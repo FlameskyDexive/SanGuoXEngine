@@ -1,0 +1,30 @@
+Scenes:
+  $id: 2
+  $values:
+    - Path: "Scenes/SampleScene.scene"
+      SceneGuid: "5f587eab-675b-420b-86b0-e59f1f3dd181"
+      Enabled: true
+      $id: 3
+Config: 1
+OutputDirectory: "Builds"
+PackagingMode: 1
+AssetMode: 1
+MaxPakSizeMB: 2048
+ActiveProfileGuid: "1936e5eb-1d39-46c9-92ec-9eebe8ee267c"
+ActivePipelineId: "xengine.desktop"
+PlatformProfiles:
+  $id: 4
+  $values:
+    - Platform: 0
+      SelfContained: false
+      PublishTrimmed: false
+      WindowWidth: 1280
+      WindowHeight: 720
+      MacOSArch: 0
+      ScriptingDefineSymbols:
+        $id: 6
+        $values: []
+      $id: 5
+      $type: "XEngine.Editor.Build.DesktopBuildProfile, XEngine.Editor"
+$id: 1
+$type: "XEngine.Editor.Projects.Settings.BuildSettings, XEngine.Editor"

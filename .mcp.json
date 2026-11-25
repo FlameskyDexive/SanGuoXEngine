@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "xengine": {
+      "command": "dotnet",
+      "args": [
+        "D:\\Engine\\XEngine\\Tools\\XEngine.Ai.Host\\bin\\Debug\\net10.0\\xengine-cli.dll",
+        "serve",
+        "--project",
+        "D:\\Engine\\XEngine\\SanGuoXEngine"
+      ]
+    },
+    "xengine-live": {
+      "command": "D:\\Engine\\XEngine\\Build\\Editor\\Debug\\net10.0\\XEngine.Editor.exe",
+      "args": [
+        "--serve",
+        "--project",
+        "D:\\Engine\\XEngine\\SanGuoXEngine"
+      ]
+    }
+  }
+}

@@ -1,0 +1,18 @@
+# Auto detect text files and perform LF normalization (same policy as the parent XEngine repository)
+* text=auto
+
+# Tooling run from Git Bash and the AIBridge snippet host must see LF in the working tree
+*.sh   text eol=lf
+*.csx  text eol=lf
+*.py   text eol=lf
+
+# Raw binary assets must never be line-ending normalized
+*.bin  binary
+*.brdf binary
+*.ogg  binary
+*.fbx  binary
+*.tga  binary
+*.png  binary
+*.exr  binary
+*.hdr  binary
+*.dds  binary

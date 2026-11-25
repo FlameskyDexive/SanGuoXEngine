@@ -1,0 +1,4 @@
+AsyncAssetLoading: true
+EditorSimulateAssetBundles: false
+$id: 1
+$type: "XEngine.Editor.Projects.Settings.AssetSettings, XEngine.Editor"

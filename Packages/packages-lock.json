@@ -1,0 +1,107 @@
+{
+  "lockfileVersion": 1,
+  "resolverVersion": "xengine-package-resolver/1",
+  "manifestHash": "577aec2ae72b4c11e25d8168c78ee4452322735d32d1954119ca88e0370b3bf7",
+  "generatedAtUtc": "2026-11-25T17:21:43.2621607Z",
+  "packages": [
+    {
+      "name": "com.xengine.2d.common",
+      "version": "0.1.0",
+      "source": "builtin",
+      "logicalRoot": "Packages/com.xengine.2d.common",
+      "resolvedPath": "",
+      "contentHash": "a41cff9e1c82fa207e6a4ecd2850cf099dea14ba83b4d2b9e5e0d50d71b2a6d0",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.2d.sprite",
+      "version": "0.1.0",
+      "source": "builtin",
+      "logicalRoot": "Packages/com.xengine.2d.sprite",
+      "resolvedPath": "",
+      "contentHash": "bfd47d2675324136c4ceca665797633c439f023d91c90ad5124e4af0d0f64505",
+      "dependencies": {
+        "com.xengine.2d.common": "0.1.0"
+      },
+      "dependencyClosure": [
+        "com.xengine.2d.common"
+      ]
+    },
+    {
+      "name": "com.xengine.cinemachine",
+      "version": "0.1.0",
+      "source": "builtin",
+      "sourceSpecifier": "0.1.0",
+      "logicalRoot": "Packages/com.xengine.cinemachine",
+      "resolvedPath": "Library/PackageCache/com.xengine.cinemachine@0.1.0",
+      "contentHash": "f083234d089efd9dc4efc5509b95097edb7d05b38739e4586829f07a391d5ed7",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.hudmesh",
+      "version": "0.1.0",
+      "source": "builtin",
+      "sourceSpecifier": "0.1.0",
+      "logicalRoot": "Packages/com.xengine.hudmesh",
+      "resolvedPath": "Library/PackageCache/com.xengine.hudmesh@0.1.0",
+      "contentHash": "b850b66c69f09d93dd8b93ffc6d4eb7d61ee42daa8722fda15163bd453fd2632",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.inputsystem",
+      "version": "0.1.1",
+      "source": "builtin",
+      "sourceSpecifier": "0.1.1",
+      "logicalRoot": "Packages/com.xengine.inputsystem",
+      "resolvedPath": "Library/PackageCache/com.xengine.inputsystem@0.1.1",
+      "contentHash": "7cca7eb1c3ad83bbaaee1fb0ce1565d980b89b87dd22d214f87ecd522819ee7d",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.rpgvfx",
+      "version": "0.1.1",
+      "source": "builtin",
+      "sourceSpecifier": "0.1.1",
+      "logicalRoot": "Packages/com.xengine.rpgvfx",
+      "resolvedPath": "Library/PackageCache/com.xengine.rpgvfx@0.1.1",
+      "contentHash": "94de6363b6615a6f5c7be73b4af62c24751f07145a3c59c954e2b129c1d63429",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.timeline",
+      "version": "0.1.0",
+      "source": "builtin",
+      "logicalRoot": "Packages/com.xengine.timeline",
+      "resolvedPath": "",
+      "contentHash": "962fdb52158bfb193c7c4864af2071b258e781ff7f921cb71bf2465811151013",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.unityimporter",
+      "version": "0.1.0",
+      "source": "builtin",
+      "sourceSpecifier": "0.1.0",
+      "logicalRoot": "Packages/com.xengine.unityimporter",
+      "resolvedPath": "Library/PackageCache/com.xengine.unityimporter@0.1.0",
+      "contentHash": "c01fc502ea4046f169edc33a8c2178ca74acfcb46f0da8e813d4aaf3587bb6cd",
+      "dependencies": {},
+      "dependencyClosure": []
+    },
+    {
+      "name": "com.xengine.xgui",
+      "version": "0.1.1",
+      "source": "builtin",
+      "logicalRoot": "Packages/com.xengine.xgui",
+      "resolvedPath": "",
+      "contentHash": "8730aea25f47e40c6f78351217c13b6999da977169f7f33b63488d231b1afcd5",
+      "dependencies": {},
+      "dependencyClosure": []
+    }
+  ]
+}

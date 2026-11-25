@@ -1,0 +1,6 @@
+CompanyName: "DefaultCompany"
+ProductName: "SanGuoXEngine"
+Version: "0.1.0"
+ApplicationIconPath: ""
+$id: 1
+$type: "XEngine.Editor.Projects.Settings.GeneralSettings, XEngine.Editor"

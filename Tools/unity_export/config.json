@@ -1,0 +1,6 @@
+{
+  "jws2_client": "F:/jws2/client",
+  "unity_editor": "F:/UnityHub/Editor/2022.3.62f3/Editor/Unity.exe",
+  "out_dir": "Export",
+  "default_timeout_ms": 120000
+}

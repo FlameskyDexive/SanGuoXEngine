@@ -1,0 +1,424 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Resources.Scene, XEngine.Runtime",
+  "serializeObj": {
+    "$id": 2,
+    "array": [
+      {
+        "$id": 3,
+        "Name": "Main Camera",
+        "AssetPath": "",
+        "Identifier": "61b9f909-2e92-40cd-a4be-f5504a4c9da0",
+        "Static": 0B,
+        "Enabled": 1B,
+        "EnabledInHierarchy": 1B,
+        "TagIndex": 1,
+        "LayerIndex": 0,
+        "HideFlags": 0,
+        "Transform": {
+          "$id": 4,
+          "$type": "XEngine.Vector.Transform, XEngine.Runtime",
+          "_localPosition": {
+            "X": 0F,
+            "Y": 1F,
+            "Z": -10F
+          },
+          "_localScale": {
+            "X": 1F,
+            "Y": 1F,
+            "Z": 1F
+          },
+          "_localRotation": {
+            "X": 0F,
+            "Y": 0F,
+            "Z": 0F,
+            "W": 1F
+          }
+        },
+        "Components": [
+          {
+            "$id": 5,
+            "$type": "XEngine.Runtime.Camera, XEngine.Runtime",
+            "Effects": {
+              "$id": 6,
+              "$values": [
+
+              ]
+            },
+            "ClearFlags": 3L,
+            "ClearColor": {
+              "R": 0F,
+              "G": 0F,
+              "B": 0F,
+              "A": 1F
+            },
+            "CullingMask": {
+              "mask": 4294967295U
+            },
+            "ProjectionMode": 0L,
+            "FieldOfView": 60F,
+            "OrthographicSize": 0.5F,
+            "NearClipPlane": 0.1F,
+            "FarClipPlane": 100F,
+            "Viewrect": {
+              "Min": {
+                "X": 0F,
+                "Y": 0F
+              },
+              "Max": {
+                "X": 1F,
+                "Y": 1F
+              }
+            },
+            "Depth": -1,
+            "TargetDisplay": 0,
+            "RenderType": 0L,
+            "CameraStack": {
+              "$id": 7,
+              "$values": [
+
+              ]
+            },
+            "Pipeline": NULL,
+            "Target": NULL,
+            "HDR": true,
+            "RenderScale": 1F,
+            "_aspect": 0F,
+            "_customAspect": false,
+            "_identifier": "5ad2029a-9f50-4fba-af9a-e6c89d3fdb20",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewCamera"
+          },
+          {
+            "$id": 8,
+            "$type": "XEngine.Runtime.UniversalAdditionalCameraData, XEngine.Runtime",
+            "RenderShadows": true,
+            "RenderPostProcessing": true,
+            "Antialiasing": 0L,
+            "RequiresDepthTexture": false,
+            "_identifier": "bc491999-ff1f-4c10-bf2b-11fbed174763",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewUniversalAdditionalCameraData"
+          },
+          {
+            "$id": 9,
+            "$type": "XEngine.Runtime.AudioListener, XEngine.Runtime",
+            "_identifier": "867074ed-7bab-440c-8335-dbcd6e251897",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewAudioListener"
+          }
+        ],
+        "Children": [
+
+        ]
+      },
+      {
+        "$id": 10,
+        "Name": "Directional Light",
+        "AssetPath": "",
+        "Identifier": "62b0d835-ed3d-40d7-b514-ab91a488cec7",
+        "Static": 0B,
+        "Enabled": 1B,
+        "EnabledInHierarchy": 1B,
+        "TagIndex": 0,
+        "LayerIndex": 0,
+        "HideFlags": 0,
+        "Transform": {
+          "$id": 11,
+          "$type": "XEngine.Vector.Transform, XEngine.Runtime",
+          "_localPosition": {
+            "X": 0F,
+            "Y": 0F,
+            "Z": 0F
+          },
+          "_localScale": {
+            "X": 1F,
+            "Y": 1F,
+            "Z": 1F
+          },
+          "_localRotation": {
+            "X": -0.3535534F,
+            "Y": 0.3535534F,
+            "Z": 0.14644663F,
+            "W": 0.85355335F
+          }
+        },
+        "Components": [
+          {
+            "$id": 12,
+            "$type": "XEngine.Runtime.DirectionalLight, XEngine.Runtime",
+            "ShadowResolution": 2048L,
+            "Cascades": 2L,
+            "ShadowDistance": 70F,
+            "Color": {
+              "R": 1F,
+              "G": 1F,
+              "B": 1F,
+              "A": 1F
+            },
+            "Intensity": 1F,
+            "ShadowStrength": 1F,
+            "ShadowBias": 0.001F,
+            "ShadowNormalBias": 0F,
+            "CastShadows": true,
+            "ShadowQuality": 1L,
+            "BakeMode": 0L,
+            "Cookie": {
+              "AssetID": "00000000-0000-0000-0000-000000000000"
+            },
+            "CookieSize": 10F,
+            "CookieIntensity": 1F,
+            "RenderingLayers": {
+              "mask": 255U
+            },
+            "_identifier": "6dd5826a-ead5-4731-bbce-6b0d2fe2c125",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewDirectionalLight"
+          },
+          {
+            "$id": 13,
+            "$type": "XEngine.Runtime.UniversalAdditionalLightData, XEngine.Runtime",
+            "UsePipelineSettings": true,
+            "AdditionalLightsShadowResolutionTier": 1L,
+            "SoftShadowQuality": 1L,
+            "_identifier": "b991d0d1-c2c7-4f82-844f-341ff3b323ff",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewUniversalAdditionalLightData"
+          }
+        ],
+        "Children": [
+
+        ]
+      },
+      {
+        "$id": 14,
+        "Name": "Global Volume",
+        "AssetPath": "",
+        "Identifier": "92fa0611-848e-4978-aa70-054d86a2ecd8",
+        "Static": 0B,
+        "Enabled": 1B,
+        "EnabledInHierarchy": 1B,
+        "TagIndex": 0,
+        "LayerIndex": 0,
+        "HideFlags": 0,
+        "Transform": {
+          "$id": 15,
+          "$type": "XEngine.Vector.Transform, XEngine.Runtime",
+          "_localPosition": {
+            "X": 0F,
+            "Y": 0F,
+            "Z": 0F
+          },
+          "_localScale": {
+            "X": 1F,
+            "Y": 1F,
+            "Z": 1F
+          },
+          "_localRotation": {
+            "X": 0F,
+            "Y": 0F,
+            "Z": 0F,
+            "W": 1F
+          }
+        },
+        "Components": [
+          {
+            "$id": 16,
+            "$type": "XEngine.Runtime.Volume, XEngine.Runtime",
+            "IsGlobal": true,
+            "Weight": 1F,
+            "BlendDistance": 0F,
+            "Priority": 0,
+            "Profile": {
+              "AssetID": "93735f0a-1dae-4b31-a399-6c1f379bc0dd"
+            },
+            "_identifier": "05f74d9a-4d21-4855-918a-0b869028cd76",
+            "_enabled": true,
+            "_enabledInHierarchy": true,
+            "HideFlags": 0L,
+            "AssetPath": "",
+            "AssetID": "00000000-0000-0000-0000-000000000000",
+            "Name": "NewVolume"
+          }
+        ],
+        "Children": [
+
+        ]
+      }
+    ]
+  },
+  "_goIdentifiers": {
+    "$id": 17,
+    "array": [
+      "61b9f909-2e92-40cd-a4be-f5504a4c9da0",
+      "62b0d835-ed3d-40d7-b514-ab91a488cec7",
+      "92fa0611-848e-4978-aa70-054d86a2ecd8"
+    ]
+  },
+  "_compIdentifiers": {
+    "$id": 18,
+    "array": [
+      "5ad2029a-9f50-4fba-af9a-e6c89d3fdb20",
+      "bc491999-ff1f-4c10-bf2b-11fbed174763",
+      "867074ed-7bab-440c-8335-dbcd6e251897",
+      "6dd5826a-ead5-4731-bbce-6b0d2fe2c125",
+      "b991d0d1-c2c7-4f82-844f-341ff3b323ff",
+      "05f74d9a-4d21-4855-918a-0b869028cd76"
+    ]
+  },
+  "_compIdOffsets": {
+    "$id": 19,
+    "array": [
+      0,
+      3,
+      5,
+      6
+    ]
+  },
+  "Fog": {
+    "Mode": 3L,
+    "Color": {
+      "R": 0.5F,
+      "G": 0.5F,
+      "B": 0.5F,
+      "A": 1F
+    },
+    "Start": 20F,
+    "End": 100F,
+    "Density": 0.01F
+  },
+  "Ambient": {
+    "Mode": 0L,
+    "Strength": 1F,
+    "Color": {
+      "X": 0.43F,
+      "Y": 0.55F,
+      "Z": 0.65F,
+      "W": 1F
+    },
+    "SkyColor": {
+      "X": 0.3F,
+      "Y": 0.3F,
+      "Z": 0.4F,
+      "W": 1F
+    },
+    "GroundColor": {
+      "X": 0.2F,
+      "Y": 0.2F,
+      "Z": 0.2F,
+      "W": 1F
+    }
+  },
+  "Gi": {
+    "Enable": false,
+    "Intensity": 1F,
+    "Radius": 2.5F,
+    "Resolution": 1,
+    "UseTemporal": true,
+    "TemporalResponse": 0.9F,
+    "BlurRadius": 1F,
+    "ProbeSpacing": 2F,
+    "ProbesPerFrame": 16,
+    "DebugView": 0
+  },
+  "Provenance": {
+    "Author": NULL,
+    "Intent": NULL,
+    "Source": NULL,
+    "LastEditAtUtcTicks": 0L,
+    "ParentDeltaId": NULL
+  },
+  "Skybox": {
+    "Mode": 0L,
+    "SolidColor": {
+      "R": 0.2F,
+      "G": 0.3F,
+      "B": 0.5F,
+      "A": 1F
+    },
+    "GradientTop": {
+      "R": 0.4F,
+      "G": 0.6F,
+      "B": 0.9F,
+      "A": 1F
+    },
+    "GradientBottom": {
+      "R": 0.8F,
+      "G": 0.8F,
+      "B": 0.7F,
+      "A": 1F
+    },
+    "GradientExponent": 1F,
+    "CustomMaterial": {
+      "AssetID": "00000000-0000-0000-0000-000000000000"
+    }
+  },
+  "BakedLighting": {
+    "$id": 20,
+    "Lightmaps": {
+      "$id": 21,
+      "$values": [
+
+      ]
+    },
+    "ProbePositions": {
+      "$id": 22,
+      "array": [
+
+      ]
+    },
+    "ProbeSH": {
+      "$id": 23,
+      "array": [
+
+      ]
+    },
+    "ProbeTetrahedra": {
+      "$id": 24,
+      "array": [
+
+      ]
+    },
+    "ProbeTetNeighbours": {
+      "$id": 24
+    }
+  },
+  "LightmapBake": {
+    "$id": 25,
+    "AtlasSize": 1024,
+    "TexelsPerUnit": 20F,
+    "DilatePixels": 2,
+    "Bounces": 2,
+    "Samples": 64,
+    "ProbeSamples": 256,
+    "DoBackfaceCull": false,
+    "RussianRoulette": 0F,
+    "Denoise": false,
+    "DenoiseRadius": 5,
+    "BakeSkyLighting": false,
+    "IgnoreAlbedo": false
+  },
+  "AssetPath": "Scenes/SampleScene.scene",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "SampleScene"
+}

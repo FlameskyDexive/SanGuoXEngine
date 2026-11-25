@@ -1,0 +1,34 @@
+<Project>
+
+  <!--
+    Directory.Build.props (XEngine user MSBuild customization)
+
+    This is where you add NuGet packages for your game. XEngine regenerates the .csproj files on
+    every recompile, but never touches this file, and MSBuild imports it into every generated
+    user project automatically (editor script assemblies and the shipped player build). Add
+    PackageReference, ProjectReference, analyzers, or any other MSBuild here.
+
+    Packages in the default group below are available to your scripts in the editor AND bundled
+    into player builds. To keep a package out of player builds (editor tooling only), put it in
+    the editor group, which is scoped to the *.Editor assembly by name.
+  -->
+
+  <!-- Available everywhere: editor scripts, runtime scripts, and shipped player builds. -->
+  <ItemGroup>
+    <!-- <PackageReference Include="Newtonsoft.Json" Version="13.0.3" /> -->
+    <!-- <ProjectReference Include="..\Shared\Shared.csproj" /> -->
+  </ItemGroup>
+
+  <!-- Editor only: never shipped in a player build. -->
+  <ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Editor'))">
+    <!-- <PackageReference Include="ImGui.NET" Version="1.91.6.1" /> -->
+  </ItemGroup>
+
+  <!-- Tests only (the generated *.Tests assembly): xUnit runner for `dotnet test SanGuoXEngine.Tests.csproj`. -->
+  <ItemGroup Condition="$(MSBuildProjectName.EndsWith('.Tests'))">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.11.0" />
+    <PackageReference Include="xunit" Version="2.9.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2" />
+  </ItemGroup>
+
+</Project>

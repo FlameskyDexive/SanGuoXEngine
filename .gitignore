@@ -1,0 +1,27 @@
+# XEngine editor caches (regenerable)
+Library/
+Temp/
+Logs/
+UserSettings/
+*.csproj
+*.sln
+*.slnx
+.vs/
+bin/
+obj/
+Builds/
+*.log
+
+# Runtime artifacts of the agent harness (evidence is copied into docs/evidence/)
+.xengine/journal/
+.xengine/screenshots/
+.xengine/evidence/
+
+# Export intermediates and downloaded third-party binaries (jws2 data, vgmstream, ffmpeg)
+Export/
+Tools/bin/
+__pycache__/
+.pytest_cache/
+
+# MacOS
+.DS_Store

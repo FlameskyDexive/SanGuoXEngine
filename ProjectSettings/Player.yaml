@@ -1,0 +1,9 @@
+DefaultOrientation: 5
+KeepScreenOn: false
+TargetFrameRate: 0
+AutoRotateToPortrait: true
+AutoRotateToPortraitUpsideDown: true
+AutoRotateToLandscapeLeft: true
+AutoRotateToLandscapeRight: true
+$id: 1
+$type: "XEngine.Editor.Projects.Settings.PlayerSettings, XEngine.Editor"

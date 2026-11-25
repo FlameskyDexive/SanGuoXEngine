@@ -1,0 +1,23 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Rendering.VolumeProfile, XEngine.Runtime",
+  "Components": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "$type": "XEngine.Runtime.Rendering.TonemapVolumeComponent, XEngine.Runtime",
+        "OverrideType": true,
+        "Type": 3,
+        "OverrideContrast": false,
+        "Contrast": 1.1F,
+        "OverrideSaturation": false,
+        "Saturation": 1.1F,
+        "Active": true
+      }
+    ]
+  },
+  "AssetPath": "Settings/DefaultVolumeProfile.volumeprofile",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "Default Volume Profile"
+}

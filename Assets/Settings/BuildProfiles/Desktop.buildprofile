@@ -1,0 +1,57 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Editor.Build.Profiles.BuildProfile, XEngine.Editor",
+  "PipelineId": "xengine.desktop",
+  "PlatformSettings": {
+    "$id": 2,
+    "$type": "XEngine.Editor.Build.DesktopBuildProfile, XEngine.Editor",
+    "Platform": 0L,
+    "SelfContained": false,
+    "PublishTrimmed": false,
+    "WindowWidth": 1280,
+    "WindowHeight": 720,
+    "MacOSArch": 0L,
+    "ScriptingDefineSymbols": {
+      "$id": 3,
+      "$values": [
+
+      ]
+    }
+  },
+  "OverrideScenes": true,
+  "Scenes": {
+    "$id": 4,
+    "$values": [
+      {
+        "$id": 5,
+        "Path": "Scenes/SampleScene.scene",
+        "SceneGuid": "5f587eab-675b-420b-86b0-e59f1f3dd181",
+        "Enabled": true
+      }
+    ]
+  },
+  "OverrideOutputDirectory": false,
+  "OutputDirectory": "Builds",
+  "OverrideConfiguration": false,
+  "Configuration": 1L,
+  "OverridePackaging": false,
+  "PackagingMode": 1L,
+  "AssetMode": 1L,
+  "MaxPakSizeMB": 2048,
+  "SettingOverrides": {
+    "$id": 6,
+    "$values": [
+
+    ]
+  },
+  "AssetImportOverrides": {
+    "$id": 7,
+    "Enabled": false,
+    "MaxTextureSize": 0,
+    "ForceUncompressed": false,
+    "CompressMeshVertexData": false
+  },
+  "AssetPath": "Settings/BuildProfiles/Desktop.buildprofile",
+  "AssetID": "1936e5eb-1d39-46c9-92ec-9eebe8ee267c",
+  "Name": "Desktop"
+}
