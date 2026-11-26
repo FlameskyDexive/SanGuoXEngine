@@ -1,15 +1,16 @@
 # SanGuoXEngine 移植进度
 
-- 计划：[`plans/2026-11-26-sanguo-taoyuan-port-plan.md`](plans/2026-11-26-sanguo-taoyuan-port-plan.md)（第 9 节是 M0 实测后的修订）
+- 计划：[`plans/2026-11-26-sanguo-taoyuan-port-plan.md`](plans/2026-11-26-sanguo-taoyuan-port-plan.md)（第 9 节是 M0 实测后的修订，第 10 节是 M1 的）
 - 纪律：一个节点 = 代码 + 测试 + Unity/XEngine 并排截图（`evidence/mN/`）→ commit（`[feat]sanguo port function + …`）→ push
 - 证据目录约定：`evidence/mN/<节点>.md` + 截图，分 `unity/` 与 `xengine/` 两侧
+- 仓库：私有的 `FlameskyDexive/SanGuoXEngine`，在 XEngine 仓库里登记为子模块 `SanGuoXEngine`
 
 ## 里程碑
 
 | 里程碑 | 状态 | 节点 / 说明 | 证据 |
 |---|---|---|---|
-| M0 脚手架与导出探针 | 代码完成，待仓库登记 | 工程已建（引擎 1.1.0-a19）；harness、manifest、`.gitignore`、`AGENTS.md`、计划、`NoLuaGuardTests`（4/4，含反向验证）；AIBridge 探针 5/5 通过（闸门通过）；实时编辑器可打开工程。**待办**：GitHub 登录 → 建私有仓库 → 首次推送 → 父仓库登记子模块 | `evidence/m0/probe.md` |
-| M1 角色模型与 PBR 材质 | 代码完成，待推送 | 5 个 FBX、78 张贴图（+31 张派生图）、26 个材质、5 个 prefab 已导入；模型节点与 Unity 一一对应（位置差 ≤ 4.5 mm）；蒙皮经数据与渲染剪影双重核对（GPU 剪影重合 0.997–1.000）；Python 测试 70 个、C# 测试 8 个通过。Unity 参考图在 FourBones 质量等级下抓取。**待办**：随 M0 一起首次推送 | `evidence/m1/heroes.md` |
+| M0 脚手架与导出探针 | 完成 | 工程已建（引擎 1.1.0-a19）；harness、manifest、`.gitignore`、`AGENTS.md`、计划、`NoLuaGuardTests`（4/4，含反向验证）；AIBridge 探针 5/5 通过（闸门通过）；实时编辑器可打开工程 | `evidence/m0/probe.md` |
+| M1 角色模型与 PBR 材质 | 完成 | 5 个 FBX、78 张贴图（+31 张派生图）、26 个材质、5 个 prefab 已导入；模型节点与 Unity 一一对应（位置差 ≤ 4.5 mm）；蒙皮经数据与渲染剪影双重核对（GPU 剪影重合 0.997–1.000）；Python 测试 70 个、C# 测试 8 个通过。Unity 参考图在 FourBones 质量等级下抓取 | `evidence/m1/heroes.md` |
 | M2 动画 | 未开始 | 战斗剪辑导出（含 `RootT`/`RootQ` 根运动曲线）→ `AnimationClip` → `SanguoAnimator` | |
 | M3 桃园场景 | 未开始 | 4046 对象 / 1378 组 LOD / 2 张光照贴图 / 天空 / IBL / LUT；引擎节点 LODGroup | |
 | M4 战斗内核 | 未开始 | C# 重写：连段、技能时间轴、判定、HUD、顿帧 | |
@@ -24,7 +25,7 @@
 |---|---|---|
 | 用户程序集无法解析 `Directory.Build.props` 声明的 NuGet 依赖（带 xUnit 测试的工程打不开） | M0 | **已修复**，引擎 `cfab4988a` |
 | 内置着色器 `StandardAnisotropic` / `Unlit` / `StandardTransparent` 不做 GPU 蒙皮（`Variants` 未声明蒙皮关键字 + Slang 顶点阶段不蒙皮），蒙皮网格画在绑定姿态 | M1 | **已修复**，引擎 `fcf643108` |
-| `Default/Standard` 自己的 Slang Prepass / GBuffer 只蒙皮位置，法线、切线与运动矢量起点仍是未蒙皮的值 | M2 / M3 | 未开始（Slang 后端上动画中的蒙皮网格受影响） |
+| `Default/Standard` 的 Slang Prepass / GBuffer 只蒙皮位置，法线、切线与运动矢量起点仍是绑定姿态的值（影响 Deferred 路径，以及读取 Prepass 法线 / 运动矢量的 GTAO、SSGI、SSR、ScreenSpaceDecal；Forward 光照不受影响） | M2 / M3 | **已修复**，引擎 `f0f68d5a3` |
 | LODGroup 组件（场景实测 1378 组） | M3 | 未开始 |
 | 光照贴图不消费方向图 / 阴影遮罩（桃园有 2 张图集的方向图与阴影遮罩） | M3 | 未开始，先用颜色图 |
 | 无立方体贴图导入器（天空 HDR → IBL、角色自带反射立方体贴图） | M1 / M3 | 未开始，先在移植仓库的 Editor 侧生成 |

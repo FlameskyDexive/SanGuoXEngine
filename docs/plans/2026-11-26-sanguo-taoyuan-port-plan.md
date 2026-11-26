@@ -187,6 +187,7 @@ M0 中另修复了一个引擎缺陷（带 xUnit 测试的工程打不开），�
 | 贴图 TGA 转 PNG 以控制体积 | 78 张源贴图 71.9 MB → PNG 28.5 MB，连同派生图与 FBX 共 44 MB | 不需要 LFS，也不需要再压 |
 | 材质由 `SanguoMaterialGenerator` + `SanguoHeroPrefabBuilder` 两个类生成 | 合并为 `SanguoHeroGenerator`（材质 + prefab）；截图工具 `SanguoCaptureStudio` 放在同一个 Editor 程序集 | 名称以代码为准 |
 | 头发用 `Default/StandardAnisotropic` + 裁切 | 该着色器在引擎里不做 GPU 蒙皮（`Unlit`、`StandardTransparent` 同） | 引擎缺陷，已在引擎 `main` 以 `fcf643108` 修复 |
+| （未涉及） | `Default/Standard` 的 Slang Prepass / GBuffer 只蒙皮位置，法线是绑定姿态的 | 影响 Deferred 路径与读取 Prepass 法线 / 运动矢量的 GTAO、SSGI、SSR；已在引擎 `main` 以 `f0f68d5a3` 修复 |
 | （未涉及） | jws2 的活动质量等级 Fastest 只用 1 根骨头蒙皮；`BakeMesh` 也只取第一骨 | Unity 参考图统一在 FourBones 等级下抓取；**`BakeMesh` 不能当作蒙皮基准** |
 | （未涉及） | Unity 的「网格压缩 = Low」会把权重量化（落在 1/31 网格上）；引擎原样读取 FBX | 引擎与 Unity 的权重差异来自 Unity，静止姿态下影响 ≤ 1.86 mm |
 | （未涉及） | XEngine 的方向光沿节点 −Z 照射（Unity 是 +Z）；相机目标回读为线性字节，Vulkan 自下而上、D3D12 自上而下；`AssetRef.Res` 异步，材质的贴图要逐个 `EnsureLoaded` | 写进 `SanguoCaptureStudio`，后续所有截图沿用 |

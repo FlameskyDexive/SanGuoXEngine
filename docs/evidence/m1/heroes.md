@@ -107,6 +107,17 @@ Slang 顶点阶段本身也不蒙皮。`Default/Unlit`、`Default/StandardTransp
 `docs/superpowers/evidence/rendering/2026-11-26-builtin-shader-skinning.md`（引擎 `fcf643108`）。修复后重拍，
 关羽变化的 5225 个像素全部落在头部与胡须区域（x 213..296，y 65..258）。
 
+### 引擎缺陷 E3：`Default/Standard` 的 Prepass / GBuffer 不蒙皮法线（已修复）
+
+追查 E2 时顺带发现：`Default/Standard` 自己的 Slang `Prepass` 与 `GBuffer` 顶点阶段只蒙皮了位置，法线和切线仍是
+绑定姿态的值。Forward 路径不受影响（主 pass 自己蒙皮法线），所以本里程碑的并排截图看不出来；受影响的是
+Deferred / DeferredPlus 渲染路径，以及读取 Prepass 法线 / 运动矢量的 GTAO、SSGI、SSR、ScreenSpaceDecal——M3
+打开这些效果时会碰到。
+
+修复在引擎 `f0f68d5a3`，证据
+`docs/superpowers/evidence/rendering/2026-11-26-standard-normal-skinning.md`：一块靠骨头倾斜 60° 的方形必须
+和靠自身变换倾斜的方形受光一致；修复前 Deferred 路径的 D3D12 / Vulkan 上两者差 35.2%，修复后 0.1%。
+
 ## 渲染对比
 
 同一个相机（Unity 的 `shots.json`）、同一盏白色方向光（无阴影）、平环境光 0.2、灰色背景、无后处理。
