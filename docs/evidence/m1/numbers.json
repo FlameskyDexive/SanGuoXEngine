@@ -2,9 +2,9 @@
   "Hero_ZhaoYun": {
     "unityGame": 0.1736420932265673,
     "unityStandard": 0.0990954072406849,
-    "xengineVulkan": 0.12069111731130823,
-    "xengineD3D12": 0.12078296295227413,
-    "vulkanVsD3d12Percent": 2.393341064453125
+    "xengineVulkan": 0.12071796871312983,
+    "xengineD3D12": 0.12081004982908945,
+    "vulkanVsD3d12Percent": 2.392832438151042
   },
   "Hero_GuanYu": {
     "unityGame": 0.1631764902341192,
@@ -16,23 +16,23 @@
   "Hero_LiuBei": {
     "unityGame": 0.1432083841700235,
     "unityStandard": 0.10598127640604717,
-    "xengineVulkan": 0.12955950746309305,
-    "xengineD3D12": 0.13011315479542243,
+    "xengineVulkan": 0.1295593435826409,
+    "xengineD3D12": 0.13011299091497028,
     "vulkanVsD3d12Percent": 2.893829345703125
   },
   "Hero_ZhangFei": {
     "unityGame": 0.14221555595809823,
     "unityStandard": 0.1084387584549461,
-    "xengineVulkan": 0.12607486666189496,
-    "xengineD3D12": 0.1262504626679003,
-    "vulkanVsD3d12Percent": 1.8829345703125
+    "xengineVulkan": 0.12603082769430526,
+    "xengineD3D12": 0.12620682008298803,
+    "vulkanVsD3d12Percent": 1.8816630045572917
   },
   "Hero_LvBu": {
     "unityGame": 0.11837921969961802,
     "unityStandard": 0.09545323175072373,
-    "xengineVulkan": 0.10528801162366698,
-    "xengineD3D12": 0.10548332463998193,
-    "vulkanVsD3d12Percent": 1.8407185872395833
+    "xengineVulkan": 0.10680391868715537,
+    "xengineD3D12": 0.10699884569118796,
+    "vulkanVsD3d12Percent": 1.8389383951822917
   },
   "guanyuFix": {
     "pixelsChanged": 5225,

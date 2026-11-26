@@ -44,6 +44,10 @@
         {
           "key": "_AlphaCutoff",
           "value": 0.944F
+        },
+        {
+          "key": "_Cull",
+          "value": 0F
         }
       ]
     },
@@ -126,7 +130,8 @@
       "_MainColor",
       "_NormalTex",
       "_SurfaceTex",
-      "_AlphaCutoff"
+      "_AlphaCutoff",
+      "_Cull"
     ]
   },
   "AssetPath": "",

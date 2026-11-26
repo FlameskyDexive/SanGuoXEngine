@@ -97,6 +97,20 @@ def test_hair_uses_the_anisotropic_shader_and_always_alpha_tests():
     assert any("strand specular" in note for note in mapped["notes"])
 
 
+def test_hair_cards_are_drawn_from_both_sides():
+    # The hair shader has front-face and back-face passes; the engine draws the cards two-sided.
+    two_sided = material_mapping.map_material(material(HAIR, _MainTex=texenv("hair")))
+    assert two_sided["properties"]["_Cull"] == 0
+
+    # A material that states its own cull mode keeps it.
+    stated = material_mapping.map_material(material(HAIR, _MainTex=texenv("hair"), _Cull=2))
+    assert stated["properties"]["_Cull"] == 2
+
+    # Other shaders stay at the engine default (back faces culled).
+    body = material_mapping.map_material(material(HERO, _MainTex=texenv("body")))
+    assert "_Cull" not in body["properties"]
+
+
 def test_tiling_and_offset_are_carried_only_when_not_default():
     default = material_mapping.map_material(material(HERO, _MainTex=texenv("a", (1, 1), (0, 0)), _MetallicGlossMap=texenv("p")))
     tiled = material_mapping.map_material(material(HERO, _MainTex=texenv("a", (2, 3), (0.25, 0)), _MetallicGlossMap=texenv("p")))

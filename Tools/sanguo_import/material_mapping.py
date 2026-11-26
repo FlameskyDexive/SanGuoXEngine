@@ -99,6 +99,12 @@ def map_material(material):
 
     if "_Cull" in props:
         properties["_Cull"] = int(props["_Cull"])
+    elif engine_shader == "StandardAnisotropic":
+        # The hair shader draws its cards from both sides (an opaque front-face pass, then
+        # transparent back-face and front-face passes). One two-sided opaque pass stands in for
+        # all three; with the engine's default (back faces culled) every card seen from behind
+        # vanished — 吕布's left plume disappeared in most poses.
+        properties["_Cull"] = 0
 
     emission = None
     recipe = texture_math.emission_recipe(props.get("_EmissionColor", (0.0, 0.0, 0.0, 1.0)), props.get("_EmissionScale", 0.0))
@@ -110,8 +116,8 @@ def map_material(material):
     if shader_name == "Standards/S_Standard_Skin":
         notes.append(f"fake-skin shading is not reproduced (_SSSLUT ramp, _SkinLightScale {props.get('_SkinLightScale', 1.0)})")
     if shader_name == "Standards/S_Standard_Hair":
-        notes.append("strand specular replaced by GGX anisotropy; the extra front-face and back-face passes "
-                     "and the transparent render queue are not reproduced (alpha-tested opaque)")
+        notes.append("strand specular replaced by GGX anisotropy; the transparent front-face and back-face "
+                     "passes are not reproduced (one two-sided alpha-tested opaque pass, cull off)")
     if _enabled(props, keywords, "_RimLight", "_RIMLIGHT_ON"):
         notes.append("rim light is not reproduced")
     if _enabled(props, keywords, "_EffectToggle", "_EFFECTTOGGLE_ON"):
