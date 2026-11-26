@@ -120,6 +120,7 @@ public sealed class SanguoBattleStage
     private readonly List<SanguoFieldActor> _heroes = [];
     private readonly List<SanguoFieldActor> _enemies = [];
     private readonly List<SanguoFieldActor> _livingScratch = new(256);
+    private int _shoveStep;
     private readonly Dictionary<int, SanguoMonster> _monsterData;
     private readonly Dictionary<int, SanguoMonsterValue> _valueData;
     private readonly List<SanguoSpawnGroup> _pendingGroups = [];
@@ -262,6 +263,10 @@ public sealed class SanguoBattleStage
     private void Shove()
     {
         PopulateLivingScratch();
+        // Separation is a presentation correction. Keep simulation, targeting and attacks at
+        // 60 Hz, but solve the O(N²) crowd pass at 15 Hz so a 234-actor wave does not consume the
+        // entire editor frame on repeated tiny overlaps.
+        if ((++_shoveStep & 3) != 0) return;
         List<SanguoFieldActor> all = _livingScratch;
         for (int i = 0; i < all.Count; i++)
         {

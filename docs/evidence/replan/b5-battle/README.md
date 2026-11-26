@@ -25,3 +25,9 @@
 ## 结论
 
 固定步进和主要战斗逻辑临时集合已移除，45 个子模块测试全部通过。当前帧率仍受桃园场景阴影和几何提交支配，不能把本节点的 CPU 逻辑改动宣称为 60 FPS 达标。
+
+## 固定步进后续复测
+
+推挤分离改为每 4 个固定步执行一次，移动、攻击和命中仍保持 60 Hz。结合战斗 Play 单相机预算，D3D12 复测为 `frameTimeMs=51.63`、`gpuFrameTimeMs=35.49`、`cpuFrameTimeP95Ms=62.11`。
+
+![Single battle camera](battle-single-camera-d3d12.png)
