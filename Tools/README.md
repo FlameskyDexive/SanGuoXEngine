@@ -67,6 +67,7 @@ is saved to the jws2 project.
 | `compare_skin.py` | skinning of every mesh against Unity: vertices, skin matrices, the formula, the weights, and (with `--silhouettes`) what each renderer drew |
 | `fbx_skin_weights.py` | the weights the FBX file itself stores, per mesh and per control point |
 | `compare_anim.py` | the engine's played poses (from `capture_poses.cs`) against Unity's sampled poses, bone by bone and time by time; also the rendered hero's extent in every Unity | engine frame pair, and with `--sheets` contact sheets |
+| `upgrade_legacy_fbx.py` | converts the four legacy FBX 6100 meshes the engine rejects (`t_shanshi04_01`, `i_ly_muche01_01_lod2`, the two ASCII `i_zx_xiaodiaodeng01` lantern LODs) into binary FBX 7400 in place. Reads both 6100 layouts (binary: mesh data inside the Model node; ASCII: bare-value arrays, `*N { a: … }` wrappers, and the brace miscounts of 2015-era Max exports), fans quads into triangles and remaps the per-corner normals and UV indices by corner position, then writes a minimal 7400 (Model + Geometry + scalar-long OO connections + W-flipped PolygonVertexIndex) |
 
 ```powershell
 py -3 Tools/sanguo_import/import_heroes.py
@@ -76,6 +77,7 @@ py -3 Tools/sanguo_import/fbx_skin_weights.py Assets/Heroes/Hero_GuanYu/Hero_Gua
 py -3 Tools/unity_export/clip_manifest.py Hero_LvBu
 py -3 Tools/unity_export/run_export.py run export_clips --filter Hero_LvBu --out Export/clips --timeout-ms 900000
 py -3 Tools/sanguo_import/compare_anim.py --sheets docs/evidence/m2/sheets
+py -3 Tools/sanguo_import/upgrade_legacy_fbx.py <source.FBX> <target.FBX>   # or --info <file>
 ```
 
 `export_clips` runs once per hero. `compare_anim.py` exits with status 1 when a rotation is more than
