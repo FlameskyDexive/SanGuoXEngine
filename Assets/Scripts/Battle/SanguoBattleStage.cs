@@ -128,6 +128,7 @@ public sealed class SanguoBattleStage
     public bool Won { get; private set; }
     public bool Lost { get; private set; }
     public IReadOnlyList<SanguoFieldActor> Enemies => _enemies;
+    public int SpawnGroupCount => _pendingGroups.Count;
     public IReadOnlyList<SanguoFieldActor> Heroes => _heroes;
 
     /// <summary>Raised per resolved spawn so the presenter can instantiate the right prefab.</summary>

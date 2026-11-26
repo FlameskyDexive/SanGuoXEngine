@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text.Json;
 
@@ -39,6 +40,50 @@ public static class SanguoSceneBuilder
 
     [MenuItem("Sanguo/Import/5 Generate Scene")]
     private static void MenuScene() => Debug.Log("[Sanguo] " + GenerateScene());
+
+    /// <summary>The battle variant: the same scene plus the battle driver GameObject.</summary>
+    public const string OutputBattleSceneRelativePath = "Scenes/TaoYuanBattle.scene";
+
+    [MenuItem("Sanguo/Import/5b Generate Battle Scene")]
+    private static void MenuBattleScene() => Debug.Log("[Sanguo] " + GenerateBattleScene());
+
+    /// <summary>Writes TaoYuanBattle.scene — the full scene with a SanguoBattleDriver node.</summary>
+    public static string GenerateBattleScene()
+    {
+        string rootPath = Project.Current?.RootPath ?? throw new InvalidOperationException("No project is open.");
+        string assetsPath = Project.Current!.AssetsPath;
+
+        using JsonDocument sceneDocument = JsonDocument.Parse(
+            File.ReadAllText(Path.Combine(rootPath, SceneDocumentRelativePath)));
+        using JsonDocument manifestDocument = JsonDocument.Parse(
+            File.ReadAllText(SanguoSceneGenerator.FullManifestPath()));
+        JsonElement scene = sceneDocument.RootElement;
+        JsonElement manifest = manifestDocument.RootElement;
+
+        List<string> warnings = new();
+        Guid skyTextureGuid = Guid.Parse(manifest.GetProperty("sky")
+            .GetProperty("customReflection").GetProperty("guid").GetString()!);
+        Guid skyMaterialGuid = WriteSkyMaterial(assetsPath, skyTextureGuid);
+        Dictionary<string, Guid> builtinMeshes = EnsureBuiltinMeshes(assetsPath, warnings);
+        Scene nativeScene = BuildScene(scene, manifest, skyMaterialGuid, builtinMeshes, warnings);
+
+        // the driver lives in the game assembly, which the editor project does not reference —
+        // add it by type name (the game scripts always load before the generator runs)
+        Type? driverType = Type.GetType("SanGuoXEngine.Battle.SanguoBattleDriver, SanGuoXEngine.Game")
+            ?? AppDomain.CurrentDomain.GetAssemblies()
+                .Select(a => a.GetType("SanGuoXEngine.Battle.SanguoBattleDriver"))
+                .FirstOrDefault(t => t != null);
+        if (driverType == null) throw new InvalidOperationException("SanguoBattleDriver type not found (game assembly not loaded).");
+        GameObject driverGo = new("Battle Driver");
+        nativeScene.Add(driverGo);
+        driverGo.AddComponent(driverType);
+
+        Guid sceneGuid = StableGuid("scene", "taoyuan-battle");
+        SanguoHeroGenerator.WriteNative(nativeScene, OutputBattleSceneRelativePath, sceneGuid, "SceneImporter");
+        int roots = 0;
+        foreach (GameObject _ in nativeScene.RootObjects) roots++;
+        return $"TaoYuanBattle.scene: {roots} root object(s), {warnings.Count} warning(s)";
+    }
 
     /// <summary>Writes the sky material and the scene document. Returns a summary line.</summary>
     public static string GenerateScene()
