@@ -202,7 +202,11 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _battleCamera.ClearFlags = CameraClearFlags.Skybox;
         _battleCamera.FarClipPlane = 4000f;
 
-        Debug.Log("[SanguoBattle] stage ready: heroes " + heroes.Count + ", spawn groups " + _stage.SpawnGroupCount + ")");
+        // spawn every wave now: the stage queues them and the AI engages as they walk in
+        int spawned = 0;
+        while (_stage.SpawnNextGroup() != null) spawned++;
+        Debug.Log("[SanguoBattle] stage ready: heroes " + heroes.Count + ", spawn groups " + spawned
+            + ", enemies " + _stage.Enemies.Count);
     }
 
     private int HeroFirstSkillId(string hero)
@@ -257,8 +261,20 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         };
     }
 
+    private bool _updateLogged;
+    private float _updateCount;
+    private float _lastHeartbeatMs;
+
     public override void Update()
     {
+        if (!_updateLogged)
+        {
+            _updateLogged = true;
+            Debug.Log("[SanguoBattle] first Update tick, playing=" + Application.IsPlaying
+                + ", stage=" + (_stage != null) + ", enemies=" + (_stage?.Enemies.Count ?? -1)
+                + ", heroes=" + (_stage?.Heroes.Count ?? -1));
+        }
+        _updateCount += 1;
         if (_stage == null || _over) return;
         float deltaTime = Math.Min(Time.DeltaTime, 1f / 20f);
         _battleTimeMs += deltaTime * 1000f;
@@ -273,6 +289,22 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         {
             _over = true;
             Debug.Log("[SanguoBattle] " + (_stage.Won ? "WIN" : "LOSE") + " at " + (_battleTimeMs / 1000f) + "s");
+        }
+        else if (_battleTimeMs - _lastHeartbeatMs >= 2000f)
+        {
+            _lastHeartbeatMs = _battleTimeMs;
+            SanguoFieldActor? probeEnemy = _stage.Enemies.Count > 0 ? _stage.Enemies[0] : null;
+            SanguoFieldActor? probeHero = _stage.Heroes.Count > 0 ? _stage.Heroes[0] : null;
+            int chasing = 0, attacking = 0;
+            foreach (SanguoFieldActor enemy in _stage.Enemies)
+            {
+                if (enemy.StateMachine.State == SanguoActorState.Run) chasing++;
+                if (enemy.StateMachine.State == SanguoActorState.Attack) attacking++;
+            }
+            Debug.Log("[SanguoBattle] t=" + (_battleTimeMs / 1000f) + "s enemy0="
+                + (probeEnemy != null ? probeEnemy.Position.X + "," + probeEnemy.Position.Y + " state=" + probeEnemy.StateMachine.State : "none")
+                + " hero0=" + (probeHero != null ? probeHero.Position.X + "," + probeHero.Position.Y + " hp=" + probeHero.Health.Hp : "none")
+                + " chasing=" + chasing + " attacking=" + attacking);
         }
     }
 

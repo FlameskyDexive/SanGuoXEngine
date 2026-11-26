@@ -18,6 +18,17 @@ if (app == null) return "EditorApplication not found.";
 // EnterPlayMode is an INSTANCE method on the EditorApplication singleton.
 var enter = app.GetMethod("EnterPlayMode", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
 if (enter == null) return "EnterPlayMode not found.";
+
+// Open the GameView first: without it the editor keeps its idle throttle (no render -> the play
+// loop barely ticks) and runtime_screenshot has no capture target.
+System.Type gameViewPanel = null;
+foreach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {
+    var t = assembly.GetType("XEngine.Editor.GUI.Panels.GameViewPanel");
+    if (t != null) { gameViewPanel = t; break; }
+}
+if (gameViewPanel == null) return "GameViewPanel type not found.";
+var openMethod = gameViewPanel.GetMethod("Open", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
+if (openMethod != null) openMethod.Invoke(null, null);
 object? instance = app.GetProperty("Instance", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null);
 if (instance == null) {
     var instanceField = app.GetField("Instance", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);
