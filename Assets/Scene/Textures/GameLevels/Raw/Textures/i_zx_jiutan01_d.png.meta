@@ -1,0 +1,17 @@
+{
+  "guid": "32ad2052-4e86-dfe7-1603-3bef28862231",
+  "importer": "TextureImporter",
+  "importerVersion": 7,
+  "settings": {
+    "textureType": 0,
+    "maxTextureSize": 256,
+    "generateMipmaps": true,
+    "sRGB": true,
+    "sRGBSampling": false,
+    "alphaSource": 1,
+    "minFilter": 3,
+    "magFilter": 1,
+    "wrapMode": 0,
+    "npotScale": 0
+  }
+}

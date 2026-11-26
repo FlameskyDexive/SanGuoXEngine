@@ -1,0 +1,19 @@
+{
+  "guid": "61baca22-2951-51b0-9847-af75ed5a3a4c",
+  "importer": "EditorModelImporter",
+  "importerVersion": 52,
+  "settings": {
+    "normalImportMode": 0,
+    "tangentImportMode": 3,
+    "calculateTangents": true,
+    "convertFileUnits": true,
+    "bakeAxisConversion": false,
+    "importAnimation": false,
+    "animationType": 0,
+    "avatarDefinition": 2,
+    "generateLightmapUVs": false,
+    "skinBoneCount": 4,
+    "stripBones": true,
+    "isReadable": true
+  }
+}

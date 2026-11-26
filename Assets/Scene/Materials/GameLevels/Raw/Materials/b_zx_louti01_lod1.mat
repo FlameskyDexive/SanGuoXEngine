@@ -1,0 +1,131 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Resources.Material, XEngine.Runtime",
+  "_shader": {
+    "AssetID": "87bedf66-4e8b-0056-bc2e-4f8c7fc22a5a"
+  },
+  "_properties": {
+    "$id": 2,
+    "_colors": {
+      "$id": 3,
+      "entries": [
+
+      ]
+    },
+    "_vectors2": {
+      "$id": 4,
+      "entries": [
+
+      ]
+    },
+    "_vectors3": {
+      "$id": 5,
+      "entries": [
+
+      ]
+    },
+    "_vectors4": {
+      "$id": 6,
+      "entries": [
+
+      ]
+    },
+    "_floats": {
+      "$id": 7,
+      "entries": [
+        {
+          "key": "_AlphaClip",
+          "value": 1F
+        },
+        {
+          "key": "_AlphaCutoff",
+          "value": 0.5F
+        }
+      ]
+    },
+    "_ints": {
+      "$id": 8,
+      "entries": [
+
+      ]
+    },
+    "_matrices": {
+      "$id": 9,
+      "entries": [
+
+      ]
+    },
+    "_matrixArr": {
+      "$id": 10,
+      "entries": [
+
+      ]
+    },
+    "_textures": {
+      "$id": 11,
+      "entries": [
+        {
+          "key": "_MainTex",
+          "value": {
+            "AssetID": "d7f37f2f-a3bb-cbc3-3354-394b61a4c4c2"
+          }
+        },
+        {
+          "key": "_NormalTex",
+          "value": {
+            "AssetID": "77f54d3a-1f85-a7d6-a2d7-c50a74513303"
+          }
+        },
+        {
+          "key": "_SurfaceTex",
+          "value": {
+            "AssetID": "c3dd70f9-77bf-eac0-2eef-15f95333ced9"
+          }
+        }
+      ]
+    },
+    "_textures3D": {
+      "$id": 12,
+      "entries": [
+
+      ]
+    },
+    "_textures2DArray": {
+      "$id": 13,
+      "entries": [
+
+      ]
+    },
+    "_texturesCube": {
+      "$id": 14,
+      "entries": [
+
+      ]
+    },
+    "_buffers": {
+      "$id": 15,
+      "entries": [
+
+      ]
+    },
+    "_bufferBindings": {
+      "$id": 16,
+      "entries": [
+
+      ]
+    }
+  },
+  "_overrides": {
+    "$id": 17,
+    "$values": [
+      "_AlphaClip",
+      "_AlphaCutoff",
+      "_MainTex",
+      "_NormalTex",
+      "_SurfaceTex"
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "b_zx_louti01_lod1"
+}

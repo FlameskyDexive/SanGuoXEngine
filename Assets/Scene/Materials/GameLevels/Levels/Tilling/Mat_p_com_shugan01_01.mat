@@ -1,0 +1,122 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Resources.Material, XEngine.Runtime",
+  "_shader": {
+    "AssetID": "87bedf66-4e8b-0056-bc2e-4f8c7fc22a5a"
+  },
+  "_properties": {
+    "$id": 2,
+    "_colors": {
+      "$id": 3,
+      "entries": [
+
+      ]
+    },
+    "_vectors2": {
+      "$id": 4,
+      "entries": [
+
+      ]
+    },
+    "_vectors3": {
+      "$id": 5,
+      "entries": [
+
+      ]
+    },
+    "_vectors4": {
+      "$id": 6,
+      "entries": [
+
+      ]
+    },
+    "_floats": {
+      "$id": 7,
+      "entries": [
+
+      ]
+    },
+    "_ints": {
+      "$id": 8,
+      "entries": [
+
+      ]
+    },
+    "_matrices": {
+      "$id": 9,
+      "entries": [
+
+      ]
+    },
+    "_matrixArr": {
+      "$id": 10,
+      "entries": [
+
+      ]
+    },
+    "_textures": {
+      "$id": 11,
+      "entries": [
+        {
+          "key": "_MainTex",
+          "value": {
+            "AssetID": "34fb55f7-f36c-21ba-5967-4dc978491e5c"
+          }
+        },
+        {
+          "key": "_NormalTex",
+          "value": {
+            "AssetID": "da9559da-e40a-5804-ea2d-39781b24b358"
+          }
+        },
+        {
+          "key": "_SurfaceTex",
+          "value": {
+            "AssetID": "6a80b172-dfec-704e-99ce-b3e724382161"
+          }
+        }
+      ]
+    },
+    "_textures3D": {
+      "$id": 12,
+      "entries": [
+
+      ]
+    },
+    "_textures2DArray": {
+      "$id": 13,
+      "entries": [
+
+      ]
+    },
+    "_texturesCube": {
+      "$id": 14,
+      "entries": [
+
+      ]
+    },
+    "_buffers": {
+      "$id": 15,
+      "entries": [
+
+      ]
+    },
+    "_bufferBindings": {
+      "$id": 16,
+      "entries": [
+
+      ]
+    }
+  },
+  "_overrides": {
+    "$id": 17,
+    "$values": [
+      "_MainTex",
+      "_NormalTex",
+      "_SurfaceTex"
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "Mat_p_com_shugan01_01"
+}

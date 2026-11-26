@@ -151,8 +151,10 @@ def model_settings(unity_importer):
     keeps the engine default (omitted from the meta)."""
     unity_importer = unity_importer or {}
     animation_type = unity_importer.get("animationType", "Generic")
-    if animation_type != "Generic":
+    if animation_type not in ("Generic", "None"):
         # Only generic rigs are handled: a humanoid rig needs the engine's muscle-space avatar path.
+        # "None" (no rig — the 桃园 scene props) imports as Generic too: the engine attaches an
+        # Animator only when the model has clips, so a clip-less prop gets none.
         raise ValueError(f"unsupported Unity animationType for a character model: {animation_type!r}")
     avatar_setup = unity_importer.get("avatarSetup", "NoAvatar")
     if avatar_setup not in AVATAR_DEFINITION:
