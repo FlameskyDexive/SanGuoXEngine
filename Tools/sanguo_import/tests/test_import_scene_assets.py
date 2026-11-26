@@ -136,10 +136,19 @@ def project(tmp_path):
              "materials": [{"path": BB_MAT, "name": "p_com_zhuzi01_BillBoardMat",
                             "shader": "Unlit/BillBoard"}]},
         ],
-        "lightmaps": [{"color": "Assets/.../Lightmap-0_comp_light.exr", "dir": "d.png", "shadowMask": "s.png"}],
-        "renderSettings": {"customReflection": "Assets/.../Tex_hdr_the_sky_dusk.hdr", "sun": "Root/Directional Light"},
+        "lightmaps": [{"color": {"path": "Assets/LM/Lightmap-0_comp_light.exr", "name": "Lightmap-0_comp_light"},
+                       "dir": {"path": "Assets/LM/Lightmap-0_comp_dir.png", "name": "Lightmap-0_comp_dir"},
+                       "shadowMask": {"path": "Assets/LM/Lightmap-0_comp_shadowmask.png", "name": "Lightmap-0_comp_shadowmask"}}],
+        "renderSettings": {"customReflection": {"path": "Assets/LM/Tex_hdr_the_sky_dusk.hdr",
+                                                "name": "Tex_hdr_the_sky_dusk"},
+                           "sun": "Root/Directional Light"},
         "lodBias": 0.4,
     }
+    for relative in ("Assets/LM/Lightmap-0_comp_light.exr", "Assets/LM/Lightmap-0_comp_dir.png",
+                     "Assets/LM/Lightmap-0_comp_shadowmask.png", "Assets/LM/Tex_hdr_the_sky_dusk.hdr"):
+        source = project / relative
+        source.parent.mkdir(parents=True, exist_ok=True)
+        source.write_bytes(b"stub")
     return tmp_path, project, export, scene, {"albedo": albedo, "strip": strip}
 
 
@@ -208,12 +217,31 @@ def test_billboard_material_is_two_sided_and_alpha_clipped(project):
 
 def test_lightmaps_and_the_sky_are_recorded_for_the_builder(project):
     tmp_path, unity, export, scene, _ = project
-    _, importer = _run(tmp_path, unity, export, scene)
+    scene_root, importer = _run(tmp_path, unity, export, scene)
 
-    assert importer.manifest["lightmaps"] == [{"index": 0, "color": scene["lightmaps"][0]["color"],
-                                               "dir": "d.png", "shadowMask": "s.png"}]
-    assert importer.manifest["sky"]["customReflection"] == scene["renderSettings"]["customReflection"]
+    def meta_of(relative):
+        return json.loads((scene_root.parent / relative).with_name(
+            (scene_root.parent / relative).name + ".meta").read_text(encoding="utf-8"))
+
+    lightmaps = importer.manifest["lightmaps"]
+    assert [page["color"]["enginePath"] for page in lightmaps] == \
+        ["Scene/Lightmaps/Lightmap-0_comp_light.exr"]
+    assert (scene_root.parent / lightmaps[0]["color"]["enginePath"]).read_bytes() == b"stub"
+    color_meta = meta_of(lightmaps[0]["color"]["enginePath"])
+    assert color_meta["guid"] == lightmaps[0]["color"]["guid"]
+    assert color_meta["settings"]["textureType"] == engine_meta.TEXTURE_TYPE["Lightmap"]
+    assert color_meta["settings"]["sRGB"] is False
+    assert color_meta["settings"]["wrapMode"] == engine_meta.WRAP_MODE["Clamp"]
+    assert meta_of(lightmaps[0]["dir"]["enginePath"])["settings"]["textureType"] == \
+        engine_meta.TEXTURE_TYPE["DirectionalLightmap"]
+    assert meta_of(lightmaps[0]["shadowMask"]["enginePath"])["settings"]["textureType"] == \
+        engine_meta.TEXTURE_TYPE["Shadowmask"]
+    sky = importer.manifest["sky"]["customReflection"]
+    assert sky["enginePath"] == "Scene/Sky/Tex_hdr_the_sky_dusk.hdr"
+    assert meta_of(sky["enginePath"])["settings"]["textureType"] == engine_meta.TEXTURE_TYPE["Default"]
+    assert meta_of(sky["enginePath"])["settings"]["wrapMode"] == engine_meta.WRAP_MODE["Repeat"]
     assert importer.manifest["sky"]["lodBias"] == 0.4
+    assert importer.report["legacyFbxUpgraded"] == []      # the fixture FBX is not a legacy file
 
 
 def test_scene_material_mapping_degrades_with_notes():

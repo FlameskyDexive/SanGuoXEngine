@@ -1,0 +1,19 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Resources.Mesh, XEngine.Runtime",
+  "Name": "Quad",
+  "CompressVertexData": false,
+  "IsReadable": true,
+  "IsWritable": true,
+  "MeshData": [B;AAQEAAAAAAAAvwAAAL8AAAAAAAAAPwAAAL8AAAAAAAAAvwAAAD8AAAAAAAAAPwAAAD8AAAAABAAAAAAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAIA/AACAPwAAAAAGAAAAAAAAAAIAAAABAAAAAQAAAAIAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA],
+  "MeshType": 4,
+  "MeshIndexFormat": 0,
+  "BoundsMinX": -0.5F,
+  "BoundsMinY": -0.5F,
+  "BoundsMinZ": 0F,
+  "BoundsMaxX": 0.5F,
+  "BoundsMaxY": 0.5F,
+  "BoundsMaxZ": 0F,
+  "PreBakeConvexCollisionMesh": false,
+  "PreBakeTriangleCollisionMesh": false
+}

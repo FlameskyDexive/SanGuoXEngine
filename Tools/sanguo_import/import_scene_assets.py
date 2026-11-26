@@ -27,6 +27,7 @@ import argparse
 import json
 import os
 import shutil
+import struct
 import sys
 from pathlib import Path
 
@@ -35,10 +36,28 @@ if __package__ in (None, ""):
 
 import numpy as np
 
-from sanguo_import import engine_meta, material_mapping, texture_math
+from sanguo_import import engine_meta, material_mapping, texture_math, upgrade_legacy_fbx
 from sanguo_import.import_heroes import load_as_unity_imported, load_config, save_png
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
+
+
+def _fbx_source_version(path):
+    """The binary FBX document version, or None for ASCII files (which 6.1 exports also are)."""
+    data = path.read_bytes()[:27]
+    if data.startswith(b"Kaydara FBX Binary") and len(data) >= 27:
+        return struct.unpack("<I", data[23:27])[0]
+    return None
+
+
+def _is_legacy_fbx(path):
+    """True for pre-2011 FBX in either layout: a binary version below 7300, or an ASCII 6.1
+    document (they start with the `; FBX 6.1.0 project file` banner)."""
+    head = path.read_bytes()[:200]
+    version = _fbx_source_version(path)
+    if version is not None:
+        return version < 7300
+    return b"FBX 6.1" in head
 
 
 class SceneAssetImport:
@@ -54,7 +73,7 @@ class SceneAssetImport:
             "models": 0, "textures": 0, "texturesResizedToUnitySize": 0,
             "textureBytesSource": 0, "textureBytesPng": 0, "derivedMaps": 0,
             "materials": 0, "materialsSkippedEffects": 0, "materialNotes": [],
-            "meshesUnimplemented": [],
+            "meshesUnimplemented": [], "legacyFbxUpgraded": [],
         }
         self.textures = {}   # Unity guid -> decoded array as Unity imported it
 
@@ -73,7 +92,13 @@ class SceneAssetImport:
             relative = Path(self.manifest["root"]) / "Fbx" / _without_assets(unity_path)
             destination = self.assets_root / relative
             destination.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(source, destination)
+            if _is_legacy_fbx(source):
+                # The engine rejects pre-2011 FBX; the converter upgrades it in place so a
+                # re-run of this import never regresses an upgraded file back to 6100.
+                mesh = upgrade_legacy_fbx.upgrade(str(source), str(destination))
+                self.report["legacyFbxUpgraded"].append(f"{mesh.name} ({mesh.triangle_count} tris)")
+            else:
+                shutil.copyfile(source, destination)
             guid = engine_meta.unity_guid(model["guid"])
             engine_meta.write_meta(destination, guid, engine_meta.MODEL_IMPORTER,
                                    engine_meta.model_settings(model.get("importer")))
@@ -269,6 +294,67 @@ class SceneAssetImport:
         self.report["materialNotes"].append({"material": name, "shader": mapped["shader"], "notes": mapped["notes"]})
 
     # ------------------------------------------------------------ lightmaps + sky
+    def import_lightmaps_and_sky(self):
+        """Copies the two lightmap atlases (colour EXR + direction + shadowmask PNGs) and the
+        scene's sky panorama (the dusk HDR the RenderSettings reference) byte-for-byte, with
+        linear-import metas. The lightmap textures land in Assets/Scene/Lightmaps/, the sky in
+        Assets/Scene/Sky/; the manifest gains enginePath + guid for each."""
+        copies = []
+        for index, data in enumerate(self.scene.get("lightmaps") or []):
+            for kind in ("color", "dir", "shadowMask"):
+                reference = data.get(kind)
+                if reference:
+                    copies.append((reference["path"], f"Lightmaps/{Path(reference['path']).name}",
+                                   f"lightmap:{index}:{kind}"))
+        sky = (self.manifest.get("sky") or {}).get("customReflection")
+        if sky:
+            copies.append((sky["path"], f"Sky/{Path(sky['path']).name}", "sky:customReflection"))
+
+        settings_by_kind = {"color": "Lightmap", "dir": "DirectionalLightmap", "shadowMask": "Shadowmask"}
+        for source_relative, destination_relative, guid_key in copies:
+            source = self.source_project / source_relative
+            if not source.is_file():
+                self.report.setdefault("missingLightmapFiles", []).append(source_relative)
+                continue
+            destination = self.assets_root / self.manifest["root"] / destination_relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, destination)
+            name = destination.name.lower()
+            if guid_key.startswith("sky"):
+                texture_type = "Default"                      # the sky panorama stays a plain HDR texture
+            elif "shadowmask" in name:
+                texture_type = settings_by_kind["shadowMask"]
+            elif "_comp_dir" in name:
+                texture_type = settings_by_kind["dir"]
+            else:
+                texture_type = settings_by_kind["color"]
+            settings = {
+                "textureType": engine_meta.TEXTURE_TYPE[texture_type],
+                "maxTextureSize": 4096,
+                "generateMipmaps": False,
+                "sRGB": False,                                # every lightmap/sky texture is linear
+                "sRGBSampling": False,
+                "alphaSource": engine_meta.ALPHA_SOURCE["FromInput"] if name.endswith(".png") else engine_meta.ALPHA_SOURCE["None"],
+                "minFilter": engine_meta.MIN_FILTER[(False, "Bilinear")],
+                "magFilter": engine_meta.MAG_FILTER["Bilinear"],
+                "wrapMode": engine_meta.WRAP_MODE["Repeat"] if guid_key.startswith("sky") else engine_meta.WRAP_MODE["Clamp"],
+                "npotScale": 0,
+            }
+            guid = engine_meta.stable_guid(*guid_key.split(":"))
+            engine_meta.write_meta(destination, guid, engine_meta.TEXTURE_IMPORTER, settings)
+            manifest_list = "lightmaps" if guid_key.startswith("lightmap") else "sky"
+            key = {"color": "color", "dir": "dir", "shadowMask": "shadowMask"}.get(guid_key.rsplit(":", 1)[-1],
+                                                                                   "customReflection")
+            record = {"enginePath": self._relative(destination).as_posix(), "guid": guid}
+            if manifest_list == "lightmaps":
+                index = int(guid_key.split(":")[1])
+                while len(self.manifest["lightmaps"]) <= index:
+                    self.manifest["lightmaps"].append({})
+                self.manifest["lightmaps"][index][key] = record
+            else:
+                self.manifest["sky"]["customReflection"] = record
+            self.report["lightmapSkyFiles"] = self.report.get("lightmapSkyFiles", 0) + 1
+
     def record_lightmaps_and_sky(self):
         """Records the lightmap atlases and the sky as builder instructions. The textures
         themselves are exported by Unity in M3-3's capture step (lightmap EXR / HDR need Unity's
@@ -296,6 +382,7 @@ class SceneAssetImport:
         self.import_textures()
         self.import_materials()
         self.record_lightmaps_and_sky()
+        self.import_lightmaps_and_sky()
         return self
 
 

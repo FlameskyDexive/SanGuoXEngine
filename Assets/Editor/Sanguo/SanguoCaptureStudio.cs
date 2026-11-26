@@ -333,23 +333,34 @@ public static partial class SanguoCaptureStudio
 
     /// <inheritdoc cref="WriteFrame(StudioState, JsonElement, int, int, string)"/>
     private static void WriteFrame(StudioState studio, float[] position, float[] rotation, int width, int height, string path)
+        => WriteFrame(studio.Camera, new Float3(position[0], position[1], position[2]),
+            new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]), width, height, path);
+
+    /// <summary>Renders the open scene through <paramref name="camera"/> at the given pose to a PNG
+    /// with the same linear-readback encoding as the hero captures (the scene-builder acceptance
+    /// flow uses this).</summary>
+    public static void CaptureSceneFrame(Camera camera, Float3 position, Quaternion rotation,
+        int width, int height, string path)
+        => WriteFrame(camera, position, rotation, width, height, path);
+
+    private static void WriteFrame(Camera camera, Float3 position, Quaternion rotation, int width, int height, string path)
     {
-        studio.Camera.Transform.Position = new Float3(position[0], position[1], position[2]);
-        studio.Camera.Transform.Rotation = new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]);
+        camera.Transform.Position = position;
+        camera.Transform.Rotation = rotation;
 
         using RenderTexture target = new(width, height, true, new[] { TextureImageFormat.Color4b });
-        RenderTexture? original = studio.Camera.Target;
+        RenderTexture? original = camera.Target;
         try
         {
-            studio.Camera.Target = target;
-            studio.Camera.UpdateRenderData();
+            camera.Target = target;
+            camera.UpdateRenderData();
             // Camera.Render draws through the default pipeline. It is the public entry point: the
             // pipeline class itself and its display-encoding switch are internal to the engine.
-            studio.Camera.Render();
+            camera.Render();
         }
         finally
         {
-            studio.Camera.Target = original;
+            camera.Target = original;
         }
 
         Texture2D texture = target.MainTexture;
