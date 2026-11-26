@@ -122,6 +122,12 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     // xiaobingyuanjing FBX is the closest real Yellow Turban soldier asset in this port and keeps
     // the enemy presentation on the model path while the per-monster asset table is completed.
     private static readonly Guid EnemyViewPrefabGuid = new("e4251061-3dcd-e554-cc2f-6348e0f66f65");
+    // The battle kernel keeps the complete 234-enemy wave, but the editor Play view only needs
+    // the actors that can occupy the current encounter.  A hard presentation budget prevents
+    // every logic actor from allocating a full model hierarchy and running a presenter every
+    // frame.  The first wave groups are authored closest to the hero spawn, so they are the
+    // useful initial views while the remaining actors stay fully simulated in the kernel.
+    private const int MaxEnemyViewCount = 32;
 
     private static readonly (string Name, Guid Prefab)[] HeroPrefabs =
     [
@@ -141,6 +147,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
     private readonly List<SanguoFieldActor> _finishedCasts = new(32);
     private readonly List<SanguoHit> _hitScratch = new(32);
+    private PrefabAsset? _enemyViewPrefab;
+    private int _enemyViewCount;
 
     private SanguoBattleStage? _stage;
     private Camera? _battleCamera;
@@ -171,6 +179,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         SanguoMonsterModelTable models = Load<SanguoMonsterModelTable>(ModelsGuid);
         SanguoMonsterValueTable values = Load<SanguoMonsterValueTable>(ValuesGuid);
         SanguoLevelLayout layout = Load<SanguoLevelLayout>(LayoutGuid);
+
+        var enemyViewReference = new AssetRef<PrefabAsset>(EnemyViewPrefabGuid);
+        enemyViewReference.EnsureLoaded();
+        _enemyViewPrefab = enemyViewReference.Res;
 
         _stage = new SanguoBattleStage(layout, monsters, values);
         _stage.ActorSpawned += SpawnActorView;
@@ -258,15 +270,17 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (actor.Camp == SanguoBattleStage.PlayerCamp)
             return;                                     // hero views bind through SpawnHeroes instead
 
-        var enemyPrefab = new AssetRef<PrefabAsset>(EnemyViewPrefabGuid);
-        enemyPrefab.EnsureLoaded();
-        if (enemyPrefab.Res?.Instantiate() is GameObject enemyInstance)
+        if (_enemyViewCount >= MaxEnemyViewCount)
+            return;
+
+        if (_enemyViewPrefab?.Instantiate() is GameObject enemyInstance)
         {
             Scene.Current!.Add(enemyInstance);
             enemyInstance.Name = actor.Name;
             enemyInstance.Transform.Position = new Float3(position.X, 180f, position.Y);
             enemyInstance.Transform.LocalScale = new Float3(1.1f, 1.1f, 1.1f);
             BindPresenter(actor, enemyInstance);
+            _enemyViewCount++;
             return;
         }
 
