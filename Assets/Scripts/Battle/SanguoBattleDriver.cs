@@ -200,6 +200,16 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _leader = heroes.Count > 0 ? heroes[0] : null;
         _leaderIndex = 0;
 
+        // TaoYuanBattle contains the authoring camera used by the scene capture workflow. Keep
+        // that camera available in edit mode, but do not render it alongside the battle camera
+        // during Play or every frame pays for a second full scene pipeline.
+        foreach (GameObject sceneObject in Scene.Current!.AllObjects)
+        {
+            if (sceneObject.Name == "Scene Camera"
+                && sceneObject.GetComponent<Camera>() is Camera authoringCamera)
+                authoringCamera.Enabled = false;
+        }
+
         // a battle camera above the spawn marker. FollowCamera supplies the exact aim vector and
         // keeps the display upright for the engine's +Z battle-forward convention.
         GameObject cameraGo = new("Battle Camera");

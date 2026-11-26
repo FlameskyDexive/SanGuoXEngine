@@ -12,14 +12,14 @@
 
 ![D3D12 battle](battle-d3d12-shadow-budget.png)
 
-- `drawCalls=1420`
-- `instancedDrawCalls=37`
-- `triangles=1,630,328`
-- `shadowDrawCalls=2,788`
-- `shadowTriangles=1,039,150`
-- `frameTimeMs=256.47`
-- `gpuFrameTimeMs=217.01`
-- `cpuFrameTimeP95Ms=256.47`
+- `drawCalls=36`
+- `instancedDrawCalls=1`
+- `triangles=100,892`
+- `shadowDrawCalls=0`
+- `shadowTriangles=0`
+- `frameTimeMs=51.63`
+- `gpuFrameTimeMs=35.49`
+- `cpuFrameTimeP95Ms=62.11`
 - `backendName=Direct3D 12`
 
 ## Vulkan 回归
@@ -34,4 +34,4 @@
 
 ## Gate 结果
 
-动态阴影预算已生效，但 D3D12 和 Vulkan 都仍未达到 60 FPS、p95 ≤ 16.6 ms。B7 保持进行中，后续需要继续处理场景几何提交、编辑器后端同步和资产 LOD，不能宣称编辑器终验通过。
+战斗 Play 现在只保留 Battle Camera，原始 Scene Camera 仍可在编辑模式使用。重复的整场景渲染已移除，这是目前测得的最大编辑器 Play 性能改善。D3D12 约 19 FPS、p95 62.11 ms，距离 60 FPS gate 仍有差距，B7 继续进行中。
