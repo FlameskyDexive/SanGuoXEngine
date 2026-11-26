@@ -255,6 +255,9 @@ public static class SanguoSceneBuilder
         Camera camera = go.AddComponent<Camera>();
         camera.FieldOfView = frame.GetProperty("fov").GetSingle();
         camera.ClearFlags = CameraClearFlags.Skybox;
+        // The engine default far plane is 100 m; the Unity capture used 4000 m and the scene
+        // spans ~500 m, so without this every mid/panorama view far-clips its subject.
+        camera.FarClipPlane = 4000f;
         // jws2 keeps its collision proxies (65 Unity-Cube meshes) on layer 31, which the game
         // camera's culling mask excludes; without the exclusion they render as solid cubes.
         LayerMask culling = camera.CullingMask;

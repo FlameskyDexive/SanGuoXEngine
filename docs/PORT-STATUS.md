@@ -12,7 +12,7 @@
 | M0 脚手架与导出探针 | 完成 | 工程已建（引擎 1.1.0-a19）；harness、manifest、`.gitignore`、`AGENTS.md`、计划、`NoLuaGuardTests`（4/4，含反向验证）；AIBridge 探针 5/5 通过（闸门通过）；实时编辑器可打开工程 | `evidence/m0/probe.md` |
 | M1 角色模型与 PBR 材质 | 完成 | 5 个 FBX、78 张贴图（+31 张派生图）、26 个材质、5 个 prefab 已导入（头发材质在 M2 改为双面，截图已重拍）；模型节点与 Unity 一一对应（位置差 ≤ 4.5 mm）；蒙皮经数据与渲染剪影双重核对（GPU 剪影重合 0.997–1.000）；Python 测试 70 个、C# 测试 8 个通过。Unity 参考图在 FourBones 质量等级下抓取 | `evidence/m1/heroes.md` |
 | M2 动画 | 完成 | 124 条战斗剪辑（5 个控制器）已导入；按实测的 Unity 播放规则转换曲线（密曲线逐帧、根运动按帧）；根运动走引擎的模型根轨迹；`SanguoAnimator`（点名播放、加法受击层、变速）已验证。引擎里播放出的姿态对 Unity 采样：旋转最大差 0.396°、位置 2.08 mm、根运动 18.5 mm；Python 测试 90 个、C# 测试 22 个通过 | `evidence/m2/animation.md` |
-| M3 桃园场景 | 进行中 | 场景导出与资产导入完成（220 FBX / 177 贴图 / 115 材质，1811 资产）；4 个旧版 FBX 6100（`t_shanshi04_01` 等，引擎拒绝 pre-2011 格式）由 `Tools/sanguo_import/upgrade_legacy_fbx.py` 原地升为二进制 7400 并全部导入（0 失败，Python 测试 104 个）；引擎节点 LODGroup 已落地（`fa2cf7d08`）；场景构建（.scene 生成）进行中 | |
+| M3 桃园场景 | 完成 | 场景 `Assets/Scenes/TaoYuan.scene` 已生成并验收：4047 对象 / 1378 LODGroup（精确）/ 2 页光照贴图 / 全景黄昏天空 / 1 盏方向光；三机位并排对照（D3D12）+ runtime_stats（13720 drawCalls / 11.7M 三角 / lod-hidden 4664）见 `evidence/m3/scene.md`。已知差异：远景白化（无 ACES/LUT 后期，M8 打磨）、粒子 M5、Effects 材质 42 个 M5、SpeedTree ×16 与 dir/shadowmask 消费在引擎缺口清单 | `evidence/m3/scene.md` |
 | M4 战斗内核 | 未开始 | C# 重写：连段、技能时间轴、判定、HUD、顿帧 | |
 | M5 特效 | 未开始 | PsEffect → 粒子 prefab（场景内 125 个粒子系统 + 技能特效），着色器映射，`SanguoEffect` | |
 | M6 音频 | 未开始 | `Tools/wwise2ogg` + `SanguoAudio` | |
