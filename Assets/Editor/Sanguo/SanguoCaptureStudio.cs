@@ -356,7 +356,10 @@ public static partial class SanguoCaptureStudio
             camera.UpdateRenderData();
             // Camera.Render draws through the default pipeline. It is the public entry point: the
             // pipeline class itself and its display-encoding switch are internal to the engine.
-            camera.Render();
+            // Frame several times: temporally accumulated effects (and any first-frame warm-up)
+            // converge on the new pose instead of ghosting the previous one.
+            for (int frame = 0; frame < 8; frame++)
+                camera.Render();
         }
         finally
         {
