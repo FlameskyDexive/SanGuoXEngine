@@ -25,11 +25,11 @@
 |---|---|---|
 | B0 编辑器性能基线 | 完成 | `evidence/replan/b0-baseline/`，D3D12 战斗基线 3097 draw / 0 instanced draw |
 | B1 静态场景自动实例批处理 | 完成 | `evidence/replan/b1-static-batching/`，2818 draw / 56 instanced draw / 1515 static instances |
-| B2 GPU Instancing 和动态合批 | 未开始 | |
-| B3 桃园场景接入 | 未开始 | |
+| B2 GPU Instancing 和动态合批 | 完成 | `evidence/replan/b2-gpu-instancing/`，2079 draw / 73 instanced draw / 3914 dynamic instances |
+| B3 桃园场景接入 | 进行中 | 场景保留完整桃园资产，静态/动态批次已接入；SpeedTree、粒子和效果材质仍待处理 |
 | B4 角色和敌人接入 | 未开始 | |
 | B5 战斗逻辑优化 | 未开始 | |
-| B6 视觉和特效 | 未开始 | |
+| B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，Volume/HDR/ACES/Bloom 与战斗相机已接入，敌人材质和特效仍待处理 |
 | B7 编辑器 Play 终验 | 未开始 | |
 
 ## 引擎缺口（在引擎 `main` 上单独成节点）

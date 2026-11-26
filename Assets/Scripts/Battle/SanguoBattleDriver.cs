@@ -192,14 +192,16 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _leader = heroes.Count > 0 ? heroes[0] : null;
         _leaderIndex = 0;
 
-        // a battle camera above the spawn marker, looking at the plaza
+        // a battle camera above the spawn marker. FollowCamera supplies the exact aim vector and
+        // keeps the display upright for the engine's +Z battle-forward convention.
         GameObject cameraGo = new("Battle Camera");
         Scene.Current!.Add(cameraGo);
         cameraGo.Transform.Position = new Float3(100f, 204f, 642f);
-        cameraGo.Transform.LocalEulerAngles = new Float3(26f, 180f, 0f);
+        cameraGo.Transform.LocalEulerAngles = new Float3(26f, 0f, 0f);
         _battleCamera = cameraGo.AddComponent<Camera>();
         _battleCamera.FieldOfView = 50f;
         _battleCamera.ClearFlags = CameraClearFlags.Skybox;
+        _battleCamera.HDR = true;
         _battleCamera.FarClipPlane = 4000f;
 
         // spawn every wave now: the stage queues them and the AI engages as they walk in
@@ -547,6 +549,16 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         Float3 position = _battleCamera.Transform.Position;
         float blend = Math.Clamp(deltaTime * 6f, 0f, 1f);
         _battleCamera.Transform.Position = position + (target - position) * blend;
+        Float3 aimTarget = new(_leader.Position.X, 180f, _leader.Position.Y);
+        Float3 aim = aimTarget - _battleCamera.Transform.Position;
+        if (Float3.LengthSquared(aim) > 1e-4f)
+        {
+            _battleCamera.Transform.Forward = Float3.Normalize(aim);
+            // The imported battle camera convention has a 180-degree screen roll. Apply it
+            // after LookRotation so heroes and the ground remain upright in GameView.
+            _battleCamera.Transform.Rotation =
+                Quaternion.AxisAngle(_battleCamera.Transform.Forward, MathF.PI) * _battleCamera.Transform.Rotation;
+        }
     }
 
     private void OnHeroHit(SanguoFieldActor hero, int damage)

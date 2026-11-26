@@ -1,0 +1,34 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.Rendering.VolumeProfile, XEngine.Runtime",
+  "Components": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "$type": "XEngine.Runtime.Rendering.TonemapVolumeComponent, XEngine.Runtime",
+        "OverrideType": true,
+        "Type": 1,
+        "OverrideContrast": true,
+        "Contrast": 1F,
+        "OverrideSaturation": true,
+        "Saturation": 1F,
+        "Active": true
+      },
+      {
+        "$id": 4,
+        "$type": "XEngine.Runtime.Rendering.BloomVolumeComponent, XEngine.Runtime",
+        "OverrideIntensity": true,
+        "Intensity": 0.12F,
+        "OverrideThreshold": true,
+        "Threshold": 1.2F,
+        "OverrideIterations": true,
+        "Iterations": 3,
+        "Active": true
+      }
+    ]
+  },
+  "AssetPath": "Settings/SanguoBattleVolumeProfile.volumeprofile",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "Sanguo Battle Volume Profile"
+}

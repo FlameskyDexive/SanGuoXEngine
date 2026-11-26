@@ -9,6 +9,7 @@ using XEngine.Echo;
 using XEngine.Editor;
 using XEngine.Editor.Projects;
 using XEngine.Runtime;
+using XEngine.Runtime.Rendering;
 using XEngine.Runtime.Resources;
 using XEngine.Vector;
 
@@ -33,6 +34,7 @@ public static class SanguoSceneBuilder
     public const string OutputSceneRelativePath = "Scenes/TaoYuan.scene";
     public const string SkyShaderRelativePath = "Environment/SkyPanorama.shader";
     public const string SkyMaterialRelativePath = "Environment/SkyDusk.mat";
+    private static readonly Guid BattleVolumeProfileGuid = new("1b0f55a2-34b6-4e3c-9a74-934b238314c1");
 
     private const string BuiltinQuad = "Environment/Builtin/Quad.mesh";
     private const string BuiltinCube = "Environment/Builtin/Cube.mesh";
@@ -162,6 +164,13 @@ public static class SanguoSceneBuilder
             CreateLight(lights[i], nodeByPath);
 
         // The scene camera sits at the close reference frame; M3-4's capture drives it per frame.
+        GameObject volumeObject = new("Sanguo Post FX");
+        nativeScene.Add(volumeObject);
+        Volume volume = volumeObject.AddComponent<Volume>();
+        volume.IsGlobal = true;
+        volume.Priority = 100;
+        volume.Profile = new AssetRef<VolumeProfile>(BattleVolumeProfileGuid);
+
         JsonElement close = scene.GetProperty("frames").GetProperty("close");
         CreateCamera(close, nativeScene);
 
@@ -300,6 +309,7 @@ public static class SanguoSceneBuilder
         Camera camera = go.AddComponent<Camera>();
         camera.FieldOfView = frame.GetProperty("fov").GetSingle();
         camera.ClearFlags = CameraClearFlags.Skybox;
+        camera.HDR = true;
         // The engine default far plane is 100 m; the Unity capture used 4000 m and the scene
         // spans ~500 m, so without this every mid/panorama view far-clips its subject.
         camera.FarClipPlane = 4000f;
