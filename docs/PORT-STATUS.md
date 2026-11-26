@@ -19,6 +19,19 @@
 | M7 吕布 / 小兵 / 胜负 | 未开始 | Boss 状态机、小兵波次、结算 | |
 | M8 打磨 / 性能 / 出包 | 未开始 | 自写着色器、性能预算、出包验收、gitlink | |
 
+## 重构计划进度
+
+| 节点 | 状态 | 证据 |
+|---|---|---|
+| B0 编辑器性能基线 | 完成 | `evidence/replan/b0-baseline/`，D3D12 战斗基线 3097 draw / 0 instanced draw |
+| B1 静态场景自动实例批处理 | 完成 | `evidence/replan/b1-static-batching/`，2818 draw / 56 instanced draw / 1515 static instances |
+| B2 GPU Instancing 和动态合批 | 未开始 | |
+| B3 桃园场景接入 | 未开始 | |
+| B4 角色和敌人接入 | 未开始 | |
+| B5 战斗逻辑优化 | 未开始 | |
+| B6 视觉和特效 | 未开始 | |
+| B7 编辑器 Play 终验 | 未开始 | |
+
 ## 引擎缺口（在引擎 `main` 上单独成节点）
 
 | 缺口 | 触发里程碑 | 状态 |
