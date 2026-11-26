@@ -13,9 +13,9 @@
 
 ![B5 battle GameView](battle-gameview-d3d12.png)
 
-- `frameTimeMs=323.96`
-- `cpuFrameTimeP95Ms=376.71`
-- `gpuFrameTimeMs=370.26`
+- `frameTimeMs=372.17`
+- `cpuFrameTimeP95Ms=370.13`
+- `gpuFrameTimeMs=359.15`
 - `drawCalls=1424`
 - `instancedDrawCalls=40`
 - `triangles=3,931,788`
