@@ -1,0 +1,138 @@
+{
+  "$id": 1,
+  "$type": "SanGuoXEngine.Data.SanguoMonsterModelTable, SanGuoXEngine.Game",
+  "Models": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "ID": 10003,
+        "Path": "Assets/Prefab/Actor/Gizmo/Gizmo_Empty/Gizmo_Empty.prefab",
+        "ShoveDiameterX": 0F,
+        "ShoveDiameterZ": 0F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 4,
+        "ID": 22056,
+        "Path": "Assets/Actor/Monster/Monster_YellowArmy/Monster_YellowArmy_Yellow.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1.1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 5,
+        "ID": 20467,
+        "Path": "Assets/Actor/Monster/Monster_EliteMageArmy/Monster_EliteMageArmy_Yellow.prefab",
+        "ShoveDiameterX": 1F,
+        "ShoveDiameterZ": 1F,
+        "ModelScale": 1.1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 6,
+        "ID": 22035,
+        "Path": "Assets/Actor/Monster/Monster_YellowArmy/Monster_YellowArmy_Yellow.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1.1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 7,
+        "ID": 22082,
+        "Path": "Assets/Actor/Monster/Monster_YellowArmy/Monster_YellowArmy_Lightred.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1.1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 8,
+        "ID": 22502,
+        "Path": "Assets/Actor/Monster/Monster_HorseShoulder/Monster_HorseShoulder.prefab",
+        "ShoveDiameterX": 3F,
+        "ShoveDiameterZ": 3F,
+        "ModelScale": 1.2F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 9,
+        "ID": 22079,
+        "Path": "Assets/Actor/Monster/Monster_YellowArmy/Monster_YellowArmy_Brown.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 10,
+        "ID": 10109,
+        "Path": "Assets/Actor/Hero/Hero_ZhangJiao/Hero_ZhangJiao.prefab",
+        "ShoveDiameterX": 3F,
+        "ShoveDiameterZ": 3F,
+        "ModelScale": 1.6F,
+        "DmgNumHeight": 3.8F
+      },
+      {
+        "$id": 11,
+        "ID": 4004,
+        "Path": "Assets/Actor/Hero/Hero_LiuBei/Hero_LiuBei.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 12,
+        "ID": 4008,
+        "Path": "Assets/Actor/Hero/Hero_ZhangFei/Hero_ZhangFei.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 13,
+        "ID": 10003,
+        "Path": "Assets/Prefab/Actor/Gizmo/Gizmo_Empty/Gizmo_Empty.prefab",
+        "ShoveDiameterX": 0F,
+        "ShoveDiameterZ": 0F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 2.5F
+      },
+      {
+        "$id": 14,
+        "ID": 50019,
+        "Path": "Assets/Actor/Monster/Monster_BrokenMuTong/Monster_BrokenMuTong.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 3F
+      },
+      {
+        "$id": 15,
+        "ID": 50020,
+        "Path": "Assets/Actor/Monster/Monster_BrokenMuTong3/Monster_BrokenMuTong3.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 3F
+      },
+      {
+        "$id": 16,
+        "ID": 50023,
+        "Path": "Assets/Actor/Monster/Monster_BrokenMuXiang3/Monster_BrokenMuXiang3.prefab",
+        "ShoveDiameterX": 2F,
+        "ShoveDiameterZ": 2F,
+        "ModelScale": 1F,
+        "DmgNumHeight": 3F
+      }
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "SanguoMonsterModels"
+}

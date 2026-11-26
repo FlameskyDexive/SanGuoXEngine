@@ -1,0 +1,3712 @@
+{
+  "$id": 1,
+  "$type": "SanGuoXEngine.Data.SanguoLevelLayout, SanGuoXEngine.Game",
+  "LevelID": 1011,
+  "Items": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "LevelItemID": 1001,
+        "LevelItemType": 1,
+        "PosX": 111.459F,
+        "PosZ": 777.805F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 4,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 5,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 6,
+        "LevelItemID": 2001,
+        "LevelItemType": 2,
+        "PosX": 111.46F,
+        "PosZ": 704.91F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 7,
+          "$values": [
+            101101
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 8,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 9,
+        "LevelItemID": 2010,
+        "LevelItemType": 2,
+        "PosX": 111.26F,
+        "PosZ": 702.06F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 8,
+        "Row": 4,
+        "Col": 2,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 10,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 11,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 12,
+        "LevelItemID": 2011,
+        "LevelItemType": 2,
+        "PosX": 114.05F,
+        "PosZ": 705.41F,
+        "DirX": -0.168F,
+        "DirZ": 0.986F,
+        "Count": 5,
+        "Row": 5,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 13,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 14,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 15,
+        "LevelItemID": 2012,
+        "LevelItemType": 2,
+        "PosX": 116.05F,
+        "PosZ": 705.23F,
+        "DirX": -0.316F,
+        "DirZ": 0.949F,
+        "Count": 4,
+        "Row": 4,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 16,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 17,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 18,
+        "LevelItemID": 2013,
+        "LevelItemType": 2,
+        "PosX": 118.495F,
+        "PosZ": 704.185F,
+        "DirX": -0.325F,
+        "DirZ": 0.946F,
+        "Count": 3,
+        "Row": 3,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 19,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 20,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 21,
+        "LevelItemID": 2014,
+        "LevelItemType": 2,
+        "PosX": 116.99F,
+        "PosZ": 698.69F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 12,
+        "Row": 3,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 22,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 23,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 24,
+        "LevelItemID": 2015,
+        "LevelItemType": 2,
+        "PosX": 111.56F,
+        "PosZ": 711.729F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 25,
+          "$values": [
+            101130
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 26,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 27,
+        "LevelItemID": 2016,
+        "LevelItemType": 2,
+        "PosX": 100.77F,
+        "PosZ": 702.68F,
+        "DirX": 0.41F,
+        "DirZ": 0.912F,
+        "Count": 8,
+        "Row": 4,
+        "Col": 2,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 28,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 29,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 30,
+        "LevelItemID": 2020,
+        "LevelItemType": 2,
+        "PosX": 122.2F,
+        "PosZ": 702.61F,
+        "DirX": -0.293F,
+        "DirZ": 0.956F,
+        "Count": 8,
+        "Row": 4,
+        "Col": 2,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 31,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 32,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 33,
+        "LevelItemID": 2021,
+        "LevelItemType": 2,
+        "PosX": 109.02F,
+        "PosZ": 705.58F,
+        "DirX": 0.286F,
+        "DirZ": 0.958F,
+        "Count": 5,
+        "Row": 5,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 34,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 35,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 36,
+        "LevelItemID": 2022,
+        "LevelItemType": 2,
+        "PosX": 106.85F,
+        "PosZ": 705.13F,
+        "DirX": 0.392F,
+        "DirZ": 0.92F,
+        "Count": 4,
+        "Row": 4,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 37,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 38,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 39,
+        "LevelItemID": 2023,
+        "LevelItemType": 2,
+        "PosX": 104.71F,
+        "PosZ": 704.22F,
+        "DirX": 0.425F,
+        "DirZ": 0.905F,
+        "Count": 3,
+        "Row": 3,
+        "Col": 1,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 40,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 41,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 42,
+        "LevelItemID": 2030,
+        "LevelItemType": 2,
+        "PosX": 105.23F,
+        "PosZ": 698.55F,
+        "DirX": 0.047F,
+        "DirZ": 0.999F,
+        "Count": 12,
+        "Row": 3,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 2001,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 43,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 44,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 45,
+        "LevelItemID": 2050,
+        "LevelItemType": 2,
+        "PosX": 114.08F,
+        "PosZ": 627.77F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 46,
+          "$values": [
+            101101
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 47,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 48,
+        "LevelItemID": 2051,
+        "LevelItemType": 2,
+        "PosX": 127.44F,
+        "PosZ": 628.95F,
+        "DirX": -0.666F,
+        "DirZ": 0.746F,
+        "Count": 20,
+        "Row": 4,
+        "Col": 5,
+        "Gap": 1.5F,
+        "LeaderID": 2050,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 49,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 50,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 51,
+        "LevelItemID": 2052,
+        "LevelItemType": 2,
+        "PosX": 123.42F,
+        "PosZ": 632.16F,
+        "DirX": -0.682F,
+        "DirZ": 0.731F,
+        "Count": 15,
+        "Row": 3,
+        "Col": 5,
+        "Gap": 1.5F,
+        "LeaderID": 2050,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 52,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 53,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 54,
+        "LevelItemID": 2053,
+        "LevelItemType": 2,
+        "PosX": 107.88F,
+        "PosZ": 631.23F,
+        "DirX": 0.578F,
+        "DirZ": 0.816F,
+        "Count": 15,
+        "Row": 3,
+        "Col": 5,
+        "Gap": 1.5F,
+        "LeaderID": 2050,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 55,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 56,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 57,
+        "LevelItemID": 2054,
+        "LevelItemType": 2,
+        "PosX": 104.45F,
+        "PosZ": 625.48F,
+        "DirX": 0.56F,
+        "DirZ": 0.828F,
+        "Count": 15,
+        "Row": 5,
+        "Col": 3,
+        "Gap": 1.5F,
+        "LeaderID": 2050,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 58,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 59,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 60,
+        "LevelItemID": 2058,
+        "LevelItemType": 2,
+        "PosX": 115.35F,
+        "PosZ": 629.89F,
+        "DirX": -0.073F,
+        "DirZ": 0.997F,
+        "Count": 5,
+        "Row": 1,
+        "Col": 5,
+        "Gap": 2F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 61,
+          "$values": [
+            101104
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 62,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 63,
+        "LevelItemID": 2059,
+        "LevelItemType": 2,
+        "PosX": 115.67F,
+        "PosZ": 631.99F,
+        "DirX": -0.082F,
+        "DirZ": 0.997F,
+        "Count": 4,
+        "Row": 1,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 64,
+          "$values": [
+            101104
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 65,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 66,
+        "LevelItemID": 2070,
+        "LevelItemType": 2,
+        "PosX": 15.48F,
+        "PosZ": 545.91F,
+        "DirX": 0.615F,
+        "DirZ": 0.788F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 67,
+          "$values": [
+            101101
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 68,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 69,
+        "LevelItemID": 2071,
+        "LevelItemType": 2,
+        "PosX": 34.77F,
+        "PosZ": 544.29F,
+        "DirX": 0.087F,
+        "DirZ": 0.996F,
+        "Count": 18,
+        "Row": 3,
+        "Col": 6,
+        "Gap": 2F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 70,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 71,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 72,
+        "LevelItemID": 2072,
+        "LevelItemType": 2,
+        "PosX": 18.48F,
+        "PosZ": 556.22F,
+        "DirX": 0.937F,
+        "DirZ": 0.349F,
+        "Count": 12,
+        "Row": 2,
+        "Col": 6,
+        "Gap": 2F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 73,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 74,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 75,
+        "LevelItemID": 2073,
+        "LevelItemType": 2,
+        "PosX": 9.71F,
+        "PosZ": 546.1F,
+        "DirX": 0.873F,
+        "DirZ": 0.488F,
+        "Count": 8,
+        "Row": 2,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 76,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 77,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 78,
+        "LevelItemID": 2074,
+        "LevelItemType": 2,
+        "PosX": 23.35F,
+        "PosZ": 549F,
+        "DirX": 0.661F,
+        "DirZ": 0.751F,
+        "Count": 8,
+        "Row": 1,
+        "Col": 8,
+        "Gap": 1.5F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 79,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 80,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 81,
+        "LevelItemID": 2077,
+        "LevelItemType": 2,
+        "PosX": 16.79F,
+        "PosZ": 542F,
+        "DirX": 0.652F,
+        "DirZ": 0.758F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 82,
+          "$values": [
+            101115
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 83,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 84,
+        "LevelItemID": 2079,
+        "LevelItemType": 2,
+        "PosX": 13.21F,
+        "PosZ": 537.6F,
+        "DirX": 0.556F,
+        "DirZ": 0.831F,
+        "Count": 4,
+        "Row": 1,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 85,
+          "$values": [
+            101113
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 86,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 87,
+        "LevelItemID": 2080,
+        "LevelItemType": 2,
+        "PosX": 15.11F,
+        "PosZ": 534.96F,
+        "DirX": 0.583F,
+        "DirZ": 0.812F,
+        "Count": 2,
+        "Row": 1,
+        "Col": 2,
+        "Gap": 2F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 88,
+          "$values": [
+            101113
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 89,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 90,
+        "LevelItemID": 2081,
+        "LevelItemType": 2,
+        "PosX": 22.56F,
+        "PosZ": 538.54F,
+        "DirX": 0.303F,
+        "DirZ": 0.953F,
+        "Count": 12,
+        "Row": 3,
+        "Col": 4,
+        "Gap": 2F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 91,
+          "$values": [
+            101103
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 92,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 93,
+        "LevelItemID": 2082,
+        "LevelItemType": 2,
+        "PosX": 24.1F,
+        "PosZ": 549.86F,
+        "DirX": 0.661F,
+        "DirZ": 0.751F,
+        "Count": 7,
+        "Row": 1,
+        "Col": 7,
+        "Gap": 1.5F,
+        "LeaderID": 2070,
+        "RefreshCount": -1,
+        "MonsterIDs": {
+          "$id": 94,
+          "$values": [
+            101111
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 95,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 96,
+        "LevelItemID": 2085,
+        "LevelItemType": 2,
+        "PosX": -61.1F,
+        "PosZ": 485.85F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 97,
+          "$values": [
+            101122
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 98,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 99,
+        "LevelItemID": 2150,
+        "LevelItemType": 2,
+        "PosX": 37.09F,
+        "PosZ": 551.15F,
+        "DirX": -0.643F,
+        "DirZ": -0.766F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 100,
+          "$values": [
+            101172
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 101,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 102,
+        "LevelItemID": 2151,
+        "LevelItemType": 2,
+        "PosX": 25.51F,
+        "PosZ": 560.84F,
+        "DirX": -0.643F,
+        "DirZ": -0.766F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 103,
+          "$values": [
+            101171
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 104,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 105,
+        "LevelItemID": 2201,
+        "LevelItemType": 2,
+        "PosX": 114.89F,
+        "PosZ": 702.78F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 106,
+          "$values": [
+            101165
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 107,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 108,
+        "LevelItemID": 2202,
+        "LevelItemType": 2,
+        "PosX": 113.25F,
+        "PosZ": 624.89F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 109,
+          "$values": [
+            101165
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 110,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 111,
+        "LevelItemID": 2203,
+        "LevelItemType": 2,
+        "PosX": 20.25F,
+        "PosZ": 548.66F,
+        "DirX": 0.7F,
+        "DirZ": 0.714F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 112,
+          "$values": [
+            101165
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 113,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 114,
+        "LevelItemID": 2204,
+        "LevelItemType": 2,
+        "PosX": 100.6F,
+        "PosZ": 696.75F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 115,
+          "$values": [
+            101160
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 116,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 117,
+        "LevelItemID": 2205,
+        "LevelItemType": 2,
+        "PosX": 102.36F,
+        "PosZ": 681.78F,
+        "DirX": -0.502F,
+        "DirZ": 0.865F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 118,
+          "$values": [
+            101161
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 119,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 120,
+        "LevelItemID": 2206,
+        "LevelItemType": 2,
+        "PosX": 101.86F,
+        "PosZ": 694.98F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 121,
+          "$values": [
+            101163
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 122,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 123,
+        "LevelItemID": 2208,
+        "LevelItemType": 2,
+        "PosX": 8.26F,
+        "PosZ": 556.32F,
+        "DirX": 0.302F,
+        "DirZ": -0.953F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 124,
+          "$values": [
+            101163
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 125,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 126,
+        "LevelItemID": 2209,
+        "LevelItemType": 2,
+        "PosX": 4.51F,
+        "PosZ": 553.6F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 127,
+          "$values": [
+            101160
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 128,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 129,
+        "LevelItemID": 2210,
+        "LevelItemType": 2,
+        "PosX": 9.63F,
+        "PosZ": 554.34F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 1,
+        "MonsterIDs": {
+          "$id": 130,
+          "$values": [
+            101161
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 131,
+          "$values": [
+            100
+          ]
+        }
+      },
+      {
+        "$id": 132,
+        "LevelItemID": 3001,
+        "LevelItemType": 3,
+        "PosX": 111.36F,
+        "PosZ": 758.84F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 133,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 134,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 135,
+        "LevelItemID": 3002,
+        "LevelItemType": 3,
+        "PosX": 114.19F,
+        "PosZ": 650.33F,
+        "DirX": 0.019F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 136,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 137,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 138,
+        "LevelItemID": 3003,
+        "LevelItemType": 3,
+        "PosX": 100.06F,
+        "PosZ": 621.17F,
+        "DirX": 0.766F,
+        "DirZ": 0.643F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 139,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 140,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 141,
+        "LevelItemID": 4001,
+        "LevelItemType": 4,
+        "PosX": 118.134F,
+        "PosZ": 728.971F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 142,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 143,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 144,
+        "LevelItemID": 4002,
+        "LevelItemType": 4,
+        "PosX": 120.644F,
+        "PosZ": 723.673F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 145,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 146,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 147,
+        "LevelItemID": 4003,
+        "LevelItemType": 4,
+        "PosX": 106.207F,
+        "PosZ": 737.152F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 148,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 149,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 150,
+        "LevelItemID": 4004,
+        "LevelItemType": 4,
+        "PosX": 105.952F,
+        "PosZ": 753.359F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 151,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 152,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 153,
+        "LevelItemID": 4005,
+        "LevelItemType": 4,
+        "PosX": 113.337F,
+        "PosZ": 653.307F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 154,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 155,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 156,
+        "LevelItemID": 5001,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 157,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 158,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 159,
+        "LevelItemID": 5002,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 160,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 161,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 162,
+        "LevelItemID": 5003,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 163,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 164,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 165,
+        "LevelItemID": 5004,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 166,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 167,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 168,
+        "LevelItemID": 5005,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 169,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 170,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 171,
+        "LevelItemID": 5006,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 172,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 173,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 174,
+        "LevelItemID": 5007,
+        "LevelItemType": 5,
+        "PosX": 0F,
+        "PosZ": 0F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 175,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 176,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 177,
+        "LevelItemID": 6001,
+        "LevelItemType": 6,
+        "PosX": 111.508F,
+        "PosZ": 723.34F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 178,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 179,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 180,
+        "LevelItemID": 6002,
+        "LevelItemType": 6,
+        "PosX": 113.61F,
+        "PosZ": 657.88F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 181,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 182,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 183,
+        "LevelItemID": 6003,
+        "LevelItemType": 6,
+        "PosX": 28.88F,
+        "PosZ": 554.01F,
+        "DirX": -0.716F,
+        "DirZ": -0.698F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 184,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 185,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 186,
+        "LevelItemID": 6004,
+        "LevelItemType": 6,
+        "PosX": -73.53F,
+        "PosZ": 503.87F,
+        "DirX": 0.551F,
+        "DirZ": -0.834F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 187,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 188,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 189,
+        "LevelItemID": 6005,
+        "LevelItemType": 6,
+        "PosX": 114.701F,
+        "PosZ": 649.13F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 190,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 191,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 192,
+        "LevelItemID": 6010,
+        "LevelItemType": 6,
+        "PosX": -61.12F,
+        "PosZ": 484.61F,
+        "DirX": -0.822F,
+        "DirZ": 0.57F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 193,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 194,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 195,
+        "LevelItemID": 6011,
+        "LevelItemType": 6,
+        "PosX": -69.45F,
+        "PosZ": 490.47F,
+        "DirX": 0.82F,
+        "DirZ": -0.572F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 196,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 197,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 198,
+        "LevelItemID": 6500,
+        "LevelItemType": 6,
+        "PosX": -63.34F,
+        "PosZ": 488.04F,
+        "DirX": -0.729F,
+        "DirZ": 0.685F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 199,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 200,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 201,
+        "LevelItemID": 7001,
+        "LevelItemType": 7,
+        "PosX": 114.46F,
+        "PosZ": 765.71F,
+        "DirX": -0.342F,
+        "DirZ": 0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 202,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 203,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 204,
+        "LevelItemID": 7002,
+        "LevelItemType": 7,
+        "PosX": 107.65F,
+        "PosZ": 764.75F,
+        "DirX": 0.342F,
+        "DirZ": -0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 205,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 206,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 207,
+        "LevelItemID": 7003,
+        "LevelItemType": 7,
+        "PosX": 114.99F,
+        "PosZ": 761.98F,
+        "DirX": 0.866F,
+        "DirZ": 0.5F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 208,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 209,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 210,
+        "LevelItemID": 7004,
+        "LevelItemType": 7,
+        "PosX": 107.88F,
+        "PosZ": 758.24F,
+        "DirX": -0.174F,
+        "DirZ": -0.985F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 211,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 212,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 213,
+        "LevelItemID": 7005,
+        "LevelItemType": 7,
+        "PosX": 109.15F,
+        "PosZ": 764.52F,
+        "DirX": -0.866F,
+        "DirZ": -0.5F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 214,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 215,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 216,
+        "LevelItemID": 7006,
+        "LevelItemType": 7,
+        "PosX": 115.07F,
+        "PosZ": 758.62F,
+        "DirX": -0.342F,
+        "DirZ": 0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 217,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 218,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 219,
+        "LevelItemID": 7007,
+        "LevelItemType": 7,
+        "PosX": 130.46F,
+        "PosZ": 721.13F,
+        "DirX": -0.774F,
+        "DirZ": 0.633F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 220,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 221,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 222,
+        "LevelItemID": 7008,
+        "LevelItemType": 7,
+        "PosX": 129.28F,
+        "PosZ": 711.6F,
+        "DirX": -0.999F,
+        "DirZ": 0.054F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 223,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 224,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 225,
+        "LevelItemID": 7009,
+        "LevelItemType": 7,
+        "PosX": 131.4F,
+        "PosZ": 714.35F,
+        "DirX": -0.999F,
+        "DirZ": -0.035F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 226,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 227,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 228,
+        "LevelItemID": 7010,
+        "LevelItemType": 7,
+        "PosX": 129.18F,
+        "PosZ": 714.68F,
+        "DirX": -0.78F,
+        "DirZ": 0.626F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 229,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 230,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 231,
+        "LevelItemID": 7011,
+        "LevelItemType": 7,
+        "PosX": 114.161F,
+        "PosZ": 671.593F,
+        "DirX": -0.94F,
+        "DirZ": 0.342F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 232,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 233,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 234,
+        "LevelItemID": 7012,
+        "LevelItemType": 7,
+        "PosX": 107.11F,
+        "PosZ": 670.22F,
+        "DirX": 0.342F,
+        "DirZ": 0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 235,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 236,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 237,
+        "LevelItemID": 7013,
+        "LevelItemType": 7,
+        "PosX": 107.72F,
+        "PosZ": 664.84F,
+        "DirX": -0.342F,
+        "DirZ": -0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 238,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 239,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 240,
+        "LevelItemID": 7014,
+        "LevelItemType": 7,
+        "PosX": 110.23F,
+        "PosZ": 657.9F,
+        "DirX": 0.342F,
+        "DirZ": -0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 241,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 242,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 243,
+        "LevelItemID": 7015,
+        "LevelItemType": 7,
+        "PosX": 109.09F,
+        "PosZ": 657.49F,
+        "DirX": 0.985F,
+        "DirZ": 0.174F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 244,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 245,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 246,
+        "LevelItemID": 7016,
+        "LevelItemType": 7,
+        "PosX": 115.45F,
+        "PosZ": 663.39F,
+        "DirX": 0.985F,
+        "DirZ": -0.174F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 247,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 248,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 249,
+        "LevelItemID": 7017,
+        "LevelItemType": 7,
+        "PosX": 108.54F,
+        "PosZ": 649.14F,
+        "DirX": -0.174F,
+        "DirZ": -0.985F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 250,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 251,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 252,
+        "LevelItemID": 7018,
+        "LevelItemType": 7,
+        "PosX": 117.72F,
+        "PosZ": 651.56F,
+        "DirX": -0.342F,
+        "DirZ": 0.94F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 253,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 254,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 255,
+        "LevelItemID": 8001,
+        "LevelItemType": 8,
+        "PosX": -85.1F,
+        "PosZ": 512.5F,
+        "DirX": 0.385F,
+        "DirZ": -0.923F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 256,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 257,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 258,
+        "LevelItemID": 8002,
+        "LevelItemType": 8,
+        "PosX": -102.1F,
+        "PosZ": 482.7F,
+        "DirX": 0.965F,
+        "DirZ": -0.264F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 259,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 260,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 261,
+        "LevelItemID": 8003,
+        "LevelItemType": 8,
+        "PosX": -94.22F,
+        "PosZ": 467.47F,
+        "DirX": 0.537F,
+        "DirZ": 0.844F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 262,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 263,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 264,
+        "LevelItemID": 8004,
+        "LevelItemType": 8,
+        "PosX": -19.85F,
+        "PosZ": 533.23F,
+        "DirX": 0.83F,
+        "DirZ": 0.558F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 265,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 266,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 267,
+        "LevelItemID": 8005,
+        "LevelItemType": 8,
+        "PosX": -50.51F,
+        "PosZ": 520.15F,
+        "DirX": -0.817F,
+        "DirZ": -0.577F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 268,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 269,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 270,
+        "LevelItemID": 8011,
+        "LevelItemType": 8,
+        "PosX": -51.77F,
+        "PosZ": 478.84F,
+        "DirX": -0.822F,
+        "DirZ": 0.57F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 271,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 272,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 273,
+        "LevelItemID": 8012,
+        "LevelItemType": 8,
+        "PosX": -75.86F,
+        "PosZ": 494.95F,
+        "DirX": 0.82F,
+        "DirZ": -0.572F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 274,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 275,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 276,
+        "LevelItemID": 8013,
+        "LevelItemType": 8,
+        "PosX": -70.46F,
+        "PosZ": 474.91F,
+        "DirX": 0.546F,
+        "DirZ": 0.837F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 277,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 278,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 279,
+        "LevelItemID": 8014,
+        "LevelItemType": 8,
+        "PosX": -54.65F,
+        "PosZ": 499.26F,
+        "DirX": -0.571F,
+        "DirZ": -0.821F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 280,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 281,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 282,
+        "LevelItemID": 8015,
+        "LevelItemType": 8,
+        "PosX": -63.46F,
+        "PosZ": 502.59F,
+        "DirX": -0.113F,
+        "DirZ": -0.994F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 283,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 284,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 285,
+        "LevelItemID": 8016,
+        "LevelItemType": 8,
+        "PosX": -70.87F,
+        "PosZ": 500.28F,
+        "DirX": 0.544F,
+        "DirZ": -0.839F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 286,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 287,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 288,
+        "LevelItemID": 8017,
+        "LevelItemType": 8,
+        "PosX": -48.55F,
+        "PosZ": 486.55F,
+        "DirX": -0.977F,
+        "DirZ": 0.211F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 289,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 290,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 291,
+        "LevelItemID": 8018,
+        "LevelItemType": 8,
+        "PosX": -49.76F,
+        "PosZ": 493.68F,
+        "DirX": -0.883F,
+        "DirZ": -0.47F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 292,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 293,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 294,
+        "LevelItemID": 8019,
+        "LevelItemType": 8,
+        "PosX": -77.96F,
+        "PosZ": 487.3F,
+        "DirX": 0.999F,
+        "DirZ": 0.054F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 295,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 296,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 297,
+        "LevelItemID": 8020,
+        "LevelItemType": 8,
+        "PosX": -75.91F,
+        "PosZ": 480.26F,
+        "DirX": 0.898F,
+        "DirZ": 0.439F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 298,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 299,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 300,
+        "LevelItemID": 8021,
+        "LevelItemType": 8,
+        "PosX": -63.48F,
+        "PosZ": 473.19F,
+        "DirX": 0.061F,
+        "DirZ": 0.998F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 301,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 302,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 303,
+        "LevelItemID": 8022,
+        "LevelItemType": 8,
+        "PosX": -56.77F,
+        "PosZ": 474.36F,
+        "DirX": -0.461F,
+        "DirZ": 0.887F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 304,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 305,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 306,
+        "LevelItemID": 8023,
+        "LevelItemType": 8,
+        "PosX": 110.72F,
+        "PosZ": 787.96F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 307,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 308,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 309,
+        "LevelItemID": 8024,
+        "LevelItemType": 8,
+        "PosX": 111.701F,
+        "PosZ": 742.865F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 310,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 311,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 312,
+        "LevelItemID": 11001,
+        "LevelItemType": 11,
+        "PosX": 107.17F,
+        "PosZ": 741.727F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 313,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 314,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 315,
+        "LevelItemID": 11002,
+        "LevelItemType": 11,
+        "PosX": 111.12F,
+        "PosZ": 741.727F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 316,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 317,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 318,
+        "LevelItemID": 11003,
+        "LevelItemType": 11,
+        "PosX": 260F,
+        "PosZ": 855F,
+        "DirX": 0F,
+        "DirZ": -1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 319,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 320,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 321,
+        "LevelItemID": 11030,
+        "LevelItemType": 11,
+        "PosX": -46.77F,
+        "PosZ": 503.14F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 322,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 323,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 324,
+        "LevelItemID": 11031,
+        "LevelItemType": 11,
+        "PosX": -41.35F,
+        "PosZ": 480.69F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 325,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 326,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 327,
+        "LevelItemID": 11032,
+        "LevelItemType": 11,
+        "PosX": -64.85F,
+        "PosZ": 465.11F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 328,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 329,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 330,
+        "LevelItemID": 11033,
+        "LevelItemType": 11,
+        "PosX": -83.82F,
+        "PosZ": 479.47F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 331,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 332,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 333,
+        "LevelItemID": 11040,
+        "LevelItemType": 11,
+        "PosX": 394.2F,
+        "PosZ": -98.1F,
+        "DirX": -0.832F,
+        "DirZ": 0.554F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 334,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 335,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 336,
+        "LevelItemID": 11041,
+        "LevelItemType": 11,
+        "PosX": 315F,
+        "PosZ": -181F,
+        "DirX": -0.038F,
+        "DirZ": 0.999F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 337,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 338,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 339,
+        "LevelItemID": 11042,
+        "LevelItemType": 11,
+        "PosX": -69.96F,
+        "PosZ": 508.31F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 340,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 341,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 342,
+        "LevelItemID": 11050,
+        "LevelItemType": 11,
+        "PosX": -61.09F,
+        "PosZ": 484.57F,
+        "DirX": -0.74F,
+        "DirZ": 0.673F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 343,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 344,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 345,
+        "LevelItemID": 11060,
+        "LevelItemType": 11,
+        "PosX": -10.36F,
+        "PosZ": 539.74F,
+        "DirX": -0.885F,
+        "DirZ": -0.465F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 346,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 347,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 348,
+        "LevelItemID": 11061,
+        "LevelItemType": 11,
+        "PosX": -8.42F,
+        "PosZ": 539.243F,
+        "DirX": -0.891F,
+        "DirZ": -0.454F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 349,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 350,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 351,
+        "LevelItemID": 11062,
+        "LevelItemType": 11,
+        "PosX": -22.97F,
+        "PosZ": 531.01F,
+        "DirX": -0.864F,
+        "DirZ": -0.504F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 352,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 353,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 354,
+        "LevelItemID": 11063,
+        "LevelItemType": 11,
+        "PosX": 120.21F,
+        "PosZ": 645.94F,
+        "DirX": 0.103F,
+        "DirZ": -0.995F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 355,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 356,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 357,
+        "LevelItemID": 11064,
+        "LevelItemType": 11,
+        "PosX": 110.71F,
+        "PosZ": 645.01F,
+        "DirX": -0.037F,
+        "DirZ": 0.999F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 358,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 359,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 360,
+        "LevelItemID": 11065,
+        "LevelItemType": 11,
+        "PosX": 111.952F,
+        "PosZ": 645.096F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 1,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 361,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 362,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 363,
+        "LevelItemID": 15001,
+        "LevelItemType": 15,
+        "PosX": 120.38F,
+        "PosZ": 767.55F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 364,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 365,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 366,
+        "LevelItemID": 15002,
+        "LevelItemType": 15,
+        "PosX": 98.86F,
+        "PosZ": 768.63F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 367,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 368,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 369,
+        "LevelItemID": 15003,
+        "LevelItemType": 15,
+        "PosX": 93.2F,
+        "PosZ": 682.08F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 370,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 371,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 372,
+        "LevelItemID": 15004,
+        "LevelItemType": 15,
+        "PosX": 143.26F,
+        "PosZ": 711.63F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 373,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 374,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 375,
+        "LevelItemID": 15005,
+        "LevelItemType": 15,
+        "PosX": 132.1F,
+        "PosZ": 664.32F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 376,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 377,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 378,
+        "LevelItemID": 15006,
+        "LevelItemType": 15,
+        "PosX": 105.26F,
+        "PosZ": 655.5F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 379,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 380,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 381,
+        "LevelItemID": 15007,
+        "LevelItemType": 15,
+        "PosX": 125.2F,
+        "PosZ": 678.12F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 382,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 383,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 384,
+        "LevelItemID": 15008,
+        "LevelItemType": 15,
+        "PosX": 15.55F,
+        "PosZ": 527.12F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 385,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 386,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 387,
+        "LevelItemID": 15009,
+        "LevelItemType": 15,
+        "PosX": 2.35F,
+        "PosZ": 578.69F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 388,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 389,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 390,
+        "LevelItemID": 15010,
+        "LevelItemType": 15,
+        "PosX": 23.51F,
+        "PosZ": 582.75F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 391,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 392,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 393,
+        "LevelItemID": 15011,
+        "LevelItemType": 15,
+        "PosX": -26.45F,
+        "PosZ": 549.07F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 394,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 395,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 396,
+        "LevelItemID": 15012,
+        "LevelItemType": 15,
+        "PosX": 45.77F,
+        "PosZ": 555.65F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 397,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 398,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 399,
+        "LevelItemID": 15013,
+        "LevelItemType": 15,
+        "PosX": 23.58F,
+        "PosZ": 518.55F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 400,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 401,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 402,
+        "LevelItemID": 15014,
+        "LevelItemType": 15,
+        "PosX": 45.75F,
+        "PosZ": 524.32F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 403,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 404,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 405,
+        "LevelItemID": 15015,
+        "LevelItemType": 15,
+        "PosX": 4.35F,
+        "PosZ": 537.04F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 406,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 407,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 408,
+        "LevelItemID": 15016,
+        "LevelItemType": 15,
+        "PosX": -11.67F,
+        "PosZ": 531.13F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 409,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 410,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 411,
+        "LevelItemID": 15017,
+        "LevelItemType": 15,
+        "PosX": 6.69F,
+        "PosZ": 616.62F,
+        "DirX": 0F,
+        "DirZ": 1F,
+        "Count": 0,
+        "Row": 0,
+        "Col": 0,
+        "Gap": 0F,
+        "LeaderID": 0,
+        "RefreshCount": 0,
+        "MonsterIDs": {
+          "$id": 412,
+          "$values": [
+
+          ]
+        },
+        "MonsterWeights": {
+          "$id": 413,
+          "$values": [
+
+          ]
+        }
+      }
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "SanguoLevel1011"
+}

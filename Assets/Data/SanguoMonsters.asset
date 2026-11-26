@@ -1,0 +1,271 @@
+{
+  "$id": 1,
+  "$type": "SanGuoXEngine.Data.SanguoMonsterTable, SanGuoXEngine.Game",
+  "Monsters": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "ID": 101101,
+        "MonsterType": 6,
+        "Camp": 1,
+        "AIID": 102102,
+        "ModelID": 10003,
+        "Speed": 4.5F,
+        "Skills": {
+          "$id": 4,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 5,
+        "ID": 101103,
+        "MonsterType": 2,
+        "Camp": 1,
+        "AIID": 101102,
+        "ModelID": 22056,
+        "Speed": 8F,
+        "Skills": {
+          "$id": 6,
+          "$values": [
+            500083,
+            500084,
+            500085,
+            500086,
+            500087,
+            500088
+          ]
+        }
+      },
+      {
+        "$id": 7,
+        "ID": 101130,
+        "MonsterType": 4,
+        "Camp": 1,
+        "AIID": 101130,
+        "ModelID": 20467,
+        "Speed": 4.5F,
+        "Skills": {
+          "$id": 8,
+          "$values": [
+            500169,
+            500170,
+            500171,
+            500172,
+            500173,
+            500174,
+            501202,
+            501208
+          ]
+        }
+      },
+      {
+        "$id": 9,
+        "ID": 101111,
+        "MonsterType": 2,
+        "Camp": 1,
+        "AIID": 101102,
+        "ModelID": 22035,
+        "Speed": 8F,
+        "Skills": {
+          "$id": 10,
+          "$values": [
+            500077,
+            500078,
+            500079,
+            500080,
+            500081,
+            500082
+          ]
+        }
+      },
+      {
+        "$id": 11,
+        "ID": 101104,
+        "MonsterType": 2,
+        "Camp": 1,
+        "AIID": 3,
+        "ModelID": 22082,
+        "Speed": 8F,
+        "Skills": {
+          "$id": 12,
+          "$values": [
+            500002,
+            500015
+          ]
+        }
+      },
+      {
+        "$id": 13,
+        "ID": 101115,
+        "MonsterType": 4,
+        "Camp": 1,
+        "AIID": 1011152,
+        "ModelID": 22502,
+        "Speed": 4.5F,
+        "Skills": {
+          "$id": 14,
+          "$values": [
+            500358,
+            500359,
+            500360,
+            500361,
+            500362,
+            500363,
+            500364
+          ]
+        }
+      },
+      {
+        "$id": 15,
+        "ID": 101113,
+        "MonsterType": 2,
+        "Camp": 1,
+        "AIID": 3,
+        "ModelID": 22079,
+        "Speed": 8F,
+        "Skills": {
+          "$id": 16,
+          "$values": [
+            500002,
+            500015
+          ]
+        }
+      },
+      {
+        "$id": 17,
+        "ID": 101122,
+        "MonsterType": 5,
+        "Camp": 1,
+        "AIID": 101122,
+        "ModelID": 10109,
+        "Speed": 3F,
+        "Skills": {
+          "$id": 18,
+          "$values": [
+            500047,
+            500048,
+            500049,
+            500050,
+            500051,
+            500054,
+            500066,
+            500067,
+            500068,
+            500074,
+            500075,
+            500076,
+            500070,
+            500188
+          ]
+        }
+      },
+      {
+        "$id": 19,
+        "ID": 101172,
+        "MonsterType": 51,
+        "Camp": 2,
+        "AIID": 101170,
+        "ModelID": 4004,
+        "Speed": 4.5F,
+        "Skills": {
+          "$id": 20,
+          "$values": [
+            100058,
+            100063,
+            100062,
+            100059,
+            100060,
+            100061,
+            100183
+          ]
+        }
+      },
+      {
+        "$id": 21,
+        "ID": 101171,
+        "MonsterType": 51,
+        "Camp": 2,
+        "AIID": 101170,
+        "ModelID": 4008,
+        "Speed": 4.5F,
+        "Skills": {
+          "$id": 22,
+          "$values": [
+            100128,
+            100133,
+            100132,
+            100129,
+            100130,
+            100131
+          ]
+        }
+      },
+      {
+        "$id": 23,
+        "ID": 101165,
+        "MonsterType": 6,
+        "Camp": 1,
+        "AIID": 302118,
+        "ModelID": 10003,
+        "Speed": 0F,
+        "Skills": {
+          "$id": 24,
+          "$values": [
+            900002
+          ]
+        }
+      },
+      {
+        "$id": 25,
+        "ID": 101160,
+        "MonsterType": 8,
+        "Camp": 1,
+        "AIID": 1118,
+        "ModelID": 50019,
+        "Speed": 0F,
+        "Skills": {
+          "$id": 26,
+          "$values": [
+            500558
+          ]
+        }
+      },
+      {
+        "$id": 27,
+        "ID": 101161,
+        "MonsterType": 8,
+        "Camp": 1,
+        "AIID": 1118,
+        "ModelID": 50020,
+        "Speed": 0F,
+        "Skills": {
+          "$id": 28,
+          "$values": [
+            500558
+          ]
+        }
+      },
+      {
+        "$id": 29,
+        "ID": 101163,
+        "MonsterType": 8,
+        "Camp": 1,
+        "AIID": 1118,
+        "ModelID": 50023,
+        "Speed": 0F,
+        "Skills": {
+          "$id": 30,
+          "$values": [
+            500558
+          ]
+        }
+      }
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "SanguoMonsters"
+}

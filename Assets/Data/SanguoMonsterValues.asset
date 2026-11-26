@@ -1,0 +1,52 @@
+{
+  "$id": 1,
+  "$type": "SanGuoXEngine.Data.SanguoMonsterValueTable, SanGuoXEngine.Game",
+  "Values": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "GroupID": 101103,
+        "Difficulty": 1,
+        "Hp": 95,
+        "Atk": 58,
+        "Def": 24
+      },
+      {
+        "$id": 4,
+        "GroupID": 101104,
+        "Difficulty": 1,
+        "Hp": 63,
+        "Atk": 66,
+        "Def": 24
+      },
+      {
+        "$id": 5,
+        "GroupID": 101115,
+        "Difficulty": 1,
+        "Hp": 945,
+        "Atk": 58,
+        "Def": 24
+      },
+      {
+        "$id": 6,
+        "GroupID": 101122,
+        "Difficulty": 1,
+        "Hp": 6615,
+        "Atk": 71,
+        "Def": 24
+      },
+      {
+        "$id": 7,
+        "GroupID": 101171,
+        "Difficulty": 1,
+        "Hp": 5000,
+        "Atk": 38,
+        "Def": 40
+      }
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "SanguoMonsterValues"
+}
