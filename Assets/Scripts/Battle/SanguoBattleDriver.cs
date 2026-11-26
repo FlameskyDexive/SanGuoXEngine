@@ -139,12 +139,16 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<SanguoFieldActor, float> _aiCooldowns = new();
     private readonly Dictionary<SanguoFieldActor, HashSet<int>> _hitByBullet = new();
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
+    private readonly List<SanguoFieldActor> _finishedCasts = new(32);
+    private readonly List<SanguoHit> _hitScratch = new(32);
 
     private SanguoBattleStage? _stage;
     private Camera? _battleCamera;
     private SanguoFieldActor? _leader;
     private int _leaderIndex;
     private float _battleTimeMs;
+    private float _fixedAccumulator;
+    private const float FixedStep = 1f / 60f;
     private bool _started;
     private bool _over;
 
@@ -295,36 +299,46 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         }
         _updateCount += 1;
         if (_stage == null || _over) return;
-        float deltaTime = Math.Min(Time.DeltaTime, 1f / 20f);
-        _battleTimeMs += deltaTime * 1000f;
+        _fixedAccumulator += Math.Clamp(Time.DeltaTime, 0f, 0.25f);
+        int steps = 0;
+        while (_fixedAccumulator >= FixedStep && steps++ < 4)
+        {
+            SimulateFixedStep(FixedStep);
+            _fixedAccumulator -= FixedStep;
+        }
+    }
 
+    private void SimulateFixedStep(float deltaTime)
+    {
+        _battleTimeMs += deltaTime * 1000f;
         HandleInput(deltaTime);
         MonsterBrains(deltaTime);
         TickCasts(deltaTime);
-        _stage.Tick(deltaTime);
+        _stage!.Tick(deltaTime);
         FollowCamera(deltaTime);
 
         if (_stage.Won || _stage.Lost)
         {
             _over = true;
             Debug.Log("[SanguoBattle] " + (_stage.Won ? "WIN" : "LOSE") + " at " + (_battleTimeMs / 1000f) + "s");
+            return;
         }
-        else if (_battleTimeMs - _lastHeartbeatMs >= 2000f)
+
+        if (_battleTimeMs - _lastHeartbeatMs < 2000f) return;
+        _lastHeartbeatMs = _battleTimeMs;
+        SanguoFieldActor? probeEnemy = _stage.Enemies.Count > 0 ? _stage.Enemies[0] : null;
+        SanguoFieldActor? probeHero = _stage.Heroes.Count > 0 ? _stage.Heroes[0] : null;
+        int chasing = 0, attacking = 0;
+        for (int i = 0; i < _stage.Enemies.Count; i++)
         {
-            _lastHeartbeatMs = _battleTimeMs;
-            SanguoFieldActor? probeEnemy = _stage.Enemies.Count > 0 ? _stage.Enemies[0] : null;
-            SanguoFieldActor? probeHero = _stage.Heroes.Count > 0 ? _stage.Heroes[0] : null;
-            int chasing = 0, attacking = 0;
-            foreach (SanguoFieldActor enemy in _stage.Enemies)
-            {
-                if (enemy.StateMachine.State == SanguoActorState.Run) chasing++;
-                if (enemy.StateMachine.State == SanguoActorState.Attack) attacking++;
-            }
-            Debug.Log("[SanguoBattle] t=" + (_battleTimeMs / 1000f) + "s enemy0="
-                + (probeEnemy != null ? probeEnemy.Position.X + "," + probeEnemy.Position.Y + " state=" + probeEnemy.StateMachine.State : "none")
-                + " hero0=" + (probeHero != null ? probeHero.Position.X + "," + probeHero.Position.Y + " hp=" + probeHero.Health.Hp : "none")
-                + " chasing=" + chasing + " attacking=" + attacking);
+            SanguoFieldActor enemy = _stage.Enemies[i];
+            if (enemy.StateMachine.State == SanguoActorState.Run) chasing++;
+            if (enemy.StateMachine.State == SanguoActorState.Attack) attacking++;
         }
+        Debug.Log("[SanguoBattle] t=" + (_battleTimeMs / 1000f) + "s enemy0="
+            + (probeEnemy != null ? probeEnemy.Position.X + "," + probeEnemy.Position.Y + " state=" + probeEnemy.StateMachine.State : "none")
+            + " hero0=" + (probeHero != null ? probeHero.Position.X + "," + probeHero.Position.Y + " hp=" + probeHero.Health.Hp : "none")
+            + " chasing=" + chasing + " attacking=" + attacking);
     }
 
     // ------------------------------------------------------------ input + control
@@ -435,9 +449,11 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 // a plain melee hit: circle 2.2 m in front
                 SanguoMissile swing = new() { ShapeType = 1, ShapeParam1 = 2.2f, DamageStartFrame = 1, DamageEndFrame = 1, DamageIntervalFrame = 1 };
                 int attackerAtk = MonsterAttackOf(enemy);
-                foreach (SanguoHit hit in SanguoSkillRules.ResolveHits(swing, enemy.Position, enemy.Facing,
-                    _stage.Heroes, SanguoBattleStage.EnemyCamp, attackerAtk, 1f))
+                SanguoSkillRules.ResolveHits(swing, enemy.Position, enemy.Facing,
+                    _stage.Heroes, SanguoBattleStage.EnemyCamp, attackerAtk, 1f, _hitScratch);
+                for (int hitIndex = 0; hitIndex < _hitScratch.Count; hitIndex++)
                 {
+                    SanguoHit hit = _hitScratch[hitIndex];
                     OnHeroHit(hit.Target, hit.Damage);
                 }
             }
@@ -491,22 +507,21 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private void TickCasts(float deltaTime)
     {
         float deltaMs = deltaTime * 1000f;
-        List<SanguoFieldActor> finished = [];
+        _finishedCasts.Clear();
         foreach ((SanguoFieldActor actor, SanguoCastState cast) in _casts)
         {
             if (actor.Dead)
             {
-                finished.Add(actor);
+                _finishedCasts.Add(actor);
                 continue;
             }
             foreach (SanguoSkillEvent ev in cast.Advance(deltaMs))
                 FireEvent(actor, cast, ev);
-            if (cast.Finished) finished.Add(actor);
+            if (cast.Finished) _finishedCasts.Add(actor);
         }
-        foreach (SanguoFieldActor actor in finished) _casts.Remove(actor);
+        for (int i = 0; i < _finishedCasts.Count; i++) _casts.Remove(_finishedCasts[i]);
 
         // live bullets fly for their missile's total time and damage on their landing frames
-        List<(SanguoCallBullet, SanguoMissile, SanguoFieldActor, float, HashSet<int>)> done = [];
         for (int i = _liveBullets.Count - 1; i >= 0; i--)
         {
             var entry = _liveBullets[i];

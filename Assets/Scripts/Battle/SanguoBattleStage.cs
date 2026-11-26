@@ -119,6 +119,7 @@ public sealed class SanguoBattleStage
     private readonly SanguoActorRegistry _registry = new();
     private readonly List<SanguoFieldActor> _heroes = [];
     private readonly List<SanguoFieldActor> _enemies = [];
+    private readonly List<SanguoFieldActor> _livingScratch = new(256);
     private readonly Dictionary<int, SanguoMonster> _monsterData;
     private readonly Dictionary<int, SanguoMonsterValue> _valueData;
     private readonly List<SanguoSpawnGroup> _pendingGroups = [];
@@ -260,7 +261,8 @@ public sealed class SanguoBattleStage
     /// overlap each, so crowds don't collapse into one point (jws2's shove, simplified).</summary>
     private void Shove()
     {
-        List<SanguoFieldActor> all = CollectLiving();
+        PopulateLivingScratch();
+        List<SanguoFieldActor> all = _livingScratch;
         for (int i = 0; i < all.Count; i++)
         {
             for (int j = i + 1; j < all.Count; j++)
@@ -285,11 +287,10 @@ public sealed class SanguoBattleStage
         }
     }
 
-    private List<SanguoFieldActor> CollectLiving()
+    private void PopulateLivingScratch()
     {
-        List<SanguoFieldActor> all = new(_heroes.Count + _enemies.Count);
-        foreach (SanguoFieldActor hero in _heroes) if (!hero.Dead) all.Add(hero);
-        foreach (SanguoFieldActor enemy in _enemies) if (!enemy.Dead) all.Add(enemy);
-        return all;
+        _livingScratch.Clear();
+        foreach (SanguoFieldActor hero in _heroes) if (!hero.Dead) _livingScratch.Add(hero);
+        foreach (SanguoFieldActor enemy in _enemies) if (!enemy.Dead) _livingScratch.Add(enemy);
     }
 }

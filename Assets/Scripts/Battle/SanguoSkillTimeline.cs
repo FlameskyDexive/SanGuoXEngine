@@ -125,6 +125,16 @@ public static class SanguoSkillRules
         IReadOnlyList<SanguoFieldActor> candidates, int attackerCamp, int attackerAtk, float multiplier)
     {
         List<SanguoHit> hits = [];
+        ResolveHits(missile, origin, forward, candidates, attackerCamp, attackerAtk, multiplier, hits);
+        return hits;
+    }
+
+    /// <summary>Allocation-free variant for the fixed-step battle loop.</summary>
+    public static void ResolveHits(SanguoMissile missile, Float2 origin, Float2 forward,
+        IReadOnlyList<SanguoFieldActor> candidates, int attackerCamp, int attackerAtk, float multiplier,
+        List<SanguoHit> hits)
+    {
+        hits.Clear();
         foreach (SanguoFieldActor candidate in candidates)
         {
             if (candidate.Dead || candidate.Camp == attackerCamp) continue;
@@ -140,7 +150,6 @@ public static class SanguoSkillRules
             };
             if (hit) hits.Add(new SanguoHit(candidate, candidate.Health.ApplyHit(attackerAtk, multiplier)));
         }
-        return hits;
     }
 
     private static float DegreesToRadians(float degrees) => degrees * MathF.PI / 180f;
