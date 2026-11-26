@@ -27,7 +27,7 @@
 | B1 静态场景自动实例批处理 | 完成 | `evidence/replan/b1-static-batching/`，2818 draw / 56 instanced draw / 1515 static instances |
 | B2 GPU Instancing 和动态合批 | 完成 | `evidence/replan/b2-gpu-instancing/`，2079 draw / 73 instanced draw / 3914 dynamic instances |
 | B3 桃园场景接入 | 进行中 | 场景保留完整桃园资产，静态/动态批次已接入；SpeedTree、粒子和效果材质仍待处理 |
-| B4 角色和敌人接入 | 未开始 | |
+| B4 角色和敌人接入 | 进行中 | `evidence/replan/b4-characters/`，四英雄保持真实 Prefab，敌人已切换到已导入真实士兵模型；逐 MonsterID Prefab 映射和 GPU 蒙皮实例仍待处理 |
 | B5 战斗逻辑优化 | 未开始 | |
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，Volume/HDR/ACES/Bloom 与战斗相机已接入，敌人材质和特效仍待处理 |
 | B7 编辑器 Play 终验 | 未开始 | |

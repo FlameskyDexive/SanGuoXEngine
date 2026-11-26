@@ -118,6 +118,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private static readonly Guid ModelsGuid = new("a0438efe-498e-e824-ea17-116c3ec8950a");
     private static readonly Guid ValuesGuid = new("c02e2542-06fc-9769-7bc9-547feca0eb7b");
     private static readonly Guid LayoutGuid = new("d435194f-f8cb-3612-f43e-56855330d375");
+    // The source package does not contain the original YellowArmy prefab yet. The imported
+    // xiaobingyuanjing FBX is the closest real Yellow Turban soldier asset in this port and keeps
+    // the enemy presentation on the model path while the per-monster asset table is completed.
+    private static readonly Guid EnemyViewPrefabGuid = new("e4251061-3dcd-e554-cc2f-6348e0f66f65");
 
     private static readonly (string Name, Guid Prefab)[] HeroPrefabs =
     [
@@ -226,13 +230,26 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         return reference.Res ?? throw new InvalidOperationException($"data asset {guid} ({typeof(T).Name}) failed to load.");
     }
 
-    /// <summary>Spawns the scene view of a kernel actor: hero prefabs for camp 2, coloured
-    /// placeholder capsules for the monsters (their model prefabs are M7 scope).</summary>
+    /// <summary>Spawns the scene view of a kernel actor. Heroes and enemies use imported model
+    /// prefabs, with the builtin cube retained only when an enemy model is unavailable.</summary>
     private void SpawnActorView(SanguoFieldActor actor, Float2 position, Float2 forward)
     {
         GameObject go;
         if (actor.Camp == SanguoBattleStage.PlayerCamp)
             return;                                     // hero views bind through SpawnHeroes instead
+
+        var enemyPrefab = new AssetRef<PrefabAsset>(EnemyViewPrefabGuid);
+        enemyPrefab.EnsureLoaded();
+        if (enemyPrefab.Res?.Instantiate() is GameObject enemyInstance)
+        {
+            Scene.Current!.Add(enemyInstance);
+            enemyInstance.Name = actor.Name;
+            enemyInstance.Transform.Position = new Float3(position.X, 180f, position.Y);
+            enemyInstance.Transform.LocalScale = new Float3(1.1f, 1.1f, 1.1f);
+            BindPresenter(actor, enemyInstance);
+            return;
+        }
+
         go = new GameObject(actor.Name);
         Scene.Current!.Add(go);
         MeshRenderer renderer = go.AddComponent<MeshRenderer>();
