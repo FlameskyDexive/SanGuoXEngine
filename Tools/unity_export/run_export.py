@@ -104,19 +104,22 @@ class Bridge:
             return False, "play mode"
         return True, data
 
-    def stage(self, name, out_dir, name_filter=""):
+    def stage(self, name, out_dir, name_filter="", extra=None):
         body = (SCRIPTS / f"{name}.csx").read_text(encoding="utf-8")
         text = PRELUDE.read_text(encoding="utf-8") + "\n" + body
         # Forward slashes keep the path safe inside a C# string literal.
         text = text.replace("__OUT_DIR__", out_dir.as_posix())
         text = text.replace("__NAME_FILTER__", name_filter)
+        text = text.replace("__REPO_ROOT__", REPO_ROOT.as_posix())
+        for placeholder, value in (extra or {}).items():
+            text = text.replace(placeholder, value)
         self.code_dir.mkdir(parents=True, exist_ok=True)
         staged = self.code_dir / f"{STAGE_PREFIX}{name}.csx"
         staged.write_text(text, encoding="utf-8")
         return staged
 
-    def execute(self, name, out_dir, timeout_ms, name_filter=""):
-        staged = self.stage(name, out_dir, name_filter)
+    def execute(self, name, out_dir, timeout_ms, name_filter="", extra=None):
+        staged = self.stage(name, out_dir, name_filter, extra)
         res = self.run("code", "execute", "--file", staged, "--timeout", int(timeout_ms),
                        timeout_s=timeout_ms / 1000.0 + 60.0)
         data = res.get("data") or {}
@@ -207,6 +210,29 @@ def validate_json(path):
     return None
 
 
+def export_clips_replacements(cfg, hero):
+    """The clip list export_clips.csx takes, resolved from the clip files on disk.
+
+    The hero is `--filter`. The heroes do not all have every clip of the manifest (张飞 has no
+    `bighurt`), so a pattern without a file is reported and skipped.
+    """
+    import clip_manifest
+
+    if hero not in clip_manifest.HEROES:
+        sys.exit(f"[error] --filter must be one of {clip_manifest.HEROES} (got {hero!r})")
+    anim_root = Path(cfg["jws2_client"]) / "Assets/Actor/AnimationSplit/Animation_L"
+    names = clip_manifest.clip_names(hero, anim_root)
+    if not names:
+        sys.exit(f"[error] no clip files under {anim_root / hero}")
+    chosen = clip_manifest.select(names, hero)
+    unmatched = clip_manifest.unmatched_patterns(names, hero)
+    if unmatched:
+        print(f"[clips] {hero} has no clip for {', '.join(unmatched)}; skipped")
+    literal = ", ".join(json.dumps(n) for n in chosen)
+    print(f"[clips] {hero}: {len(chosen)} clips")
+    return {"__CLIP_LIST__": literal}
+
+
 def cmd_run(bridge, cfg, names, out_dir, timeout_ms, name_filter=""):
     out_dir.mkdir(parents=True, exist_ok=True)
     summary = []
@@ -214,7 +240,8 @@ def cmd_run(bridge, cfg, names, out_dir, timeout_ms, name_filter=""):
     for name in names:
         print(f"[run] {name} ...")
         started = time.time()
-        result = bridge.execute(name, out_dir, timeout_ms, name_filter)
+        extra = export_clips_replacements(cfg, name_filter) if name == "export_clips" else None
+        result = bridge.execute(name, out_dir, timeout_ms, name_filter, extra)
         elapsed = time.time() - started
         entry = {"script": name, "ok": result["ok"], "stage": result["stage"],
                  "elapsedS": round(elapsed, 2)}
@@ -277,7 +304,8 @@ def main(argv=None):
                      help="start the jws2 editor when it is not reachable, then wait for it")
     run.add_argument("--out", help="export folder (default: config out_dir)")
     run.add_argument("--timeout-ms", type=int, default=None, help="per-script timeout")
-    run.add_argument("--filter", default="", help="method-name substring for probe_api")
+    run.add_argument("--filter", default="",
+                     help="method-name substring for probe_api; the hero (Hero_LvBu, ...) for export_clips")
 
     args = parser.parse_args(argv)
     cfg = load_config()

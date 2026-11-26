@@ -9,7 +9,7 @@ Run everything with `py -3` from the repository root. The tools' tests: `py -3 -
 | Folder | Purpose |
 |---|---|
 | `unity_export/` | AIBridge driver + `.csx` scripts run inside the jws2 Unity editor: exporters, reference captures, probes |
-| `sanguo_import/` | import the heroes (FBX, textures, metas, import manifest) and compare the result with Unity |
+| `sanguo_import/` | import the heroes (FBX, textures, metas, import manifest), and compare models, skinning and animation with Unity |
 | `xengine_live/` | MCP stdio client for a live XEngine editor + `.cs` scripts it evaluates there |
 | `wwise2ogg/` | (M6) Wwise banks → OGG Vorbis + event mapping table |
 
@@ -40,10 +40,15 @@ Do not use that editor while an export is running.
 | `capture_heroes`, `capture_heroes_standard` | reference frames of the five heroes with the game's shaders, and with Unity's Standard shader | the side-by-side sheets |
 | `export_skin` | per mesh: raw vertices, bone weights, bind poses, `BakeMesh` output | `compare_skin.py` |
 | `capture_silhouettes` | every mesh alone as a flat silhouette | `compare_skin.py --silhouettes` |
+| `export_clips` | `Export/clips/Hero_*.json`: the battle clips of one hero (`--filter Hero_LvBu`) — every curve with its keys and tangents, the clip settings, Unity's sampled pose of every node at 11 fixed times, and a reference frame at 3 of them | `SanguoClipBuilder` (in the editor), `compare_anim.py` |
 | `probe_*` | one-off audits (environment, material, hero, clip, scene, API surface, skinning) | recorded in `docs/evidence/` |
 
 Each capture script takes its own output folder: `--out Export/unity-refs/heroes`,
 `Export/unity-refs/heroes-standard`, `Export/heroes/skin`, `Export/unity-refs/silhouettes`.
+
+**Outside play mode Unity skins a skinned mesh on its own schedule.** A camera rendered right after
+posing a hero can show the previous skin. `export_clips` switches every `SkinnedMeshRenderer` off and
+on before each render; a capture that poses a character must do the same, or its frames are stale.
 
 **The quality level decides how many bones skin a vertex**, and jws2's active level ("Fastest") skins
 with one bone. The engine skins with four, so the capture scripts switch to the lowest level that
@@ -61,13 +66,21 @@ is saved to the jws2 project.
 | `compare_models.py` | node sets, positions and scales of the imported models against Unity's transform tree |
 | `compare_skin.py` | skinning of every mesh against Unity: vertices, skin matrices, the formula, the weights, and (with `--silhouettes`) what each renderer drew |
 | `fbx_skin_weights.py` | the weights the FBX file itself stores, per mesh and per control point |
+| `compare_anim.py` | the engine's played poses (from `capture_poses.cs`) against Unity's sampled poses, bone by bone and time by time; also the rendered hero's extent in every Unity | engine frame pair, and with `--sheets` contact sheets |
 
 ```powershell
 py -3 Tools/sanguo_import/import_heroes.py
 py -3 Tools/sanguo_import/compare_models.py <mcp_live.py --out file of inspect_models.cs>
 py -3 Tools/sanguo_import/compare_skin.py --silhouettes --report Export/skin-report.json
 py -3 Tools/sanguo_import/fbx_skin_weights.py Assets/Heroes/Hero_GuanYu/Hero_GuanYu.fbx --mesh Hero_GuanYu_Hair
+py -3 Tools/unity_export/clip_manifest.py Hero_LvBu
+py -3 Tools/unity_export/run_export.py run export_clips --filter Hero_LvBu --out Export/clips --timeout-ms 900000
+py -3 Tools/sanguo_import/compare_anim.py --sheets docs/evidence/m2/sheets
 ```
+
+`export_clips` runs once per hero. `compare_anim.py` exits with status 1 when a rotation is more than
+0.5°, a bone position more than 5 mm or a root-motion position more than 30 mm away from Unity's
+sample; add `--strict-frames` to fail on frame pairs whose hero extent differs by more than 24 px.
 
 `compare_skin.py` exits with status 1 when a mesh's vertices or its CPU skinning are more than
 `--tolerance-mm` (default 2) away from Unity's.
@@ -83,13 +96,16 @@ py -3 Tools/xengine_live/mcp_live.py --inline '[{"tool":"runtime_screenshot","ar
 ```
 
 The editor is closed when the commands are done unless `--keep` is given. `SANGUO_CAPTURE_OUT=<folder>`
-redirects the frames of the capture scripts, e.g. per backend. The scripts under `evals/`:
+redirects the frames of `capture_heroes.cs`, `SANGUO_POSE_OUT` those of `capture_poses.cs`, e.g. per
+backend. The scripts under `evals/`:
 
 | Script | Does |
 |---|---|
 | `generate_heroes.cs` | runs `SanguoHeroGenerator` (materials, prefabs) in the editor; then refresh assets to import them |
 | `capture_heroes.cs` | runs `SanguoCaptureStudio.CaptureHeroes`: the heroes under the Unity studio setup |
 | `render_silhouettes.cs` | runs `SanguoCaptureStudio.CaptureSilhouettes` |
+| `generate_clips.cs` | runs `SanguoClipBuilder.Generate`: native clips and one controller per hero out of `Export/clips`; then refresh assets to import them |
+| `capture_poses.cs` | runs `SanguoCaptureStudio.CapturePoses`: plays every exported clip on the Animator, dumps the nodes' transforms at Unity's sample times (`poses.json`) and renders Unity's frames |
 | `inspect_models.cs` | dumps the imported hierarchies for `compare_models.py` |
 | `dump_skin.cs` | dumps the engine's skinning data for `compare_skin.py` |
 

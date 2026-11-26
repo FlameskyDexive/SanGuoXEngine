@@ -1,0 +1,1171 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Animation.AnimatorController, XEngine.Runtime",
+  "DefaultStateName": "idle_loop",
+  "Parameters": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "Name": "SpeedMultiplier",
+        "Type": 0L,
+        "DefaultFloat": 1F,
+        "DefaultInt": 0,
+        "DefaultBool": false
+      }
+    ]
+  },
+  "States": {
+    "$id": 4,
+    "$values": [
+      {
+        "$id": 5,
+        "Name": "idle_loop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": true,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "eb9006d5-629d-9bec-50a7-7dce33d13b13"
+        },
+        "Motions": {
+          "$id": 6,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 7,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 0F,
+        "Behaviours": {
+          "$id": 8,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 9,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 10,
+        "Name": "run_loop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": true,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "0f8e4456-e41d-1dce-6e38-e9740a0c4bbd"
+        },
+        "Motions": {
+          "$id": 11,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 12,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 200F,
+        "Behaviours": {
+          "$id": 13,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 14,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 15,
+        "Name": "run_stop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "0cbc07aa-efe8-a1d5-b13f-83f38954ef2e"
+        },
+        "Motions": {
+          "$id": 16,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 17,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 400F,
+        "Behaviours": {
+          "$id": 18,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 19,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 20,
+        "Name": "dodge",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "8a1f7641-7db0-eb26-0f7b-825f4eda5d16"
+        },
+        "Motions": {
+          "$id": 21,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 22,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 600F,
+        "Behaviours": {
+          "$id": 23,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 24,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 25,
+        "Name": "RunAttack",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "d3f2c8c2-dc3c-80bf-1cca-b1a8ffd4fae3"
+        },
+        "Motions": {
+          "$id": 26,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 27,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 800F,
+        "Behaviours": {
+          "$id": 28,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 29,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 30,
+        "Name": "NormalAttack_1",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "a87b6866-f359-eb45-8003-b119c28db8c7"
+        },
+        "Motions": {
+          "$id": 31,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 32,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 1000F,
+        "Behaviours": {
+          "$id": 33,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 34,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 35,
+        "Name": "NormalAttack_2",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "7c39a397-4145-aabb-d707-c6df17e49eed"
+        },
+        "Motions": {
+          "$id": 36,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 37,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 0F,
+        "Behaviours": {
+          "$id": 38,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 39,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 40,
+        "Name": "NormalAttack_3",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "1a8a112f-2c5d-dbeb-e57c-faafa812246c"
+        },
+        "Motions": {
+          "$id": 41,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 42,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 200F,
+        "Behaviours": {
+          "$id": 43,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 44,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 45,
+        "Name": "NormalAttack_4",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "785b8c12-2f3e-c5cd-6a5f-bccdde1aea5b"
+        },
+        "Motions": {
+          "$id": 46,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 47,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 400F,
+        "Behaviours": {
+          "$id": 48,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 49,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 50,
+        "Name": "SkillAttack_1",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "9427dc5f-78bf-50de-0f8c-de762d943e9b"
+        },
+        "Motions": {
+          "$id": 51,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 52,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 600F,
+        "Behaviours": {
+          "$id": 53,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 54,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 55,
+        "Name": "SkillAttack_2",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "dbeee42f-30ab-b3e5-1541-433f1f281092"
+        },
+        "Motions": {
+          "$id": 56,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 57,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 800F,
+        "Behaviours": {
+          "$id": 58,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 59,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 60,
+        "Name": "SA_1",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "1c8404e3-ca67-be5f-7d62-a46e13788440"
+        },
+        "Motions": {
+          "$id": 61,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 62,
+          "$values": [
+
+          ]
+        },
+        "PosX": 260F,
+        "PosY": 1000F,
+        "Behaviours": {
+          "$id": 63,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 64,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 65,
+        "Name": "SA_2",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "eea8e534-65c2-3689-0a51-de9318b3bb95"
+        },
+        "Motions": {
+          "$id": 66,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 67,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 0F,
+        "Behaviours": {
+          "$id": 68,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 69,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 70,
+        "Name": "hurt",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "66724986-1a9e-f12e-b23a-fe29f4bd509c"
+        },
+        "Motions": {
+          "$id": 71,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 72,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 200F,
+        "Behaviours": {
+          "$id": 73,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 74,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 75,
+        "Name": "knockback",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "738ba68e-fe0a-50e3-acd4-d6d3b0a03bf7"
+        },
+        "Motions": {
+          "$id": 76,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 77,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 400F,
+        "Behaviours": {
+          "$id": 78,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 79,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 80,
+        "Name": "hitdown",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "bf5f3801-17f3-0729-32e9-9d422d43c157"
+        },
+        "Motions": {
+          "$id": 81,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 82,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 600F,
+        "Behaviours": {
+          "$id": 83,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 84,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 85,
+        "Name": "fly",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "7318f480-80c1-7f7d-f143-839610c6a3b2"
+        },
+        "Motions": {
+          "$id": 86,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 87,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 800F,
+        "Behaviours": {
+          "$id": 88,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 89,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 90,
+        "Name": "standup",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "d4661b5b-b49e-f297-3da2-024d9994db9d"
+        },
+        "Motions": {
+          "$id": 91,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 92,
+          "$values": [
+
+          ]
+        },
+        "PosX": 520F,
+        "PosY": 1000F,
+        "Behaviours": {
+          "$id": 93,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 94,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 95,
+        "Name": "dizzy_loop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": true,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "a254922a-1683-69ad-b9f2-0f550f7ad13d"
+        },
+        "Motions": {
+          "$id": 96,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 97,
+          "$values": [
+
+          ]
+        },
+        "PosX": 780F,
+        "PosY": 0F,
+        "Behaviours": {
+          "$id": 98,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 99,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 100,
+        "Name": "die",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "40135e11-e46f-c3b8-5189-15bcae04d876"
+        },
+        "Motions": {
+          "$id": 101,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 102,
+          "$values": [
+
+          ]
+        },
+        "PosX": 780F,
+        "PosY": 200F,
+        "Behaviours": {
+          "$id": 103,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 104,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 105,
+        "Name": "win",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "fec904cb-03d3-82bb-a179-6c68f5093e40"
+        },
+        "Motions": {
+          "$id": 106,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 107,
+          "$values": [
+
+          ]
+        },
+        "PosX": 780F,
+        "PosY": 400F,
+        "Behaviours": {
+          "$id": 108,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 109,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 110,
+        "Name": "getin",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "b3d16cba-1ddd-0872-1e8b-2ee8eb7fd41f"
+        },
+        "Motions": {
+          "$id": 111,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 112,
+          "$values": [
+
+          ]
+        },
+        "PosX": 780F,
+        "PosY": 600F,
+        "Behaviours": {
+          "$id": 113,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 114,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 115,
+        "Name": "getout",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "d697b475-14d5-80db-6757-9df0426d4baa"
+        },
+        "Motions": {
+          "$id": 116,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 117,
+          "$values": [
+
+          ]
+        },
+        "PosX": 780F,
+        "PosY": 800F,
+        "Behaviours": {
+          "$id": 118,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 119,
+          "$values": [
+
+          ]
+        }
+      }
+    ]
+  },
+  "Transitions": {
+    "$id": 120,
+    "$values": [
+
+    ]
+  },
+  "AnyStateTransitions": {
+    "$id": 121,
+    "$values": [
+
+    ]
+  },
+  "Layers": {
+    "$id": 122,
+    "$values": [
+
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "Hero_ZhangFei"
+}

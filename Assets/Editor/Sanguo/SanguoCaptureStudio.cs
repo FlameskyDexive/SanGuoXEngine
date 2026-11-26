@@ -30,7 +30,7 @@ namespace SanGuoXEngine.Editor;
 /// lights shine along the node's -Z where Unity's shine along +Z (see <see cref="LightNodeRotation"/>),
 /// and the camera target reads back as linear colour that must be encoded for display.
 /// </remarks>
-public static class SanguoCaptureStudio
+public static partial class SanguoCaptureStudio
 {
     /// <summary>Where the Unity capture writes its frames and camera setup.</summary>
     public const string UnityShotsRelativePath = "Export/unity-refs/heroes/shots.json";
@@ -203,7 +203,7 @@ public static class SanguoCaptureStudio
 
     private static void RenderHero(StudioState studio, string name, JsonElement shot, int width, int height, string path)
     {
-        GameObject hero = InstantiateHero(name);
+        GameObject hero = InstantiateRestHero(name);
         LoadRenderAssets(hero);
         try
         {
@@ -252,7 +252,7 @@ public static class SanguoCaptureStudio
                     warnings.Add($"Unity did not capture '{name}'.");
                     continue;
                 }
-                GameObject hero = InstantiateHero(name);
+                GameObject hero = InstantiateRestHero(name);
                 try
                 {
                     LoadRenderAssets(hero);
@@ -306,6 +306,15 @@ public static class SanguoCaptureStudio
         return summary;
     }
 
+    /// <summary>A hero as its prefab stands, no animation applied (the M1 frames and silhouettes
+    /// compare the rest pose).</summary>
+    private static GameObject InstantiateRestHero(string name)
+    {
+        GameObject hero = InstantiateHero(name);
+        if (hero.GetComponent<Animator>() is Animator animator) animator.Enabled = false;
+        return hero;
+    }
+
     private static GameObject InstantiateHero(string name)
     {
         AssetEntry entry = EditorAssetBackend.Instance.GetEntry($"Heroes/Prefabs/{name}.prefab")
@@ -320,9 +329,11 @@ public static class SanguoCaptureStudio
 
     /// <summary>Aims the studio camera as the Unity shot did, renders one frame and writes it as a PNG.</summary>
     private static void WriteFrame(StudioState studio, JsonElement shot, int width, int height, string path)
+        => WriteFrame(studio, ReadFloats(shot.GetProperty("cameraPosition"), 3), ReadFloats(shot.GetProperty("cameraRotation"), 4), width, height, path);
+
+    /// <inheritdoc cref="WriteFrame(StudioState, JsonElement, int, int, string)"/>
+    private static void WriteFrame(StudioState studio, float[] position, float[] rotation, int width, int height, string path)
     {
-        float[] position = ReadFloats(shot.GetProperty("cameraPosition"), 3);
-        float[] rotation = ReadFloats(shot.GetProperty("cameraRotation"), 4);
         studio.Camera.Transform.Position = new Float3(position[0], position[1], position[2]);
         studio.Camera.Transform.Rotation = new Quaternion(rotation[0], rotation[1], rotation[2], rotation[3]);
 
