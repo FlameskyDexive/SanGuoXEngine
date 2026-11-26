@@ -211,6 +211,12 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _battleCamera.ClearFlags = CameraClearFlags.Skybox;
         _battleCamera.HDR = true;
         _battleCamera.FarClipPlane = 4000f;
+        // Editor Play prioritizes a responsive battle view. The full桃园 scene already carries
+        // baked/static shadow data, while rendering every dynamic caster into the cascades costs
+        // more than the editor budget allows. Platform quality profiles can re-enable this later.
+        UniversalAdditionalCameraData cameraData = cameraGo.AddComponent<UniversalAdditionalCameraData>();
+        cameraData.RenderShadows = false;
+        cameraData.RenderPostProcessing = true;
 
         // spawn every wave now: the stage queues them and the AI engages as they walk in
         int spawned = 0;

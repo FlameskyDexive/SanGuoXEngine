@@ -30,7 +30,7 @@
 | B4 角色和敌人接入 | 进行中 | `evidence/replan/b4-characters/`，四英雄保持真实 Prefab，敌人已切换到已导入真实士兵模型；逐 MonsterID Prefab 映射和 GPU 蒙皮实例仍待处理 |
 | B5 战斗逻辑优化 | 完成 | `evidence/replan/b5-battle/`，固定 60 Hz 步进、复用战斗 scratch 缓冲；45 个子模块测试通过 |
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，Volume/HDR/ACES/Bloom 与战斗相机已接入，敌人材质和特效仍待处理 |
-| B7 编辑器 Play 终验 | 未开始 | |
+| B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，动态阴影预算已接入；D3D12/Vulkan 仍未达到 60 FPS gate |
 
 ## 引擎缺口（在引擎 `main` 上单独成节点）
 
