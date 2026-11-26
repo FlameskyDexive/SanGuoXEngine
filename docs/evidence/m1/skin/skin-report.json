@@ -1,0 +1,1001 @@
+[
+  {
+    "hero": "Hero_GuanYu",
+    "mesh": "Hero_GuanYu_Body",
+    "vertices": [
+      5004,
+      5016
+    ],
+    "raw": 0.0025517885884528127,
+    "skinMatrix": 1.0707596894699023e-06,
+    "formula": 0.8753944879615586,
+    "paired": 4919,
+    "weightsDiffer": 1256,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.5725646123260437,
+    "bakeVsBlend": 11.239318816481237,
+    "bakeVsFirst": 0.0007882609042527,
+    "fbx": {
+      "weightedControlPoints": 3821,
+      "sameWeightsInEngine": 3811,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 58324,
+      "enginePixels": 58327,
+      "gpu": 0.999879991085052,
+      "readingsApart": 0.0014307369998807218,
+      "unityBlend": 0.9946618003206331,
+      "unityFirst": 0.9932723587621141,
+      "unityReading": "not separable",
+      "unityMargin": 0.0013894415585190556,
+      "engineBlend": 0.9946620734348619,
+      "engineFirst": 0.9932895050584187,
+      "engineReading": "not separable",
+      "engineMargin": 0.0013725683764431729
+    }
+  },
+  {
+    "hero": "Hero_GuanYu",
+    "mesh": "Hero_GuanYu_Cloth",
+    "vertices": [
+      2490,
+      2492
+    ],
+    "raw": 0.002120058961362875,
+    "skinMatrix": 1.0483709437236755e-06,
+    "formula": 1.1452694781362105,
+    "paired": 2428,
+    "weightsDiffer": 1141,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.3349526975198159,
+    "bakeVsBlend": 36.62254342951421,
+    "bakeVsFirst": 0.0006972192868141941,
+    "fbx": {
+      "weightedControlPoints": 1915,
+      "sameWeightsInEngine": 1908,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 54703,
+      "enginePixels": 54697,
+      "gpu": 0.99981720135271,
+      "readingsApart": 0.002596600813480565,
+      "unityBlend": 0.9943288194128874,
+      "unityFirst": 0.992534059945504,
+      "unityReading": "not separable",
+      "unityMargin": 0.0017947594673833889,
+      "engineBlend": 0.9941836159732447,
+      "engineFirst": 0.9926784513925476,
+      "engineReading": "not separable",
+      "engineMargin": 0.0015051645806970493
+    }
+  },
+  {
+    "hero": "Hero_GuanYu",
+    "mesh": "Hero_GuanYu_Hair",
+    "vertices": [
+      642,
+      642
+    ],
+    "raw": 0.0020093601467847345,
+    "skinMatrix": 1.0115804449557526e-06,
+    "formula": 1.860618863455866,
+    "paired": 638,
+    "weightsDiffer": 422,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.1920704845814978,
+    "bakeVsBlend": 59.56421607046298,
+    "bakeVsFirst": 0.001007092995656349,
+    "fbx": {
+      "weightedControlPoints": 565,
+      "sameWeightsInEngine": 565,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 13485,
+      "enginePixels": 13482,
+      "gpu": 0.9993327402135231,
+      "readingsApart": 0.01724894021341905,
+      "unityBlend": 0.9909592061742006,
+      "unityFirst": 0.9756436512580456,
+      "unityReading": "blend",
+      "unityMargin": 0.015315554916154994,
+      "engineBlend": 0.9909572121746802,
+      "engineFirst": 0.9762915264159228,
+      "engineReading": "blend",
+      "engineMargin": 0.014665685758757485
+    }
+  },
+  {
+    "hero": "Hero_GuanYu",
+    "mesh": "Hero_GuanYu_Leg",
+    "vertices": [
+      2219,
+      2219
+    ],
+    "raw": 0.0016176050970323347,
+    "skinMatrix": 1.0483709437236755e-06,
+    "formula": 0.6720461709460988,
+    "paired": 2195,
+    "weightsDiffer": 1248,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.25920910075839654,
+    "bakeVsBlend": 8.378204102634065,
+    "bakeVsFirst": 0.0005022531412163164,
+    "fbx": {
+      "weightedControlPoints": 1697,
+      "sameWeightsInEngine": 1693,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 54267,
+      "enginePixels": 54264,
+      "gpu": 0.9999447177842888,
+      "readingsApart": 0.0010997873744409414,
+      "unityBlend": 0.9947024966088646,
+      "unityFirst": 0.9939320610826963,
+      "unityReading": "not separable",
+      "unityMargin": 0.0007704355261682894,
+      "engineBlend": 0.9946475052241815,
+      "engineFirst": 0.9939867267993987,
+      "engineReading": "not separable",
+      "engineMargin": 0.0006607784247828485
+    }
+  },
+  {
+    "hero": "Hero_GuanYu",
+    "mesh": "Hero_GuanYu_Skin",
+    "vertices": [
+      1868,
+      1868
+    ],
+    "raw": 0.002514493189349885,
+    "skinMatrix": 1.6200488184014983e-06,
+    "formula": 0.3229560250600721,
+    "paired": 1811,
+    "weightsDiffer": 905,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.2976076555023923,
+    "bakeVsBlend": 2.672820988761239,
+    "bakeVsFirst": 0.0010368951687187427,
+    "fbx": {
+      "weightedControlPoints": 1582,
+      "sameWeightsInEngine": 1574,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 6821,
+      "enginePixels": 6822,
+      "gpu": 0.9998534154206977,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9835592731468128,
+      "unityFirst": 0.9835592731468128,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9837034900490338,
+      "engineFirst": 0.9837034900490338,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LiuBei",
+    "mesh": "Hero_LiuBei_Body",
+    "vertices": [
+      8058,
+      8076
+    ],
+    "raw": 0.002368654681533757,
+    "skinMatrix": 2.831343578127421e-05,
+    "formula": 0.018118405635687385,
+    "paired": 7865,
+    "weightsDiffer": 4252,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.20141882673942701,
+    "bakeVsBlend": 0.08217238065656195,
+    "bakeVsFirst": 0.000808030005918531,
+    "fbx": {
+      "weightedControlPoints": 5394,
+      "sameWeightsInEngine": 5355,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 53826,
+      "enginePixels": 53826,
+      "gpu": 1.0,
+      "readingsApart": 3.6909902926929306e-05,
+      "unityBlend": 0.9932089538467217,
+      "unityFirst": 0.99317229798306,
+      "unityReading": "not separable",
+      "unityMargin": 3.665586366174978e-05,
+      "engineBlend": 0.9932089538467217,
+      "engineFirst": 0.99317229798306,
+      "engineReading": "not separable",
+      "engineMargin": 3.665586366174978e-05
+    }
+  },
+  {
+    "hero": "Hero_LiuBei",
+    "mesh": "Hero_LiuBei_Hair",
+    "vertices": [
+      1776,
+      1776
+    ],
+    "raw": 0.0018806818816566103,
+    "skinMatrix": 1.0913075411816964e-06,
+    "formula": 0.0022149041905817042,
+    "paired": 1749,
+    "weightsDiffer": 55,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.9356948228882834,
+    "bakeVsBlend": 0.0007931994921775716,
+    "bakeVsFirst": 0.000730728413698984,
+    "fbx": {
+      "weightedControlPoints": 1369,
+      "sameWeightsInEngine": 1369,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 1848,
+      "enginePixels": 1848,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9625,
+      "unityFirst": 0.9625,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9625,
+      "engineFirst": 0.9625,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LiuBei",
+    "mesh": "Hero_LiuBei_Leg",
+    "vertices": [
+      3309,
+      3309
+    ],
+    "raw": 0.0019292239268649208,
+    "skinMatrix": 6.000175384305749e-07,
+    "formula": 1.146296296878851,
+    "paired": 3261,
+    "weightsDiffer": 722,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.6166547020818378,
+    "bakeVsBlend": 18.918355687411093,
+    "bakeVsFirst": 0.00082020383759318,
+    "fbx": {
+      "weightedControlPoints": 2329,
+      "sameWeightsInEngine": 2329,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 91257,
+      "enginePixels": 91255,
+      "gpu": 0.999978083873018,
+      "readingsApart": 0.0001963886312803531,
+      "unityBlend": 0.9956574396351376,
+      "unityFirst": 0.9955702969864927,
+      "unityReading": "not separable",
+      "unityMargin": 8.714264864495558e-05,
+      "engineBlend": 0.995646481178396,
+      "engineFirst": 0.995581159372852,
+      "engineReading": "not separable",
+      "engineMargin": 6.532180554408296e-05
+    }
+  },
+  {
+    "hero": "Hero_LiuBei",
+    "mesh": "Hero_LiuBei_Skin",
+    "vertices": [
+      2193,
+      2193
+    ],
+    "raw": 0.0019102186532815992,
+    "skinMatrix": 1.0913075411816964e-06,
+    "formula": 0.002098393509057005,
+    "paired": 2160,
+    "weightsDiffer": 490,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.5881944444444445,
+    "bakeVsBlend": 0.0008941661664022663,
+    "bakeVsFirst": 0.0008614144278498199,
+    "fbx": {
+      "weightedControlPoints": 2029,
+      "sameWeightsInEngine": 2028,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 4336,
+      "enginePixels": 4336,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9901781635449978,
+      "unityFirst": 0.9901781635449978,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9901781635449978,
+      "engineFirst": 0.9901781635449978,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Body",
+    "vertices": [
+      7869,
+      7878
+    ],
+    "raw": 0.0027179199767750533,
+    "skinMatrix": 4.9981071620353035e-06,
+    "formula": 0.004234075824604863,
+    "paired": 7683,
+    "weightsDiffer": 3754,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.23738240340808237,
+    "bakeVsBlend": 0.000778619355916231,
+    "bakeVsFirst": 0.000778619355916231,
+    "fbx": {
+      "weightedControlPoints": 5088,
+      "sameWeightsInEngine": 5083,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 28127,
+      "enginePixels": 28127,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9923427079290025,
+      "unityFirst": 0.9923427079290025,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9923427079290025,
+      "engineFirst": 0.9923427079290025,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Cloth",
+    "vertices": [
+      456,
+      456
+    ],
+    "raw": 0.0026152008749638685,
+    "skinMatrix": 1.585212945320081e-06,
+    "formula": 0.0033231662377133835,
+    "paired": 449,
+    "weightsDiffer": 448,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.0,
+    "bakeVsBlend": 0.0011985757346383338,
+    "bakeVsFirst": 0.0007668952011924427,
+    "fbx": {
+      "weightedControlPoints": 456,
+      "sameWeightsInEngine": 455,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 56125,
+      "enginePixels": 56125,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9967851370313139,
+      "unityFirst": 0.9967851370313139,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9967851370313139,
+      "engineFirst": 0.9967851370313139,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Face",
+    "vertices": [
+      2642,
+      2642
+    ],
+    "raw": 0.002051934697028768,
+    "skinMatrix": 5.563617712589508e-06,
+    "formula": 0.002591254336416037,
+    "paired": 2592,
+    "weightsDiffer": 2150,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.05940199335548173,
+    "bakeVsBlend": 0.000875156861861727,
+    "bakeVsFirst": 0.0007848808041329281,
+    "fbx": {
+      "weightedControlPoints": 2453,
+      "sameWeightsInEngine": 2404,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 2585,
+      "enginePixels": 2584,
+      "gpu": 0.9996131528046421,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9881453154875717,
+      "unityFirst": 0.9881453154875717,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9877629063097514,
+      "engineFirst": 0.9877629063097514,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Hair",
+    "vertices": [
+      6236,
+      6236
+    ],
+    "raw": 0.0034697901320280226,
+    "skinMatrix": 5.563617712589508e-06,
+    "formula": 0.003911028631223002,
+    "paired": 6047,
+    "weightsDiffer": 2443,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.38636363636363635,
+    "bakeVsBlend": 0.0011146590527569954,
+    "bakeVsFirst": 0.0009579521608901581,
+    "fbx": {
+      "weightedControlPoints": 5728,
+      "sameWeightsInEngine": 5725,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 6125,
+      "enginePixels": 6126,
+      "gpu": 0.9998367613450865,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9653106275622831,
+      "unityFirst": 0.9653106275622831,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9654683065279092,
+      "engineFirst": 0.9654683065279092,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Leg",
+    "vertices": [
+      1222,
+      1222
+    ],
+    "raw": 0.0016455190670258534,
+    "skinMatrix": 6.506598295663671e-07,
+    "formula": 0.0027036815359220514,
+    "paired": 1198,
+    "weightsDiffer": 1193,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.0007810466024472793,
+    "bakeVsBlend": 0.0036962508839703174,
+    "bakeVsFirst": 0.0005530977446574876,
+    "fbx": {
+      "weightedControlPoints": 795,
+      "sameWeightsInEngine": 792,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 26196,
+      "enginePixels": 26196,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.991671714112659,
+      "unityFirst": 0.991671714112659,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.991671714112659,
+      "engineFirst": 0.991671714112659,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_LvBu",
+    "mesh": "Hero_LvBu_Skin",
+    "vertices": [
+      3520,
+      3528
+    ],
+    "raw": 0.0020475478070972435,
+    "skinMatrix": 1.569844444004045e-06,
+    "formula": 0.0023258261127524454,
+    "paired": 3455,
+    "weightsDiffer": 2539,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.12231962238705327,
+    "bakeVsBlend": 0.0017883616383506534,
+    "bakeVsFirst": 0.000704724193750246,
+    "fbx": {
+      "weightedControlPoints": 2288,
+      "sameWeightsInEngine": 2280,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 30867,
+      "enginePixels": 30868,
+      "gpu": 0.9999676039911883,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9906911051905114,
+      "unityFirst": 0.9906911051905114,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9907232048277854,
+      "engineFirst": 0.9907232048277854,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "mesh": "Hero_ZhangFei_Body",
+    "vertices": [
+      5010,
+      5011
+    ],
+    "raw": 5.0408332780412895e-05,
+    "skinMatrix": 2.2510790873564446e-06,
+    "formula": 0.044926245042135625,
+    "paired": 5010,
+    "weightsDiffer": 899,
+    "unityOn31stGrid": 0.2853538249799289,
+    "engineOn31stGrid": 0.22564734895191121,
+    "bakeVsBlend": 5.123248740867127,
+    "bakeVsFirst": 0.0009612205933764238,
+    "fbx": {
+      "weightedControlPoints": 3649,
+      "sameWeightsInEngine": 3624,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 61979,
+      "enginePixels": 61979,
+      "gpu": 1.0,
+      "readingsApart": 0.00028798156917952955,
+      "unityBlend": 0.9915524054845367,
+      "unityFirst": 0.9915518648298373,
+      "unityReading": "not separable",
+      "unityMargin": 5.406546994546346e-07,
+      "engineBlend": 0.9915524054845367,
+      "engineFirst": 0.9915518648298373,
+      "engineReading": "not separable",
+      "engineMargin": 5.406546994546346e-07
+    }
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "mesh": "Hero_ZhangFei_Face",
+    "vertices": [
+      1229,
+      1229
+    ],
+    "raw": 5.015974495553903e-05,
+    "skinMatrix": 8.808052666467447e-07,
+    "formula": 0.0002927265756961175,
+    "paired": 1229,
+    "weightsDiffer": 0,
+    "unityOn31stGrid": 0.0737082066869301,
+    "engineOn31stGrid": 0.0737082066869301,
+    "bakeVsBlend": 0.5511182516159886,
+    "bakeVsFirst": 0.0009504265229962371,
+    "fbx": {
+      "weightedControlPoints": 1173,
+      "sameWeightsInEngine": 1173,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 2690,
+      "enginePixels": 2690,
+      "gpu": 1.0,
+      "readingsApart": 0.0003680529996319404,
+      "unityBlend": 0.9900625690099374,
+      "unityFirst": 0.9904270986745214,
+      "unityReading": "not separable",
+      "unityMargin": 0.00036452966458400127,
+      "engineBlend": 0.9900625690099374,
+      "engineFirst": 0.9904270986745214,
+      "engineReading": "not separable",
+      "engineMargin": 0.00036452966458400127
+    }
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "mesh": "Hero_ZhangFei_Hair",
+    "vertices": [
+      2750,
+      2750
+    ],
+    "raw": 5.033885193518329e-05,
+    "skinMatrix": 2.078883076725435e-06,
+    "formula": 0.14430577818333692,
+    "paired": 2750,
+    "weightsDiffer": 332,
+    "unityOn31stGrid": 0.2438660123746533,
+    "engineOn31stGrid": 0.21870646766169155,
+    "bakeVsBlend": 36.49180212524746,
+    "bakeVsFirst": 0.0009745492572196884,
+    "fbx": {
+      "weightedControlPoints": 2121,
+      "sameWeightsInEngine": 2109,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 23277,
+      "enginePixels": 23277,
+      "gpu": 1.0,
+      "readingsApart": 0.011621495525300118,
+      "unityBlend": 0.9883617211060612,
+      "unityFirst": 0.9781068352496924,
+      "unityReading": "blend",
+      "unityMargin": 0.0102548858563688,
+      "engineBlend": 0.9882777659800382,
+      "engineFirst": 0.9781068352496924,
+      "engineReading": "blend",
+      "engineMargin": 0.010170930730345806
+    }
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "mesh": "Hero_ZhangFei_Leg",
+    "vertices": [
+      2768,
+      2770
+    ],
+    "raw": 5.033885171297924e-05,
+    "skinMatrix": 3.262048912100468e-07,
+    "formula": 0.027607380508258197,
+    "paired": 2768,
+    "weightsDiffer": 253,
+    "unityOn31stGrid": 0.28273615635179156,
+    "engineOn31stGrid": 0.22154097690578378,
+    "bakeVsBlend": 1.7975208163653764,
+    "bakeVsFirst": 0.0007003782723973555,
+    "fbx": {
+      "weightedControlPoints": 2055,
+      "sameWeightsInEngine": 2054,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 57055,
+      "enginePixels": 57055,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9957242582897033,
+      "unityFirst": 0.9957242582897033,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9957242582897033,
+      "engineFirst": 0.9957242582897033,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "mesh": "Hero_ZhangFei_Skin",
+    "vertices": [
+      1341,
+      1341
+    ],
+    "raw": 5.024937824651944e-05,
+    "skinMatrix": 2.2543125730578595e-06,
+    "formula": 0.003167780020762566,
+    "paired": 1341,
+    "weightsDiffer": 208,
+    "unityOn31stGrid": 0.01672073870726229,
+    "engineOn31stGrid": 0.014750643877312106,
+    "bakeVsBlend": 1.4095114489440006,
+    "bakeVsFirst": 0.0008826492989225316,
+    "fbx": {
+      "weightedControlPoints": 1143,
+      "sameWeightsInEngine": 1130,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 36524,
+      "enginePixels": 36524,
+      "gpu": 1.0,
+      "readingsApart": 0.00016343875132796004,
+      "unityBlend": 0.9949602266535905,
+      "unityFirst": 0.9949060201579951,
+      "unityReading": "not separable",
+      "unityMargin": 5.420649559539914e-05,
+      "engineBlend": 0.9949602266535905,
+      "engineFirst": 0.9949060201579951,
+      "engineReading": "not separable",
+      "engineMargin": 5.420649559539914e-05
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Body",
+    "vertices": [
+      6360,
+      6378
+    ],
+    "raw": 0.002032360511902493,
+    "skinMatrix": 1.2119761944822847e-06,
+    "formula": 0.002714099007462183,
+    "paired": 6283,
+    "weightsDiffer": 2693,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.3606378763866878,
+    "bakeVsBlend": 0.004716595600050906,
+    "bakeVsFirst": 0.0007639733579908126,
+    "fbx": {
+      "weightedControlPoints": 3453,
+      "sameWeightsInEngine": 3452,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 39822,
+      "enginePixels": 39823,
+      "gpu": 0.9999748888833087,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9917806172009266,
+      "unityFirst": 0.9917806172009266,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9918055244215298,
+      "engineFirst": 0.9918055244215298,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Cloth",
+    "vertices": [
+      2554,
+      2573
+    ],
+    "raw": 0.0021142573163564085,
+    "skinMatrix": 3.7965685669423825e-06,
+    "formula": 0.002548263653165868,
+    "paired": 2508,
+    "weightsDiffer": 1384,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.22983710766785856,
+    "bakeVsBlend": 0.001129003030940817,
+    "bakeVsFirst": 0.0008421850274498086,
+    "fbx": {
+      "weightedControlPoints": 2087,
+      "sameWeightsInEngine": 2086,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 67663,
+      "enginePixels": 67663,
+      "gpu": 0.9999704421849137,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9948978091457139,
+      "unityFirst": 0.9948978091457139,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9949124380596686,
+      "engineFirst": 0.9949124380596686,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Hair",
+    "vertices": [
+      1767,
+      1787
+    ],
+    "raw": 0.0018953849212537768,
+    "skinMatrix": 1.327937919508304e-06,
+    "formula": 1.1421677957849525,
+    "paired": 1738,
+    "weightsDiffer": 1061,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.168741024413595,
+    "bakeVsBlend": 6.654027207039242,
+    "bakeVsFirst": 0.0011314157199259945,
+    "fbx": {
+      "weightedControlPoints": 1261,
+      "sameWeightsInEngine": 1259,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 6999,
+      "enginePixels": 7001,
+      "gpu": 0.9974318733057498,
+      "readingsApart": 0.018179369781847532,
+      "unityBlend": 0.949477115306261,
+      "unityFirst": 0.9430388310106886,
+      "unityReading": "blend",
+      "unityMargin": 0.006438284295572361,
+      "engineBlend": 0.9497419179570769,
+      "engineFirst": 0.9446249661521798,
+      "engineReading": "blend",
+      "engineMargin": 0.005116951804897019
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Leg",
+    "vertices": [
+      2725,
+      2724
+    ],
+    "raw": 0.001366004992667595,
+    "skinMatrix": 8.01884423862198e-07,
+    "formula": 0.004097026511207538,
+    "paired": 2687,
+    "weightsDiffer": 831,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.5244308717379234,
+    "bakeVsBlend": 0.05139404577039708,
+    "bakeVsFirst": 0.0006422690789326579,
+    "fbx": {
+      "weightedControlPoints": 1541,
+      "sameWeightsInEngine": 1541,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 37373,
+      "enginePixels": 37374,
+      "gpu": 0.9999732434312624,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9913262599469496,
+      "unityFirst": 0.9913262599469496,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9913527851458886,
+      "engineFirst": 0.9913527851458886,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Skin",
+    "vertices": [
+      1339,
+      1339
+    ],
+    "raw": 0.0018849656998725694,
+    "skinMatrix": 8.535999246883641e-07,
+    "formula": 0.0021935551732310357,
+    "paired": 1314,
+    "weightsDiffer": 369,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 0.5329241071428571,
+    "bakeVsBlend": 0.01645478377434839,
+    "bakeVsFirst": 0.000773374308007273,
+    "fbx": {
+      "weightedControlPoints": 1318,
+      "sameWeightsInEngine": 1318,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 4090,
+      "enginePixels": 4090,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9888781431334622,
+      "unityFirst": 0.9888781431334622,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9888781431334622,
+      "engineFirst": 0.9888781431334622,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Weapon_A",
+    "vertices": [
+      184,
+      184
+    ],
+    "raw": 0.0006756955172999879,
+    "skinMatrix": 5.422865032578272e-07,
+    "formula": 0.0009779593514568394,
+    "paired": 184,
+    "weightsDiffer": 0,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 1.0,
+    "bakeVsBlend": 0.0005484854486510962,
+    "bakeVsFirst": 0.0005484854486510962,
+    "fbx": {
+      "weightedControlPoints": 56,
+      "sameWeightsInEngine": 56,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 3990,
+      "enginePixels": 3990,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9905660377358491,
+      "unityFirst": 0.9905660377358491,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9905660377358491,
+      "engineFirst": 0.9905660377358491,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  },
+  {
+    "hero": "Hero_ZhaoYun",
+    "mesh": "Hero_ZhaoYun_Weapon_Left",
+    "vertices": [
+      448,
+      452
+    ],
+    "raw": 0.0010537703924360954,
+    "skinMatrix": 4.715603778520191e-07,
+    "formula": 0.001111624094234012,
+    "paired": 448,
+    "weightsDiffer": 0,
+    "unityOn31stGrid": 1.0,
+    "engineOn31stGrid": 1.0,
+    "bakeVsBlend": 0.0004319506058645904,
+    "bakeVsFirst": 0.0004319506058645904,
+    "fbx": {
+      "weightedControlPoints": 168,
+      "sameWeightsInEngine": 168,
+      "engineX": "-x"
+    },
+    "silhouette": {
+      "winding": "positive",
+      "unityPixels": 3500,
+      "enginePixels": 3500,
+      "gpu": 1.0,
+      "readingsApart": 0.0,
+      "unityBlend": 0.9861894024802705,
+      "unityFirst": 0.9861894024802705,
+      "unityReading": "not separable",
+      "unityMargin": 0.0,
+      "engineBlend": 0.9861894024802705,
+      "engineFirst": 0.9861894024802705,
+      "engineReading": "not separable",
+      "engineMargin": 0.0
+    }
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "jws2_client": "F:/jws2/client",
+  "export": "Export/heroes/heroes.json",
+  "output_root": "Heroes",
+  "manifest": "Export/import/heroes.json",
+  "report": "Export/import/heroes-report.json"
+}

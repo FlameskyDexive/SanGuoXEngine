@@ -26,6 +26,43 @@ string __S(string s) {
 }
 string __B(bool b) { return b ? "true" : "false"; }
 string __F(float f) { return f.ToString("R", System.Globalization.CultureInfo.InvariantCulture); }
+// Serializes dictionaries, lists, arrays and scalars, so scripts assemble data as
+// Dictionary<string, object> / List<object> instead of concatenating JSON by hand. Enums must be
+// passed through ToString() (a bare enum would be written unquoted).
+string __J(object value) {
+    if (value == null) return "null";
+    if (value is string) return __S((string)value);
+    if (value is bool) return __B((bool)value);
+    if (value is float) return __F((float)value);
+    if (value is int) return ((int)value).ToString();
+    if (value is long) return ((long)value).ToString();
+    if (value is double) return ((double)value).ToString("R", System.Globalization.CultureInfo.InvariantCulture);
+    System.Collections.IDictionary dictionary = value as System.Collections.IDictionary;
+    if (dictionary != null) {
+        System.Text.StringBuilder b = new System.Text.StringBuilder();
+        b.Append('{');
+        bool first = true;
+        foreach (System.Collections.DictionaryEntry entry in dictionary) {
+            if (!first) b.Append(',');
+            first = false;
+            b.Append(__S((string)entry.Key)).Append(':').Append(__J(entry.Value));
+        }
+        return b.Append('}').ToString();
+    }
+    System.Collections.IEnumerable list = value as System.Collections.IEnumerable;
+    if (list != null) {
+        System.Text.StringBuilder b = new System.Text.StringBuilder();
+        b.Append('[');
+        bool first = true;
+        foreach (object item in list) {
+            if (!first) b.Append(',');
+            first = false;
+            b.Append(__J(item));
+        }
+        return b.Append(']').ToString();
+    }
+    return __S(value.ToString());
+}
 void __P(string key, string value) {
     __sb.Append(__S(key)).Append(':').Append(value == null ? "null" : value).Append(',');
 }

@@ -38,8 +38,10 @@ COMPILE_PROBE = "return XEngine.Editor.Projects.Scripting.ScriptAssemblyManager.
 
 
 class LiveEditor:
-    def __init__(self, editor, project):
+    def __init__(self, editor, project, graphics=None):
         args = [editor, "--project", str(project), "--serve"]
+        if graphics:
+            args.append("--graphics=" + graphics)
         self.proc = subprocess.Popen(
             args, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
             text=True, encoding="utf-8", errors="replace", bufsize=1, cwd=str(project))
@@ -183,7 +185,9 @@ def run_commands(editor, commands):
                 continue
             text = editor.tool(command["tool"], command.get("args"), float(command.get("timeout", 120)))
             results.append({"tag": tag, "ok": True, "text": text})
-            print(f"RESULT {tag} {text[:1500]}", flush=True)
+            # Results are printed truncated unless the command asks for the full text ("full": true);
+            # --out always stores everything.
+            print(f"RESULT {tag} {text if command.get('full') else text[:1500]}", flush=True)
         except (RuntimeError, TimeoutError, ConnectionError) as error:
             results.append({"tag": tag, "ok": False, "error": str(error)})
             print(f"ERROR {tag} {str(error)[:800]}", flush=True)
@@ -198,10 +202,12 @@ def main(argv=None):
     parser.add_argument("--editor", default=DEFAULT_EDITOR)
     parser.add_argument("--project", default=str(PROJECT))
     parser.add_argument("--keep", action="store_true", help="leave the editor running")
+    parser.add_argument("--graphics", help="graphics backend of the editor, e.g. vulkan or d3d12")
     parser.add_argument("--wait-compile", type=int, default=None,
                         help="seconds to wait for the first script compile before the commands")
     parser.add_argument("--screenshot", help="shortcut: one runtime_screenshot")
     parser.add_argument("--eval", help="shortcut: one runtime_eval")
+    parser.add_argument("--eval-file", help="shortcut: one runtime_eval with the C# code read from this file")
     parser.add_argument("--tail", type=int, default=25,
                         help="on failure, print this many non-MCP editor output lines")
     args = parser.parse_args(argv)
@@ -215,8 +221,11 @@ def main(argv=None):
         commands += [{"tool": "runtime_screenshot", "args": {"path": args.screenshot}, "tag": "screenshot"}]
     if args.eval:
         commands += [{"tool": "runtime_eval", "args": {"code": args.eval}, "tag": "eval"}]
+    if args.eval_file:
+        commands += [{"tool": "runtime_eval", "args": {"code": Path(args.eval_file).read_text(encoding="utf-8")},
+                      "tag": Path(args.eval_file).stem, "full": True}]
 
-    editor = LiveEditor(args.editor, args.project)
+    editor = LiveEditor(args.editor, args.project, args.graphics)
     try:
         init = editor.initialize()
         editor._send({"jsonrpc": "2.0", "method": "notifications/initialized"})

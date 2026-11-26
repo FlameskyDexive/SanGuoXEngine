@@ -1,0 +1,345 @@
+[
+  {
+    "hero": "Hero_ZhaoYun",
+    "found": true,
+    "unityNodes": 153,
+    "engineNodes": 153,
+    "missingInEngine": [],
+    "extraInEngine": [],
+    "sharedNodes": 153,
+    "maxPositionDelta": {
+      "metres": 7.788545360359752e-06,
+      "node": "Hero_ZhaoYun/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/Bone103_T_D_1/Bone104_T_D_2/Bone105_T_D_3/Bone106_T_D_4"
+    },
+    "maxLocalScaleDelta": {
+      "value": 5.000000000032756e-06,
+      "node": "Hero_ZhaoYun/Bip001/Bip00A/Bip001 Pelvis/Bone068(mirrored)_L/Bone069(mirrored)_L/Bone070(mirrored)_L/Bone071(mirrored)_L"
+    },
+    "skinnedMeshes": [
+      {
+        "node": "Hero_ZhaoYun/Bip001/Bip00A/Bip001 Pelvis/Bone122_jian_qiao/Hero_ZhaoYun_Weapon_A",
+        "unityVertices": 184,
+        "engineVertices": 184,
+        "unityBones": 1,
+        "engineBones": 1,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Bip001/Bip00A/Bone121_jian/Hero_ZhaoYun_Weapon_Left",
+        "unityVertices": 448,
+        "engineVertices": 452,
+        "unityBones": 1,
+        "engineBones": 1,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Hero_ZhaoYun_Body",
+        "unityVertices": 6360,
+        "engineVertices": 6378,
+        "unityBones": 50,
+        "engineBones": 50,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Hero_ZhaoYun_Cloth",
+        "unityVertices": 2554,
+        "engineVertices": 2573,
+        "unityBones": 40,
+        "engineBones": 40,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Hero_ZhaoYun_Hair",
+        "unityVertices": 1767,
+        "engineVertices": 1787,
+        "unityBones": 28,
+        "engineBones": 28,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Hero_ZhaoYun_Leg",
+        "unityVertices": 2725,
+        "engineVertices": 2724,
+        "unityBones": 10,
+        "engineBones": 10,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhaoYun/Hero_ZhaoYun_Skin",
+        "unityVertices": 1339,
+        "engineVertices": 1339,
+        "unityBones": 12,
+        "engineBones": 12,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      }
+    ],
+    "engineAnimator": false
+  },
+  {
+    "hero": "Hero_GuanYu",
+    "found": true,
+    "unityNodes": 106,
+    "engineNodes": 106,
+    "missingInEngine": [],
+    "extraInEngine": [],
+    "sharedNodes": 106,
+    "maxPositionDelta": {
+      "metres": 0.004508118356961762,
+      "node": "Hero_GuanYu/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/Bone040_toufa/Bone041_toufa/Bone042_toufa/Bone043"
+    },
+    "maxLocalScaleDelta": {
+      "value": 4.812999999992407e-05,
+      "node": "Hero_GuanYu/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/Bone040_toufa/Bone041_toufa/Bone042_toufa/Bone043"
+    },
+    "skinnedMeshes": [
+      {
+        "node": "Hero_GuanYu/Hero_GuanYu_Body",
+        "unityVertices": 5004,
+        "engineVertices": 5016,
+        "unityBones": 22,
+        "engineBones": 22,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_GuanYu/Hero_GuanYu_Cloth",
+        "unityVertices": 2490,
+        "engineVertices": 2492,
+        "unityBones": 20,
+        "engineBones": 20,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_GuanYu/Hero_GuanYu_Hair",
+        "unityVertices": 642,
+        "engineVertices": 642,
+        "unityBones": 12,
+        "engineBones": 12,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_GuanYu/Hero_GuanYu_Leg",
+        "unityVertices": 2219,
+        "engineVertices": 2219,
+        "unityBones": 21,
+        "engineBones": 20,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_GuanYu/Hero_GuanYu_Skin",
+        "unityVertices": 1868,
+        "engineVertices": 1868,
+        "unityBones": 48,
+        "engineBones": 48,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      }
+    ],
+    "engineAnimator": false
+  },
+  {
+    "hero": "Hero_LiuBei",
+    "found": true,
+    "unityNodes": 149,
+    "engineNodes": 149,
+    "missingInEngine": [],
+    "extraInEngine": [],
+    "sharedNodes": 149,
+    "maxPositionDelta": {
+      "metres": 1.4956869133336528e-05,
+      "node": "Hero_LiuBei/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/Bip001 R Finger1/Bip001 R Finger11/Bip001 R Finger12"
+    },
+    "maxLocalScaleDelta": {
+      "value": 1.5499999999057934e-06,
+      "node": "Hero_LiuBei/Bip001/Bip00A/node_left_A"
+    },
+    "skinnedMeshes": [
+      {
+        "node": "Hero_LiuBei/Hero_LiuBei_Body",
+        "unityVertices": 8058,
+        "engineVertices": 8076,
+        "unityBones": 66,
+        "engineBones": 65,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LiuBei/Hero_LiuBei_Hair",
+        "unityVertices": 1776,
+        "engineVertices": 1776,
+        "unityBones": 5,
+        "engineBones": 5,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LiuBei/Hero_LiuBei_Leg",
+        "unityVertices": 3309,
+        "engineVertices": 3309,
+        "unityBones": 60,
+        "engineBones": 55,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LiuBei/Hero_LiuBei_Skin",
+        "unityVertices": 2193,
+        "engineVertices": 2193,
+        "unityBones": 23,
+        "engineBones": 23,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      }
+    ],
+    "engineAnimator": false
+  },
+  {
+    "hero": "Hero_ZhangFei",
+    "found": true,
+    "unityNodes": 121,
+    "engineNodes": 121,
+    "missingInEngine": [],
+    "extraInEngine": [],
+    "sharedNodes": 121,
+    "maxPositionDelta": {
+      "metres": 7.715519631420476e-06,
+      "node": "Hero_ZhangFei/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/Bone040_toudai004/Bone041_toudai005"
+    },
+    "maxLocalScaleDelta": {
+      "value": 4.0829999999880684e-05,
+      "node": "Hero_ZhangFei/Bip001/Bip00A/Bip001 Pelvis/Bip001 L Thigh/Bone_L_017"
+    },
+    "skinnedMeshes": [
+      {
+        "node": "Hero_ZhangFei/Hero_ZhangFei_Body",
+        "unityVertices": 5010,
+        "engineVertices": 5011,
+        "unityBones": 60,
+        "engineBones": 58,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhangFei/Hero_ZhangFei_Face",
+        "unityVertices": 1229,
+        "engineVertices": 1229,
+        "unityBones": 11,
+        "engineBones": 11,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhangFei/Hero_ZhangFei_Hair",
+        "unityVertices": 2750,
+        "engineVertices": 2750,
+        "unityBones": 23,
+        "engineBones": 21,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhangFei/Hero_ZhangFei_Leg",
+        "unityVertices": 2768,
+        "engineVertices": 2770,
+        "unityBones": 35,
+        "engineBones": 34,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_ZhangFei/Hero_ZhangFei_Skin",
+        "unityVertices": 1341,
+        "engineVertices": 1341,
+        "unityBones": 43,
+        "engineBones": 41,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      }
+    ],
+    "engineAnimator": false
+  },
+  {
+    "hero": "Hero_LvBu",
+    "found": true,
+    "unityNodes": 168,
+    "engineNodes": 168,
+    "missingInEngine": [],
+    "extraInEngine": [],
+    "sharedNodes": 168,
+    "maxPositionDelta": {
+      "metres": 8.347909170154443e-06,
+      "node": "Hero_LvBu/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/Bone02/Bone03/Bone04/Bone05/Bone06/Bone07/Bone08/Bone09/Bone10/Bone11/Bone12/Bone13"
+    },
+    "maxLocalScaleDelta": {
+      "value": 2.4999999999941735e-05,
+      "node": "Hero_LvBu/Bip001/Bip00A/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001 Neck/Bip001 Head/node_head"
+    },
+    "skinnedMeshes": [
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Body",
+        "unityVertices": 7869,
+        "engineVertices": 7878,
+        "unityBones": 46,
+        "engineBones": 46,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Cloth",
+        "unityVertices": 456,
+        "engineVertices": 456,
+        "unityBones": 13,
+        "engineBones": 13,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Face",
+        "unityVertices": 2642,
+        "engineVertices": 2642,
+        "unityBones": 14,
+        "engineBones": 14,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Hair",
+        "unityVertices": 6236,
+        "engineVertices": 6236,
+        "unityBones": 36,
+        "engineBones": 36,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Leg",
+        "unityVertices": 1222,
+        "engineVertices": 1222,
+        "unityBones": 9,
+        "engineBones": 9,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      },
+      {
+        "node": "Hero_LvBu/Hero_LvBu_Skin",
+        "unityVertices": 3520,
+        "engineVertices": 3528,
+        "unityBones": 41,
+        "engineBones": 41,
+        "unityMaterials": 1,
+        "engineMaterials": 1
+      }
+    ],
+    "engineAnimator": false
+  }
+]

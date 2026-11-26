@@ -1,0 +1,62 @@
+hero / mesh                      raw  formula     weights    fbx=eng U 1/31  b/blend  b/first  GPU/GPU  U blend  U first  E blend  E first
+GuanYu/Body                   0.00mm   0.88mm  1256/4919  3811/3821    100%   11.2mm    0.0mm    1.000    0.995    0.993    0.995    0.993
+GuanYu/Cloth                  0.00mm   1.15mm  1141/2428  1908/1915    100%   36.6mm    0.0mm    1.000    0.994    0.993    0.994    0.993
+GuanYu/Hair                   0.00mm   1.86mm   422/638    565/565     100%   59.6mm    0.0mm    0.999    0.991    0.976    0.991    0.976
+GuanYu/Leg                    0.00mm   0.67mm  1248/2195  1693/1697    100%    8.4mm    0.0mm    1.000    0.995    0.994    0.995    0.994
+GuanYu/Skin                   0.00mm   0.32mm   905/1811  1574/1582    100%    2.7mm    0.0mm    1.000    0.984    0.984    0.984    0.984
+LiuBei/Body                   0.00mm   0.02mm  4252/7865  5355/5394    100%    0.1mm    0.0mm    1.000    0.993    0.993    0.993    0.993
+LiuBei/Hair                   0.00mm   0.00mm    55/1749  1369/1369    100%    0.0mm    0.0mm    1.000    0.963    0.963    0.963    0.963
+LiuBei/Leg                    0.00mm   1.15mm   722/3261  2329/2329    100%   18.9mm    0.0mm    1.000    0.996    0.996    0.996    0.996
+LiuBei/Skin                   0.00mm   0.00mm   490/2160  2028/2029    100%    0.0mm    0.0mm    1.000    0.990    0.990    0.990    0.990
+LvBu/Body                     0.00mm   0.00mm  3754/7683  5083/5088    100%    0.0mm    0.0mm    1.000    0.992    0.992    0.992    0.992
+LvBu/Cloth                    0.00mm   0.00mm   448/449    455/456     100%    0.0mm    0.0mm    1.000    0.997    0.997    0.997    0.997
+LvBu/Face                     0.00mm   0.00mm  2150/2592  2404/2453    100%    0.0mm    0.0mm    1.000    0.988    0.988    0.988    0.988
+LvBu/Hair                     0.00mm   0.00mm  2443/6047  5725/5728    100%    0.0mm    0.0mm    1.000    0.965    0.965    0.965    0.965
+LvBu/Leg                      0.00mm   0.00mm  1193/1198   792/795     100%    0.0mm    0.0mm    1.000    0.992    0.992    0.992    0.992
+LvBu/Skin                     0.00mm   0.00mm  2539/3455  2280/2288    100%    0.0mm    0.0mm    1.000    0.991    0.991    0.991    0.991
+ZhangFei/Body                 0.00mm   0.04mm   899/5010  3624/3649     29%    5.1mm    0.0mm    1.000    0.992    0.992    0.992    0.992
+ZhangFei/Face                 0.00mm   0.00mm     0/1229  1173/1173      7%    0.6mm    0.0mm    1.000    0.990    0.990    0.990    0.990
+ZhangFei/Hair                 0.00mm   0.14mm   332/2750  2109/2121     24%   36.5mm    0.0mm    1.000    0.988    0.978    0.988    0.978
+ZhangFei/Leg                  0.00mm   0.03mm   253/2768  2054/2055     28%    1.8mm    0.0mm    1.000    0.996    0.996    0.996    0.996
+ZhangFei/Skin                 0.00mm   0.00mm   208/1341  1130/1143      2%    1.4mm    0.0mm    1.000    0.995    0.995    0.995    0.995
+ZhaoYun/Body                  0.00mm   0.00mm  2693/6283  3452/3453    100%    0.0mm    0.0mm    1.000    0.992    0.992    0.992    0.992
+ZhaoYun/Cloth                 0.00mm   0.00mm  1384/2508  2086/2087    100%    0.0mm    0.0mm    1.000    0.995    0.995    0.995    0.995
+ZhaoYun/Hair                  0.00mm   1.14mm  1061/1738  1259/1261    100%    6.7mm    0.0mm    0.997    0.949    0.943    0.950    0.945
+ZhaoYun/Leg                   0.00mm   0.00mm   831/2687  1541/1541    100%    0.1mm    0.0mm    1.000    0.991    0.991    0.991    0.991
+ZhaoYun/Skin                  0.00mm   0.00mm   369/1314  1318/1318    100%    0.0mm    0.0mm    1.000    0.989    0.989    0.989    0.989
+ZhaoYun/Weapon_A              0.00mm   0.00mm     0/184     56/56      100%    0.0mm    0.0mm    1.000    0.991    0.991    0.991    0.991
+ZhaoYun/Weapon_Left           0.00mm   0.00mm     0/448    168/168     100%    0.0mm    0.0mm    1.000    0.986    0.986    0.986    0.986
+
+What each renderer drew (the reading with the larger overlap; 'not separable' when the
+two readings project to the same silhouette):
+  Hero_GuanYu/Hero_GuanYu_Body: Unity not separable (margin 0.001), engine not separable (margin 0.001), readings 0.1% apart
+  Hero_GuanYu/Hero_GuanYu_Cloth: Unity not separable (margin 0.002), engine not separable (margin 0.002), readings 0.3% apart
+  Hero_GuanYu/Hero_GuanYu_Hair: Unity blend (margin 0.015), engine blend (margin 0.015), readings 1.7% apart
+  Hero_GuanYu/Hero_GuanYu_Leg: Unity not separable (margin 0.001), engine not separable (margin 0.001), readings 0.1% apart
+  Hero_GuanYu/Hero_GuanYu_Skin: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LiuBei/Hero_LiuBei_Body: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LiuBei/Hero_LiuBei_Hair: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LiuBei/Hero_LiuBei_Leg: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LiuBei/Hero_LiuBei_Skin: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Body: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Cloth: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Face: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Hair: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Leg: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_LvBu/Hero_LvBu_Skin: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhangFei/Hero_ZhangFei_Body: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhangFei/Hero_ZhangFei_Face: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhangFei/Hero_ZhangFei_Hair: Unity blend (margin 0.010), engine blend (margin 0.010), readings 1.2% apart
+  Hero_ZhangFei/Hero_ZhangFei_Leg: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhangFei/Hero_ZhangFei_Skin: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Body: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Cloth: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Hair: Unity blend (margin 0.006), engine blend (margin 0.005), readings 1.8% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Leg: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Skin: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Weapon_A: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+  Hero_ZhaoYun/Hero_ZhaoYun_Weapon_Left: Unity not separable (margin 0.000), engine not separable (margin 0.000), readings 0.0% apart
+
+wrote docs\evidence\m1\skin\skin-report.json
+
+OK: every mesh within 2 mm
