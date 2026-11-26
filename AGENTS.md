@@ -10,6 +10,14 @@ when the harness rewrites the rest of this file.**
 This project is a port of the Unity 2022.3 game at `F:\jws2\client` (桃园 + 刘备/关羽/张飞/赵云 +
 吕布 + 黄巾小兵) to XEngine. Plan and status: `docs/plans/`, `docs/PORT-STATUS.md`.
 
+### 当前工作交接（START HERE — 2026-11-27）
+
+M0–M3 与 M4-1..4-4 已完成并推送；**当前任务是 M4 收尾**：① 战斗帧取景修复
+（`SanguoBattleDriver.FollowCamera`，英雄/怪物入画）→ ② 怪物资产导入 + 数值驱动伤害 →
+③ HUD（hudmesh 血条/伤害数字）→ 之后按总计划 M5/M6/M7/M8。
+**完整执行手册（环境命令、已踩坑清单、文件地图、验收纪律）见
+`docs/plans/2026-11-27-m4-handoff-codex.md`，动工前必读。**
+
 ### 零 Lua，游戏代码纯 C#
 
 - Runtime and editor code is 100% C# (`.NET 10` + XEngine; coroutines use XTask; engine analyzers
