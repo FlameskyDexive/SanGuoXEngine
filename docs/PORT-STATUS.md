@@ -34,6 +34,7 @@
 | B7l 战斗相机取景 | 取景修正完成，D3D12 待复测 | `evidence/replan/b7-editor-acceptance/camera-follow/`，Vulkan 960×540 四英雄可见；D3D12 复测被 CommandBuffer 已提交错误阻塞 |
 | B7m 命中日志热路径 | 完成 | `evidence/replan/b7-editor-acceptance/hit-log-perf/`，每命中 Debug.Log 改为两秒心跳汇总；C# 50/50、Python 98/98；D3D12 Play CPU p95 57.80 ms，60 FPS gate 仍未通过 |
 | B7n HUD 更新缓存 | 完成 | `evidence/replan/b7-editor-acceptance/hud-cache/`，血条百分比只在变化时写入；C# 50/50、Python 98/98；D3D12 Play CPU p95 54.84 ms，60 FPS gate 仍未通过 |
+| B7o Shove 分离闸门 | 完成 | `evidence/replan/b7-editor-acceptance/shove-gate/`，living scratch 只在 15 Hz 分离步构建；C# 50/50、Python 98/98；D3D12 Play CPU p95 59.71 ms，未证明 FPS 改善 |
 
 补充节点：B5f 战斗空间哈希已完成，C# 测试 50/50、Python 测试 108/108；寻敌与技能命中不再对
 全量敌人线性扫描。B7 的编辑器实测帧率门槛仍未通过，后续继续处理场景收集与角色 GPU 蒙皮。

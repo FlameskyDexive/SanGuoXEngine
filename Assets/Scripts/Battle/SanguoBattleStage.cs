@@ -296,11 +296,11 @@ public sealed class SanguoBattleStage
     /// overlap each, so crowds don't collapse into one point (jws2's shove, simplified).</summary>
     private void Shove()
     {
-        PopulateLivingScratch();
         // Separation is a presentation correction. Keep simulation, targeting and attacks at
         // 60 Hz, but solve the O(N²) crowd pass at 15 Hz so a 234-actor wave does not consume the
         // entire editor frame on repeated tiny overlaps.
         if ((++_shoveStep & 3) != 0) return;
+        PopulateLivingScratch();
         List<SanguoFieldActor> all = _livingScratch;
         for (int i = 0; i < all.Count; i++)
         {
