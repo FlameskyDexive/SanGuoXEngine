@@ -21,3 +21,5 @@
 后续修正：动态缓存的材质签名只比较 AssetID；材质 uniform 内容仍由批次阶段的 `Material.GetStateHash()` 读取。修正后复测 `renderCollectMs=27.51`、`staticRegistryMs=0.013`、`cpuFrameTimeP95Ms=55.72`，与 proxy 缓存结果一致。
 
 缓存计数原始结果见 `runtime-result-counters.json`：`dynamicCollectionCacheHits=940`、`dynamicCollectionCacheBuilds=145`、`renderCollectMs=36.21`。收集时间受编辑器尖峰影响，但命中/构建比例证明缓存没有退化成每帧重建。
+
+LOD 观测见 `runtime-result-lod-timing.json`：`lodUpdateMs=0.494`，所以 1378 个 LODGroup 不是当前 27 ms 收集瓶颈；剩余工作转向 SkinnedMeshRenderer/粒子和编辑器主循环。
