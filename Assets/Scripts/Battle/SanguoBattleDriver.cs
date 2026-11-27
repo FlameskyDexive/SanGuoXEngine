@@ -167,7 +167,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
     private readonly List<SanguoFieldActor> _finishedCasts = new(32);
     private readonly List<SanguoHit> _hitScratch = new(32);
+    private readonly List<SanguoFieldActor> _nearbyScratch = new(64);
     private readonly Stack<HashSet<int>> _hitSetPool = new();
+    private readonly SanguoSpatialHash _spatialHash = new();
     private readonly SanguoMissile _meleeSwing = new()
     {
         ShapeType = 1,
@@ -562,6 +564,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private void SimulateFixedStep(float deltaTime)
     {
         _battleTimeMs += deltaTime * 1000f;
+        _spatialHash.Rebuild(_stage!.Heroes, _stage.Enemies);
         HandleInput(deltaTime);
         MonsterBrains(deltaTime);
         TickCasts(deltaTime);
@@ -722,38 +725,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         => _stage?.AttackOf(enemy.ID) ?? 20;
 
     private SanguoFieldActor? FindNearestHero(SanguoFieldActor from)
-    {
-        SanguoFieldActor? best = null;
-        float bestSqr = float.MaxValue;
-        foreach (SanguoFieldActor hero in _stage.Heroes)
-        {
-            if (hero.Dead) continue;
-            float sqr = Float2.LengthSquared(hero.Position - from.Position);
-            if (sqr < bestSqr)
-            {
-                bestSqr = sqr;
-                best = hero;
-            }
-        }
-        return best;
-    }
+        => _spatialHash.FindNearest(from, SanguoBattleStage.PlayerCamp, 40f);
 
     private SanguoFieldActor? FindNearestEnemy(SanguoFieldActor from)
-    {
-        SanguoFieldActor? best = null;
-        float bestSqr = float.MaxValue;
-        foreach (SanguoFieldActor enemy in _stage.Enemies)
-        {
-            if (enemy.Dead) continue;
-            float sqr = Float2.LengthSquared(enemy.Position - from.Position);
-            if (sqr < bestSqr)
-            {
-                bestSqr = sqr;
-                best = enemy;
-            }
-        }
-        return best;
-    }
+        => _spatialHash.FindNearest(from, SanguoBattleStage.EnemyCamp, 80f);
 
     // ------------------------------------------------------------ casts + bullets
 
@@ -791,8 +766,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             SanguoFieldActor owner = entry.owner;
             if (owner.Dead || _stage == null) continue;
             var alreadyHit = entry.hit;
-            foreach (SanguoFieldActor candidate in _stage.Enemies)
+            _spatialHash.CollectNearby(owner.Position, 5f, SanguoBattleStage.EnemyCamp, _nearbyScratch);
+            for (int candidateIndex = 0; candidateIndex < _nearbyScratch.Count; candidateIndex++)
             {
+                SanguoFieldActor candidate = _nearbyScratch[candidateIndex];
                 if (candidate.Dead || alreadyHit.Contains(candidate.ID)) continue;
                 if (Float2.Length(candidate.Position - owner.Position) > 5f) continue;   // reach
                 var hitSet = alreadyHit;

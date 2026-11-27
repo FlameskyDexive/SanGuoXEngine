@@ -32,6 +32,9 @@
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，B6a 接入 Hudmesh 血条和伤害数字回调；Volume/HDR/ACES/Bloom 已接入，敌人材质、粒子和 SpeedTree 仍待处理 |
 | B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，B7f 增加静态 MeshRenderer 场景收集缓存，D3D12 8 秒复测 p95 55.38 ms；60 FPS gate 仍未通过 |
 
+补充节点：B5f 战斗空间哈希已完成，C# 测试 50/50、Python 测试 108/108；寻敌与技能命中不再对
+全量敌人线性扫描。B7 的编辑器实测帧率门槛仍未通过，后续继续处理场景收集与角色 GPU 蒙皮。
+
 ## 引擎缺口（在引擎 `main` 上单独成节点）
 
 | 缺口 | 触发里程碑 | 状态 |
