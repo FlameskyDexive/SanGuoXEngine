@@ -14,7 +14,7 @@
 | M2 动画 | 完成 | 124 条战斗剪辑（5 个控制器）已导入；按实测的 Unity 播放规则转换曲线（密曲线逐帧、根运动按帧）；根运动走引擎的模型根轨迹；`SanguoAnimator`（点名播放、加法受击层、变速）已验证。引擎里播放出的姿态对 Unity 采样：旋转最大差 0.396°、位置 2.08 mm、根运动 18.5 mm；Python 测试 90 个、C# 测试 22 个通过 | `evidence/m2/animation.md` |
 | M3 桃园场景 | 完成 | 场景 `Assets/Scenes/TaoYuan.scene` 已生成并验收：4047 对象 / 1378 LODGroup（精确）/ 2 页光照贴图 / 全景黄昏天空 / 1 盏方向光；三机位并排对照（D3D12）+ runtime_stats（13720 drawCalls / 11.7M 三角 / lod-hidden 4664）见 `evidence/m3/scene.md`。已知差异：远景白化（无 ACES/LUT 后期，M8 打磨）、粒子 M5、Effects 材质 42 个 M5、SpeedTree ×16 与 dir/shadowmask 消费在引擎缺口清单 | `evidence/m3/scene.md` |
 | M4 战斗内核 | 核心完成 | 数据管线（8 张 Lua 表 33963 行 → 7 张原生资产，Python 108 测试）+ 纯逻辑内核（判定几何/血量/状态机/移动/布阵/BattleStage/技能时间轴/连段窗口/导弹伤害帧，C# 45 测试）+ 场景侧驱动器（英雄 prefab/怪物 AI/输入/相机）+ `TaoYuanBattle.scene`。play 实测：234 怪全数追击接敌命中（日志为证）。引擎节点：描述符池规模化（Vulkan 256 池/D3D12 256 页）已落地。待 M4-5 收尾：可玩帧取景/M7 怪物 prefab/M7 HUD | `evidence/m4/battle.md` |
-| M5 特效 | 未开始 | PsEffect → 粒子 prefab（场景内 125 个粒子系统 + 技能特效），着色器映射，`SanguoEffect` | |
+| M5 特效 | 进行中 | `evidence/replan/b6-visual/hit-particles/`，B6b 接入共享 GPU 命中粒子反馈；完整 42 个 Effect 材质、技能特效和场景粒子仍待处理 | |
 | M6 音频 | 未开始 | `Tools/wwise2ogg` + `SanguoAudio` | |
 | M7 吕布 / 小兵 / 胜负 | 未开始 | Boss 状态机、小兵波次、结算 | |
 | M8 打磨 / 性能 / 出包 | 未开始 | 自写着色器、性能预算、出包验收、gitlink | |
@@ -85,6 +85,7 @@
   起点偏移，相机跟着角色走。
 - 编辑模式下 `Animator` 的用法与播放模式不同：先 `SetControllerAsset`，再 `HasState` / `CrossFade`；`Update(dt)`
   只推进姿态，根运动要另外施加。
+
 
 
 

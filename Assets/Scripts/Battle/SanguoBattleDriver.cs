@@ -8,6 +8,8 @@ using SanGuoXEngine.Data;
 using XEngine.Animation;
 using XEngine.Hudmesh;
 using XEngine.Runtime;
+using XEngine.Runtime.ParticleSystem;
+using XEngine.Runtime.ParticleSystem.Modules;
 using XEngine.Runtime.Resources;
 using XEngine.Vector;
 
@@ -153,6 +155,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly List<SanguoHit> _hitScratch = new(32);
     private PrefabAsset? _enemyViewPrefab;
     private HudManager? _hudManager;
+    private ParticleSystemComponent? _hitParticles;
     private long _nextHudId;
     private int _enemyViewCount;
 
@@ -211,6 +214,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _hudManager.ChangeConfig(hudConfig);
         if (_hudManager.GameObject.Scene == null)
             Scene.Current!.Add(_hudManager.GameObject);
+        CreateHitParticles();
 
         // the four playable heroes enter at the spawn marker
         List<SanguoMonsterValue> heroValues = [];
@@ -364,6 +368,34 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         UpdateHud(actor, hud);
     }
 
+    private void CreateHitParticles()
+    {
+        GameObject vfxObject = new("Battle Hit Particles");
+        Scene.Current!.Add(vfxObject);
+        ParticleSystemComponent particles = vfxObject.AddComponent<ParticleSystemComponent>();
+        particles.PlayOnEnable = false;
+        particles.Looping = false;
+        particles.Duration = 0.35f;
+        particles.MaxParticles = 256;
+        particles.SimulationSpace = SimulationSpace.World;
+        particles.Material = new AssetRef<Material>(new Material(Shader.LoadDefault(DefaultShader.Particle)));
+        particles.Initial.StartLifetime = new MinMaxCurve(0.35f);
+        particles.Initial.StartSpeed = new MinMaxCurve(2.5f);
+        particles.Initial.StartSize = new MinMaxCurve(0.18f);
+        particles.Initial.StartColor = new MinMaxGradient(new Color(1f, 0.75f, 0.15f, 1f));
+        particles.Emission.Shape = EmissionShape.Sphere;
+        particles.Emission.Radius = 0.2f;
+        particles.Play();
+        _hitParticles = particles;
+    }
+
+    private void EmitHitParticles(SanguoFieldActor actor)
+    {
+        if (_hitParticles == null) return;
+        _hitParticles.Transform.Position = new Float3(actor.Position.X, 181.5f, actor.Position.Y);
+        _hitParticles.Emit(6);
+    }
+
     private static void UpdateHud(SanguoFieldActor actor, Hud hud)
     {
         hud.SetBloodPercent(actor.Health.Hp / (float)Math.Max(1, actor.Health.MaxHp));
@@ -375,6 +407,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     {
         if (damage <= 0 || !_huds.TryGetValue(actor, out Hud? hud)) return;
         hud.PopNumber(0, damage, new Float3(0f, 0.5f, 0f));
+        EmitHitParticles(actor);
         UpdateHud(actor, hud);
     }
 
