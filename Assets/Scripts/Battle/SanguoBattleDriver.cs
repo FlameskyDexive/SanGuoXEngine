@@ -157,6 +157,15 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
     private readonly List<SanguoFieldActor> _finishedCasts = new(32);
     private readonly List<SanguoHit> _hitScratch = new(32);
+    private readonly Stack<HashSet<int>> _hitSetPool = new();
+    private readonly SanguoMissile _meleeSwing = new()
+    {
+        ShapeType = 1,
+        ShapeParam1 = 2.2f,
+        DamageStartFrame = 1,
+        DamageEndFrame = 1,
+        DamageIntervalFrame = 1,
+    };
     private PrefabAsset? _enemyViewPrefab;
     private HudManager? _hudManager;
     private ParticleSystemComponent? _hitParticles;
@@ -616,7 +625,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             if (enemy.StateMachine.Busy) continue;
 
             SanguoFieldActor? target = FindNearestHero(enemy);
-            if (target == null) return;
+            if (target == null) continue;
             float distance = Float2.Length(target.Position - enemy.Position);
             if (distance > 2.2f)
             {
@@ -630,9 +639,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 enemy.StateMachine.TryStartAttack(0.6f);
                 _aiCooldowns[enemy] = 1.5f;
                 // a plain melee hit: circle 2.2 m in front
-                SanguoMissile swing = new() { ShapeType = 1, ShapeParam1 = 2.2f, DamageStartFrame = 1, DamageEndFrame = 1, DamageIntervalFrame = 1 };
                 int attackerAtk = MonsterAttackOf(enemy);
-                SanguoSkillRules.ResolveHits(swing, enemy.Position, enemy.Facing,
+                SanguoSkillRules.ResolveHits(_meleeSwing, enemy.Position, enemy.Facing,
                     _stage.Heroes, SanguoBattleStage.EnemyCamp, attackerAtk, 1f, _hitScratch);
                 for (int hitIndex = 0; hitIndex < _hitScratch.Count; hitIndex++)
                 {
@@ -713,6 +721,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             SanguoMissile missile = entry.missile;
             if (missile.TotalTime > 0 && elapsed > missile.TotalTime)
             {
+                ReleaseHitSet(entry.hit);
                 _liveBullets.RemoveAt(i);
                 continue;
             }
@@ -743,7 +752,11 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 PopHudNumber(candidate, damage);
                 Debug.Log("[SanguoBattle] hit " + candidate.Name + " -" + damage);
             }
-            if (missile.DamageEndFrame > 0 && frame >= missile.DamageEndFrame) _liveBullets.RemoveAt(i);
+            if (missile.DamageEndFrame > 0 && frame >= missile.DamageEndFrame)
+            {
+                ReleaseHitSet(entry.hit);
+                _liveBullets.RemoveAt(i);
+            }
         }
     }
 
@@ -753,7 +766,15 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (!_callBullets.TryGetValue(ev.EventIntParam, out SanguoCallBullet bullet)) return;
         int missileId = bullet.BulletID;
         if (missileId == 0 || !_missiles.TryGetValue(missileId, out SanguoMissile missile)) return;
-        _liveBullets.Add((bullet, missile, actor, 0f, new HashSet<int>()));
+        HashSet<int> hitSet = _hitSetPool.Count > 0 ? _hitSetPool.Pop() : new HashSet<int>(8);
+        hitSet.Clear();
+        _liveBullets.Add((bullet, missile, actor, 0f, hitSet));
+    }
+
+    private void ReleaseHitSet(HashSet<int> hitSet)
+    {
+        hitSet.Clear();
+        _hitSetPool.Push(hitSet);
     }
 
     // ------------------------------------------------------------ camera + hits
