@@ -1,0 +1,21 @@
+[
+  {
+    "tag": "waitCompile",
+    "ok": true
+  },
+  {
+    "tag": "enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":50.2283,\"colorPassMs\":0.058,\"shadowPassMs\":0,\"postFxMs\":0.00040000002,\"gpuWaitMs\":1.1015,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2722,\"renderablesCulled\":2693,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[38.691,41.867,38.4741,38.5519,47.9382,34.2521,38.9204,35.9206,51.9236,48.7819,42.094,33.5535,50.1563,50.7443,54.7688,45.2836,55.1954,49.1546,57.0565,55.6571,67.8988,57.2139,47.2316,49.0783,45.3396,48.4533,34.7959,52.4904,44.8178,44.2351,46.4554,42.4494,34.5171,36.0373,56.8218,45.8019,52.1552,47.9894,53.7716,46.295,63.459904,52.5178,50.8551,53.3233,47.0153,50.7532,45.6422,51.1143,52.3798,56.1457,45.0164,52.8256,41.2722,51.2621,48.8697,35.8861,51.5116,49.9605,50.9924,61.6223,59.7598,52.9962,43.5358,48.9324,47.2058,49.9981,53.4129,51.1815,48.1114,46.4746,51.7365,50.537,42.6486,33.0522,33.4141,32.897,34.7262,29.3111,35.6586,33.371,35.3145,34.4131,49.1998,44.7397,44.0735,53.7976,48.7762,54.6397,41.0821,59.5233,47.2461,49.4639,44.2862,55.8647,44.5716,54.1719,50.825,44.2185,35.5209,50.8073,52.207,55.3759,56.1668,49.7772,59.4352,50.7517,46.8232,52.7461,41.447,36.2771,50.1871,53.6881,47.2906,45.4045,41.1167,42.994,53.9745,46.6067,48.9727,50.2283],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":31.21328,\"gpuFrameId\":2141,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":2142,\"presentWaitMs\":1.1015,\"presentFps\":21,\"sustainedFps\":20.342027780749284,\"cpuFrameMs\":56.5447,\"managedMemoryBytes\":542700288,\"privateMemoryBytes\":2624724992,\"managedAllocatedBytes\":2049611096,\"cpuFrameTimeP50Ms\":48.77619934082031,\"cpuFrameTimeP95Ms\":57.21390151977539,\"lodRenderersHidden\":319}"
+  },
+  {
+    "tag": "capture",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 31 tris 105820 drawn 29 lodHidden 319\",\"resultType\":\"System.String\"}"
+  }
+]

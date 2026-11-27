@@ -46,18 +46,9 @@ public sealed class SanguoSpatialHash
                 if (sqr < bestSqr) { bestSqr = sqr; best = actor; }
             }
         }
-        // Preserve the original battle semantics when a target is outside the usual query
-        // radius: a distant actor is still a valid chase target. This fallback is reached only
-        // when no nearby bucket contained a candidate, so normal combat stays broad-phase only.
-        if (best != null) return best;
-        foreach (List<SanguoFieldActor> bucket in _cells.Values)
-        for (int i = 0; i < bucket.Count; i++)
-        {
-            SanguoFieldActor actor = bucket[i];
-            if (actor.Camp != camp || actor.Dead || ReferenceEquals(actor, from)) continue;
-            float sqr = Float2.LengthSquared(actor.Position - from.Position);
-            if (sqr < bestSqr) { bestSqr = sqr; best = actor; }
-        }
+        // The cell window covers every point inside maxDistance. If it found no candidate,
+        // scanning every cell again cannot change the bounded result because bestSqr remains the
+        // radius limit; avoid turning a failed query into an O(N) walk for every enemy.
         return best;
     }
 
