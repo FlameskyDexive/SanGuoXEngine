@@ -17,3 +17,5 @@
 
 本节点证明动态收集路径有可复用缓存并降低了稳定样本的收集时间；E7 仍未通过，600 帧零 GC 和 16.6 ms P95 尚未满足。
 
+
+后续修正：动态缓存的材质签名只比较 AssetID；材质 uniform 内容仍由批次阶段的 `Material.GetStateHash()` 读取。修正后复测 `renderCollectMs=27.51`、`staticRegistryMs=0.013`、`cpuFrameTimeP95Ms=55.72`，与 proxy 缓存结果一致。
