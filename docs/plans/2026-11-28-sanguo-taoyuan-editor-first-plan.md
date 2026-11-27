@@ -34,6 +34,8 @@
 
 跨 Mesh 世界空间合批是后续实验节点，必须先完成：每种 VertexLayout 的缺省通道策略、Lightmap UV 烘焙、材质属性快照、ShadowCaster/Depth/Motion/Picking 一致性、64K/32-bit 索引上限、资源生命周期和可逆回退。未满足时按同 Mesh Instancing 或逐 Renderer 回退。
 
+当前编辑器实现明确采用两条有证据的路径：同 Mesh、同材质状态的对象走 GPU Instancing；小型可移动 Mesh 走同 Mesh 动态批。跨 Mesh CPU 合批暂不默认开启。2026-11-28 的实验捕获表明，只复制位置、法线、切线、UV 和索引还不足以保持桃园画面，光照贴图、材质变体和深度/阴影状态会出现白化或几何回归。因此不能因为“能合成一个 Mesh”就把静态对象从原路径隐藏；跨 Mesh 节点必须先有完整契约、失败时保留源 Renderer，并用同机位截图和 Frame Debugger 逐 pass 对照通过后才可启用。
+
 ### 3.2 GPU Instancing 与动态合批
 
 树、石块、围栏、旗帜、火把、公告板、重复特效和相同敌人模型优先进入实例组；组按 64 m 空间块拆分并独立剔除。实例数据包含 Transform、颜色/受击参数、LOD 和 GI 所需数据；池化数组必须保存有效 `InstanceCount`，不能把租用数组容量当绘制数量。
