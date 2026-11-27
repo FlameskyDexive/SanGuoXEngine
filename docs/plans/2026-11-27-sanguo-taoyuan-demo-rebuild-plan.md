@@ -135,13 +135,14 @@ PC 包和手机包在 B7 通过后单独规划。
 完成当前批次后才归还数组。验收必须同时通过静态/动态批处理单测、编辑器构建和 D3D12
 1280×720 截图；该节点不宣称 60 FPS gate 已通过。
 
-### B7h 静态场景分块批处理（下一节点）
+### B7h 静态场景分块批处理（已完成首版，需随 B7 继续调优）
 
 继续沿用 Unity 的 `GameObject.IsStatic` 契约，在场景级建立按 Mesh、材质状态、子网格、光照
 贴图、RenderingLayer、阴影状态和空间块划分的静态实例组。静态组只在场景首次加载或依赖
 变化时重建，普通帧执行块 AABB 剔除并更新可见实例范围；编辑器 SceneView 过滤、LOD、对象
-定位和资源卸载必须回退到逐 Renderer 路径。验收重点是 `renderablesCollected` 明显下降、
-instanced draws 保持稳定、视觉无遮挡，并在 D3D12 与 Vulkan 各留一组截图/统计。
+定位和资源卸载回退到逐 Renderer 路径。首版 D3D12 验收已将战斗帧 `renderablesCollected`
+从 2809 降到 2712，instanced draw 和画面保持稳定；Vulkan 回归、进一步减少批次数以及
+60 FPS gate 仍属于 B7 后续调优。
 
 ### B7i 角色 GPU 蒙皮实例（后续）
 

@@ -1,0 +1,52 @@
+[
+  {
+    "tag": "open_and_enter_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "set_hd",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"resolution=9\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "shot_gameview",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261127-143535554.png\",\"width\":1280,\"height\":720}"
+  },
+  {
+    "tag": "capture_battle",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 28 tris 104818 drawn 26 lodHidden 324\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "combat_log",
+    "ok": true,
+    "text": "{\"succeeded\":false,\"error\":\"IOException: The process cannot access the file \\u0027D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\Logs\\\\Editor.log\\u0027 because it is being used by another process.\"}"
+  },
+  {
+    "tag": "runtime_stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":136.8271,\"colorPassMs\":0.0787,\"shadowPassMs\":0,\"postFxMs\":0.0003,\"gpuWaitMs\":0.6836,\"drawCalls\":29,\"instancedDrawCalls\":1,\"batches\":27,\"triangles\":104864,\"vertices\":314592,\"renderablesCollected\":2712,\"renderablesCulled\":2663,\"renderablesDrawn\":49,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":37,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[35.7559,47.1767,38.1093,57.7001,42.2954,43.5895,41.2436,44.4775,36.6663,46.2817,32.1533,32.6822,34.5291,31.270702,32.5392,32.1516,34.5552,34.0833,37.146,32.621,33.1934,32.2793,36.3417,46.8809,42.2498,42.6395,35.7675,47.814,39.9768,59.8795,53.464,51.1868,48.6284,46.8366,36.1521,47.7439,48.316,30.7928,39.4288,46.2905,34.7977,31.1979,34.4993,30.8554,34.71,33.1125,35.8195,33.5395,54.8354,57.7317,36.834,38.57,47.3426,59.0782,47.2568,42.5553,31.571299,32.9793,31.632498,35.5535,30.2079,40.8938,45.5531,539.8911,44.4579,31.8822,37.8806,48.5005,46.6832,34.1454,41.6488,43.5292,34.1537,50.4761,48.1144,32.0291,33.3436,32.9982,35.6915,25.6239,38.5699,25.5947,35.8824,38.3642,32.3755,32.4814,33.4965,37.5038,27.8907,31.4976,35.204,34.5857,42.402,61.4562,46.4083,44.8728,44.0405,36.6784,45.7424,31.888798,31.762897,32.9688,37.6484,36.1808,42.7741,36.5899,32.5633,30.2736,36.4899,38.3692,41.5404,39.2068,46.5565,33.183,31.656399,41.7213,43.9375,36.3201,49.6863,136.8271],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":31.265314,\"gpuFrameId\":294,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":164,\"uiRenderTargetBytes\":0,\"presentCount\":295,\"presentWaitMs\":0.6836,\"presentFps\":24,\"sustainedFps\":19.587331312903498,\"cpuFrameMs\":53.3884,\"managedMemoryBytes\":558369120,\"privateMemoryBytes\":3081965568,\"managedAllocatedBytes\":2108245464,\"cpuFrameTimeP50Ms\":36.83399963378906,\"cpuFrameTimeP95Ms\":57.70009994506836,\"lodRenderersHidden\":324}"
+  },
+  {
+    "tag": "play_probe",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"playing=True filter=True\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "registry_stats",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"has=True batches=58 renderers=-1\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "cache_stats",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"cacheHits=1659 cacheBuilds=63\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "exit_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exiting\",\"resultType\":\"System.String\"}"
+  }
+]
