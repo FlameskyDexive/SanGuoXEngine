@@ -1,0 +1,32 @@
+[
+  {
+    "tag": "open_enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "warm_stats_1",
+    "ok": true,
+    "text": "{\"frameTimeMs\":43.7417,\"colorPassMs\":0.0492,\"shadowPassMs\":0,\"postFxMs\":0.0004,\"gpuWaitMs\":0.7208,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2653,\"renderablesCulled\":2624,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[36.6403,39.3893,53.2588,44.4577,56.7663,45.1969,48.6666,52.8525,46.4793,50.8924,53.6567,43.2243,34.4985,55.6502,43.3991,51.9397,50.567,51.2049,54.6993,48.7372,42.4464,35.7011,62.7411,38.9326,54.7627,56.2666,47.4011,45.6971,47.7419,49.3003,50.5207,49.4802,50.7507,44.7826,33.9406,36.5682,52.8712,46.5352,49.3046,56.6403,45.2364,41.723,33.8473,32.7396,41.1796,43.6959,30.0866,33.7804,42.1059,48.8048,52.6064,55.6378,42.9535,54.9018,43.4274,37.4711,38.8059,33.6725,33.5355,39.9793,43.7089,32.4467,33.2063,33.183,42.0153,49.6709,51.8359,53.5413,50.497,61.0363,68.2702,55.2952,54.4723,42.7848,45.3062,56.4685,44.2345,48.6365,40.825,46.4495,52.6348,46.2682,54.8518,42.8754,50.8049,48.5221,36.4509,52.3617,50.7998,55.938,51.5643,41.9749,46.7898,46.4465,35.01,35.273,48.9772,50.1399,51.2182,50.2582,59.8764,39.9771,48.1735,33.2322,48.9976,33.9683,37.7363,51.6951,51.544,47.5997,54.0321,56.1625,52.1742,41.2429,45.9253,54.4688,44.1521,47.7612,39.0301,43.7417],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":36.232708,\"gpuFrameId\":230,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":231,\"presentWaitMs\":0.7208,\"presentFps\":22,\"sustainedFps\":21.8896310538446,\"cpuFrameMs\":35.8442,\"managedMemoryBytes\":342938552,\"privateMemoryBytes\":1466576896,\"managedAllocatedBytes\":1657736616,\"cpuFrameTimeP50Ms\":47.401100158691406,\"cpuFrameTimeP95Ms\":56.46849822998047,\"lodRenderersHidden\":319,\"staticBatchGroups\":0,\"staticBatchInstances\":0,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"renderCollectMs\":27.62660026550293,\"staticRegistryMs\":0.014299999922513962}"
+  },
+  {
+    "tag": "warm_stats_2",
+    "ok": true,
+    "text": "{\"frameTimeMs\":36.1984,\"colorPassMs\":0.0468,\"shadowPassMs\":0,\"postFxMs\":0.0002,\"gpuWaitMs\":0.6824,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2653,\"renderablesCulled\":2624,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[32.7396,41.1796,43.6959,30.0866,33.7804,42.1059,48.8048,52.6064,55.6378,42.9535,54.9018,43.4274,37.4711,38.8059,33.6725,33.5355,39.9793,43.7089,32.4467,33.2063,33.183,42.0153,49.6709,51.8359,53.5413,50.497,61.0363,68.2702,55.2952,54.4723,42.7848,45.3062,56.4685,44.2345,48.6365,40.825,46.4495,52.6348,46.2682,54.8518,42.8754,50.8049,48.5221,36.4509,52.3617,50.7998,55.938,51.5643,41.9749,46.7898,46.4465,35.01,35.273,48.9772,50.1399,51.2182,50.2582,59.8764,39.9771,48.1735,33.2322,48.9976,33.9683,37.7363,51.6951,51.544,47.5997,54.0321,56.1625,52.1742,41.2429,45.9253,54.4688,44.1521,47.7612,39.0301,43.7417,38.2774,52.3129,54.3366,39.8789,53.8188,47.0065,49.1845,53.0131,44.5378,38.5745,49.7126,48.3111,60.0786,36.6514,41.0929,48.7591,47.1462,67.0324,50.7971,49.6643,51.0669,46.1111,38.295,48.054,55.897,42.4431,52.3559,50.6939,46.963,51.3855,57.4289,51.6033,54.5954,52.6157,57.1211,48.1001,46.1665,48.5049,32.4143,34.857,47.3327,32.8754,36.1984],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":29.760054,\"gpuFrameId\":273,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":274,\"presentWaitMs\":0.6824,\"presentFps\":22,\"sustainedFps\":22.197733051700684,\"cpuFrameMs\":45.651,\"managedMemoryBytes\":362389704,\"privateMemoryBytes\":1463042048,\"managedAllocatedBytes\":1699385568,\"cpuFrameTimeP50Ms\":47.761199951171875,\"cpuFrameTimeP95Ms\":57.12110137939453,\"lodRenderersHidden\":319,\"staticBatchGroups\":0,\"staticBatchInstances\":0,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"renderCollectMs\":38.27050018310547,\"staticRegistryMs\":0.014600000344216824}"
+  },
+  {
+    "tag": "screenshot",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261127-215456876.png\",\"width\":1091,\"height\":549}"
+  },
+  {
+    "tag": "capture",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 31 tris 105820 drawn 29 lodHidden 319\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "exit",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"isPlayingNow\":false}"
+  }
+]
