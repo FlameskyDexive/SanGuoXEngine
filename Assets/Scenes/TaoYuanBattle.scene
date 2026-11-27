@@ -313536,7 +313536,7 @@
                   "B": 0.8254717F,
                   "A": 1F
                 },
-                "Intensity": 1.6F,
+                "Intensity": 0.8F,
                 "ShadowStrength": 1F,
                 "ShadowBias": 0.001F,
                 "ShadowNormalBias": 0F,
@@ -338837,11 +338837,11 @@
     },
     "Start": 20F,
     "End": 100F,
-    "Density": 0.01F
+    "Density": 0.002F
   },
   "Ambient": {
     "Mode": 1L,
-    "Strength": 1F,
+    "Strength": 0.55F,
     "Color": {
       "X": 0.43F,
       "Y": 0.55F,

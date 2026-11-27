@@ -28,3 +28,22 @@
 ## 结论
 
 后处理已进入 GameView 渲染链，战斗相机已能看到四名真实英雄且方向正确。本节点不宣称达到 60 FPS。当前瓶颈集中在阴影和场景几何，真实敌人模型、阴影预算和战斗呈现仍由后续节点处理。
+
+## B6a 场景光照基线
+
+- 桃园主方向光强度从 `1.6` 调整为 `0.8`。
+- 环境光强度从 `1.0` 调整为 `0.55`。
+- 雾密度从 `0.01` 调整为 `0.002`，保留黄昏雾效但恢复远景层次。
+- 1280×720 GameView、D3D12、Battle Camera 单相机复测。
+- `drawCalls=36`
+- `instancedDrawCalls=1`
+- `triangles=100,804`
+- `frameTimeMs≈38.71`
+- `gpuFrameTimeMs≈31.43`
+- `cpuFrameTimeP95Ms≈54.25`
+- `shadowDrawCalls=0`
+- `backendName=Direct3D 12`
+
+![B6a lighting baseline](lighting-baseline-d3d12.png)
+
+角色边缘光、皮肤/头发材质、粒子和 SpeedTree 仍未完成，B6 继续进行中。
