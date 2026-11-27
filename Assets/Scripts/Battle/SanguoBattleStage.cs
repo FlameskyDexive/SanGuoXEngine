@@ -133,6 +133,13 @@ public sealed class SanguoBattleStage
     public int SpawnGroupCount => _pendingGroups.Count;
     public IReadOnlyList<SanguoFieldActor> Heroes => _heroes;
 
+    /// <summary>Returns the authored attack value for a monster group. The battle driver uses
+    /// this lookup for contact damage so the live presentation follows the imported data table.</summary>
+    public int AttackOf(int monsterId)
+        => _valueData.TryGetValue(monsterId, out SanguoMonsterValue? value) && value.Atk > 0
+            ? value.Atk
+            : 20;
+
     /// <summary>Raised per resolved spawn so the presenter can instantiate the right prefab.</summary>
     public event Action<SanguoFieldActor, Float2, Float2>? ActorSpawned;
 

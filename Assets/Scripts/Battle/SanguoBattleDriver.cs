@@ -501,7 +501,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     }
 
     private int MonsterAttackOf(SanguoFieldActor enemy)
-        => enemy.Health.MaxHp > 0 ? 20 : 20;                // demo constant; MonsterValue atk drives M7
+        => _stage?.AttackOf(enemy.ID) ?? 20;
 
     private SanguoFieldActor? FindNearestHero(SanguoFieldActor from)
     {

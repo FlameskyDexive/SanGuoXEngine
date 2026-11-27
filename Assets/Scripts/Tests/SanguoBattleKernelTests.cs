@@ -268,6 +268,38 @@ public sealed class SanguoBattleKernelTests
     }
 
     [Fact]
+    public void BattleStage_UsesImportedMonsterAttackValue()
+    {
+        SanguoLevelLayout layout = new()
+        {
+            LevelID = 1011,
+            Items = [new SanguoLevelItem
+            {
+                LevelItemID = 1001,
+                LevelItemType = 2,
+                PosX = 0,
+                PosZ = 0,
+                DirX = 0,
+                DirZ = 1,
+                Count = 1,
+            }],
+        };
+        SanguoBattleStage stage = new(
+            layout,
+            new SanguoMonsterTable
+            {
+                Monsters = [new SanguoMonster { ID = 101103, MonsterType = 2, Camp = 1 }],
+            },
+            new SanguoMonsterValueTable
+            {
+                Values = [new SanguoMonsterValue { GroupID = 101103, Difficulty = 1, Hp = 100, Atk = 37, Def = 5 }],
+            });
+
+        Assert.Equal(37, stage.AttackOf(101103));
+        Assert.Equal(20, stage.AttackOf(999999));
+    }
+
+    [Fact]
     public void Registry_FindsNearestLivingEnemy()
     {
         SanguoActorRegistry registry = new();
