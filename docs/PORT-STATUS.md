@@ -27,7 +27,7 @@
 | B1 静态场景自动实例批处理 | 完成 | `evidence/replan/b1-static-batching/`，2818 draw / 56 instanced draw / 1515 static instances |
 | B2 GPU Instancing 和动态合批 | 完成 | `evidence/replan/b2-gpu-instancing/`，2079 draw / 73 instanced draw / 3914 dynamic instances |
 | B3 桃园场景接入 | 完成 | `evidence/replan/b3-taoyuan/`，完整桃园层级、静态标志、LOD、光照贴图和批次路径已接入；SpeedTree、粒子和效果材质列入 B6 |
-| B4 角色和敌人接入 | 进行中 | `evidence/replan/b4-characters/`，四英雄保持真实 Prefab，敌人已切换到已导入真实士兵模型；逐 MonsterID Prefab 映射和 GPU 蒙皮实例仍待处理 |
+| B4 角色和敌人接入 | 进行中 | `evidence/replan/b4-characters/`，B4b 接入 MonsterID→ModelID→ModelScale/DmgNumHeight 数据映射，四英雄和已导入真实士兵模型可见；逐 MonsterID Prefab 替换和 GPU 蒙皮实例仍待处理 |
 | B5 战斗逻辑优化 | 完成 | `evidence/replan/b5-battle/`，B5c 接入怪物 GroupID/Atk 数据驱动近战伤害；固定 60 Hz 步进、复用战斗 scratch 缓冲；46 个子模块测试通过 |
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，B6a 接入 Hudmesh 血条和伤害数字回调；Volume/HDR/ACES/Bloom 已接入，敌人材质、粒子和 SpeedTree 仍待处理 |
 | B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，B7f 增加静态 MeshRenderer 场景收集缓存，D3D12 8 秒复测 p95 55.38 ms；60 FPS gate 仍未通过 |
@@ -85,6 +85,7 @@
   起点偏移，相机跟着角色走。
 - 编辑模式下 `Animator` 的用法与播放模式不同：先 `SetControllerAsset`，再 `HasState` / `CrossFade`；`Update(dt)`
   只推进姿态，根运动要另外施加。
+
 
 
 

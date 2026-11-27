@@ -144,6 +144,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<SanguoFieldActor, SanguoCastState> _casts = new();
     private readonly Dictionary<SanguoFieldActor, SanguoActorPresenter> _presenters = new();
     private readonly Dictionary<SanguoFieldActor, Hud> _huds = new();
+    private readonly Dictionary<int, float> _monsterModelScales = new();
+    private readonly Dictionary<int, float> _monsterDamageHeights = new();
     private readonly Dictionary<SanguoFieldActor, float> _aiCooldowns = new();
     private readonly Dictionary<SanguoFieldActor, HashSet<int>> _hitByBullet = new();
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
@@ -183,6 +185,16 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         SanguoMonsterModelTable models = Load<SanguoMonsterModelTable>(ModelsGuid);
         SanguoMonsterValueTable values = Load<SanguoMonsterValueTable>(ValuesGuid);
         SanguoLevelLayout layout = Load<SanguoLevelLayout>(LayoutGuid);
+
+        Dictionary<int, SanguoMonsterModel> modelById = new();
+        foreach (SanguoMonsterModel model in models.Models)
+            modelById[model.ID] = model;
+        foreach (SanguoMonster monster in monsters.Monsters)
+        {
+            if (!modelById.TryGetValue(monster.ModelID, out SanguoMonsterModel? model)) continue;
+            if (model.ModelScale > 0f) _monsterModelScales[monster.ID] = model.ModelScale;
+            if (model.DmgNumHeight > 0f) _monsterDamageHeights[monster.ID] = model.DmgNumHeight;
+        }
 
         var enemyViewReference = new AssetRef<PrefabAsset>(EnemyViewPrefabGuid);
         enemyViewReference.EnsureLoaded();
@@ -296,7 +308,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             Scene.Current!.Add(enemyInstance);
             enemyInstance.Name = actor.Name;
             enemyInstance.Transform.Position = new Float3(position.X, 180f, position.Y);
-            enemyInstance.Transform.LocalScale = new Float3(1.1f, 1.1f, 1.1f);
+            float modelScale = _monsterModelScales.TryGetValue(actor.ID, out float authoredScale)
+                ? authoredScale
+                : 1.1f;
+            enemyInstance.Transform.LocalScale = new Float3(modelScale, modelScale, modelScale);
             BindPresenter(actor, enemyInstance);
             _enemyViewCount++;
             return;
@@ -336,8 +351,11 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private void EnsureHud(SanguoFieldActor actor, Transform target)
     {
         if (_hudManager == null || _huds.ContainsKey(actor)) return;
+        float damageHeight = _monsterDamageHeights.TryGetValue(actor.ID, out float authoredHeight)
+            ? authoredHeight
+            : 2.8f;
         Hud hud = _hudManager.CreateHud(++_nextHudId)
-            .Init(target, new Float3(0f, 2.8f, 0f));
+            .Init(target, new Float3(0f, damageHeight, 0f));
         HudRelation relation = actor.Camp == SanguoBattleStage.PlayerCamp
             ? HudRelation.Team
             : HudRelation.Enemy;
