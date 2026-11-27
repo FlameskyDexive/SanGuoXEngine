@@ -158,6 +158,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<SanguoFieldActor, SanguoActorPresenter> _presenters = new();
     private readonly List<SanguoActorPresenter> _presenterList = new(40);
     private readonly Dictionary<SanguoFieldActor, Hud> _huds = new();
+    private readonly Dictionary<SanguoFieldActor, float> _hudBloodPercents = new();
     private readonly Dictionary<int, SanguoMonsterModel> _monsterModelsById = new();
     private readonly Dictionary<(int modelId, Material source), Material> _enemyVariantMaterials = new();
     private readonly Dictionary<int, float> _monsterModelScales = new();
@@ -516,9 +517,15 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _skillParticles.Emit(10);
     }
 
-    private static void UpdateHud(SanguoFieldActor actor, Hud hud)
+    private void UpdateHud(SanguoFieldActor actor, Hud hud)
     {
-        hud.SetBloodPercent(actor.Health.Hp / (float)Math.Max(1, actor.Health.MaxHp));
+        float percent = actor.Health.Hp / (float)Math.Max(1, actor.Health.MaxHp);
+        if (!_hudBloodPercents.TryGetValue(actor, out float previous)
+            || MathF.Abs(previous - percent) > 0.0001f)
+        {
+            _hudBloodPercents[actor] = percent;
+            hud.SetBloodPercent(percent);
+        }
         if (actor.Health.Dead)
             hud.SetSlotVisible(HudSlot.Blood, false);
     }
