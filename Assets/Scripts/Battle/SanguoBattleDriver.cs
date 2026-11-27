@@ -180,6 +180,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private PrefabAsset? _bossViewPrefab;
     private HudManager? _hudManager;
     private ParticleSystemComponent? _hitParticles;
+    private ParticleSystemComponent? _skillParticles;
     private long _nextHudId;
     private int _enemyViewCount;
 
@@ -245,6 +246,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (_hudManager.GameObject.Scene == null)
             Scene.Current!.Add(_hudManager.GameObject);
         CreateHitParticles();
+        CreateSkillParticles();
 
         // the four playable heroes enter at the spawn marker
         List<SanguoMonsterValue> heroValues = [];
@@ -477,11 +479,39 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _hitParticles = particles;
     }
 
+    private void CreateSkillParticles()
+    {
+        GameObject vfxObject = new("Battle Skill Particles");
+        Scene.Current!.Add(vfxObject);
+        ParticleSystemComponent particles = vfxObject.AddComponent<ParticleSystemComponent>();
+        particles.PlayOnEnable = false;
+        particles.Looping = false;
+        particles.Duration = 0.28f;
+        particles.MaxParticles = 384;
+        particles.SimulationSpace = SimulationSpace.World;
+        particles.Material = new AssetRef<Material>(new Material(Shader.LoadDefault(DefaultShader.Particle)));
+        particles.Initial.StartLifetime = new MinMaxCurve(0.28f);
+        particles.Initial.StartSpeed = new MinMaxCurve(4.5f);
+        particles.Initial.StartSize = new MinMaxCurve(0.12f);
+        particles.Initial.StartColor = new MinMaxGradient(new Color(0.35f, 0.65f, 1f, 1f));
+        particles.Emission.Shape = EmissionShape.Sphere;
+        particles.Emission.Radius = 0.12f;
+        particles.Play();
+        _skillParticles = particles;
+    }
+
     private void EmitHitParticles(SanguoFieldActor actor)
     {
         if (_hitParticles == null) return;
         _hitParticles.Transform.Position = new Float3(actor.Position.X, 181.5f, actor.Position.Y);
         _hitParticles.Emit(6);
+    }
+
+    private void EmitSkillParticles(SanguoFieldActor actor)
+    {
+        if (_skillParticles == null) return;
+        _skillParticles.Transform.Position = new Float3(actor.Position.X, 181.7f, actor.Position.Y);
+        _skillParticles.Emit(10);
     }
 
     private static void UpdateHud(SanguoFieldActor actor, Hud hud)
@@ -640,6 +670,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         }
         if (!leader.StateMachine.TryStartAttack(MathF.Max(0.3f, skill.SwitchAllTime / 1000f))) return;
         _casts[leader] = new SanguoCastState(skill);
+        EmitSkillParticles(leader);
         var presenter = _presenters.GetValueOrDefault(leader);
         _ = presenter != null && presenter.PlaySkillClip(skill.AnimName);
     }
@@ -799,6 +830,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (missileId == 0 || !_missiles.TryGetValue(missileId, out SanguoMissile missile)) return;
         HashSet<int> hitSet = _hitSetPool.Count > 0 ? _hitSetPool.Pop() : new HashSet<int>(8);
         hitSet.Clear();
+        EmitSkillParticles(actor);
         _liveBullets.Add((bullet, missile, actor, 0f, hitSet));
     }
 
