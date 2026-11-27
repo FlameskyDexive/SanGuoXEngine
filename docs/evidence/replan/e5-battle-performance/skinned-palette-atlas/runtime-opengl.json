@@ -1,0 +1,17 @@
+[
+  {
+    "tag": "open_enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":15.697499,\"colorPassMs\":0.0529,\"shadowPassMs\":0,\"postFxMs\":0.00049999997,\"gpuWaitMs\":0.7679,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2652,\"renderablesCulled\":2623,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":16,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[13.7709,13.8773,13.7998,14.0247,14.2588,18.7555,14.8483,16.1239,13.8296,13.766,13.7738,13.7151,14.0259,13.2995,13.3735,13.7558,13.6731,14.2492,14.7037,14.5067,13.7302,13.8204,14.1538,14.2035,14.17,13.2554,14.977,15.518,14.1751,15.263,15.5103,15.8232,15.414,16.1919,16.6336,17.0642,17.8662,23.1198,18.513,17.0422,18.2819,17.2761,15.2006,14.7245,15.5349,14.1212,13.7832,14.1687,15.0525,14.996,14.2986,15.0076,15.0936,14.786,14.3021,13.8935,14.7246,14.9093,14.6305,14.7425,14.8127,14.4262,13.6571,14.9345,13.8535,14.3945,13.8364,13.4631,14.5041,15.695,14.1604,13.5704,13.1512,13.3995,13.6121,14.1604,13.5677,13.3587,13.1407,13.357,13.6585,13.2107,14.7767,13.1487,13.2249,13.6796,13.3267,13.3144,13.1157,13.3854,13.404,13.5441,13.7212,13.4081,14.3898,14.2334,14.2589,15.877301,14.9213,15.3833,16.4035,16.5574,18.2567,18.1522,23.5924,23.4263,22.411,18.1267,19.6763,17.8015,17.8983,15.7279,16.5148,16.0655,15.1618,15.4259,15.351,15.5528,14.6693,15.697499],\"backendName\":\"OpenGL 4.1\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":1.447628,\"gpuFrameId\":428,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":429,\"presentWaitMs\":0.7679,\"presentFps\":67,\"sustainedFps\":61.62263363782004,\"cpuFrameMs\":13.1521,\"managedMemoryBytes\":413704224,\"privateMemoryBytes\":1413390336,\"managedAllocatedBytes\":1873249608,\"cpuFrameTimeP50Ms\":14.426199913024902,\"cpuFrameTimeP95Ms\":18.51300048828125,\"lodRenderersHidden\":319,\"staticBatchGroups\":0,\"staticBatchInstances\":0,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"dynamicCollectionCacheHits\":940,\"dynamicCollectionCacheBuilds\":145,\"renderCollectMs\":5.281099796295166,\"staticRegistryMs\":0.013100000098347664,\"lodUpdateMs\":0.5292999744415283,\"skinnedCollectMs\":1.664000153541565,\"particleCollectMs\":0.0008999999845400453,\"skinningUpdateMs\":1.571799874305725,\"boneTextureUploadMs\":0.008200000040233135,\"skinnedPaletteRows\":27,\"skinnedPaletteUploads\":1}"
+  },
+  {
+    "tag": "exit",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"isPlayingNow\":false}"
+  }
+]

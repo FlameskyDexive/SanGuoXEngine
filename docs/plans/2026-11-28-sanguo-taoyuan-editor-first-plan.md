@@ -48,6 +48,8 @@
 
 近景四英雄和 Boss 保留独立高质量 GPU 蒙皮；中景相同 Mesh/材质/动画状态按骨骼调色板分组；远景降低动画更新频率并使用低 LOD。每个实例必须验证颜色、受击参数、深度、阴影和不同姿态，不得只用静止同姿态截图。
 
+当前编辑器实现还提供场景级 `SkinnedPaletteAtlas`：不含 BlendShape 的 skinned 子网格把骨骼矩阵写入共享纹理行，GPU-instancing custom data 选择行；含 BlendShape 或不兼容 shader 的对象继续走原始单体纹理路径。atlas 必须在 D3D12、Vulkan、OpenGL 同机位截图中证明角色姿态和材质一致后才可作为默认编辑器路径。
+
 ## 4. 节点顺序
 
 ### E0 编辑器基线与证据协议
