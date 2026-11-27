@@ -1,0 +1,17 @@
+[
+  {
+    "tag": "open_enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":30.5262,\"colorPassMs\":0.0604,\"shadowPassMs\":0,\"postFxMs\":0.00049999997,\"gpuWaitMs\":1.0618,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2653,\"renderablesCulled\":2624,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[35.3491,37.4746,35.7777,35.8958,31.623598,33.1007,33.1018,65.2032,47.8234,53.466,57.9113,42.9006,45.093,52.7692,50.9203,47.4584,55.8527,43.2998,47.9866,35.2198,54.4373,44.1916,45.16,32.0188,35.7789,31.0902,35.1658,33.1105,32.9719,34.6459,34.4017,29.4513,33.3203,37.0785,37.7186,60.0387,44.5,39.6665,47.1209,45.2364,49.9101,47.7124,48.8876,49.1233,48.7846,39.4477,45.3098,48.7264,35.8018,48.0963,33.2972,33.2403,33.5916,33.9047,54.3684,47.0799,65.1157,40.7105,44.8612,51.0199,47.8897,51.6354,51.0001,51.8593,54.5275,45.5224,47.6016,54.2172,48.6858,47.2583,48.2019,55.1486,42.349,41.8219,47.738,55.7978,48.7677,54.8717,50.6207,43.6548,50.88,43.7811,53.8821,44.0327,35.4549,52.7,45.295,33.4612,60.136,39.8687,39.2951,46.1493,49.6106,53.7454,53.5184,45.6822,50.0943,49.0116,52.9943,46.3203,50.4144,50.1745,49.4573,47.7126,52.5665,52.0487,48.0703,50.8831,49.7328,51.543,50.4537,43.0622,36.0365,51.3033,41.8011,33.9327,33.6432,31.555298,36.5023,30.5262],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":27.036718,\"gpuFrameId\":219,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":220,\"presentWaitMs\":1.0618,\"presentFps\":23,\"sustainedFps\":24.157962849141757,\"cpuFrameMs\":36.952,\"managedMemoryBytes\":343623104,\"privateMemoryBytes\":1466785792,\"managedAllocatedBytes\":1637548984,\"cpuFrameTimeP50Ms\":47.079898834228516,\"cpuFrameTimeP95Ms\":55.79779815673828,\"lodRenderersHidden\":319,\"staticBatchGroups\":0,\"staticBatchInstances\":0,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"renderCollectMs\":27.71540069580078,\"staticRegistryMs\":0.02070000022649765}"
+  },
+  {
+    "tag": "exit",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"isPlayingNow\":false}"
+  }
+]

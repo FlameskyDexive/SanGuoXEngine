@@ -20,3 +20,7 @@
 可观测性已完成，但 E2 的功能验收未通过：桃园当前机位没有形成可见的同状态实例组，不能把 0 个 instanced draw 宣称为 GPU Instancing 完成。下一步必须接入可重复环境物件/重复 VFX 或相同敌人模型，保持材质、Lightmap、阴影和透明裁剪正确后再重新采样。
 
 补充采样：registry 在同一战斗机位收集到 `64` 个多实例 proxy、共 `231` 个实例，说明静态分组已经形成；但这些组的 AABB 全部在当前 Battle Camera 视锥外，颜色 pass 没有提交它们，因此 `instancedDrawCalls=0`。当前机位可见的 4 个静态场景对象仍属于不同状态，不能为了制造 draw call 忽略 Lightmap/材质契约。
+
+## 收集耗时观测
+
+引擎节点增加 `RenderCollectMs` 与 `StaticRegistryMs`。D3D12 原始结果见 `runtime-result-timing.json`：`renderCollectMs=36.72`、`staticRegistryMs=0.019`，证明后续 CPU 优化重点应放在动态组件收集，而不是静态 registry 重建。

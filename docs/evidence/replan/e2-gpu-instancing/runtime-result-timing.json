@@ -1,0 +1,17 @@
+[
+  {
+    "tag": "open_enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":53.9426,\"colorPassMs\":0.0509,\"shadowPassMs\":0,\"postFxMs\":0.0004,\"gpuWaitMs\":0.6382,\"drawCalls\":29,\"instancedDrawCalls\":2,\"batches\":27,\"triangles\":106154,\"vertices\":318462,\"renderablesCollected\":1831,\"renderablesCulled\":1804,\"renderablesDrawn\":27,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[30.3849,35.0968,32.7191,33.3871,34.5618,31.599897,35.9811,34.5046,27.7407,39.1929,30.2153,33.3629,34.8644,29.8499,34.6655,35.2771,32.4952,33.5992,31.4104,33.9868,36.6133,27.9514,35.0975,34.7051,32.2037,32.1486,36.0435,30.8283,43.5266,48.2948,52.6963,48.9925,53.1321,47.5019,46.8943,55.795,47.9479,47.8373,54.9027,47.4345,52.897,42.2858,31.0622,35.6253,55.9417,43.5711,33.4364,32.7448,34.0311,32.786,35.4945,32.6077,40.6729,54.3584,41.4427,51.8171,53.7957,46.8888,45.972,58.2538,39.1792,37.7322,47.4608,32.5336,36.8688,49.1996,53.1402,43.202,37.4701,52.7851,44.2471,33.3748,31.764702,36.0832,34.8219,55.9852,46.4045,51.1844,50.093,45.5317,51.2942,52.7228,45.4637,52.8872,46.5439,33.9651,32.6706,33.6169,34.7105,51.1004,48.5936,33.3851,59.8651,42.8817,47.5278,51.2351,48.5716,49.8604,58.3351,47.7452,50.3986,44.7153,55.4416,46.304,48.3991,47.9836,37.2035,49.4605,48.0709,48.9669,35.3293,46.3695,44.3552,42.1888,52.2346,49.1048,47.3539,32.8237,35.4106,53.9426],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":32.200935,\"gpuFrameId\":263,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":264,\"presentWaitMs\":0.6382,\"presentFps\":22,\"sustainedFps\":22.00369192017215,\"cpuFrameMs\":44.3039,\"managedMemoryBytes\":602680272,\"privateMemoryBytes\":1699823616,\"managedAllocatedBytes\":1965334776,\"cpuFrameTimeP50Ms\":43.20199966430664,\"cpuFrameTimeP95Ms\":55.44160079956055,\"lodRenderersHidden\":319,\"staticBatchGroups\":0,\"staticBatchInstances\":0,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"renderCollectMs\":36.723201751708984,\"staticRegistryMs\":0.01899999938905239}"
+  },
+  {
+    "tag": "exit",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"isPlayingNow\":false}"
+  }
+]
