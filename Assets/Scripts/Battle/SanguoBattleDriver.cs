@@ -136,6 +136,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     // xiaobingyuanjing FBX is the closest real Yellow Turban soldier asset in this port and keeps
     // the enemy presentation on the model path while the per-monster asset table is completed.
     private static readonly Guid EnemyViewPrefabGuid = new("e4251061-3dcd-e554-cc2f-6348e0f66f65");
+    private static readonly Guid BuiltinCubeMeshGuid = new("3baf3103-ea03-e2d9-7e45-ca749920713c");
     // The battle kernel keeps the complete 234-enemy wave, but the editor Play view only needs
     // the actors that can occupy the current encounter.  A hard presentation budget prevents
     // every logic actor from allocating a full model hierarchy and running a presenter every
@@ -312,6 +313,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         cameraData.RenderShadows = false;
         cameraData.RenderPostProcessing = !editorPreview;
 
+        if (string.Equals(Environment.GetEnvironmentVariable("SANGUO_BATCH_PROBE"), "1", StringComparison.Ordinal))
+            CreateBatchProbe();
+
         // Put the boss into the same kernel before the wave so it participates in targeting,
         // health and the win condition while keeping the editor view visually grounded.
         _stage.SpawnBoss(new Float2(120f, 724f), new Float2(0f, -1f));
@@ -321,6 +325,59 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         while (_stage.SpawnNextGroup() != null) spawned++;
         Debug.Log("[SanguoBattle] stage ready: heroes " + heroes.Count + ", spawn groups " + spawned
             + ", enemies " + _stage.Enemies.Count);
+    }
+
+    /// <summary>
+    /// Optional editor-only batching fixture. It deliberately uses one readable mesh and one
+    /// material in the battle camera frustum: static rows exercise the scene registry while the
+    /// dynamic rows exercise the per-pass runtime promotion. The fixture is opt-in so normal
+    /// TaoYuan captures retain the authored scene and budget.
+    /// </summary>
+    private static void CreateBatchProbe()
+    {
+        Scene scene = Scene.Current!;
+        var meshRef = new AssetRef<Mesh>(BuiltinCubeMeshGuid);
+        meshRef.EnsureLoaded();
+        Mesh? mesh = meshRef.Res;
+        if (mesh == null)
+        {
+            Debug.LogWarning("[SanguoBatchProbe] builtin probe mesh unavailable");
+            return;
+        }
+
+        Material material = new(Shader.LoadDefault(DefaultShader.Unlit));
+        material.SetColor("_MainColor", new Color(0.18f, 0.42f, 0.72f, 1f));
+        const int side = 8;
+        const float spacing = 5f;
+        for (int i = 0; i < side * side; i++)
+        {
+            int x = i % side;
+            int z = i / side;
+            GameObject staticObject = new($"BatchProbe.Static.{i}") { IsStatic = true };
+            scene.Add(staticObject);
+            staticObject.Transform.Position = new Float3(60f + x * spacing, 186f, 760f + z * spacing);
+            staticObject.Transform.LocalScale = new Float3(2.5f, 2.5f, 2.5f);
+            MeshRenderer renderer = staticObject.AddComponent<MeshRenderer>();
+            renderer.Mesh = mesh;
+            renderer.Material = material;
+        }
+
+        material = material.Clone();
+        material.SetColor("_MainColor", new Color(0.72f, 0.28f, 0.16f, 1f));
+        for (int i = 0; i < side * side; i++)
+        {
+            int x = i % side;
+            int z = i / side;
+            GameObject dynamicObject = new($"BatchProbe.Dynamic.{i}");
+            scene.Add(dynamicObject);
+            dynamicObject.Transform.Position = new Float3(100f + x * spacing, 186f, 760f + z * spacing);
+            dynamicObject.Transform.LocalScale = new Float3(2.5f, 2.5f, 2.5f);
+            MeshRenderer renderer = dynamicObject.AddComponent<MeshRenderer>();
+            renderer.Mesh = mesh;
+            renderer.Material = material;
+        }
+
+        Debug.Log("[SanguoBatchProbe] spawned 64 static + 64 dynamic instances");
     }
 
     private int HeroFirstSkillId(string hero)
@@ -372,7 +429,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         MeshRenderer renderer = go.AddComponent<MeshRenderer>();
         // the monsters' real model prefabs are M7 scope; the battle cube asset (the scene
         // builder's builtin) stands in, tinted by camp
-        var placeholder = new AssetRef<Mesh>(new Guid("0331af3b-03ea-d9e2-7e45-ca749920713c"));
+        var placeholder = new AssetRef<Mesh>(BuiltinCubeMeshGuid);
         placeholder.EnsureLoaded();
         renderer.Mesh = placeholder;
         Material material = new(Shader.LoadDefault(DefaultShader.Unlit));
