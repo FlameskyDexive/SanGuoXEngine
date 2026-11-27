@@ -125,6 +125,29 @@
 
 PC 包和手机包在 B7 通过后单独规划。
 
+## 追加执行节点（编辑器优先）
+
+### B7g GPU 实例缓冲生命周期（已完成）
+
+静态 MeshRenderer 和动态合批继续沿用同一套 GPU instancing draw，但 CPU 侧实例数据改为从
+`ArrayPool<InstanceData>` 租用。`InstancedMeshRenderable.InstanceCount` 单独保存有效实例数，
+因此池数组的多余容量不会被上传或绘制；CommandBuffer 在 `UpdateBuffer` 编码阶段复制 payload，
+完成当前批次后才归还数组。验收必须同时通过静态/动态批处理单测、编辑器构建和 D3D12
+1280×720 截图；该节点不宣称 60 FPS gate 已通过。
+
+### B7h 静态场景分块批处理（下一节点）
+
+继续沿用 Unity 的 `GameObject.IsStatic` 契约，在场景级建立按 Mesh、材质状态、子网格、光照
+贴图、RenderingLayer、阴影状态和空间块划分的静态实例组。静态组只在场景首次加载或依赖
+变化时重建，普通帧执行块 AABB 剔除并更新可见实例范围；编辑器 SceneView 过滤、LOD、对象
+定位和资源卸载必须回退到逐 Renderer 路径。验收重点是 `renderablesCollected` 明显下降、
+instanced draws 保持稳定、视觉无遮挡，并在 D3D12 与 Vulkan 各留一组截图/统计。
+
+### B7i 角色 GPU 蒙皮实例（后续）
+
+逐 MonsterID 接入真实 YellowArmy、EliteMageArmy 和骑兵 prefab 后，再按 Mesh、材质、动画
+状态分组 GPU 蒙皮；每实例独立骨骼调色板、受击参数和阴影 pass，近景英雄保持独立高质量路径。
+
 ## 证据和提交
 
 证据目录使用：
