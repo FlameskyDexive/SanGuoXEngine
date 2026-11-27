@@ -27,3 +27,7 @@
 - 画面截图：`battle-gameview-d3d12-960x540.png`、`editor-gameview-d3d12.png`
 
 本节点证明静态组件收集不再逐个重建缓存，同时没有以单例强制实例化引入白化/材质变体回归。E7 的 60 FPS gate 仍未通过；下一节点继续处理 renderables 收集、编辑器主循环和真正可见的同状态实例组。
+
+## E1b 批次哈希缓存
+
+引擎节点 `7b638f000` 为 `PropertyState.ComputeBatchHash()` 增加失效感知缓存，静态状态未变时不再每帧排序属性字典。D3D12 Play 复测原始结果见 `runtime-result-hash-cache.json`：`cpuFrameTimeP50Ms=46.93`、`cpuFrameTimeP95Ms=55.18`、`gpuFrameTimeMs=38.24`、`renderablesCollected=2903`、`drawCalls=31`。与 E0/B7 的 `cpuFrameTimeP95Ms=57.70` 相比有下降，但采样时刻和编辑器负载不能当作独立基准；E7 仍未通过。
