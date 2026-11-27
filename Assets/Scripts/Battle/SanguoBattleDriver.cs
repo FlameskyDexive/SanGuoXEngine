@@ -534,6 +534,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private bool _updateLogged;
     private float _updateCount;
     private float _lastHeartbeatMs;
+    private int _hitEvents;
+    private int _heartbeatHitEvents;
 
     public override void Update()
     {
@@ -594,7 +596,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         Debug.Log("[SanguoBattle] t=" + (_battleTimeMs / 1000f) + "s enemy0="
             + (probeEnemy != null ? probeEnemy.Position.X + "," + probeEnemy.Position.Y + " state=" + probeEnemy.StateMachine.State : "none")
             + " hero0=" + (probeHero != null ? probeHero.Position.X + "," + probeHero.Position.Y + " hp=" + probeHero.Health.Hp : "none")
-            + " chasing=" + chasing + " attacking=" + attacking);
+            + " chasing=" + chasing + " attacking=" + attacking
+            + " hits=" + (_hitEvents - _heartbeatHitEvents) + " totalHits=" + _hitEvents);
+        _heartbeatHitEvents = _hitEvents;
     }
 
     // ------------------------------------------------------------ input + control
@@ -786,10 +790,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 if (!inShape) continue;
                 hitSet.Add(candidate.ID);
                 int damage = candidate.Health.ApplyHit(120, 1f);
+                _hitEvents++;
                 var targetPresenter = _presenters.GetValueOrDefault(candidate);
                 targetPresenter?.PlayHurt();
                 PopHudNumber(candidate, damage);
-                Debug.Log("[SanguoBattle] hit " + candidate.Name + " -" + damage);
             }
             if (missile.DamageEndFrame > 0 && frame >= missile.DamageEndFrame)
             {
@@ -839,7 +843,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private void OnHeroHit(SanguoFieldActor hero, int damage)
     {
         // the kernel already applied the damage (ResolveHits); this only drives the feedback
-        Debug.Log("[SanguoBattle] hero hit " + hero.Name + " -" + damage + " (hp " + hero.Health.Hp + ")");
+        _hitEvents++;
         PopHudNumber(hero, damage);
         if (hero.Health.Dead) return;
         hero.StateMachine.TakeHurt();
