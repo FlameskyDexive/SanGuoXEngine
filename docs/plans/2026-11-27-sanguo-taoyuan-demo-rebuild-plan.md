@@ -144,10 +144,12 @@ PC 包和手机包在 B7 通过后单独规划。
 从 2809 降到 2712，instanced draw 和画面保持稳定；Vulkan 回归、进一步减少批次数以及
 60 FPS gate 仍属于 B7 后续调优。
 
-### B7i 角色 GPU 蒙皮实例（后续）
+### B7i 角色 GPU 蒙皮实例（进行中）
 
-逐 MonsterID 接入真实 YellowArmy、EliteMageArmy 和骑兵 prefab 后，再按 Mesh、材质、动画
-状态分组 GPU 蒙皮；每实例独立骨骼调色板、受击参数和阴影 pass，近景英雄保持独立高质量路径。
+已先完成 `MonsterID → ModelID` 固化、模型缩放/伤害高度绑定和共享材质变体缓存；当前源包
+仍缺真实 YellowArmy、EliteMageArmy 和骑兵 FBX/Prefab，因此 xiaobingyuanjing 只作为几何
+回退。下一步必须补齐真实 prefab，再按 Mesh、材质、动画状态分组 GPU 蒙皮；每实例独立骨骼
+调色板、受击参数和阴影 pass，近景英雄保持独立高质量路径。
 
 ## 证据和提交
 

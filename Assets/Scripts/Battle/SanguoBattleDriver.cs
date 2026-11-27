@@ -27,6 +27,8 @@ public sealed class SanguoActorPresenter : MonoBehaviour
     public float BaseY = 180f;
 
     public SanguoFieldActor Kernel = new();
+    /// <summary>Resolved MonsterData.ModelID for diagnostics and visual variant binding.</summary>
+    public int ModelID;
 
     private SanguoAnimator? _animator;
     private bool _animatorBroken;
@@ -146,6 +148,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<SanguoFieldActor, SanguoCastState> _casts = new();
     private readonly Dictionary<SanguoFieldActor, SanguoActorPresenter> _presenters = new();
     private readonly Dictionary<SanguoFieldActor, Hud> _huds = new();
+    private readonly Dictionary<int, SanguoMonsterModel> _monsterModelsById = new();
+    private readonly Dictionary<(int modelId, Material source), Material> _enemyVariantMaterials = new();
     private readonly Dictionary<int, float> _monsterModelScales = new();
     private readonly Dictionary<int, float> _monsterDamageHeights = new();
     private readonly Dictionary<SanguoFieldActor, float> _aiCooldowns = new();
@@ -191,7 +195,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
 
         Dictionary<int, SanguoMonsterModel> modelById = new();
         foreach (SanguoMonsterModel model in models.Models)
+        {
             modelById[model.ID] = model;
+            _monsterModelsById[model.ID] = model;
+        }
         foreach (SanguoMonster monster in monsters.Monsters)
         {
             if (!modelById.TryGetValue(monster.ModelID, out SanguoMonsterModel? model)) continue;
@@ -312,6 +319,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             Scene.Current!.Add(enemyInstance);
             enemyInstance.Name = actor.Name;
             enemyInstance.Transform.Position = new Float3(position.X, 180f, position.Y);
+            ApplyEnemyModelVariant(enemyInstance, actor.ModelID);
             float modelScale = _monsterModelScales.TryGetValue(actor.ID, out float authoredScale)
                 ? authoredScale
                 : 1.1f;
@@ -337,11 +345,54 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         BindPresenter(actor, go);
     }
 
+    /// <summary>
+    /// The source drop currently contains the xiaobingyuanjing mesh but not every original
+    /// MonsterModel prefab. Keep the authoritative ModelID binding in place and give the
+    /// available fallback mesh a stable per-model material variant. The cache is shared by all
+    /// actors of the same model, so GPU skinning/instancing still sees one material per variant.
+    /// </summary>
+    private void ApplyEnemyModelVariant(GameObject instance, int modelId)
+    {
+        Color tint = EnemyModelTint(modelId);
+        foreach (MeshRenderer renderer in instance.GetComponentsInChildren<MeshRenderer>(includeInactive: true))
+            ApplyEnemyMaterialVariant(renderer.Materials, modelId, tint);
+        foreach (SkinnedMeshRenderer renderer in instance.GetComponentsInChildren<SkinnedMeshRenderer>(includeInactive: true))
+            ApplyEnemyMaterialVariant(renderer.Materials, modelId, tint);
+    }
+
+    private void ApplyEnemyMaterialVariant(List<AssetRef<Material>> materials, int modelId, Color tint)
+    {
+        for (int i = 0; i < materials.Count; i++)
+        {
+            Material? source = materials[i].Res;
+            if (source == null) continue;
+            var key = (modelId, source);
+            if (!_enemyVariantMaterials.TryGetValue(key, out Material? variant))
+            {
+                variant = source.Clone();
+                variant.SetColor("_MainColor", tint);
+                _enemyVariantMaterials[key] = variant;
+            }
+            materials[i] = new AssetRef<Material>(variant);
+        }
+    }
+
+    private static Color EnemyModelTint(int modelId) => modelId switch
+    {
+        20467 => new Color(0.55f, 0.72f, 1f, 1f),   // EliteMageArmy
+        22082 => new Color(1f, 0.55f, 0.45f, 1f),    // YellowArmy_Lightred
+        22079 => new Color(0.62f, 0.42f, 0.24f, 1f), // YellowArmy_Brown
+        22502 => new Color(0.72f, 0.58f, 0.32f, 1f), // HorseShoulder
+        22056 or 22035 => new Color(1f, 0.9f, 0.45f, 1f),
+        _ => Color.White,
+    };
+
     private void BindPresenter(SanguoFieldActor actor, GameObject instance)
     {
         SanguoActorPresenter presenter = instance.GetComponent<SanguoActorPresenter>()
             ?? instance.AddComponent<SanguoActorPresenter>();
         presenter.Kernel = actor;
+        presenter.ModelID = actor.ModelID;
         _presenters[actor] = presenter;
         EnsureHud(actor, instance.Transform);
         actor.Health.Died += () =>

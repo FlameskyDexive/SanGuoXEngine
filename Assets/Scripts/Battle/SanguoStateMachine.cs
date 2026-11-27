@@ -232,6 +232,9 @@ public sealed class SanguoActorRegistry
 public sealed class SanguoFieldActor
 {
     public int ID;
+    /// <summary>Authoritative MonsterData.ModelID used by the scene presenter to select the
+    /// visual variant. Heroes leave this at zero.</summary>
+    public int ModelID;
     public string Name = "";
     public int Camp;
     public int MonsterType;

@@ -239,6 +239,8 @@ public sealed class SanguoBattleKernelTests
         stage.Tick(0.016f);
         Assert.Equal(6, spawns);
         Assert.Equal(2, stage.Enemies.Count);
+        Assert.Equal(22056, stage.Enemies[0].ModelID);
+        Assert.Equal(22082, stage.Enemies[1].ModelID);
 
         // kill both enemies → pending groups empty → win
         foreach (SanguoFieldActor enemy in stage.Enemies) enemy.Health.ApplyHit(100000);

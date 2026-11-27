@@ -212,6 +212,7 @@ public sealed class SanguoBattleStage
             var actor = new SanguoFieldActor
             {
                 ID = group.MonsterID,
+                ModelID = monster.ModelID,
                 Name = $"M{group.MonsterID}_{i}",
                 Camp = EnemyCamp,
                 MonsterType = monster.MonsterType,
