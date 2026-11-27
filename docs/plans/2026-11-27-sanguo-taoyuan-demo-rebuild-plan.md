@@ -169,6 +169,11 @@ CPU 优化和 B7 的 60 FPS gate。
 角色数量增加时不再为每个视图注册一套 LateUpdate 回调。该节点保留截图和 D3D12 统计，
 最终 CPU gate 仍需在宿主稳定后复测。
 
+### B7k Lu Bu Boss kernel 接入（已完成基础形态）
+
+使用已有 `Hero_LvBu` prefab 将 Lu Bu 注册到战斗 kernel，接入寻敌、攻击、血量、HUD 和胜负
+判定。第二阶段变身、专属技能特效、Boss 专用取景和最终平衡仍待后续节点。
+
 ## 证据和提交
 
 证据目录使用：

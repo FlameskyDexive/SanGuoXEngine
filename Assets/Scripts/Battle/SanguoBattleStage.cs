@@ -136,7 +136,9 @@ public sealed class SanguoBattleStage
     /// <summary>Returns the authored attack value for a monster group. The battle driver uses
     /// this lookup for contact damage so the live presentation follows the imported data table.</summary>
     public int AttackOf(int monsterId)
-        => _valueData.TryGetValue(monsterId, out SanguoMonsterValue? value) && value.Atk > 0
+        => monsterId == 900001
+            ? 180
+            : _valueData.TryGetValue(monsterId, out SanguoMonsterValue? value) && value.Atk > 0
             ? value.Atk
             : 20;
 
@@ -189,6 +191,30 @@ public sealed class SanguoBattleStage
         }
         Leader = spawned.Count > 0 ? spawned[0] : null;
         return spawned;
+    }
+
+    /// <summary>Spawns the demo's Lu Bu boss from the same kernel registry as wave enemies.
+    /// The scene driver supplies the real Hero_LvBu prefab while the kernel owns targeting,
+    /// health and win/lose accounting.</summary>
+    public SanguoFieldActor SpawnBoss(Float2 position, Float2 forward)
+    {
+        var boss = new SanguoFieldActor
+        {
+            ID = 900001,
+            ModelID = 10109,
+            Name = "LuBu_Boss",
+            Camp = EnemyCamp,
+            MonsterType = 51,
+            Health = new SanguoHealth(5000, 180, 80),
+            ShoveRadius = 1.2f,
+        };
+        boss.Position = position;
+        boss.Motor.FaceTowards(position + forward * 10f);
+        boss.Health.Died += () => OnActorDied(boss);
+        _registry.Register(boss);
+        _enemies.Add(boss);
+        ActorSpawned?.Invoke(boss, boss.Position, boss.Motor.Facing);
+        return boss;
     }
 
     /// <summary>Spawns the pending group whose turn it is. Groups spawn in layout order; each call

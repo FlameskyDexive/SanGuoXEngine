@@ -131,6 +131,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private static readonly Guid ModelsGuid = new("a0438efe-498e-e824-ea17-116c3ec8950a");
     private static readonly Guid ValuesGuid = new("c02e2542-06fc-9769-7bc9-547feca0eb7b");
     private static readonly Guid LayoutGuid = new("d435194f-f8cb-3612-f43e-56855330d375");
+    private static readonly Guid BossViewPrefabGuid = new("2c30308a-0bae-3fc3-7d56-74cbebc23598");
     // The source package does not contain the original YellowArmy prefab yet. The imported
     // xiaobingyuanjing FBX is the closest real Yellow Turban soldier asset in this port and keeps
     // the enemy presentation on the model path while the per-monster asset table is completed.
@@ -176,6 +177,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         DamageIntervalFrame = 1,
     };
     private PrefabAsset? _enemyViewPrefab;
+    private PrefabAsset? _bossViewPrefab;
     private HudManager? _hudManager;
     private ParticleSystemComponent? _hitParticles;
     private long _nextHudId;
@@ -227,6 +229,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         var enemyViewReference = new AssetRef<PrefabAsset>(EnemyViewPrefabGuid);
         enemyViewReference.EnsureLoaded();
         _enemyViewPrefab = enemyViewReference.Res;
+        var bossViewReference = new AssetRef<PrefabAsset>(BossViewPrefabGuid);
+        bossViewReference.EnsureLoaded();
+        _bossViewPrefab = bossViewReference.Res;
 
         _stage = new SanguoBattleStage(layout, monsters, values);
         _stage.ActorSpawned += SpawnActorView;
@@ -302,6 +307,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         cameraData.RenderShadows = false;
         cameraData.RenderPostProcessing = !editorPreview;
 
+        // Put the boss into the same kernel before the wave so it participates in targeting,
+        // health and the win condition while keeping the editor view visually grounded.
+        _stage.SpawnBoss(new Float2(120f, 724f), new Float2(0f, -1f));
+
         // spawn every wave now: the stage queues them and the AI engages as they walk in
         int spawned = 0;
         while (_stage.SpawnNextGroup() != null) spawned++;
@@ -335,7 +344,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (_enemyViewCount >= MaxEnemyViewCount)
             return;
 
-        if (_enemyViewPrefab?.Instantiate() is GameObject enemyInstance)
+        PrefabAsset? viewPrefab = actor.ID == 900001 ? _bossViewPrefab : _enemyViewPrefab;
+        if (viewPrefab?.Instantiate() is GameObject enemyInstance)
         {
             Scene.Current!.Add(enemyInstance);
             enemyInstance.Name = actor.Name;
@@ -343,7 +353,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             ApplyEnemyModelVariant(enemyInstance, actor.ModelID);
             float modelScale = _monsterModelScales.TryGetValue(actor.ID, out float authoredScale)
                 ? authoredScale
-                : 1.1f;
+                : _monsterModelsById.TryGetValue(actor.ModelID, out SanguoMonsterModel? model)
+                    ? model.ModelScale
+                    : 1.1f;
             enemyInstance.Transform.LocalScale = new Float3(modelScale, modelScale, modelScale);
             BindPresenter(actor, enemyInstance);
             _enemyViewCount++;
@@ -431,7 +443,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         if (_hudManager == null || _huds.ContainsKey(actor)) return;
         float damageHeight = _monsterDamageHeights.TryGetValue(actor.ID, out float authoredHeight)
             ? authoredHeight
-            : 2.8f;
+            : _monsterModelsById.TryGetValue(actor.ModelID, out SanguoMonsterModel? model)
+                ? model.DmgNumHeight
+                : 2.8f;
         Hud hud = _hudManager.CreateHud(++_nextHudId)
             .Init(target, new Float3(0f, damageHeight, 0f));
         HudRelation relation = actor.Camp == SanguoBattleStage.PlayerCamp

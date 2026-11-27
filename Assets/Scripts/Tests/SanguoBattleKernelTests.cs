@@ -315,6 +315,20 @@ public sealed class SanguoBattleKernelTests
         Assert.Same(near, registry.FindNearest(new Float2(0, 0), enemyCamp: 1));
     }
 
+    [Fact]
+    public void BattleStage_SpawnsBossIntoEnemyRegistry()
+    {
+        SanguoBattleStage stage = new(
+            new SanguoLevelLayout(),
+            new SanguoMonsterTable(),
+            new SanguoMonsterValueTable());
+        SanguoFieldActor boss = stage.SpawnBoss(new Float2(10, 20), new Float2(0, -1));
+        Assert.Same(boss, Assert.Single(stage.Enemies));
+        Assert.Equal(900001, boss.ID);
+        Assert.Equal(10109, boss.ModelID);
+        Assert.Equal(180, stage.AttackOf(boss.ID));
+    }
+
     private static SanguoFieldActor ActorAt(float x, float z)
     {
         var actor = new SanguoFieldActor
