@@ -88,3 +88,13 @@
 ![Vulkan linear camera](linear-camera-vulkan.png)
 
 两张截图均为正向画面。B7 的 60 FPS gate 仍未通过，编辑器 UI 和场景收集开销继续列入后续性能节点。
+
+## B7e 编辑器 Play 性能档
+
+- `Application.IsEditor` 下 Battle Camera 关闭 HDR、Bloom/Tonemap 后处理，保留单相机和无动态阴影预算。
+- Player 构建路径继续使用 HDR 与完整后处理，编辑器性能档只作用于 GameView Play。
+- 1280×720 D3D12 GameView 复测：`drawCalls=27`、`triangles=100,786`、`imageEffects=0`、`shadowDrawCalls=0`、`frameTimeMs=32.59`、`gpuFrameTimeMs=29.55`、`cpuFrameTimeP95Ms=50.80`。
+
+![Editor performance profile](editor-performance-profile-d3d12.png)
+
+该档位消除了编辑器中后处理的额外全屏链路，但当前编辑器主循环和场景收集仍高于 16.6 ms，60 FPS gate 继续保持未通过。
