@@ -1,0 +1,27 @@
+[
+  {
+    "tag": "enter_battle_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering TaoYuanBattle play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "capture_battle_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 31 tris 105820 drawn 29 lodHidden 319\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "runtime_stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":34.0842,\"colorPassMs\":0.0588,\"shadowPassMs\":0,\"postFxMs\":0.00029999999,\"gpuWaitMs\":0.9047,\"drawCalls\":31,\"instancedDrawCalls\":0,\"batches\":29,\"triangles\":105820,\"vertices\":317460,\"renderablesCollected\":2722,\"renderablesCulled\":2693,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":43,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[23.0757,22.0972,20.5577,21.2374,21.4895,21.8242,20.4766,21.8258,21.0391,22.3471,24.1172,23.282,22.2885,24.9885,23.0848,25.4426,28.8813,36.5302,38.4899,34.1201,29.4831,25.097,24.2515,23.3613,24.677,21.7622,21.6879,21.8759,24.1721,24.7677,24.2433,22.823,21.9828,24.4126,26.0315,22.6846,21.1831,22.3104,22.292,21.2123,22.3572,23.0759,22.1461,22.8101,23.1899,22.8794,24.9478,21.6815,21.977,21.8117,21.1941,21.3919,23.3491,21.7904,24.7477,22.058,23.6802,23.0227,22.3335,22.7442,36.2701,24.6664,23.5987,22.2574,25.9838,23.3036,22.2384,22.4393,22.8569,22.0183,21.2599,21.4605,24.0101,22.1125,22.2825,21.5857,21.5858,21.6951,21.6492,21.5678,20.827,23.6415,26.8861,22.5232,21.5112,21.5013,20.6619,22.3954,21.3513,22.9504,21.4753,20.7188,21.6548,21.6031,20.6026,20.9411,24.4155,22.9826,24.0138,25.1674,23.2714,28.0441,35.836,37.0515,38.4093,29.4789,26.8676,26.1576,22.9446,23.736,22.3628,21.7062,23.1473,22.0152,22.7178,24.9618,22.9342,26.4932,655.649,34.0842],\"backendName\":\"Vulkan (Intel(R) Arc(TM) 140T GPU (32GB))\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":38.251457,\"gpuFrameId\":44088,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":44089,\"presentWaitMs\":0.9047,\"presentFps\":15,\"sustainedFps\":1.8608970936784603,\"cpuFrameMs\":29.4565,\"managedMemoryBytes\":600094336,\"privateMemoryBytes\":1868369920,\"managedAllocatedBytes\":2755893112,\"cpuFrameTimeP50Ms\":22.744199752807617,\"cpuFrameTimeP95Ms\":35.83599853515625,\"lodRenderersHidden\":319}"
+  },
+  {
+    "tag": "registry_probe",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"True 156\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "exit_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exiting\",\"resultType\":\"System.String\"}"
+  }
+]

@@ -1,6 +1,6 @@
 # SanGuoXEngine 移植进度
 
-- 计划：[`plans/2026-11-26-sanguo-taoyuan-port-plan.md`](plans/2026-11-26-sanguo-taoyuan-port-plan.md)（第 9、10、11 节分别是 M0、M1、M2 实测后的修订）
+- 计划：[`plans/2026-11-28-sanguo-taoyuan-editor-first-plan.md`](plans/2026-11-28-sanguo-taoyuan-editor-first-plan.md)（编辑器 Play 优先；旧总计划保留作资产/里程碑索引）
 - 纪律：一个节点 = 代码 + 测试 + Unity/XEngine 并排截图（`evidence/mN/`）→ commit（`[feat]sanguo port function + …`）→ push
 - 证据目录约定：`evidence/mN/<节点>.md` + 截图，分 `unity/` 与 `xengine/` 两侧
 - 仓库：私有的 `FlameskyDexive/SanGuoXEngine`，在 XEngine 仓库里登记为子模块 `SanGuoXEngine`
@@ -31,6 +31,7 @@
 | B5 战斗逻辑优化 | 完成 | `evidence/replan/b5-battle/`，B5c 接入怪物 GroupID/Atk 数据驱动近战伤害；固定 60 Hz 步进、复用战斗 scratch 缓冲；46 个子模块测试通过 |
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，B6a 接入 Hudmesh 血条和伤害数字回调；Volume/HDR/ACES/Bloom 已接入，敌人材质、粒子和 SpeedTree 仍待处理 |
 | B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，B7f 增加静态 MeshRenderer 场景收集缓存，D3D12 8 秒复测 p95 55.38 ms；60 FPS gate 仍未通过 |
+| B7l 战斗相机取景 | 取景修正完成，D3D12 待复测 | `evidence/replan/b7-editor-acceptance/camera-follow/`，Vulkan 960×540 四英雄可见；D3D12 复测被 CommandBuffer 已提交错误阻塞 |
 
 补充节点：B5f 战斗空间哈希已完成，C# 测试 50/50、Python 测试 108/108；寻敌与技能命中不再对
 全量敌人线性扫描。B7 的编辑器实测帧率门槛仍未通过，后续继续处理场景收集与角色 GPU 蒙皮。
