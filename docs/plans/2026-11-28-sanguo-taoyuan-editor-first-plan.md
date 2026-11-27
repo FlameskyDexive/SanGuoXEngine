@@ -32,6 +32,8 @@
 
 首个可交付策略沿用 Unity 的可靠路径：按 Mesh、材质状态、PropertyState、子网格、空间块建立静态实例组，使用 `InstancedMeshRenderable`/`DrawIndexedInstanced`。每组保存 AABB、实例变换和源对象调试映射；普通帧只做 AABB 剔除和实例数据上传，不复制顶点。
 
+静态 registry 会接管所有通过契约校验的 `MeshRenderer`，即使某个空间块只有一个实例也保留一个静态 proxy，避免每帧重新遍历静态组件和重建 `PropertyState`。单例 proxy 透传原始 renderable，继续走普通 draw；只有同 Mesh、同材质状态且至少两个实例的组才升级为 GPU Instancing。材质或导入状态不完整时 registry 保持不完整标记并让源 Renderer 回退，不能为了计数减少而强行切换 shader 变体。
+
 跨 Mesh 世界空间合批是后续实验节点，必须先完成：每种 VertexLayout 的缺省通道策略、Lightmap UV 烘焙、材质属性快照、ShadowCaster/Depth/Motion/Picking 一致性、64K/32-bit 索引上限、资源生命周期和可逆回退。未满足时按同 Mesh Instancing 或逐 Renderer 回退。
 
 当前编辑器实现明确采用两条有证据的路径：同 Mesh、同材质状态的对象走 GPU Instancing；小型可移动 Mesh 走同 Mesh 动态批。跨 Mesh CPU 合批暂不默认开启。2026-11-28 的实验捕获表明，只复制位置、法线、切线、UV 和索引还不足以保持桃园画面，光照贴图、材质变体和深度/阴影状态会出现白化或几何回归。因此不能因为“能合成一个 Mesh”就把静态对象从原路径隐藏；跨 Mesh 节点必须先有完整契约、失败时保留源 Renderer，并用同机位截图和 Frame Debugger 逐 pass 对照通过后才可启用。
