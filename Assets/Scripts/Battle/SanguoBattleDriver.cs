@@ -27,6 +27,8 @@ public sealed class SanguoActorPresenter : MonoBehaviour
     public float BaseY = 180f;
 
     public SanguoFieldActor Kernel = new();
+    /// <summary>When true, the battle driver applies poses in one contiguous loop.</summary>
+    public bool ExternalUpdate;
     /// <summary>Resolved MonsterData.ModelID for diagnostics and visual variant binding.</summary>
     public int ModelID;
 
@@ -41,6 +43,12 @@ public sealed class SanguoActorPresenter : MonoBehaviour
     }
 
     public override void LateUpdate()
+    {
+        if (ExternalUpdate) return;
+        ApplyKernelPose();
+    }
+
+    public void ApplyKernelPose()
     {
         if (Kernel == null) return;
         Transform.Position = new Float3(Kernel.Position.X, BaseY, Kernel.Position.Y);
@@ -147,6 +155,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<int, SanguoMissile> _missiles = new();
     private readonly Dictionary<SanguoFieldActor, SanguoCastState> _casts = new();
     private readonly Dictionary<SanguoFieldActor, SanguoActorPresenter> _presenters = new();
+    private readonly List<SanguoActorPresenter> _presenterList = new(40);
     private readonly Dictionary<SanguoFieldActor, Hud> _huds = new();
     private readonly Dictionary<int, SanguoMonsterModel> _monsterModelsById = new();
     private readonly Dictionary<(int modelId, Material source), Material> _enemyVariantMaterials = new();
@@ -405,7 +414,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             ?? instance.AddComponent<SanguoActorPresenter>();
         presenter.Kernel = actor;
         presenter.ModelID = actor.ModelID;
+        presenter.ExternalUpdate = true;
         _presenters[actor] = presenter;
+        if (!_presenterList.Contains(presenter)) _presenterList.Add(presenter);
         EnsureHud(actor, instance.Transform);
         actor.Health.Died += () =>
         {
@@ -496,6 +507,12 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             SimulateFixedStep(FixedStep);
             _fixedAccumulator -= FixedStep;
         }
+    }
+
+    public override void LateUpdate()
+    {
+        for (int i = 0; i < _presenterList.Count; i++)
+            _presenterList[i].ApplyKernelPose();
     }
 
     private void SimulateFixedStep(float deltaTime)

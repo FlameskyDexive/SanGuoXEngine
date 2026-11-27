@@ -1,0 +1,42 @@
+[
+  {
+    "tag": "open_and_enter_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "set_hd",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"resolution=9\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "shot_gameview",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261127-155135025.png\",\"width\":1280,\"height\":720}"
+  },
+  {
+    "tag": "capture_battle",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 29 tris 104820 drawn 27 lodHidden 324\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "combat_log",
+    "ok": true,
+    "text": "{\"succeeded\":false,\"error\":\"IOException: The process cannot access the file \\u0027D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\Logs\\\\Editor.log\\u0027 because it is being used by another process.\"}"
+  },
+  {
+    "tag": "runtime_stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":31.981401,\"colorPassMs\":0.0622,\"shadowPassMs\":0,\"postFxMs\":0.0002,\"gpuWaitMs\":0.7938,\"drawCalls\":30,\"instancedDrawCalls\":1,\"batches\":28,\"triangles\":104866,\"vertices\":314598,\"renderablesCollected\":2712,\"renderablesCulled\":2662,\"renderablesDrawn\":50,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":37,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[31.1032,34.748,38.9212,46.3493,31.8123,35.1115,32.2339,35.8799,45.5688,31.7366,37.0171,38.3857,50.151,48.2933,48.8512,35.3307,65.3703,53.7395,41.6686,36.6871,32.9791,33.7709,31.3828,30.885,37.744,32.9672,31.9083,32.6835,30.6976,36.8068,34.7815,31.225,37.2971,47.2556,31.1249,33.4952,33.3188,32.4249,33.2431,41.0377,47.4452,34.7048,51.9346,60.0801,43.6539,48.1679,44.38,32.2864,32.2208,34.8504,46.3721,35.6325,31.7086,37.8897,33.7581,45.4148,42.2147,40.958,34.1884,37.0011,31.7,32.057,35.2037,35.1885,47.5138,38.4197,598.8794,48.4925,30.8291,32.8131,37.6353,51.0223,46.4414,32.7173,32.5071,36.1599,49.5434,32.0932,34.526,34.0416,49.9173,45.2542,37.4172,31.967503,31.9863,34.5875,31.8867,28.2141,34.7008,32.0771,41.4055,29.6003,35.9642,36.576,48.878,50.0069,49.1319,41.7233,42.0741,31.4745,36.6938,46.9005,39.849,45.0502,36.4175,62.5211,50.8143,36.837,47.4036,35.4501,45.3995,34.7571,42.4444,38.8186,35.3392,34.3565,31.306301,42.6293,125.68361,31.981401],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":28.03224,\"gpuFrameId\":3365,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":164,\"uiRenderTargetBytes\":0,\"presentCount\":3366,\"presentWaitMs\":0.7938,\"presentFps\":23,\"sustainedFps\":21.18308691481332,\"cpuFrameMs\":31.5211,\"managedMemoryBytes\":602648392,\"privateMemoryBytes\":2916790272,\"managedAllocatedBytes\":2250392024,\"cpuFrameTimeP50Ms\":36.41749954223633,\"cpuFrameTimeP95Ms\":51.934600830078125,\"lodRenderersHidden\":324}"
+  },
+  {
+    "tag": "cache_stats",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"cacheHits=1659 cacheBuilds=63\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "exit_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exiting\",\"resultType\":\"System.String\"}"
+  }
+]
