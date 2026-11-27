@@ -6,6 +6,7 @@ using SanGuoXEngine.Animation;
 using SanGuoXEngine.Data;
 
 using XEngine.Animation;
+using XEngine.Hudmesh;
 using XEngine.Runtime;
 using XEngine.Runtime.Resources;
 using XEngine.Vector;
@@ -142,12 +143,15 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private readonly Dictionary<int, SanguoMissile> _missiles = new();
     private readonly Dictionary<SanguoFieldActor, SanguoCastState> _casts = new();
     private readonly Dictionary<SanguoFieldActor, SanguoActorPresenter> _presenters = new();
+    private readonly Dictionary<SanguoFieldActor, Hud> _huds = new();
     private readonly Dictionary<SanguoFieldActor, float> _aiCooldowns = new();
     private readonly Dictionary<SanguoFieldActor, HashSet<int>> _hitByBullet = new();
     private readonly List<(SanguoCallBullet bullet, SanguoMissile missile, SanguoFieldActor owner, float elapsedMs, HashSet<int> hit)> _liveBullets = [];
     private readonly List<SanguoFieldActor> _finishedCasts = new(32);
     private readonly List<SanguoHit> _hitScratch = new(32);
     private PrefabAsset? _enemyViewPrefab;
+    private HudManager? _hudManager;
+    private long _nextHudId;
     private int _enemyViewCount;
 
     private SanguoBattleStage? _stage;
@@ -186,6 +190,15 @@ public sealed class SanguoBattleDriver : MonoBehaviour
 
         _stage = new SanguoBattleStage(layout, monsters, values);
         _stage.ActorSpawned += SpawnActorView;
+        _hudManager = HudManager.Init(HudSpriteTable.CreateBundled());
+        HudmeshConfig hudConfig = HudmeshConfig.CreateDefault();
+        hudConfig.Blood.BarSize = new XEngine.Vector.Float2(120f, 24f);
+        hudConfig.Blood.FillSize = new XEngine.Vector.Float2(108f, 11f);
+        hudConfig.Blood.FillOffset = new XEngine.Vector.Float2(6f, 7f);
+        hudConfig.SpriteLineGap = 6f;
+        _hudManager.ChangeConfig(hudConfig);
+        if (_hudManager.GameObject.Scene == null)
+            Scene.Current!.Add(_hudManager.GameObject);
 
         // the four playable heroes enter at the spawn marker
         List<SanguoMonsterValue> heroValues = [];
@@ -311,12 +324,40 @@ public sealed class SanguoBattleDriver : MonoBehaviour
             ?? instance.AddComponent<SanguoActorPresenter>();
         presenter.Kernel = actor;
         _presenters[actor] = presenter;
+        EnsureHud(actor, instance.Transform);
         actor.Health.Died += () =>
         {
             var presenter2 = _presenters.GetValueOrDefault(actor);
             _ = presenter2 != null && presenter2.PlaySkillClip("die");
             Debug.Log("[SanguoBattle] died: " + actor.Name);
         };
+    }
+
+    private void EnsureHud(SanguoFieldActor actor, Transform target)
+    {
+        if (_hudManager == null || _huds.ContainsKey(actor)) return;
+        Hud hud = _hudManager.CreateHud(++_nextHudId)
+            .Init(target, new Float3(0f, 2.8f, 0f));
+        HudRelation relation = actor.Camp == SanguoBattleStage.PlayerCamp
+            ? HudRelation.Team
+            : HudRelation.Enemy;
+        hud.SetBloodVisible(true, relation);
+        _huds[actor] = hud;
+        UpdateHud(actor, hud);
+    }
+
+    private static void UpdateHud(SanguoFieldActor actor, Hud hud)
+    {
+        hud.SetBloodPercent(actor.Health.Hp / (float)Math.Max(1, actor.Health.MaxHp));
+        if (actor.Health.Dead)
+            hud.SetSlotVisible(HudSlot.Blood, false);
+    }
+
+    private void PopHudNumber(SanguoFieldActor actor, int damage)
+    {
+        if (damage <= 0 || !_huds.TryGetValue(actor, out Hud? hud)) return;
+        hud.PopNumber(0, damage, new Float3(0f, 0.5f, 0f));
+        UpdateHud(actor, hud);
     }
 
     private bool _updateLogged;
@@ -350,6 +391,8 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         MonsterBrains(deltaTime);
         TickCasts(deltaTime);
         _stage!.Tick(deltaTime);
+        foreach (KeyValuePair<SanguoFieldActor, Hud> pair in _huds)
+            UpdateHud(pair.Key, pair.Value);
         FollowCamera(deltaTime);
 
         if (_stage.Won || _stage.Lost)
@@ -592,6 +635,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 int damage = candidate.Health.ApplyHit(120, 1f);
                 var targetPresenter = _presenters.GetValueOrDefault(candidate);
                 targetPresenter?.PlayHurt();
+                PopHudNumber(candidate, damage);
                 Debug.Log("[SanguoBattle] hit " + candidate.Name + " -" + damage);
             }
             if (missile.DamageEndFrame > 0 && frame >= missile.DamageEndFrame) _liveBullets.RemoveAt(i);
@@ -626,6 +670,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     {
         // the kernel already applied the damage (ResolveHits); this only drives the feedback
         Debug.Log("[SanguoBattle] hero hit " + hero.Name + " -" + damage + " (hp " + hero.Health.Hp + ")");
+        PopHudNumber(hero, damage);
         if (hero.Health.Dead) return;
         hero.StateMachine.TakeHurt();
         var presenter = _presenters.GetValueOrDefault(hero);
