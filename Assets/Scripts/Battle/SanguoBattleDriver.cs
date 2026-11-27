@@ -272,7 +272,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         // can use the linear presentation path without spending a full-resolution Bloom chain.
         bool editorPreview = Application.IsEditor;
         _battleCamera.HDR = !editorPreview;
-        _battleCamera.RenderScale = 1f;
+        // The editor surface is commonly a 1920x1080 dock even when GameView is set to
+        // 1280x720. Render at the GameView target scale in Play so GPU cost follows the
+        // acceptance resolution; player builds keep native scale until B7 passes.
+        _battleCamera.RenderScale = editorPreview ? 0.67f : 1f;
         _battleCamera.FarClipPlane = 4000f;
         // Editor Play prioritizes a responsive battle view. The full桃园 scene already carries
         // baked/static shadow data, while rendering every dynamic caster into the cascades costs
