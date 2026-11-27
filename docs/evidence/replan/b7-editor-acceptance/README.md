@@ -56,3 +56,35 @@
 ![B7c 1280x720 GameView](battle-d3d12-shadow-budget.png)
 
 该子节点降低了敌人场景视图的对象和 Presenter 数量，未把逻辑敌人数量裁剪掉。60 FPS gate 仍未通过，B7 继续进行动态分辨率、编辑器 UI 和场景收集路径的专项优化。
+
+## B7d 线性相机编辑器呈现回归
+
+引擎主干修复了未经过后处理的线性相机目标在编辑器 GameView 中的行序策略。D3D12 使用线性目标专用 `FlipY=0`，Vulkan 使用 `FlipY=1`，sRGB/后处理路径继续使用原有策略。
+
+### D3D12
+
+- 1280×720 GameView
+- `frameTimeMs=30.90`
+- `gpuFrameTimeMs=30.58`
+- `cpuFrameTimeP95Ms=48.53`
+- `drawCalls=26`
+- `triangles=100,452`
+- `shadowDrawCalls=0`
+- `backendName=Direct3D 12`
+
+![D3D12 linear camera](linear-camera-d3d12.png)
+
+### Vulkan
+
+- 1280×720 GameView
+- `frameTimeMs=22.70`
+- `gpuFrameTimeMs=24.93`
+- `cpuFrameTimeP95Ms=24.48`
+- `drawCalls=26`
+- `triangles=100,452`
+- `shadowDrawCalls=0`
+- `backendName=Vulkan (Intel(R) Arc(TM) 140T GPU (32GB))`
+
+![Vulkan linear camera](linear-camera-vulkan.png)
+
+两张截图均为正向画面。B7 的 60 FPS gate 仍未通过，编辑器 UI 和场景收集开销继续列入后续性能节点。
