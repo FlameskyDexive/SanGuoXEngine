@@ -41,7 +41,10 @@
     "_floats": {
       "$id": 7,
       "entries": [
-
+        {
+          "key": "_Cull",
+          "value": 0F
+        },
       ]
     },
     "_ints": {

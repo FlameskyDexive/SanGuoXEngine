@@ -59,3 +59,19 @@ Ambient=1 的采样为 `staticBatchGroups=174`、`staticBatchInstances=792`、
 `cpuFrameTimeP95Ms=24.486`。这证明相机修正同时恢复了环境物件可见性和批处理统计；截图中的
 墙体、城门、树木与黄昏天空已进入正确朝向，但材质/几何仍存在黑面、断片和 SpeedTree
 差异，E3 继续保持未通过。
+
+## 场景材质双面契约迁移（2026-11-28）
+
+Unity 桃园场景材质的导出契约是 `CullingOff`。此前移植代码只在运行时诊断中临时覆盖
+`_Cull=0`，导入资产本身没有记录这个状态，导致重新载入场景或切换后端时出现黑面。现在
+`Tools/sanguo_import/material_mapping.py` 对每个场景材质写入 `_Cull=0`，并批量回填
+`Assets/Scene/Materials/**/*.mat` 的 115 个场景材质；运行时不再需要战斗专用 cull 覆盖。
+
+验证：`py -3 -m pytest Tools/sanguo_import -q` 为 **98 passed**，115/115 场景材质包含
+`_Cull` 属性。D3D12 编辑器 Play 的 1280×720 GameView 证据为
+`cull-import-fixed-gameview.png` 和 `cull-import-fixed-d3d12.json`，采样记录
+`staticBatchGroups=167`、`staticBatchInstances=788`、`dynamicBatchGroups=8`、
+`dynamicBatchInstances=111`、`instancedDrawCalls=93`、`gpuFrameTimeMs=6.502`、
+`cpuFrameTimeP95Ms=23.916`。双面导入契约已落到资产并保持批处理可用；截图仍能看到
+光照图/材质变体造成的黑面和几何断片，因此 E3 场景保真节点继续保持开放，不能把本次
+迁移当作最终视觉通过。

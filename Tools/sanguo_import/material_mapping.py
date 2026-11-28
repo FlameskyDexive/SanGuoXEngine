@@ -219,6 +219,12 @@ def map_scene_material(material):
         linear = texture_math.srgb_to_linear(color[:3])
         properties["_MainColor"] = [float(linear[0]), float(linear[1]), float(linear[2]), float(color[3])]
 
+    # The 桃园 scene family is authored with two-sided environment geometry. Unity's
+    # custom scene shaders keep the back faces visible (the FBX source also records
+    # CullingOff), while XEngine's Standard default is back-face culling. Preserve the
+    # authored contract in the material instead of relying on a battle-only runtime patch.
+    properties["_Cull"] = 0
+
     emission = None
     recipe = texture_math.emission_recipe(props.get("_EmissionColor", (0.0, 0.0, 0.0, 1.0)), props.get("_EmissionScale", 0.0))
     if recipe is not None and _texture_guid(props, "_EmissionMap") is None:

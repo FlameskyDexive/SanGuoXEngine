@@ -40,7 +40,11 @@
         {
           "key": "_AlphaCutoff",
           "value": 0.3F
-        }
+        },
+        {
+          "key": "_Cull",
+          "value": 0F
+        },
       ]
     },
     "_ints": {
