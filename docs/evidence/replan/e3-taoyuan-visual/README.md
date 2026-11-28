@@ -33,6 +33,19 @@ Unity 的桃园场景并不使用反射探针 `Tex_hdr_the_sky_dusk.hdr` 作为�
 XEngine 的 Battle Camera 可见范围缺少 Unity 对应地形，角色悬空且下半视野被天空填充；
 因此本节点标记为“天空源已修正，E3 场景保真未通过”，后续必须先修场景几何/相机和光照遮罩。
 
+## Battle Camera 与环境光补齐（2026-11-28）
+
+Battle Camera 已改为 `LookAt(target, worldUp)` 加 180° roll 补偿，并使用更接近 Unity 的
+跟随距离；同机位已恢复墙体、城门、树木和天空的正确朝向。Battle 场景的 Hemisphere
+ambient strength 也从错误的 `0.55` 对齐到 Unity 的 `1.0`。A/B 证据见
+`camera-roll-fix-d3d12.json`、`camera-roll-fix-gameview.png`、`ambient-strength1-d3d12.json`
+和 `ambient-strength1-gameview.png`。
+
+Ambient=1 的采样为 `staticBatchGroups=174`、`staticBatchInstances=792`、
+`dynamicBatchGroups=8`、`dynamicBatchInstances=113`、`gpuFrameTimeMs=5.090`、
+`cpuFrameTimeP95Ms=19.505`。环境更亮且批次仍然稳定，但墙体黑面、断片和植被材质差异仍在，
+方向光照图/阴影遮罩、材质变体和 SpeedTree 继续作为 E3 后续节点。
+
 ## Battle Camera 坐标轴修正（2026-11-28）
 
 `SanguoBattleDriver` 原来把 `(26, 0, 180)` 当作俯视角；XEngine 的 Euler 约定是

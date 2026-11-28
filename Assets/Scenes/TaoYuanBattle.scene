@@ -338841,7 +338841,7 @@
   },
   "Ambient": {
     "Mode": 1L,
-    "Strength": 0.55F,
+    "Strength": 1F,
     "Color": {
       "X": 0.43F,
       "Y": 0.55F,
