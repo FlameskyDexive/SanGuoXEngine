@@ -44,6 +44,18 @@
 
 小型可移动、低顶点 Mesh 才进入动态合批；移动、材质属性、LOD、光照状态或透明排序变化时只失效对应组。透明、复杂粒子、角色蒙皮和 Boss 保持独立路径或专用 GPU 蒙皮实例。
 
+### 3.2.1 Static 标记的运行时行为（本次用户要求的硬规则）
+
+桃园 Demo 不把 `GameObject.IsStatic` 当成“每个物件永远单独 Draw”或“导入期盲目焊成一个大 Mesh”。它在编辑器 Play 首帧建立场景级 registry，随后按 Unity 风格的兼容状态做运行时批处理：
+
+1. `IsStatic` 且通过 Mesh、材质/Shader Pass、PropertyState、子网格、Layer、RenderingLayer、光照页/UV 和阴影状态检查的对象进入静态实例组。
+2. 同 Mesh、同材质状态、同子网格、同空间块的对象用 `DrawIndexedInstanced`；单例也由静态 proxy 接管，从每帧组件遍历中移除，但不强行切换到不兼容的 shader 变体。
+3. 静态 Transform、材质、Lightmap 或 LOD 状态发生变化时必须让 registry 失效并在下一次收集重建；动态对象的移动只失效自己的缓存，不能触发整场静态重建。
+4. 未勾选 Static 的小型同 Mesh 对象进入运行时兼容分组，视锥裁剪后升级为 GPU Instancing；透明、蒙皮、BlendShape、不同光照状态和不可读 Mesh 回退到各自安全路径。
+5. 跨 Mesh CPU 动态合批只有在顶点布局、缺省通道、Lightmap UV、材质属性和 Shadow/Depth/Motion/Picking 全部等价时才开启；否则保持同 Mesh Instancing 或逐 Renderer，不能为了减少 draw 把场景焊白或破坏阴影。
+
+验收必须同时看到：`staticBatchGroups/staticBatchInstances`、`dynamicBatchGroups/dynamicBatchInstances`、相同机位截图和 Transform 变更后的重建证据。任何“统计变少但画面变白/UV 错/阴影错”的实现都回退。
+
 ### 3.3 角色与敌人
 
 近景四英雄和 Boss 保留独立高质量 GPU 蒙皮；中景相同 Mesh/材质/动画状态按骨骼调色板分组；远景降低动画更新频率并使用低 LOD。每个实例必须验证颜色、受击参数、深度、阴影和不同姿态，不得只用静止同姿态截图。
@@ -60,7 +72,7 @@
 
 锁定 `IsStatic` 注册、空间块、LOD/SceneView 过滤、Transform/材质/光照变化失效和资源卸载回退。补齐不可读 Mesh、不同 Lightmap 页、不同 UV scale/offset、材质变体、ShadowCaster 和对象定位测试。编辑器 Play 截图必须与 E0 同机位对照。
 
-验收：静态源不重复提交；同 Mesh 组为一个或少量 instanced draw；不可读 Mesh 不退回逐 Renderer；无每帧重建和无资源释放后引用。
+验收：静态源不重复提交；同 Mesh 组为一个或少量 instanced draw；不可读 Mesh 不退回逐 Renderer；无每帧重建和无资源释放后引用；静态 Transform 改动会触发一次 registry 重建并显示新矩阵。
 
 ### E2 GPU Instancing 与动态合批
 
@@ -97,6 +109,7 @@ D3D12 1280×720：预热后稳态 p95 ≤ 16.6 ms、p99 ≤ 25 ms；600 帧内�
 ## 6. 当前验收台账
 
 - E2 GPU Instancing/动态合批：探针通过，D3D12 记录 `staticBatchGroups=6`、`staticBatchInstances=112`、`dynamicBatchGroups=1`、`dynamicBatchInstances=63`；默认桃园机位仍需真实环境物件材质/光照保真复验。
+- E1 静态 Transform 失效：已通过引擎单测 10/10 与 D3D12 Play。静态物件移动后 `Scene.StructureVersion` 递增，registry 下一次收集重新建立 proxy；证据见 `docs/evidence/replan/e1-static-transform-invalidation/`，引擎提交 `2767ec0ff`。
 - E2 follow-up 每实例 Lightmap ST：已通过 D3D12 编辑器 Play 验收。批次 key 不再把
   `_LightmapScaleOffset` 当整组状态，Standard shader 从 `InstanceData.CustomData` 读取
   每实例 ST；真实战斗机位记录 `instancedDrawCalls=2`、`staticBatchGroups=3`、
