@@ -1,0 +1,57 @@
+[
+  {
+    "tool": "runtime_eval",
+    "tag": "open_and_enter_play",
+    "args": {
+      "code": "// Enters play mode with TaoYuan open so the live GameView renders the scene camera every frame.\n\nSystem.Type manager = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.GUI.SceneView.EditorSceneManager\");\n    if (type != null) { manager = type; break; }\n}\nif (manager == null) return \"EditorSceneManager not found.\";\nbool opened = (bool)manager.GetMethod(\"OpenScene\").Invoke(null, new object[] { \"Scenes/TaoYuanBattle.scene\" });\nif (!opened) return \"OpenScene returned false.\";\n\nSystem.Type app = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.Core.EditorApplication\");\n    if (type != null) { app = type; break; }\n}\nif (app == null) return \"EditorApplication not found.\";\n// EnterPlayMode is an INSTANCE method on the EditorApplication singleton.\nvar enter = app.GetMethod(\"EnterPlayMode\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);\nif (enter == null) return \"EnterPlayMode not found.\";\n\n// Open the GameView first: without it the editor keeps its idle throttle (no render -> the play\n// loop barely ticks) and runtime_screenshot has no capture target.\nSystem.Type gameViewPanel = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var t = assembly.GetType(\"XEngine.Editor.GUI.Panels.GameViewPanel\");\n    if (t != null) { gameViewPanel = t; break; }\n}\nif (gameViewPanel == null) return \"GameViewPanel type not found.\";\nvar openMethod = gameViewPanel.GetMethod(\"Open\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\nif (openMethod != null) openMethod.Invoke(null, null);\nobject? instance = app.GetProperty(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null);\nif (instance == null) {\n    var instanceField = app.GetField(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\n    instance = instanceField != null ? instanceField.GetValue(null) : null;\n}\nif (instance == null) return \"EditorApplication.Instance not found.\";\nenter.Invoke(instance, null);\nreturn \"entering play mode\";\n"
+    },
+    "full": true
+  },
+  {
+    "delay": 10
+  },
+  {
+    "tool": "runtime_stats",
+    "tag": "stats_before",
+    "args": {},
+    "full": true
+  },
+  {
+    "tool": "runtime_screenshot",
+    "tag": "shot_before",
+    "args": {
+      "path": "Export/scene/xengine-frames/static-transform-before.png"
+    }
+  },
+  {
+    "tool": "runtime_eval",
+    "tag": "move_static",
+    "args": {
+      "code": "var scene=XEngine.Runtime.Resources.Scene.Current;\nif (scene == null) return \"scene=null\";\nforeach (var go in scene.AllObjects)\n{\n    if (!go.IsStatic) continue;\n    var mr = go.GetComponent<XEngine.Runtime.MeshRenderer>();\n    if (mr == null || mr.Mesh.Res == null) continue;\n    var before = go.Transform.Position;\n    go.Transform.Position = new XEngine.Vector.Float3(before.X + 0.75f, before.Y, before.Z);\n    return \"moved=\" + go.Name + \" beforeX=\" + before.X + \" afterX=\" + go.Transform.Position.X + \" structure=\" + scene.StructureVersion;\n}\nreturn \"no static mesh renderer\";\r\n"
+    },
+    "full": true
+  },
+  {
+    "delay": 2
+  },
+  {
+    "tool": "runtime_screenshot",
+    "tag": "shot_after",
+    "args": {
+      "path": "Export/scene/xengine-frames/static-transform-after.png"
+    }
+  },
+  {
+    "tool": "runtime_stats",
+    "tag": "stats_after",
+    "args": {},
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "tag": "exit_play",
+    "args": {
+      "code": "XEngine.Editor.Core.EditorApplication.Instance.ExitPlayMode(); return \"exiting\";"
+    }
+  }
+]
