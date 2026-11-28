@@ -10,6 +10,7 @@
 - `cpuFrameTimeP95Ms=17.64`
 - `gpuFrameTimeMs=2.25`
 - `renderCollectMs=5.13`
+- `componentCollectMs=4.65`（新增分项观测，动态组件回调占主要部分）
 - `staticRegistryMs=0.020`
 - `lodUpdateMs=0.49`
 - `skinnedCollectMs=1.57`
@@ -20,4 +21,4 @@
 
 ## 状态
 
-骨骼纹理 atlas 已将上传成本压到约 0.01 ms；当前瓶颈集中在场景收集、动态视图更新和编辑器 CPU 抖动。E7 的 P95 ≤16.6 ms、600 帧零 Gen0 GC、10 分钟稳定性仍未通过，不能进入出包节点。
+骨骼纹理 atlas 已将上传成本压到约 0.01 ms；当前瓶颈集中在动态组件回调、动态视图更新和编辑器 CPU 抖动，静态 registry 仅约 0.027 ms。E7 的 P95 ≤16.6 ms、600 帧零 Gen0 GC、10 分钟稳定性仍未通过，不能进入出包节点。
