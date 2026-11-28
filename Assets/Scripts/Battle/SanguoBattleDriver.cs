@@ -134,8 +134,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     private static readonly Guid BossViewPrefabGuid = new("2c30308a-0bae-3fc3-7d56-74cbebc23598");
     // The source package does not contain the original YellowArmy prefab yet. The imported
     // xiaobingyuanjing FBX is the closest real Yellow Turban soldier asset in this port and keeps
-    // the enemy presentation on the model path while the per-monster asset table is completed.
-    private static readonly Guid EnemyViewPrefabGuid = new("e4251061-3dcd-e554-cc2f-6348e0f66f65");
+    // Native GPU-monster prefab generated from the source Monster_YellowArmy FBX. The old
+    // xiaobingyuanjing scene quad remains an import diagnostic only and is no longer used for
+    // battle presentation.
+    private static readonly Guid EnemyViewPrefabGuid = new("6f864fb6-05e4-58fd-92ba-a3e291b018d6");
     private static readonly Guid BuiltinCubeMeshGuid = new("3baf3103-ea03-e2d9-7e45-ca749920713c");
     // The battle kernel keeps the complete 234-enemy wave, but the editor Play view only needs
     // the actors that can occupy the current encounter.  A hard presentation budget prevents

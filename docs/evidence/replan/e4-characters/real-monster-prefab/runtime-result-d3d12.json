@@ -1,0 +1,32 @@
+[
+  {
+    "tag": "open_and_enter_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "set_hd",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"resolution=9\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "enemy_positions",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"M101101_0@109.27841,779.47327;M101103_0@112.83122,781.61383;M101103_1@110.50132,782.54944;M101103_2@111.866196,781.44916;M101103_3@110.68175,780.7056;M101103_4@109.039635,781.9618;M101103_5@111.688965,783.47327;M101103_6@111.787636,781.80066;M101103_7@111.392944,782.46875;M101103_0@109.76282,784.04816;M101103_1@112.07235,780.70856;M101103_2@108.68321,780.2372\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "enemy_scale_shot",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261128-051632764.png\",\"width\":1280,\"height\":720}"
+  },
+  {
+    "tag": "enemy_scale_stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":15.4714,\"colorPassMs\":0.0822,\"shadowPassMs\":0,\"postFxMs\":0.0001,\"gpuWaitMs\":1.1408,\"drawCalls\":67,\"instancedDrawCalls\":3,\"batches\":65,\"triangles\":167086,\"vertices\":501258,\"renderablesCollected\":852,\"renderablesCulled\":788,\"renderablesDrawn\":64,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":13,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[15.849801,15.389,15.9728,15.879899,16.5737,15.2692,15.4849,15.0967,15.4894,15.2312,15.780101,15.2652,17.2136,15.2006,15.3309,15.678101,15.823501,17.1331,16.3466,16.6389,17.6537,16.0852,16.557,17.4404,16.7999,15.6789,17.4327,16.0437,17.5056,17.9728,15.1864,15.720301,18.1345,16.0216,16.5841,16.2435,17.634,16.852,15.969099,16.9341,16.952,15.8138,17.1228,16.0118,17.2492,16.7102,16.4275,17.1882,16.0056,15.951499,17.4659,16.2128,18.0823,16.1876,17.0446,17.8685,15.742701,15.1785,17.5246,16.5246,16.2693,16.894,17.8452,15.2644,17.9167,15.7148,17.813,16.2005,17.0887,16.3606,15.8861,17.0621,16.6545,16.5502,16.5702,17.2762,17.5451,16.0611,17.1751,15.2903,50.211,169.4955,16.2931,15.2681,24.9737,15.1942,16.6824,37.8531,17.9675,18.0898,16.0776,17.3107,16.7611,17.4296,16.4538,16.5036,16.7737,16.7292,26.9447,17.0094,16.4823,16.4619,16.7329,15.997799,16.0717,16.7953,16.0043,16.6064,16.3052,16.7171,16.6707,16.9814,18.1305,17.4523,16.377,16.4386,18.0428,17.0997,16.0823,15.4714],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":3.6172395,\"gpuFrameId\":4019,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":168,\"uiRenderTargetBytes\":0,\"presentCount\":4020,\"presentWaitMs\":1.1408,\"presentFps\":47,\"sustainedFps\":58.37387392245065,\"cpuFrameMs\":13.8675,\"managedMemoryBytes\":378072920,\"privateMemoryBytes\":2196701184,\"managedAllocatedBytes\":2838838264,\"cpuFrameTimeP50Ms\":16.55699920654297,\"cpuFrameTimeP95Ms\":18.13050079345703,\"lodRenderersHidden\":321,\"staticBatchGroups\":2,\"staticBatchInstances\":6,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"dynamicCollectionCacheHits\":2,\"dynamicCollectionCacheBuilds\":114,\"renderCollectMs\":4.589000225067139,\"staticRegistryMs\":0.024399999529123306,\"componentCollectMs\":3.848299980163574,\"meshRendererCollectMs\":0,\"skinnedRendererCollectDetailedMs\":0,\"particleCollectDetailedMs\":0,\"otherComponentCollectMs\":0,\"lodUpdateMs\":0.6442000269889832,\"skinnedCollectMs\":2.9057998657226562,\"particleCollectMs\":0.22859999537467957,\"skinningUpdateMs\":2.722900629043579,\"boneTextureUploadMs\":0.015699999406933784,\"skinnedPaletteRows\":58,\"skinnedPaletteUploads\":1}"
+  },
+  {
+    "tag": "exit_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exiting\",\"resultType\":\"System.String\"}"
+  }
+]
