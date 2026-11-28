@@ -1,0 +1,57 @@
+[
+  {
+    "tag": "open_and_enter_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entering play mode\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "set_hd",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"resolution=9\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "shot_gameview",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261128-013007251.png\",\"width\":1280,\"height\":720}"
+  },
+  {
+    "tag": "capture_battle",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"captured play-battle.png | drivers 1 | drawCalls 30 tris 106154 drawn 29 lodHidden 319\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "combat_log",
+    "ok": true,
+    "text": "{\"succeeded\":false,\"error\":\"IOException: The process cannot access the file \\u0027D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\Logs\\\\Editor.log\\u0027 because it is being used by another process.\"}"
+  },
+  {
+    "tag": "runtime_stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":15.9622,\"colorPassMs\":0.0516,\"shadowPassMs\":0,\"postFxMs\":0.0002,\"gpuWaitMs\":0.8138,\"drawCalls\":30,\"instancedDrawCalls\":2,\"batches\":28,\"triangles\":106154,\"vertices\":318462,\"renderablesCollected\":1728,\"renderablesCulled\":1699,\"renderablesDrawn\":29,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":16,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[16.2841,15.5057,26.7494,15.0317,15.7815,15.0556,15.176,15.0104,16.1531,15.0243,15.0895,15.251,16.0401,14.102,15.0419,15.4062,15.261,15.8579,15.0292,19.5268,15.5416,16.0232,15.0879,15.5375,19.7776,16.2663,15.7509,16.3452,15.562,16.6007,15.871501,15.0871,15.8321,16.7881,15.517,15.776001,15.5931,19.2943,17.0706,16.3844,15.8369,17.5856,17.4868,17.0913,17.0095,16.585,15.1706,15.3562,15.4626,16.2618,16.404,16.0303,16.9553,16.3041,16.7557,17.8156,15.5246,17.5427,17.1109,16.495,16.2463,16.4658,17.0073,16.2069,17.7057,16.6734,17.1391,17.037,16.8944,18.2001,16.954,16.1436,17.055,17.7723,15.917999,16.7549,17.8539,16.8399,15.2206,15.4819,15.3963,16.239,15.6094,16.0999,17.0945,16.6264,16.565,16.5254,17.862,15.5976,16.658,17.3228,16.3617,16.4119,17.0465,18.2604,17.935,18.5212,17.3245,18.0039,17.5821,18.1087,16.9755,18.1715,18.8678,18.9217,17.4467,33.7318,20.4287,17.6304,17.0646,17.3408,16.3368,16.6156,15.5286,125.0229,18.6832,17.9456,14.2659,15.9622],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":2.9789584,\"gpuFrameId\":468,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":163,\"uiRenderTargetBytes\":0,\"presentCount\":469,\"presentWaitMs\":0.8138,\"presentFps\":52,\"sustainedFps\":42.02554009255943,\"cpuFrameMs\":13.8113,\"managedMemoryBytes\":361478400,\"privateMemoryBytes\":1643839488,\"managedAllocatedBytes\":1937866400,\"cpuFrameTimeP50Ms\":16.46579933166504,\"cpuFrameTimeP95Ms\":19.294300079345703,\"lodRenderersHidden\":319,\"staticBatchGroups\":3,\"staticBatchInstances\":6,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"dynamicCollectionCacheHits\":940,\"dynamicCollectionCacheBuilds\":145,\"renderCollectMs\":5.4653000831604,\"staticRegistryMs\":0.018699999898672104,\"componentCollectMs\":4.791999816894531,\"meshRendererCollectMs\":0,\"skinnedRendererCollectDetailedMs\":0,\"particleCollectDetailedMs\":0,\"otherComponentCollectMs\":0,\"lodUpdateMs\":0.5892999768257141,\"skinnedCollectMs\":1.6622000932693481,\"particleCollectMs\":0.0009000000427477062,\"skinningUpdateMs\":1.5686999559402466,\"boneTextureUploadMs\":0.006899999920278788,\"skinnedPaletteRows\":27,\"skinnedPaletteUploads\":1}"
+  },
+  {
+    "tag": "play_probe",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"playing=True filter=True\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "registry_probe2",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"active=False batched=1818 first=True\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "registry_stats",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"has=True batches=727 renderers=-1\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "cache_stats",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"cacheHits=0 cacheBuilds=0\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "exit_play",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exiting\",\"resultType\":\"System.String\"}"
+  }
+]

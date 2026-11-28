@@ -97,6 +97,10 @@ D3D12 1280×720：预热后稳态 p95 ≤ 16.6 ms、p99 ≤ 25 ms；600 帧内�
 ## 6. 当前验收台账
 
 - E2 GPU Instancing/动态合批：探针通过，D3D12 记录 `staticBatchGroups=6`、`staticBatchInstances=112`、`dynamicBatchGroups=1`、`dynamicBatchInstances=63`；默认桃园机位仍需真实环境物件材质/光照保真复验。
+- E2 follow-up 每实例 Lightmap ST：已通过 D3D12 编辑器 Play 验收。批次 key 不再把
+  `_LightmapScaleOffset` 当整组状态，Standard shader 从 `InstanceData.CustomData` 读取
+  每实例 ST；真实战斗机位记录 `instancedDrawCalls=2`、`staticBatchGroups=3`、
+  `staticBatchInstances=6`，截图和原始 stats 见 `docs/evidence/replan/e2-lightmap-instancing/`。
 - E3 场景保真：EXR 线性光照图已修复，默认编辑器路径 GPU 约 2.20 ms；Tonemap/Bloom A/B 可用但 GPU 约 10.09 ms，暂不默认开启。天空色调、方向光照图/阴影遮罩、SpeedTree 和效果材质仍开放。
 - E5 战斗性能：预热样本 D3D12 CPU P95 约 17.64–19.65 ms、GPU 约 2.25 ms；新增 `ComponentCollectMs` 后确认动态组件回调约 4.65 ms、静态 registry 约 0.027 ms，继续优化动态收集与编辑器 CPU 尖峰。
 - E7 编辑器终验：未通过；PC/手机包保持冻结。
