@@ -31,3 +31,10 @@
 ## E1b 批次哈希缓存
 
 引擎节点 `7b638f000` 为 `PropertyState.ComputeBatchHash()` 增加失效感知缓存，静态状态未变时不再每帧排序属性字典。D3D12 Play 复测原始结果见 `runtime-result-hash-cache.json`：`cpuFrameTimeP50Ms=46.93`、`cpuFrameTimeP95Ms=55.18`、`gpuFrameTimeMs=38.24`、`renderablesCollected=2903`、`drawCalls=31`。与 E0/B7 的 `cpuFrameTimeP95Ms=57.70` 相比有下降，但采样时刻和编辑器负载不能当作独立基准；E7 仍未通过。
+
+
+## E1c 编辑器过滤隔离（2026-11-28）
+
+引擎提交 `ab1a13c0d` 修复 `StaticBatchRegistry` 的过滤语义：隐藏一个 GameObject 只跳过该对象，不再让整场 registry 放弃重建。新增 `StaticRegistryKeepsVisibleObjectsWhenFilterHidesAnotherObject`，静态测试 11/11 通过；编辑器 D3D12 Play 取样见 `static-filter-fixed-d3d12.json` 与 `static-filter-fixed-gameview.png`。
+
+本次真实桃园机位 `staticBatchGroups=2`、`staticBatchInstances=6`，`drawCalls=60`、`instancedDrawCalls=3`、`cpuFrameTimeP95Ms=20.18`、`gpuFrameTimeMs=4.64`。过滤修复保证可见性切换不再破坏批处理所有权，但当前场景仍只有少量同 Mesh/同材质状态可合批；这不是把统计数字减少就算完成，后续仍需补齐材质状态和场景几何契约。
