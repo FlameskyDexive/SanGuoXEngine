@@ -30,7 +30,7 @@
 | B4 角色和敌人接入 | 进行中 | `evidence/replan/b4-characters/`，B4b 接入 MonsterID→ModelID→ModelScale/DmgNumHeight 数据映射，四英雄和真实黄巾兵 prefab 可见；`evidence/replan/e4-characters/monster-animation/` 已接入黄巾兵 Idle/Run/Attack/Hurt/Die 原生动作和 Animator Controller，`boss-actions/` 已把 Idle/Run/Attack/Hurt/Dead 状态映射到真实动作，`hud-damage/` 已验收血条/伤害数字链路（D3D12 Play 70 draw / 3 instanced draw / 58 palette rows）；Boss 专属技能动作和同机位 Unity 对照仍待处理 |
 | B5 战斗逻辑优化 | 完成 | `evidence/replan/b5-battle/`，B5c 接入怪物 GroupID/Atk 数据驱动近战伤害；固定 60 Hz 步进、复用战斗 scratch 缓冲；46 个子模块测试通过 |
 | B6 视觉和特效 | 进行中 | `evidence/replan/b6-visual/`，B6a 接入 Hudmesh 血条和伤害数字回调；Volume/HDR/ACES/Bloom 已接入，敌人材质、粒子和 SpeedTree 仍待处理 |
-| B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，B7f 增加静态 MeshRenderer 场景收集缓存，D3D12 8 秒复测 p95 55.38 ms；60 FPS gate 仍未通过 |
+| B7 编辑器 Play 终验 | 进行中 | `evidence/replan/b7-editor-acceptance/`，B7f 增加静态 MeshRenderer 场景收集缓存；E5 `enemy-view-budget` 保留 234 个逻辑敌人、限制 20 个真实展示 prefab，D3D12 1280×720 采样 P95 24.645 ms，60 FPS gate 仍未通过 |
 | B7l 战斗相机取景 | 取景修正完成，D3D12 待复测 | `evidence/replan/b7-editor-acceptance/camera-follow/`，Vulkan 960×540 四英雄可见；D3D12 复测被 CommandBuffer 已提交错误阻塞 |
 | B7m 命中日志热路径 | 完成 | `evidence/replan/b7-editor-acceptance/hit-log-perf/`，每命中 Debug.Log 改为两秒心跳汇总；C# 50/50、Python 98/98；D3D12 Play CPU p95 57.80 ms，60 FPS gate 仍未通过 |
 | B7n HUD 更新缓存 | 完成 | `evidence/replan/b7-editor-acceptance/hud-cache/`，血条百分比只在变化时写入；C# 50/50、Python 98/98；D3D12 Play CPU p95 54.84 ms，60 FPS gate 仍未通过 |

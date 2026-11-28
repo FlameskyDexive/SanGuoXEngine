@@ -157,7 +157,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
     // every logic actor from allocating a full model hierarchy and running a presenter every
     // frame.  The first wave groups are authored closest to the hero spawn, so they are the
     // useful initial views while the remaining actors stay fully simulated in the kernel.
-    private const int MaxEnemyViewCount = 32;
+    private const int MaxEnemyViewCount = 20;
 
     private static readonly (string Name, Guid Prefab)[] HeroPrefabs =
     [
