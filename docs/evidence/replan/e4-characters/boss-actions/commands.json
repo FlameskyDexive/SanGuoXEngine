@@ -1,0 +1,48 @@
+[
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "// Enters play mode with TaoYuan open so the live GameView renders the scene camera every frame.\n\nSystem.Type manager = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.GUI.SceneView.EditorSceneManager\");\n    if (type != null) { manager = type; break; }\n}\nif (manager == null) return \"EditorSceneManager not found.\";\nbool opened = (bool)manager.GetMethod(\"OpenScene\").Invoke(null, new object[] { \"Scenes/TaoYuanBattle.scene\" });\nif (!opened) return \"OpenScene returned false.\";\n\nSystem.Type app = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.Core.EditorApplication\");\n    if (type != null) { app = type; break; }\n}\nif (app == null) return \"EditorApplication not found.\";\n// EnterPlayMode is an INSTANCE method on the EditorApplication singleton.\nvar enter = app.GetMethod(\"EnterPlayMode\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);\nif (enter == null) return \"EnterPlayMode not found.\";\n\n// Open the GameView first: without it the editor keeps its idle throttle (no render -> the play\n// loop barely ticks) and runtime_screenshot has no capture target.\nSystem.Type gameViewPanel = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var t = assembly.GetType(\"XEngine.Editor.GUI.Panels.GameViewPanel\");\n    if (t != null) { gameViewPanel = t; break; }\n}\nif (gameViewPanel == null) return \"GameViewPanel type not found.\";\nvar openMethod = gameViewPanel.GetMethod(\"Open\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\nif (openMethod != null) openMethod.Invoke(null, null);\nobject? instance = app.GetProperty(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null);\nif (instance == null) {\n    var instanceField = app.GetField(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\n    instance = instanceField != null ? instanceField.GetValue(null) : null;\n}\nif (instance == null) return \"EditorApplication.Instance not found.\";\nenter.Invoke(instance, null);\nreturn \"entering play mode\";\n"
+    },
+    "tag": "open_and_enter_play",
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "System.Type t = null; foreach(var a in System.AppDomain.CurrentDomain.GetAssemblies()){t = a.GetType(\"XEngine.Editor.GUI.Panels.GameViewPanel\"); if(t != null) break;} var p = t?.GetProperty(\"ActiveInstance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null); if (p == null) return \"no GameView\"; var f = t.GetField(\"_resolutionIndex\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance); f.SetValue(p, 9); p.GetType().GetMethod(\"RequestRender\")?.Invoke(p, null); return \"resolution=\" + f.GetValue(p);"
+    },
+    "tag": "set_hd"
+  },
+  {
+    "delay": 20
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var s=XEngine.Runtime.Resources.Scene.Current;\nvar rows=new System.Collections.Generic.List<string>();\nforeach(var go in s.AllObjects)\n{\n    if(!go.Name.StartsWith(\"M101\")) continue;\n    rows.Add(go.Name+\"@\"+go.Transform.Position.X+\",\"+go.Transform.Position.Z);\n    if(rows.Count>=12) break;\n}\nreturn string.Join(\";\",rows);\r\n"
+    },
+    "tag": "boss_actions_positions",
+    "full": true
+  },
+  {
+    "tool": "runtime_screenshot",
+    "args": {
+      "path": "docs/evidence/replan/e4-characters/boss-actions/editor-gameview.png"
+    },
+    "tag": "boss_actions_shot"
+  },
+  {
+    "tool": "runtime_stats",
+    "args": {},
+    "tag": "boss_actions_stats",
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "XEngine.Editor.Core.EditorApplication.Instance.ExitPlayMode(); return \"exiting\";"
+    },
+    "tag": "exit_play"
+  }
+]

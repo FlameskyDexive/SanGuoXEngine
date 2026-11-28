@@ -112,6 +112,8 @@ public sealed class SanguoActorPresenter : MonoBehaviour
         {
             SanguoActorState.Idle => "idle_loop",
             SanguoActorState.Run => "run_loop",
+            SanguoActorState.Attack => "NormalAttack_1",
+            SanguoActorState.Hurt => "hurt",
             SanguoActorState.Dead => "die",
             _ => "",
         };
