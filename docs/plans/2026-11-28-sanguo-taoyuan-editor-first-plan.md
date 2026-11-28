@@ -106,6 +106,10 @@ D3D12 1280×720：预热后稳态 p95 ≤ 16.6 ms、p99 ≤ 25 ms；600 帧内�
 - E5 HUD proxy 缓存：已在 `com.xengine.hudmesh` 按材质槽复用 `MeshRenderable`，真实 Play
   样本 `componentCollectMs=4.4029 ms`、`renderCollectMs=4.9761 ms`；截图和原始 stats
   见 `docs/evidence/replan/e5-hud-renderable-cache/`。单次 P95=22.50 ms，E7 仍未通过。
+- E5 HUD 30 Hz 预算：桃园 Demo 将 HUD 网格重建间隔设为 2 帧，真实 Play 样本将
+  `otherComponentCollectMs` 降至 `1.6192 ms`、`componentCollectMs` 降至 `3.7640 ms`；
+  GameView 截图和原始 stats 见 `docs/evidence/replan/e5-hud-30hz/`。P95=20.08 ms，
+  仍未通过 E7。
 - E7 编辑器终验：未通过；PC/手机包保持冻结。
 
 ```text

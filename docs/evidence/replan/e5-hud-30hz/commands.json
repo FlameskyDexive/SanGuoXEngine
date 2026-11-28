@@ -1,0 +1,97 @@
+[
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "// Enters play mode with TaoYuan open so the live GameView renders the scene camera every frame.\n\nSystem.Type manager = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.GUI.SceneView.EditorSceneManager\");\n    if (type != null) { manager = type; break; }\n}\nif (manager == null) return \"EditorSceneManager not found.\";\nbool opened = (bool)manager.GetMethod(\"OpenScene\").Invoke(null, new object[] { \"Scenes/TaoYuanBattle.scene\" });\nif (!opened) return \"OpenScene returned false.\";\n\nSystem.Type app = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"XEngine.Editor.Core.EditorApplication\");\n    if (type != null) { app = type; break; }\n}\nif (app == null) return \"EditorApplication not found.\";\n// EnterPlayMode is an INSTANCE method on the EditorApplication singleton.\nvar enter = app.GetMethod(\"EnterPlayMode\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);\nif (enter == null) return \"EnterPlayMode not found.\";\n\n// Open the GameView first: without it the editor keeps its idle throttle (no render -> the play\n// loop barely ticks) and runtime_screenshot has no capture target.\nSystem.Type gameViewPanel = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var t = assembly.GetType(\"XEngine.Editor.GUI.Panels.GameViewPanel\");\n    if (t != null) { gameViewPanel = t; break; }\n}\nif (gameViewPanel == null) return \"GameViewPanel type not found.\";\nvar openMethod = gameViewPanel.GetMethod(\"Open\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\nif (openMethod != null) openMethod.Invoke(null, null);\nobject? instance = app.GetProperty(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static)?.GetValue(null);\nif (instance == null) {\n    var instanceField = app.GetField(\"Instance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Static);\n    instance = instanceField != null ? instanceField.GetValue(null) : null;\n}\nif (instance == null) return \"EditorApplication.Instance not found.\";\nenter.Invoke(instance, null);\nreturn \"entering play mode\";\n"
+    },
+    "tag": "open_and_enter_play",
+    "full": true
+  },
+  {
+    "delay": 10
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var t = System.Type.GetType(\"XEngine.Editor.GUI.Panels.GameViewPanel, XEngine.Editor\"); var p = t?.GetProperty(\"ActiveInstance\", System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static)?.GetValue(null); if (p == null) return \"no GameView\"; var f = t.GetField(\"_resolutionIndex\", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance); f.SetValue(p, 9); p.GetType().GetMethod(\"RequestRender\")?.Invoke(p, null); return \"resolution=\" + f.GetValue(p);"
+    },
+    "tag": "set_hd"
+  },
+  {
+    "delay": 6
+  },
+  {
+    "tool": "runtime_screenshot",
+    "args": {
+      "path": "Export/scene/xengine-frames/e2-hud-cache-gameview.png"
+    },
+    "tag": "shot_gameview"
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "// In play mode (TaoYuanBattle open): renders the live battle camera to a PNG and returns the\n// frame stats. Expects the editor already in play mode (enter_play.cs ran first).\n\nvar scene = XEngine.Runtime.Resources.Scene.Current;\nif (scene == null || scene.Name != \"TaoYuanBattle\") return \"TaoYuanBattle is not the current scene (playing=\" + XEngine.Runtime.Application.IsPlaying + \").\";\n\nXEngine.Runtime.Camera? battleCamera = null;\nint drivers = 0;\nSystem.Type driverType = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var t = assembly.GetType(\"SanGuoXEngine.Battle.SanguoBattleDriver\");\n    if (t != null) { driverType = t; break; }\n}\nforeach (var go in scene.AllObjects) {\n    foreach (var component in go.GetComponents()) {\n        if (component is XEngine.Runtime.Camera c && go.Name == \"Battle Camera\" && battleCamera == null) battleCamera = c;\n        if (driverType != null && driverType.IsInstanceOfType(component)) drivers++;\n    }\n}\nif (battleCamera == null) return \"no Battle Camera found.\";\n\nstring root = XEngine.Editor.Projects.Project.Current.RootPath;\nstring output = System.IO.Path.Combine(root, \"Export/scene/xengine-frames/e2-hud-cache-battle.png\");\nSystem.Type studio = null;\nforeach (var assembly in System.AppDomain.CurrentDomain.GetAssemblies()) {\n    var type = assembly.GetType(\"SanGuoXEngine.Editor.SanguoCaptureStudio\");\n    if (type != null) { studio = type; break; }\n}\nvar position = battleCamera.Transform.Position;\nvar rotation = battleCamera.Transform.Rotation;\nstudio.GetMethod(\"CaptureSceneFrame\").Invoke(null, new object[] {\n    battleCamera, position, rotation, 960, 540, output });\n\nvar stats = XEngine.Runtime.Rendering.RenderStats.Last;\nreturn \"captured play-battle.png | drivers \" + drivers\n    + \" | drawCalls \" + stats.DrawCalls + \" tris \" + stats.Triangles\n    + \" drawn \" + stats.RenderablesDrawn + \" lodHidden \" + stats.LodRenderersHidden;\n"
+    },
+    "tag": "capture_battle",
+    "full": true
+  },
+  {
+    "delay": 10
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var lines = System.IO.File.ReadAllLines(System.IO.Path.Combine(XEngine.Editor.Projects.Project.Current.RootPath, \"Logs/Editor.log\"));var picked = new System.Collections.Generic.List<string>();for (int i = lines.Length - 1; i >= 0 && picked.Count < 10; i--) if (lines[i].Contains(\"SanguoBattle\")) picked.Insert(0, lines[i]);return \"log tail: \" + picked.Count + \" lines\";"
+    },
+    "tag": "combat_log"
+  },
+  {
+    "tool": "runtime_stats",
+    "args": {},
+    "tag": "runtime_stats"
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "return \"playing=\"+XEngine.Runtime.Application.IsPlaying+\" filter=\"+(XEngine.Runtime.Resources.Scene.RenderCollectFilter!=null);"
+    },
+    "tag": "play_probe",
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var s=XEngine.Runtime.Resources.Scene.Current; var f=s.GetType().GetField(\"_staticBatchRegistry\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance); var r=f?.GetValue(s); var p=r?.GetType().GetProperty(\"BatchedRendererCount\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance); int n=p==null?-1:(int)p.GetValue(r); XEngine.Runtime.MeshRenderer first=null; foreach(var go in s.AllObjects){if(!go.IsStatic)continue; var mr=go.GetComponent<XEngine.Runtime.MeshRenderer>(); if(mr!=null){first=mr;break;}} var m=s.GetType().GetMethod(\"IsStaticRendererBatched\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance); bool hit=first!=null && m!=null && (bool)m.Invoke(s,new object[]{first}); var a=s.GetType().GetProperty(\"IsStaticBatchingActive\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance)?.GetValue(s); return \"active=\"+a+\" batched=\"+n+\" first=\"+hit;"
+    },
+    "tag": "registry_probe2",
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var s=XEngine.Runtime.Resources.Scene.Current; var f=s.GetType().GetField(\"_staticBatchRegistry\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance); var r=f?.GetValue(s); if(r==null)return \"registry=null\"; var h=r.GetType().GetProperty(\"HasBatches\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance)?.GetValue(r); var b=r.GetType().GetField(\"_batches\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance)?.GetValue(r) as System.Collections.ICollection; var c=r.GetType().GetField(\"_batchedRenderers\",System.Reflection.BindingFlags.NonPublic|System.Reflection.BindingFlags.Instance)?.GetValue(r) as System.Collections.ICollection; return \"has=\"+h+\" batches=\"+(b?.Count??-1)+\" renderers=\"+(c?.Count??-1);"
+    },
+    "tag": "registry_stats",
+    "full": true
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "var s = XEngine.Runtime.Rendering.RenderStats.Last; return \"cacheHits=\" + s.StaticCollectionCacheHits + \" cacheBuilds=\" + s.StaticCollectionCacheBuilds;"
+    },
+    "tag": "cache_stats"
+  },
+  {
+    "delay": 10
+  },
+  {
+    "tool": "runtime_eval",
+    "args": {
+      "code": "XEngine.Editor.Core.EditorApplication.Instance.ExitPlayMode(); return \"exiting\";"
+    },
+    "tag": "exit_play"
+  }
+]
+
+
+

@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "resolverVersion": "xengine-package-resolver/1",
   "manifestHash": "577aec2ae72b4c11e25d8168c78ee4452322735d32d1954119ca88e0370b3bf7",
-  "generatedAtUtc": "2026-11-25T17:21:43.2621607Z",
+  "generatedAtUtc": "2026-11-28T02:18:29.1767279Z",
   "packages": [
     {
       "name": "com.xengine.2d.common",
@@ -46,7 +46,7 @@
       "sourceSpecifier": "0.1.0",
       "logicalRoot": "Packages/com.xengine.hudmesh",
       "resolvedPath": "Library/PackageCache/com.xengine.hudmesh@0.1.0",
-      "contentHash": "b850b66c69f09d93dd8b93ffc6d4eb7d61ee42daa8722fda15163bd453fd2632",
+      "contentHash": "378144ca63c7db3cda169272026b88f3126f0bfd599a0d3389de970312346c2d",
       "dependencies": {},
       "dependencyClosure": []
     },

@@ -241,6 +241,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         _stage = new SanguoBattleStage(layout, monsters, values);
         _stage.ActorSpawned += SpawnActorView;
         _hudManager = HudManager.Init(HudSpriteTable.CreateBundled());
+        _hudManager.RenderFrameInterval = 2;
         HudmeshConfig hudConfig = HudmeshConfig.CreateDefault();
         hudConfig.Blood.BarSize = new XEngine.Vector.Float2(120f, 24f);
         hudConfig.Blood.FillSize = new XEngine.Vector.Float2(108f, 11f);
