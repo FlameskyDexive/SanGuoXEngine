@@ -1,0 +1,289 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Animation.AnimatorController, XEngine.Runtime",
+  "DefaultStateName": "idle_loop",
+  "Parameters": {
+    "$id": 2,
+    "$values": [
+      {
+        "$id": 3,
+        "Name": "SpeedMultiplier",
+        "Type": 0L,
+        "DefaultFloat": 1F,
+        "DefaultInt": 0,
+        "DefaultBool": false
+      }
+    ]
+  },
+  "States": {
+    "$id": 4,
+    "$values": [
+      {
+        "$id": 5,
+        "Name": "idle_loop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": true,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "0ba633df-ddc0-fb3b-e912-cf2ba854cbf8"
+        },
+        "Motions": {
+          "$id": 6,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 7,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 0F,
+        "Behaviours": {
+          "$id": 8,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 9,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 10,
+        "Name": "run_loop",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": true,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "92f5e7d4-d35b-1f66-8902-480a123ec10f"
+        },
+        "Motions": {
+          "$id": 11,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 12,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 200F,
+        "Behaviours": {
+          "$id": 13,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 14,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 15,
+        "Name": "NormalAttack_1",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "1d57754d-574d-a40c-d3a5-2d850fe1841f"
+        },
+        "Motions": {
+          "$id": 16,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 17,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 400F,
+        "Behaviours": {
+          "$id": 18,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 19,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 20,
+        "Name": "hurt",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "34319f6c-5672-fded-8d27-62368868ebca"
+        },
+        "Motions": {
+          "$id": 21,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 22,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 600F,
+        "Behaviours": {
+          "$id": 23,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 24,
+          "$values": [
+
+          ]
+        }
+      },
+      {
+        "$id": 25,
+        "Name": "die",
+        "Tag": "",
+        "Speed": 1F,
+        "IsLooping": false,
+        "WriteDefaults": true,
+        "Mirror": false,
+        "CycleOffset": 0F,
+        "IKOnFeet": false,
+        "SpeedMultiplierParameter": "SpeedMultiplier",
+        "MirrorParameter": "",
+        "CycleOffsetParameter": "",
+        "TimeParameter": "",
+        "SpeedParameterActive": true,
+        "MirrorParameterActive": NULL,
+        "CycleOffsetParameterActive": NULL,
+        "TimeParameterActive": NULL,
+        "Motion": {
+          "AssetID": "79479692-9bc9-2790-4417-a83691dac31d"
+        },
+        "Motions": {
+          "$id": 26,
+          "$values": [
+
+          ]
+        },
+        "BlendTree": NULL,
+        "TransitionNames": {
+          "$id": 27,
+          "$values": [
+
+          ]
+        },
+        "PosX": 0F,
+        "PosY": 800F,
+        "Behaviours": {
+          "$id": 28,
+          "$values": [
+
+          ]
+        },
+        "Curves": {
+          "$id": 29,
+          "$values": [
+
+          ]
+        }
+      }
+    ]
+  },
+  "Transitions": {
+    "$id": 30,
+    "$values": [
+
+    ]
+  },
+  "AnyStateTransitions": {
+    "$id": 31,
+    "$values": [
+
+    ]
+  },
+  "Layers": {
+    "$id": 32,
+    "$values": [
+
+    ]
+  },
+  "AssetPath": "",
+  "AssetID": "00000000-0000-0000-0000-000000000000",
+  "Name": "Monster_YellowArmy_Dao"
+}

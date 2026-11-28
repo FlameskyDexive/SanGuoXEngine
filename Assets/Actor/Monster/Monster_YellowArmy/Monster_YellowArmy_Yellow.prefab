@@ -3,8 +3,8 @@
   "$type": "XEngine.Runtime.GameObject, XEngine.Runtime",
   "Name": "Monster_YellowArmy",
   "AssetPath": "",
-  "Identifier": "44f39a3f-c9c5-4e32-86ba-dc6140de8ce5",
-  "SourceIdentifier": "0e4caf7d-e34d-49f5-bc11-a9923cc56985",
+  "Identifier": "ab609f82-4636-41b5-a248-8c55ca23e6af",
+  "SourceIdentifier": "44f39a3f-c9c5-4e32-86ba-dc6140de8ce5",
   "Static": 0B,
   "Enabled": 1B,
   "EnabledInHierarchy": 1B,
@@ -32,15 +32,63 @@
     }
   },
   "Components": [
-
+    {
+      "$id": 3,
+      "$type": "XEngine.Runtime.Animator, XEngine.Runtime",
+      "Clip": {
+        "AssetID": "00000000-0000-0000-0000-000000000000"
+      },
+      "Controller": {
+        "AssetID": "96de1e57-604c-b497-c52e-d93014520abc"
+      },
+      "PlayAutomatically": true,
+      "TransitionLibrary": {
+        "AssetID": "00000000-0000-0000-0000-000000000000"
+      },
+      "Avatar": {
+        "AssetID": "00000000-0000-0000-0000-000000000000"
+      },
+      "Speed": 1F,
+      "MaximumDeltaTime": 0F,
+      "Wrap": 1L,
+      "ApplyRootMotion": true,
+      "SkeletonRoot": NULL,
+      "Parameters": {
+        "$id": 4
+      },
+      "Events": {
+        "$id": 5
+      },
+      "FootIK": false,
+      "RootMotionPlanar": false,
+      "ApplyRootMotionRotation": true,
+      "_identifier": "8508a1bf-c561-46aa-adda-a04b10a816a8",
+      "_enabled": true,
+      "_enabledInHierarchy": true,
+      "HideFlags": 0L,
+      "AssetPath": "",
+      "AssetID": "00000000-0000-0000-0000-000000000000",
+      "Name": "NewAnimator"
+    },
+    {
+      "$id": 6,
+      "$type": "SanGuoXEngine.Animation.SanguoAnimator, SanGuoXEngine.Game",
+      "_identifier": "294cac69-e045-442a-abaf-67498df988a8",
+      "_enabled": true,
+      "_enabledInHierarchy": true,
+      "HideFlags": 0L,
+      "AssetPath": "",
+      "AssetID": "00000000-0000-0000-0000-000000000000",
+      "Name": "NewSanguoAnimator"
+    }
   ],
   "Children": [
     {
-      "$id": 3,
+      "$id": 7,
       "Name": "Bip001",
       "AssetPath": "",
-      "Identifier": "e36f99a6-2cf5-4932-b1a0-5ed74eb8b8a1",
-      "SourceIdentifier": "f25d0bbd-c4c0-43fd-a27e-6346b0249e39",
+      "Identifier": "b0ab41a9-eb67-4d4a-beeb-bfeeb7861f9f",
+      "SourceIdentifier": "e36f99a6-2cf5-4932-b1a0-5ed74eb8b8a1",
       "Static": 0B,
       "Enabled": 1B,
       "EnabledInHierarchy": 1B,
@@ -48,7 +96,7 @@
       "LayerIndex": 0,
       "HideFlags": 0,
       "Transform": {
-        "$id": 4,
+        "$id": 8,
         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
         "_localPosition": {
           "X": 0F,
@@ -72,11 +120,11 @@
       ],
       "Children": [
         {
-          "$id": 5,
+          "$id": 9,
           "Name": "Bip001 Pelvis",
           "AssetPath": "",
-          "Identifier": "c27f1b25-cf6e-4d88-b21c-c87d39281327",
-          "SourceIdentifier": "0f6f1bfe-1172-4877-a796-652171f752de",
+          "Identifier": "38f951c5-c6c5-48cb-bce3-c841592f8d3e",
+          "SourceIdentifier": "c27f1b25-cf6e-4d88-b21c-c87d39281327",
           "Static": 0B,
           "Enabled": 1B,
           "EnabledInHierarchy": 1B,
@@ -84,7 +132,7 @@
           "LayerIndex": 0,
           "HideFlags": 0,
           "Transform": {
-            "$id": 6,
+            "$id": 10,
             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
             "_localPosition": {
               "X": 0F,
@@ -108,11 +156,11 @@
           ],
           "Children": [
             {
-              "$id": 7,
+              "$id": 11,
               "Name": "Bip001 Spine",
               "AssetPath": "",
-              "Identifier": "a871812d-2ba1-46c6-815e-015b71f36e89",
-              "SourceIdentifier": "7196e26e-5258-472b-9f22-c2154823115c",
+              "Identifier": "3a561d4a-dab2-4483-b408-16792ca96b5c",
+              "SourceIdentifier": "a871812d-2ba1-46c6-815e-015b71f36e89",
               "Static": 0B,
               "Enabled": 1B,
               "EnabledInHierarchy": 1B,
@@ -120,7 +168,7 @@
               "LayerIndex": 0,
               "HideFlags": 0,
               "Transform": {
-                "$id": 8,
+                "$id": 12,
                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                 "_localPosition": {
                   "X": -0.13159108F,
@@ -144,11 +192,11 @@
               ],
               "Children": [
                 {
-                  "$id": 9,
+                  "$id": 13,
                   "Name": "Bip001 L Thigh",
                   "AssetPath": "",
-                  "Identifier": "cf62e2cb-b3bf-4b73-9046-50ce52d6e6e0",
-                  "SourceIdentifier": "68281601-3e32-43b2-bf9a-637d7a9d23d5",
+                  "Identifier": "19d80476-cf00-4a14-adcd-4dea20a51179",
+                  "SourceIdentifier": "cf62e2cb-b3bf-4b73-9046-50ce52d6e6e0",
                   "Static": 0B,
                   "Enabled": 1B,
                   "EnabledInHierarchy": 1B,
@@ -156,7 +204,7 @@
                   "LayerIndex": 0,
                   "HideFlags": 0,
                   "Transform": {
-                    "$id": 10,
+                    "$id": 14,
                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                     "_localPosition": {
                       "X": 0.13159096F,
@@ -180,11 +228,11 @@
                   ],
                   "Children": [
                     {
-                      "$id": 11,
+                      "$id": 15,
                       "Name": "Bip001 L Calf",
                       "AssetPath": "",
-                      "Identifier": "8885ac11-1a03-4f61-ae71-0eb3ac805d08",
-                      "SourceIdentifier": "587f496c-bd61-4183-a7f4-78e219ccc8a6",
+                      "Identifier": "852a32b0-e43f-4480-a447-63623a2df25c",
+                      "SourceIdentifier": "8885ac11-1a03-4f61-ae71-0eb3ac805d08",
                       "Static": 0B,
                       "Enabled": 1B,
                       "EnabledInHierarchy": 1B,
@@ -192,7 +240,7 @@
                       "LayerIndex": 0,
                       "HideFlags": 0,
                       "Transform": {
-                        "$id": 12,
+                        "$id": 16,
                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                         "_localPosition": {
                           "X": -0.48233813F,
@@ -216,11 +264,11 @@
                       ],
                       "Children": [
                         {
-                          "$id": 13,
+                          "$id": 17,
                           "Name": "Bip001 L Foot",
                           "AssetPath": "",
-                          "Identifier": "d051876a-257d-4165-90c3-d59b1cd126b2",
-                          "SourceIdentifier": "b5275c6f-5ef4-4adc-a484-259252acccfe",
+                          "Identifier": "edcd32a5-436c-406a-beeb-0299d2527d9c",
+                          "SourceIdentifier": "d051876a-257d-4165-90c3-d59b1cd126b2",
                           "Static": 0B,
                           "Enabled": 1B,
                           "EnabledInHierarchy": 1B,
@@ -228,7 +276,7 @@
                           "LayerIndex": 0,
                           "HideFlags": 0,
                           "Transform": {
-                            "$id": 14,
+                            "$id": 18,
                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                             "_localPosition": {
                               "X": -0.42403293F,
@@ -259,11 +307,11 @@
                   ]
                 },
                 {
-                  "$id": 15,
+                  "$id": 19,
                   "Name": "Bip001 R Thigh",
                   "AssetPath": "",
-                  "Identifier": "bf257ab6-94a5-42ef-8d46-fcf4023b53db",
-                  "SourceIdentifier": "5783397f-e29b-4cce-88b5-94e87335c567",
+                  "Identifier": "4d51f592-93fd-412d-a375-833efadd02e0",
+                  "SourceIdentifier": "bf257ab6-94a5-42ef-8d46-fcf4023b53db",
                   "Static": 0B,
                   "Enabled": 1B,
                   "EnabledInHierarchy": 1B,
@@ -271,7 +319,7 @@
                   "LayerIndex": 0,
                   "HideFlags": 0,
                   "Transform": {
-                    "$id": 16,
+                    "$id": 20,
                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                     "_localPosition": {
                       "X": 0.13159096F,
@@ -295,11 +343,11 @@
                   ],
                   "Children": [
                     {
-                      "$id": 17,
+                      "$id": 21,
                       "Name": "Bip001 R Calf",
                       "AssetPath": "",
-                      "Identifier": "f71a49a3-ba65-4cac-9528-dd509dade581",
-                      "SourceIdentifier": "10e06402-d5b2-4aa9-81f4-22cd396e046c",
+                      "Identifier": "5f203e36-070e-4f4e-a17d-29313237d66f",
+                      "SourceIdentifier": "f71a49a3-ba65-4cac-9528-dd509dade581",
                       "Static": 0B,
                       "Enabled": 1B,
                       "EnabledInHierarchy": 1B,
@@ -307,7 +355,7 @@
                       "LayerIndex": 0,
                       "HideFlags": 0,
                       "Transform": {
-                        "$id": 18,
+                        "$id": 22,
                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                         "_localPosition": {
                           "X": -0.48233813F,
@@ -331,11 +379,11 @@
                       ],
                       "Children": [
                         {
-                          "$id": 19,
+                          "$id": 23,
                           "Name": "Bip001 R Foot",
                           "AssetPath": "",
-                          "Identifier": "1818638f-0dfa-4022-92b7-441497b38513",
-                          "SourceIdentifier": "8e4ef653-d0a6-467a-80cd-d48ffa1233c4",
+                          "Identifier": "ffdfcb8b-201d-424b-97d0-fdd4ec04a772",
+                          "SourceIdentifier": "1818638f-0dfa-4022-92b7-441497b38513",
                           "Static": 0B,
                           "Enabled": 1B,
                           "EnabledInHierarchy": 1B,
@@ -343,7 +391,7 @@
                           "LayerIndex": 0,
                           "HideFlags": 0,
                           "Transform": {
-                            "$id": 20,
+                            "$id": 24,
                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                             "_localPosition": {
                               "X": -0.42403293F,
@@ -374,11 +422,11 @@
                   ]
                 },
                 {
-                  "$id": 21,
+                  "$id": 25,
                   "Name": "Bip001 Spine1",
                   "AssetPath": "",
-                  "Identifier": "7df9947c-4532-46d0-a8d4-ad98eb1eabf2",
-                  "SourceIdentifier": "6e3313e2-e247-4e21-a6fa-4295afa0d206",
+                  "Identifier": "edce1c61-f58d-409d-8451-325dcf721622",
+                  "SourceIdentifier": "7df9947c-4532-46d0-a8d4-ad98eb1eabf2",
                   "Static": 0B,
                   "Enabled": 1B,
                   "EnabledInHierarchy": 1B,
@@ -386,7 +434,7 @@
                   "LayerIndex": 0,
                   "HideFlags": 0,
                   "Transform": {
-                    "$id": 22,
+                    "$id": 26,
                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                     "_localPosition": {
                       "X": -0.21292293F,
@@ -410,11 +458,11 @@
                   ],
                   "Children": [
                     {
-                      "$id": 23,
+                      "$id": 27,
                       "Name": "Bip001 Neck",
                       "AssetPath": "",
-                      "Identifier": "9a756860-46ba-4940-b6e9-72d8aa33daf6",
-                      "SourceIdentifier": "2f948d0e-b18d-4e97-8737-a121432fb7fc",
+                      "Identifier": "6fb4f87e-a516-4209-9e27-9e918a46a362",
+                      "SourceIdentifier": "9a756860-46ba-4940-b6e9-72d8aa33daf6",
                       "Static": 0B,
                       "Enabled": 1B,
                       "EnabledInHierarchy": 1B,
@@ -422,7 +470,7 @@
                       "LayerIndex": 0,
                       "HideFlags": 0,
                       "Transform": {
-                        "$id": 24,
+                        "$id": 28,
                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                         "_localPosition": {
                           "X": -0.30781734F,
@@ -446,11 +494,11 @@
                       ],
                       "Children": [
                         {
-                          "$id": 25,
+                          "$id": 29,
                           "Name": "Bip001 Head",
                           "AssetPath": "",
-                          "Identifier": "545c36dd-fb84-4ad9-8247-b8fd4f4f4105",
-                          "SourceIdentifier": "ec4035cc-9d3f-4330-897d-407590fbf973",
+                          "Identifier": "4f606f26-d2fa-4c72-af32-b3a1fe7912e6",
+                          "SourceIdentifier": "545c36dd-fb84-4ad9-8247-b8fd4f4f4105",
                           "Static": 0B,
                           "Enabled": 1B,
                           "EnabledInHierarchy": 1B,
@@ -458,7 +506,7 @@
                           "LayerIndex": 0,
                           "HideFlags": 0,
                           "Transform": {
-                            "$id": 26,
+                            "$id": 30,
                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                             "_localPosition": {
                               "X": -0.09719801F,
@@ -482,11 +530,11 @@
                           ],
                           "Children": [
                             {
-                              "$id": 27,
+                              "$id": 31,
                               "Name": "node_head",
                               "AssetPath": "",
-                              "Identifier": "27ab181e-1c75-424f-99ef-932f0bf7b972",
-                              "SourceIdentifier": "56c9c813-6dde-4f0c-bc06-8b8591100a91",
+                              "Identifier": "e4cb8c71-887b-4672-aea2-255abc83c147",
+                              "SourceIdentifier": "27ab181e-1c75-424f-99ef-932f0bf7b972",
                               "Static": 0B,
                               "Enabled": 1B,
                               "EnabledInHierarchy": 1B,
@@ -494,7 +542,7 @@
                               "LayerIndex": 0,
                               "HideFlags": 0,
                               "Transform": {
-                                "$id": 28,
+                                "$id": 32,
                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                 "_localPosition": {
                                   "X": -0.10543597F,
@@ -521,11 +569,11 @@
                               ]
                             },
                             {
-                              "$id": 29,
+                              "$id": 33,
                               "Name": "piaodai01",
                               "AssetPath": "",
-                              "Identifier": "ec49c5f2-d757-4327-9ff5-fdae1d1c167e",
-                              "SourceIdentifier": "97858fe4-cedc-4c57-8c98-6aac81560c01",
+                              "Identifier": "95c1ab31-d5c5-40d7-b6d5-1eda17d64f79",
+                              "SourceIdentifier": "ec49c5f2-d757-4327-9ff5-fdae1d1c167e",
                               "Static": 0B,
                               "Enabled": 1B,
                               "EnabledInHierarchy": 1B,
@@ -533,7 +581,7 @@
                               "LayerIndex": 0,
                               "HideFlags": 0,
                               "Transform": {
-                                "$id": 30,
+                                "$id": 34,
                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                 "_localPosition": {
                                   "X": -0.011815906F,
@@ -562,11 +610,11 @@
                           ]
                         },
                         {
-                          "$id": 31,
+                          "$id": 35,
                           "Name": "Bip001 L Clavicle",
                           "AssetPath": "",
-                          "Identifier": "79430158-f4ee-49bf-923f-994003c1566d",
-                          "SourceIdentifier": "c6516018-fe96-42aa-8711-a535d4d0855b",
+                          "Identifier": "b9b5b63d-5f20-4f09-acde-e9e5fa410142",
+                          "SourceIdentifier": "79430158-f4ee-49bf-923f-994003c1566d",
                           "Static": 0B,
                           "Enabled": 1B,
                           "EnabledInHierarchy": 1B,
@@ -574,7 +622,7 @@
                           "LayerIndex": 0,
                           "HideFlags": 0,
                           "Transform": {
-                            "$id": 32,
+                            "$id": 36,
                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                             "_localPosition": {
                               "X": 0.059030414F,
@@ -598,11 +646,11 @@
                           ],
                           "Children": [
                             {
-                              "$id": 33,
+                              "$id": 37,
                               "Name": "Bip001 L UpperArm",
                               "AssetPath": "",
-                              "Identifier": "63e679f3-bc42-42f8-8c96-271018afdf3e",
-                              "SourceIdentifier": "b8504bdf-d76a-420d-be2a-73c865bb7524",
+                              "Identifier": "ea23fa31-6ada-40e0-b173-b8a7a15cf622",
+                              "SourceIdentifier": "63e679f3-bc42-42f8-8c96-271018afdf3e",
                               "Static": 0B,
                               "Enabled": 1B,
                               "EnabledInHierarchy": 1B,
@@ -610,7 +658,7 @@
                               "LayerIndex": 0,
                               "HideFlags": 0,
                               "Transform": {
-                                "$id": 34,
+                                "$id": 38,
                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                 "_localPosition": {
                                   "X": -0.145779F,
@@ -634,11 +682,11 @@
                               ],
                               "Children": [
                                 {
-                                  "$id": 35,
+                                  "$id": 39,
                                   "Name": "Bip001 L Forearm",
                                   "AssetPath": "",
-                                  "Identifier": "a7802900-a4a7-4b80-ba38-cc61fa19cab4",
-                                  "SourceIdentifier": "d48cf5b0-0c7a-43e3-bd36-f24ba4647a3c",
+                                  "Identifier": "fd0b1586-7b20-48cd-a5e9-259c50f9ce28",
+                                  "SourceIdentifier": "a7802900-a4a7-4b80-ba38-cc61fa19cab4",
                                   "Static": 0B,
                                   "Enabled": 1B,
                                   "EnabledInHierarchy": 1B,
@@ -646,7 +694,7 @@
                                   "LayerIndex": 0,
                                   "HideFlags": 0,
                                   "Transform": {
-                                    "$id": 36,
+                                    "$id": 40,
                                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                     "_localPosition": {
                                       "X": -0.24618274F,
@@ -670,11 +718,11 @@
                                   ],
                                   "Children": [
                                     {
-                                      "$id": 37,
+                                      "$id": 41,
                                       "Name": "Bip001 L Hand",
                                       "AssetPath": "",
-                                      "Identifier": "736aca69-ff51-4f7e-affe-124b74118054",
-                                      "SourceIdentifier": "1b4529b3-4864-4f3b-97ae-c8b86c5b833c",
+                                      "Identifier": "02c05158-0b6e-451e-bec2-57c797f78aba",
+                                      "SourceIdentifier": "736aca69-ff51-4f7e-affe-124b74118054",
                                       "Static": 0B,
                                       "Enabled": 1B,
                                       "EnabledInHierarchy": 1B,
@@ -682,7 +730,7 @@
                                       "LayerIndex": 0,
                                       "HideFlags": 0,
                                       "Transform": {
-                                        "$id": 38,
+                                        "$id": 42,
                                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                         "_localPosition": {
                                           "X": -0.285356F,
@@ -706,11 +754,11 @@
                                       ],
                                       "Children": [
                                         {
-                                          "$id": 39,
+                                          "$id": 43,
                                           "Name": "node_left_weapon",
                                           "AssetPath": "",
-                                          "Identifier": "f16468d1-7617-4bf0-83cd-106b5ecb1ca1",
-                                          "SourceIdentifier": "99343fde-59ce-423d-8362-c478ef57d6f8",
+                                          "Identifier": "c4c58cbe-19a3-46db-8c97-94adc536950b",
+                                          "SourceIdentifier": "f16468d1-7617-4bf0-83cd-106b5ecb1ca1",
                                           "Static": 0B,
                                           "Enabled": 1B,
                                           "EnabledInHierarchy": 1B,
@@ -718,7 +766,7 @@
                                           "LayerIndex": 0,
                                           "HideFlags": 0,
                                           "Transform": {
-                                            "$id": 40,
+                                            "$id": 44,
                                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                             "_localPosition": {
                                               "X": -0.109267324F,
@@ -753,11 +801,11 @@
                           ]
                         },
                         {
-                          "$id": 41,
+                          "$id": 45,
                           "Name": "Bip001 R Clavicle",
                           "AssetPath": "",
-                          "Identifier": "0022557b-0f28-4f03-b223-5be0ef050467",
-                          "SourceIdentifier": "804fdeb1-2a69-497a-939c-551b26907749",
+                          "Identifier": "4a52b8bb-a41b-40fc-949e-6ccbbcebddb3",
+                          "SourceIdentifier": "0022557b-0f28-4f03-b223-5be0ef050467",
                           "Static": 0B,
                           "Enabled": 1B,
                           "EnabledInHierarchy": 1B,
@@ -765,7 +813,7 @@
                           "LayerIndex": 0,
                           "HideFlags": 0,
                           "Transform": {
-                            "$id": 42,
+                            "$id": 46,
                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                             "_localPosition": {
                               "X": 0.053462744F,
@@ -789,11 +837,11 @@
                           ],
                           "Children": [
                             {
-                              "$id": 43,
+                              "$id": 47,
                               "Name": "Bip001 R UpperArm",
                               "AssetPath": "",
-                              "Identifier": "407289be-cc34-474f-91cb-7be12cf41448",
-                              "SourceIdentifier": "ecba1e20-a415-42ae-acda-bd1fd4d51679",
+                              "Identifier": "90f9eb81-9a24-464c-a5e0-0eb109766f1f",
+                              "SourceIdentifier": "407289be-cc34-474f-91cb-7be12cf41448",
                               "Static": 0B,
                               "Enabled": 1B,
                               "EnabledInHierarchy": 1B,
@@ -801,7 +849,7 @@
                               "LayerIndex": 0,
                               "HideFlags": 0,
                               "Transform": {
-                                "$id": 44,
+                                "$id": 48,
                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                 "_localPosition": {
                                   "X": -0.145779F,
@@ -825,11 +873,11 @@
                               ],
                               "Children": [
                                 {
-                                  "$id": 45,
+                                  "$id": 49,
                                   "Name": "Bip001 R Forearm",
                                   "AssetPath": "",
-                                  "Identifier": "f0bc101b-69f3-4520-8d5f-da1df51fda35",
-                                  "SourceIdentifier": "a0070a22-7623-4af1-8941-fe12d22f57c8",
+                                  "Identifier": "95127722-e2da-448c-814a-25dda50ee33b",
+                                  "SourceIdentifier": "f0bc101b-69f3-4520-8d5f-da1df51fda35",
                                   "Static": 0B,
                                   "Enabled": 1B,
                                   "EnabledInHierarchy": 1B,
@@ -837,7 +885,7 @@
                                   "LayerIndex": 0,
                                   "HideFlags": 0,
                                   "Transform": {
-                                    "$id": 46,
+                                    "$id": 50,
                                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                     "_localPosition": {
                                       "X": -0.24618268F,
@@ -861,11 +909,11 @@
                                   ],
                                   "Children": [
                                     {
-                                      "$id": 47,
+                                      "$id": 51,
                                       "Name": "Bip001 R Hand",
                                       "AssetPath": "",
-                                      "Identifier": "b06c02f3-b51b-4aca-88cd-db6a3e182834",
-                                      "SourceIdentifier": "e312db9d-cc30-4f7f-bbe7-287275b3a0bf",
+                                      "Identifier": "ecf34550-4b9a-40b8-a62a-64e05b80bdd4",
+                                      "SourceIdentifier": "b06c02f3-b51b-4aca-88cd-db6a3e182834",
                                       "Static": 0B,
                                       "Enabled": 1B,
                                       "EnabledInHierarchy": 1B,
@@ -873,7 +921,7 @@
                                       "LayerIndex": 0,
                                       "HideFlags": 0,
                                       "Transform": {
-                                        "$id": 48,
+                                        "$id": 52,
                                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                         "_localPosition": {
                                           "X": -0.28535593F,
@@ -897,11 +945,11 @@
                                       ],
                                       "Children": [
                                         {
-                                          "$id": 49,
+                                          "$id": 53,
                                           "Name": "node_right_weapon",
                                           "AssetPath": "",
-                                          "Identifier": "4c7d26de-5f95-41b3-9202-7afd414797bd",
-                                          "SourceIdentifier": "2e7fb77a-e936-4395-bca5-6383a8e25573",
+                                          "Identifier": "3cc9bdcd-131b-4e18-bcae-ace9d113ea26",
+                                          "SourceIdentifier": "4c7d26de-5f95-41b3-9202-7afd414797bd",
                                           "Static": 0B,
                                           "Enabled": 1B,
                                           "EnabledInHierarchy": 1B,
@@ -909,7 +957,7 @@
                                           "LayerIndex": 0,
                                           "HideFlags": 0,
                                           "Transform": {
-                                            "$id": 50,
+                                            "$id": 54,
                                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                             "_localPosition": {
                                               "X": -0.10038054F,
@@ -933,11 +981,11 @@
                                           ],
                                           "Children": [
                                             {
-                                              "$id": 51,
+                                              "$id": 55,
                                               "Name": "Bone021",
                                               "AssetPath": "",
-                                              "Identifier": "d806fa13-4c05-43c0-8a5f-05dbcc458953",
-                                              "SourceIdentifier": "541dfd42-1fec-4596-9ab5-8eb74b9f20c9",
+                                              "Identifier": "2ba0c846-9c66-4528-9107-1f8ae06d2c82",
+                                              "SourceIdentifier": "d806fa13-4c05-43c0-8a5f-05dbcc458953",
                                               "Static": 0B,
                                               "Enabled": 1B,
                                               "EnabledInHierarchy": 1B,
@@ -945,7 +993,7 @@
                                               "LayerIndex": 0,
                                               "HideFlags": 0,
                                               "Transform": {
-                                                "$id": 52,
+                                                "$id": 56,
                                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                                 "_localPosition": {
                                                   "X": -2.3841858E-07F,
@@ -969,11 +1017,11 @@
                                               ],
                                               "Children": [
                                                 {
-                                                  "$id": 53,
+                                                  "$id": 57,
                                                   "Name": "Bone001",
                                                   "AssetPath": "",
-                                                  "Identifier": "9b0a251d-e3bd-4ab7-b3d7-9b482072b530",
-                                                  "SourceIdentifier": "fdee88c4-1e5d-4d16-9f94-6fa9d9f9bfa4",
+                                                  "Identifier": "60fc6b71-5c2c-4611-b51f-2a8c0f7cdafe",
+                                                  "SourceIdentifier": "9b0a251d-e3bd-4ab7-b3d7-9b482072b530",
                                                   "Static": 0B,
                                                   "Enabled": 1B,
                                                   "EnabledInHierarchy": 1B,
@@ -981,7 +1029,7 @@
                                                   "LayerIndex": 0,
                                                   "HideFlags": 0,
                                                   "Transform": {
-                                                    "$id": 54,
+                                                    "$id": 58,
                                                     "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                                     "_localPosition": {
                                                       "X": -0.34121394F,
@@ -1005,11 +1053,11 @@
                                                   ],
                                                   "Children": [
                                                     {
-                                                      "$id": 55,
+                                                      "$id": 59,
                                                       "Name": "Bone003",
                                                       "AssetPath": "",
-                                                      "Identifier": "561bf12f-36bc-4047-8902-7de76dd39954",
-                                                      "SourceIdentifier": "8cecf6e8-bbfc-4e48-a68e-a800e5c687f9",
+                                                      "Identifier": "95f6cc03-5483-48ea-b508-09dcf4e35eee",
+                                                      "SourceIdentifier": "561bf12f-36bc-4047-8902-7de76dd39954",
                                                       "Static": 0B,
                                                       "Enabled": 1B,
                                                       "EnabledInHierarchy": 1B,
@@ -1017,7 +1065,7 @@
                                                       "LayerIndex": 0,
                                                       "HideFlags": 0,
                                                       "Transform": {
-                                                        "$id": 56,
+                                                        "$id": 60,
                                                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                                         "_localPosition": {
                                                           "X": -1.9144089F,
@@ -1041,11 +1089,11 @@
                                                       ],
                                                       "Children": [
                                                         {
-                                                          "$id": 57,
+                                                          "$id": 61,
                                                           "Name": "Bone004",
                                                           "AssetPath": "",
-                                                          "Identifier": "dba5f31f-f0e2-43f9-bab1-62e553a2c86d",
-                                                          "SourceIdentifier": "10bff27e-8e3b-4e8d-8c3e-d0941aeca259",
+                                                          "Identifier": "8172455e-6ffa-4132-86f0-cbfce8f677b9",
+                                                          "SourceIdentifier": "dba5f31f-f0e2-43f9-bab1-62e553a2c86d",
                                                           "Static": 0B,
                                                           "Enabled": 1B,
                                                           "EnabledInHierarchy": 1B,
@@ -1053,7 +1101,7 @@
                                                           "LayerIndex": 0,
                                                           "HideFlags": 0,
                                                           "Transform": {
-                                                            "$id": 58,
+                                                            "$id": 62,
                                                             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                                             "_localPosition": {
                                                               "X": -0.7679415F,
@@ -1077,11 +1125,11 @@
                                                           ],
                                                           "Children": [
                                                             {
-                                                              "$id": 59,
+                                                              "$id": 63,
                                                               "Name": "Bone005",
                                                               "AssetPath": "",
-                                                              "Identifier": "8863cd49-d31f-474b-b6de-99a6a72e1666",
-                                                              "SourceIdentifier": "004c4340-9f6b-4b42-9875-3786c82be75d",
+                                                              "Identifier": "2d1feef1-24ab-4f25-bc5a-8fb89d8eba74",
+                                                              "SourceIdentifier": "8863cd49-d31f-474b-b6de-99a6a72e1666",
                                                               "Static": 0B,
                                                               "Enabled": 1B,
                                                               "EnabledInHierarchy": 1B,
@@ -1089,7 +1137,7 @@
                                                               "LayerIndex": 0,
                                                               "HideFlags": 0,
                                                               "Transform": {
-                                                                "$id": 60,
+                                                                "$id": 64,
                                                                 "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                                                                 "_localPosition": {
                                                                   "X": -0.7851889F,
@@ -1136,11 +1184,11 @@
                       ]
                     },
                     {
-                      "$id": 61,
+                      "$id": 65,
                       "Name": "node_chest",
                       "AssetPath": "",
-                      "Identifier": "ea2edf43-910f-4a02-b1bb-992337216348",
-                      "SourceIdentifier": "6979ad48-648e-4aa9-9905-b7530c7c3c88",
+                      "Identifier": "c8f5900f-d056-4a99-a50d-464cf2e29183",
+                      "SourceIdentifier": "ea2edf43-910f-4a02-b1bb-992337216348",
                       "Static": 0B,
                       "Enabled": 1B,
                       "EnabledInHierarchy": 1B,
@@ -1148,7 +1196,7 @@
                       "LayerIndex": 0,
                       "HideFlags": 0,
                       "Transform": {
-                        "$id": 62,
+                        "$id": 66,
                         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
                         "_localPosition": {
                           "X": -0.13835704F,
@@ -1181,11 +1229,11 @@
           ]
         },
         {
-          "$id": 63,
+          "$id": 67,
           "Name": "node_fixed",
           "AssetPath": "",
-          "Identifier": "e5fe36f7-6d91-4623-8f99-663e7365adc2",
-          "SourceIdentifier": "34e1b312-d636-4f01-9172-0d7525aff198",
+          "Identifier": "b057de90-dbdf-43af-a569-f8e3e7007555",
+          "SourceIdentifier": "e5fe36f7-6d91-4623-8f99-663e7365adc2",
           "Static": 0B,
           "Enabled": 1B,
           "EnabledInHierarchy": 1B,
@@ -1193,7 +1241,7 @@
           "LayerIndex": 0,
           "HideFlags": 0,
           "Transform": {
-            "$id": 64,
+            "$id": 68,
             "$type": "XEngine.Vector.Transform, XEngine.Runtime",
             "_localPosition": {
               "X": -0F,
@@ -1222,13 +1270,13 @@
       ]
     },
     {
-      "$id": 65,
+      "$id": 69,
       "Name": "Monster_YellowArmy_Body",
       "AssetPath": "",
-      "Identifier": "ddaf345d-6826-4bc4-b4dd-a9254607a807",
-      "SourceIdentifier": "e2b281f8-f55b-49a7-89bd-e599376891ae",
+      "Identifier": "ed98944e-9bfe-438b-8de6-75992129cceb",
+      "SourceIdentifier": "ddaf345d-6826-4bc4-b4dd-a9254607a807",
       "CompSourceIdentifiers": [
-        "c5d6f486-9e56-4577-81c6-d8282958a8c0"
+        "90b3e006-405d-4d18-a46a-ccd020627d73"
       ],
       "Static": 0B,
       "Enabled": 1B,
@@ -1237,7 +1285,7 @@
       "LayerIndex": 0,
       "HideFlags": 0,
       "Transform": {
-        "$id": 66,
+        "$id": 70,
         "$type": "XEngine.Vector.Transform, XEngine.Runtime",
         "_localPosition": {
           "X": 0F,
@@ -1258,13 +1306,13 @@
       },
       "Components": [
         {
-          "$id": 67,
+          "$id": 71,
           "$type": "XEngine.Runtime.SkinnedMeshRenderer, XEngine.Runtime",
           "SharedMesh": {
             "AssetID": "ae565e4b-18a8-6d39-20b9-c09073a31500"
           },
           "Materials": {
-            "$id": 68,
+            "$id": 72,
             "$values": [
               {
                 "AssetID": "ff65ac6c-3a12-59e2-8d48-01cdd6088150"
@@ -1273,7 +1321,7 @@
           },
           "RootBonePath": "Bip001/Bip001 Pelvis",
           "BonePaths": {
-            "$id": 69,
+            "$id": 73,
             "array": [
               "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/piaodai01",
               "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head",
@@ -1311,7 +1359,7 @@
             "mask": 255U
           },
           "_blendShapeWeights": NULL,
-          "_identifier": "90b3e006-405d-4d18-a46a-ccd020627d73",
+          "_identifier": "952aeca2-a450-48a7-b779-794bcf394b69",
           "_enabled": true,
           "_enabledInHierarchy": true,
           "HideFlags": 0L,

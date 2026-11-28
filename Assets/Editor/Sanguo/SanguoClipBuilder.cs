@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json;
@@ -563,12 +564,17 @@ public static class SanguoClipBuilder
     public static string ExportDirectory()
         => Path.Combine(Project.Current?.RootPath ?? throw new InvalidOperationException("No project is open."), ExportRelativePath);
 
-    /// <summary>Writes every clip and controller of every <c>Hero_*.json</c> in
-    /// <paramref name="exportDirectory"/>. Returns a summary with warnings.</summary>
+    /// <summary>Writes every clip and controller of every exported actor document in
+    /// <paramref name="exportDirectory"/>. Hero documents keep their historical
+    /// <c>Hero_*.json</c> name; monster documents use <c>Monster_*.json</c> and follow the same
+    /// curve conversion path.</summary>
     public static string Generate(string exportDirectory)
     {
         string assets = Project.Current?.AssetsPath ?? throw new InvalidOperationException("No project is open.");
-        string[] documents = Directory.GetFiles(exportDirectory, "Hero_*.json");
+        string[] documents = Directory.GetFiles(exportDirectory, "Hero_*.json")
+            .Concat(Directory.GetFiles(exportDirectory, "Monster_*.json"))
+            .OrderBy(static path => path, StringComparer.Ordinal)
+            .ToArray();
         if (documents.Length == 0) throw new InvalidOperationException($"no Hero_*.json under {exportDirectory}; run the clip export first.");
 
         int clips = 0, sourceKeys = 0, nativeKeys = 0, constant = 0, streamed = 0, dense = 0;

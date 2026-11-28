@@ -17,8 +17,8 @@ namespace SanGuoXEngine.Battle;
 
 /// <summary>
 /// Scene-side binding of a <see cref="SanguoFieldActor"/>: writes the kernel's motor result into
-/// the Transform, plays the state animations (heroes carry a real Animator with the M2
-/// controllers; monster placeholders animate by code only), and applies the hit flash.
+/// the Transform, plays the state animations (heroes and the imported Yellow Army carry real
+/// Animator controllers), and applies the hit flash.
 /// The kernel stays pure — this component is the only one that touches scene objects.
 /// </summary>
 public sealed class SanguoActorPresenter : MonoBehaviour
@@ -71,7 +71,18 @@ public sealed class SanguoActorPresenter : MonoBehaviour
         if (_animator == null || _animatorBroken) return false;
         try
         {
-            return _animator.Play(animName, 0.05f);
+            if (_animator.Play(animName, 0.05f)) return true;
+            // The battle tables use compact n1/attack names while the imported Yellow Army
+            // controller keeps Unity's clip names.  Keep the authored name as the first lookup,
+            // then resolve only the small aliases shared by the demo actors.
+            string alias = animName switch
+            {
+                "n1" or "attack" => "NormalAttack_1",
+                "idle" => "idle_loop",
+                "run" => "run_loop",
+                _ => "",
+            };
+            return alias.Length > 0 && _animator.Play(alias, 0.05f);
         }
         catch (Exception)
         {
@@ -99,8 +110,8 @@ public sealed class SanguoActorPresenter : MonoBehaviour
         if (_animator == null || _animatorBroken) return;
         string clip = state switch
         {
-            SanguoActorState.Idle => "idle",
-            SanguoActorState.Run => "run",
+            SanguoActorState.Idle => "idle_loop",
+            SanguoActorState.Run => "run_loop",
             SanguoActorState.Dead => "die",
             _ => "",
         };

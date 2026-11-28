@@ -1,0 +1,1667 @@
+{
+  "$id": 1,
+  "$type": "XEngine.Runtime.AnimationClip, XEngine.Runtime",
+  "Name": "idle_loop",
+  "Duration": 1.6666669F,
+  "TicksPerSecond": 1F,
+  "FrameRate": 30F,
+  "DurationInTicks": 1.6666669F,
+  "Wrap": 1,
+  "RootBonePath": ".",
+  "RootMotionPolicy": 1,
+  "Bones": [
+    {
+      "BoneName": "Bip001",
+      "PosX": {
+        "$id": 2,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "PosY": {
+        "$id": 3,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "PosZ": {
+        "$id": 4,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAKuqqj6rqqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 5,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJ/NKj8AAAAAfF0/O0ymqj5Mpqo+0MzMPnqlLD+h3O87COFRPEymqj5Mpqo+zcyMP21WLT8tkCC896r0u0ymqj5Mpqo+ExHRP2PuKj/X0QS8jdEEukymqj5Mpqo+VVXVPyzUKj9vwLW5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotY": {
+        "$id": 6,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAARWDr4AAAAA+cwSOkymqj5Mpqo+0MzMPgTnDL5lvrw6lCYlO0ymqj5Mpqo+zcyMP/FjDL5XcwC7+LvDukymqj5Mpqo+ExHRP807Dr74u8O6i7vDuEymqj5Mpqo+VVXVP807Dr6N0YS4AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotZ": {
+        "$id": 7,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEHxI74AAAAAI3amO0ymqj5Mpqo+0MzMPj0KF74yVlQ8Z8u5PEymqj5Mpqo+zcyMP/MfEr4oXI+8E3RavEymqj5Mpqo+ExHRP4ofI77Tr2a8Uq9mukymqj5Mpqo+VVXVPwrXI77+SB26AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotW": {
+        "$id": 8,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAELPNr8AAAAAwDrHOkymqj5Mpqo+0MzMPjnWNb/lwoE7DBXjO0ymqj5Mpqo+zcyMP+tzNb/L6bK7n1CIu0ymqj5Mpqo+ExHRP5m7Nr+fUIi7U1CIuUymqj5Mpqo+VVXVP7TINr82Pzm5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis",
+      "PosX": {
+        "$id": 9,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 10,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 11,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 12,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAL8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 13,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 14,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 15,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine",
+      "PosX": {
+        "$id": 16,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACfCBr4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 17,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABe3UbkAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 18,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 19,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGiRbb0AAAAADd9oO0ymqj5Mpqo+4N3dPjtwTr0Qtus7u/wHPEymqj5Mpqo+8u5uP+wvO70N16O7QmDlu0ymqj5Mpqo+ExHRP0Mca706tEi8heoYukymqj5Mpqo+VVXVP40obb22+ci5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotY": {
+        "$id": 20,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACh+DL0AAAAACghmO0ymqj5Mpqo+4N3dPqyL27yInOQ7KOQDPEymqj5Mpqo+8u5uP+xRuLxxEoO7NoC3u0ymqj5Mpqo+ExHRPwMJCr1BpF+8aWQqukymqj5Mpqo+VVXVP00VDL3Esd+5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotZ": {
+        "$id": 21,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKhXSr0AAAAA9f1UO0ymqj5Mpqo+4N3dPnsULr17QNk73qz6O0ymqj5Mpqo+8u5uPwg9G70ip2i7Y9uiu0ymqj5Mpqo+ExHRP4LiR70PFWO8fgMtukymqj5Mpqo+VVXVP8zuSb2MMOO5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotW": {
+        "$id": 22,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKAafz8AAAAAIOn5OUymqj5Mpqo+4N3dPilcfz/51Fc6cAl5Okymqj5Mpqo+8u5uP+58fz/+7eu5liYlukymqj5Mpqo+ExHRPy0hfz8Sje66b8C1uEymqj5Mpqo+VVXVP6Aafz/hrG24AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1",
+      "PosX": {
+        "$id": 23,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACntTb4AAAAAAAAAAEymqj5Mpqo+qKqqPintTb4AAAAAAAAAAEymqj5Mpqo+Q0SEPyntTb72zJI4AAAAAEymqj5Mpqo+//+/PyntTb4AAAAAAAAAAEymqj5Mpqo+VVXVPyntTb4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosY": {
+        "$id": 24,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABe3UbkAAAAAAAAAAEymqj5Mpqo+qKqqPhe3UbkAAAAAAAAAAEymqj5Mpqo+Q0SEPxe3UbkAAAAAAAAAAEymqj5Mpqo+//+/P1JJnbkAAAAAAAAAAEymqj5Mpqo+VVXVPxe3UbkAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosZ": {
+        "$id": 25,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABe30TgAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 26,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAHUCGr4AAACAuSEzu0ymqj5Mpqo+iIgIPlInIL6iBtO7PNbFvEymqj5Mpqo+JCIiP+m3L77tlbI7wH0+O0ymqj5Mpqo+ZmZmP57vJ76gm0Q8MgisPEymqj5Mpqo+7+6uP84ZEb7RyPo7Nk6PO0ymqj5Mpqo+ExHRP1D8GL7P+Ru8dPmbukymqj5Mpqo+VVXVPz7oGb4FpSi6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 27,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAH/7ur0AAACAgaj7ukymqj5Mpqo+iIgIPu/Jw738epi7T/OOvEymqj5Mpqo+JCIiP9DV1r2fMyI81AOtO0ymqj5Mpqo+ZmZmP6foyL2E6/I7G45UPEymqj5Mpqo+7+6uP3uDr73RyHo7Nk4PO0ymqj5Mpqo+ExHRP36Mub1je8W78HpFukymqj5Mpqo+VVXVPxHHur1vNdW5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 28,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALWm+b0AAACAXqWou0ymqj5Mpqo+iIgIPsx/CL4j0Uu8FRQ/vUymqj5Mpqo+JCIiPwpoIr4/TtE8W0JfPEymqj5Mpqo+ZmZmP6kTEL7rYJ4805QKPUymqj5Mpqo+7+6uP2TM3b3e2i88LPrIO0ymqj5Mpqo+ExHRP9lf9r1cvHC8z7vwukymqj5Mpqo+VVXVP2wJ+b2ewoG6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 29,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJEPej8AAACA40akukymqj5Mpqo+iIgIPhBYeT9l11C78slDvEymqj5Mpqo+JCIiPxlzdz/QzMw7B3RaO0ymqj5Mpqo+ZmZmP6yteD98oLY7c8wfPEymqj5Mpqo+7+6uP2Puej92RCs7/rvDOkymqj5Mpqo+ExHRP8cpej8s6Xm7mej5uUymqj5Mpqo+VVXVPx4Wej/wkIa5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck",
+      "PosX": {
+        "$id": 30,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEoMor4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 31,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAANjw9LwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 32,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 33,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 34,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 35,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMPTa74AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 36,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABUdeT8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head",
+      "PosX": {
+        "$id": 37,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMsQx70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 38,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 39,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 40,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAD7omb4AAAAA7susO0ymqj5Mpqo+8O5uPrx0k74v91w8Kma9PEymqj5Mpqo+JCIiPyntjb6fFjy8sG/bu0ymqj5Mpqo+3t1dPzy9kr7XHiq8okW2vEymqj5Mpqo+7+6uPxsNoL4pXA+83+qYu0ymqj5Mpqo+ExHRP9qsmr5olFk8TpTZOkymqj5Mpqo+V1XVPz7omb7nu0M6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 41,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAATnDL4AAACAbUNFu0ymqj5Mpqo+8O5uPmHDE74zb+i7wDpHvEymqj5Mpqo+JCIiP9JvH77pHSe8MvjCu0ymqj5Mpqo+3t1dP4ofI74vgDe6ppvEukymqj5Mpqo+7+6uP5qZGb4Fo5I8p2kcPEymqj5Mpqo+ExHRP5YhDr7sRiQ82UakOkymqj5Mpqo+V1XVPwTnDL6VaRw6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 42,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJ2Apj4AAAAAOJGGOUymqj5Mpqo+8O5uPnnppj52RKu5+cwSukymqj5Mpqo+JCIiP+QUnT7d5ka9TA3ovEymqj5Mpqo+3t1dPw6+kD7532u8JLn8vEymqj5Mpqo+7+6uP8UgkD5SSR09tsWnPEymqj5Mpqo+ExHRP8oypD5QZR09PmWdO0ymqj5Mpqo+V1XVP52Apj4ClRI7AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 43,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOXQYj8AAAAAtwifOkymqj5Mpqo+8O5uPmaIYz/7q1o72W67O0ymqj5Mpqo+JCIiP1ioZT/Dzzg8BJ3XO0ymqj5Mpqo+3t1dPyfCZj8Dvo86dQIaO0ymqj5Mpqo+7+6uPw8LZT/LEEe8OVbUu0ymqj5Mpqo+ExHRP+ELYz9aJ/+7PCd/ukymqj5Mpqo+V1XVP+XQYj9Gava5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 Head/piaodai01",
+      "PosX": {
+        "$id": 44,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAH9qvLwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 45,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAIEmwr0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 46,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 47,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAPd1AD8AAAAAOJEGOkymqj5Mpqo+8O7uPnRGBD+qj608vcDSPEymqj5Mpqo+RUSEP52ABj+3Z5a8jRmovEymqj5Mpqo+VVXVPxKDAD/EWJO7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 48,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKg1XT8AAACA8qr0uUymqj5Mpqo+8O7uPvH0Wj8sf1G8kWN+vEymqj5Mpqo+RUSEP5qZWT9zrzk814dPPEymqj5Mpqo+VVXVPxsvXT9iUy47AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 49,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAFJJnTwAAAAAM2/oOkymqj5Mpqo+8O7uPlCNlzy090+6Noh8ukymqj5Mpqo+RUSEP3RGlDwJQjI6uzpHOkymqj5Mpqo+VVXVP+Olmzy7Okc5AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 50,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAN6TB70AAACAU1Fiu0ymqj5Mpqo+8O7uPt6TB73yqvS5XYwUukymqj5Mpqo+RUSEP5VlCL1gre050dEEOkymqj5Mpqo+VVXVP0tZBr3R0YQ4AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle",
+      "PosX": {
+        "$id": 51,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAADj4Qj0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 52,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAP5l9zwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 53,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACzUmj0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 54,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJHtPD8AAACAo4aCu0ymqj5Mpqo+sKoqPvW5Oj+duxa8HeG0vEymqj5Mpqo+EhERPzQRNj8Xt1G8PMMuvEymqj5Mpqo+ZmZmPxTQND/sqvQ6+cwSO0ymqj5Mpqo+Z2amP3QkNz+yWpk8LJd/PEymqj5Mpqo+ExHRP5p3PD8AYJs8g5n4Okymqj5Mpqo+V1XVP5HtPD8CjW46AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 55,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALIuLj4AAAAA2+qYOkymqj5Mpqo+sKoqPldbMT7nd2Y77EcKPEymqj5Mpqo+EhERPw5PLz4d4bS8lruWvEymqj5Mpqo+ZmZmPx4WKj4XL90837UEPUymqj5Mpqo+Z2amPwTnTD4S+Py7vc7Su0ymqj5Mpqo+ExHRPw6+MD5fXt+81bEyu0ymqj5Mpqo+V1XVP7IuLj6LJqW6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 56,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGFUIr8AAACAC1+Yu0ymqj5Mpqo+sKoqPr3jJL+wqiq8zMzMvEymqj5Mpqo+EhERP3UCKr8qwWK8TPY8vEymqj5Mpqo+ZmZmPz9XK79oCfk6EGwVO0ymqj5Mpqo+Z2amP8x/KL/C7J48+W+EPEymqj5Mpqo+ExHRPwHeIr8UC7U8nNUQO0ymqj5Mpqo+V1XVP2FUIr8Pr4w6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 57,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAECkHz4AAACAOoC3ukymqj5Mpqo+sKoqPoj0Gz6jhoK7i6EcvEymqj5Mpqo+EhERP3ZPHj79n8M8UQWjPEymqj5Mpqo+ZmZmPwrXIz4C7ei8bMELvUymqj5Mpqo+Z2amP/5D+j0Vje476srGO0ymqj5Mpqo+ExHRPwisHD4dKQE9G6hOO0ymqj5Mpqo+V1XVP0CkHz5Gzb86AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm",
+      "PosX": {
+        "$id": 58,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJhMFb4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 59,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 60,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 61,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAFOWIT4AAAAAwzKCO0ymqj5Mpqo+kIiIPR4WKj5JFg88mr5EPUymqj5Mpqo+4N3dPvT9VD4R34k8uGcWPEymqj5Mpqo+JCIiP4cWWT7CCYU7BjabO0ymqj5Mpqo+3t1dPy0hXz6cJws8AKxaPEymqj5Mpqo+392dP+f7aT44/BS8FZ69u0ymqj5Mpqo+vbu7PwXFTz47kku9d2gRvUymqj5Mpqo+ExHRP3lYKD4UMw692ITju0ymqj5Mpqo+V1XVP1OWIT5LvVa7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 62,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAO84Bb8AAAAAut47O0ymqj5Mpqo+kIiIPdO8A78ShMM7xWoGPUymqj5Mpqo+4N3dPqJF9r4ZKQE9BueMPEymqj5Mpqo+JCIiP4PA6r7gXtI8pW71PEymqj5Mpqo+3t1dP2UZ4r5Uc4C719nJu0ymqj5Mpqo+392dPw4t8r7MHwy9AVeyvEymqj5Mpqo+vbu7P2TM/b4Ua/G8E3GsvEymqj5Mpqo+ExHRPwFNBL8x1Jq80bl3u0ymqj5Mpqo+V1XVP+84Bb93Pe26AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 63,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJ/NKr4AAACA6C2Qukymqj5Mpqo+kIiIPR/0LL5aJ/+6BGsvvEymqj5Mpqo+4N3dPlvTPL5pQgC9XeuLvEymqj5Mpqo+JCIiPxsvXb7bQhC9+E0ovUymqj5Mpqo+3t1dP52AZr6DzzA9N+yKPUymqj5Mpqo+392dP2Ey1b2OT4E9yZMkPUymqj5Mpqo+vbu7P0aU9r2mD129oOYdvUymqj5Mpqo+ExHRP4qOJL5cFAm9slPbu0ymqj5Mpqo+V1XVP5/NKr5PUki7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 64,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAM6IUj8AAAAA7DVVOkymqj5Mpqo+kIiIParxUj+nWM066ywNPEymqj5Mpqo+4N3dPi/dVD9j4+c7Evh8O0ymqj5Mpqo+JCIiP+LpVT+raoI7FieYO0ymqj5Mpqo+3t1dPx04Vz+SBe07RTs6PEymqj5Mpqo+392dPycxWD/jLRC8NYC3u0ymqj5Mpqo+vbu7P4v9VT+lwli8MdQavEymqj5Mpqo+ExHRP4ofUz8Xxzq8BWwVu0ymqj5Mpqo+V1XVP86IUj+JDZG6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm",
+      "PosX": {
+        "$id": 65,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOtzdb4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 66,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 67,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 68,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 69,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 70,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMBbwD4AAAAAUTfoO0ymqj5Mpqo+kIiIPUvIxz5TeXk8YIOrPUymqj5Mpqo+4N3dPk5i8D6y/GY9ZPx7PUymqj5Mpqo+VlVVP44GAD+iIzm9pSM5vUymqj5Mpqo+392dP2aIwz4RLbK9JwbBvUymqj5Mpqo+V1XVP8BbwD7CjSc7AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 71,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMRCbT8AAACA0X0+u0ymqj5Mpqo+kIiIPf+yaz+HdtO7dWERvUymqj5Mpqo+4N3dPrwFYj+vZ/W8dtsFvUymqj5Mpqo+VlVVPy2yXT/WUdU82lHVPEymqj5Mpqo+392dP1+YbD+wnhM96OsfPUymqj5Mpqo+V1XVP8RCbT+eUIi6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand",
+      "PosX": {
+        "$id": 72,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAPMfkr4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 73,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 74,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 75,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAIQNL78AAAAAAAAAAEymqj5Mpqo+8O7uPqAaL7+gJ4u7oyeLu0ymqj5Mpqo+8u5uP2giLL8ty5A9YYhjPUymqj5Mpqo+Z2amP/KwIL9T+Yu8jX9+vEymqj5Mpqo+ExHRPw3gLb8EQUy9J2eju0ymqj5Mpqo+V1XVP4QNL79Bmxe7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 76,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMuhBT4AAAAAAAAAAEymqj5Mpqo+8O7uPpSHBT63CJ+6uQifukymqj5Mpqo+8u5uP94CCT5DPaM8ZkKAPEymqj5Mpqo+Z2amP2EyFT5I+o671PqBu0ymqj5Mpqo+ExHRP5T2Bj6TSmq8y267ukymqj5Mpqo+V1XVP8uhBT4zwy66AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 77,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABpRGr4AAAAAAAAAAEymqj5Mpqo+8O7uPlFrGr4Vnr26GJ69ukymqj5Mpqo+8u5uP/RsFr48+MI8uzCZPEymqj5Mpqo+Z2amPwIrB76pB7m7izWou0ymqj5Mpqo+ExHRP+PHGL4U5om8PqPcukymqj5Mpqo+V1XVPxpRGr6PWE26AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 78,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALivMz8AAAAAAAAAAEymqj5Mpqo+8O7uPpyiMz+gJ4u7oyeLu0ymqj5Mpqo+8u5uPyuHNj/ExYo9KxJaPUymqj5Mpqo+Z2amP7fRQD/mF2y8aKFWvEymqj5Mpqo+ExHRPy/dND+Vv0e9aMyfu0ymqj5Mpqo+V1XVP7ivMz/woxW7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001 L Hand/node_left_weapon",
+      "PosX": {
+        "$id": 79,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABdI0L0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 80,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALRZdb0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 81,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALADZ7wAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 82,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKytWD0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 83,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKRwbT8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 84,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGUZ4j0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 85,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAIbJtL4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle",
+      "PosX": {
+        "$id": 86,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAADj4Qj0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 87,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAP5l9zwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 88,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACzUmr0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 89,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABSuVz8AAACA/swSu0ymqj5Mpqo+kIiIPYJzVj9bi667fOgCvUymqj5Mpqo+8O7uPs6qTz+Yu5Y79yuKO0ymqj5Mpqo+VlVVPyKOVT/KT6o8zk+qPEymqj5Mpqo+m5mZP4iFWj8paCY8X8rTO0ymqj5Mpqo+eXe3P8cpWj/0VAe8XP/nu0ymqj5Mpqo+ExHRPyv2Vz/6WPq77+Wmukymqj5Mpqo+V1XVPxSuVz8xqhq6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotY": {
+        "$id": 90,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACh+TD4AAACAUQYmu0ymqj5Mpqo+kIiIPV3cRj7e2cm7XmMXvUymqj5Mpqo+8O7uPtUJKD43FSk8Hv4aPEymqj5Mpqo+VlVVP95xSj5vAvk8dAL5PEymqj5Mpqo+m5mZP2fVZz4DQUw80foBPEymqj5Mpqo+eXe3P1OWYT74qpW8aEmAvEymqj5Mpqo+ExHRP4QNTz7ftYS8cfIwu0ymqj5Mpqo+V1XVPyh+TD49Bqa6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotZ": {
+        "$id": 91,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAPVK+T4AAAAAkKh7O0ymqj5Mpqo+kIiIPaRw/T59YRE8LxJaPUymqj5Mpqo+8O7uPvkPCT/Wbru7RdCru0ymqj5Mpqo+VlVVP/s6AD8p7Q29LO0NvUymqj5Mpqo+m5mZPynt7T6Y6aq8YYZZvEymqj5Mpqo+eXe3PwXF7z4Hvo88WWp2PEymqj5Mpqo+ExHRP7U3+D7HKl48eRwUO0ymqj5Mpqo+V1XVP/VK+T7hcIc6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotW": {
+        "$id": 92,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAANZW7L0AAACAqv6Nu0ymqj5Mpqo+kIiIPUku/71a6iW8ed94vUymqj5Mpqo+8O7uPnqlLL4HCGY8stxSPEymqj5Mpqo+VlVVP/wY871laE89aWhPPUymqj5Mpqo+m5mZP921hL2/Rt481HKNPEymqj5Mpqo+eXe3P5vmnb20bha9LvEAvUymqj5Mpqo+ExHRP/hT472t9um8vfmbu0ymqj5Mpqo+V1XVP9ZW7L2c1RC7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm",
+      "PosX": {
+        "$id": 93,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJhMFb4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 94,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 95,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 96,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOQUXT4AAACAvwgfukymqj5Mpqo+kIiIPRrAWz46Z6O6yRr1u0ymqj5Mpqo+8O7uPr1SVj4d4TS72KgHu0ymqj5Mpqo+RkREPygPSz6uz1W8dIoOvEymqj5Mpqo+end3P5MYRD7HKt67L6dLvEymqj5Mpqo+q6qqPzY8PT42Edc7cp5qO0ymqj5Mpqo+RUTEP99PTT70hck8BIZJPEymqj5Mpqo+ExHRP5qZWT4eTy88rr5pO0ymqj5Mpqo+V1XVP+QUXT4nBNo6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 97,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALUVKz8AAACAZiGGu0ymqj5Mpqo+kIiIPYzbKD9TPCC8b1pwvUymqj5Mpqo+8O7uPuQUHT/CKl48FaAmPEymqj5Mpqo+RkREP2fVJz+hQUM9wCsCPUymqj5Mpqo+end3P2kALz8sLPE8IBNdPUymqj5Mpqo+q6qqP/32NT+ZU7a83eZGvEymqj5Mpqo+RUTEPyDSLz8BZve8FGZ3vEymqj5Mpqo+ExHRP9obLD905VC8jUOLu0ymqj5Mpqo+V1XVP7UVKz+0MgK7AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 98,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAG3F/r0AAACA/rtDuEymqj5Mpqo+kIiIPbdi/722xSe6gqh7u0ymqj5Mpqo+8O7uPrRZ9b3ZIBM9SrHcPEymqj5Mpqo+RkREP8dLt72cmZk80MxMPEymqj5Mpqo+end3P6CJsL1I9Va7ewvFu0ymqj5Mpqo+q6qqP4iF2r0HlRK9auifvEymqj5Mpqo+RUTEPyL99r0vweK7QMFiu0ymqj5Mpqo+ExHRP5Ht/L30iDW7ygtyukymqj5Mpqo+V1XVP23F/r3XZ/25AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 99,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAC9uMz8AAAAA2tGEO0ymqj5Mpqo+kIiIPcuhNT/MIhk8JLRlPUymqj5Mpqo+8O7uPoV8QD+Yu5a7aRliu0ymqj5Mpqo+RkREPxUdOT9pvRi9NqfLvEymqj5Mpqo+end3P6rxMj8n+N+8HE5NvUymqj5Mpqo+q6qqPzqSKz9AkIM8HYYPPEymqj5Mpqo+RUTEP+AtMD8KQrI8GEIyPEymqj5Mpqo+ExHRP8rDMj9o6ws8GY86O0ymqj5Mpqo+V1XVPy9uMz9rRKs6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm",
+      "PosX": {
+        "$id": 100,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOtzdb4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 101,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 102,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 103,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 104,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 105,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALU32D4AAAAA0Y6NO0ymqj5Mpqo+kIiIPVvT3D6huxY81vB0PUymqj5Mpqo+AAAAPzJV8D59dxi9dpDqvEymqj5Mpqo+VlVVP3WT2D6jZ7O87jnpvEymqj5Mpqo+IyKiP3WT2D4TjW46bDNcOkymqj5Mpqo+VVXVP8e62D6oxae4AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 106,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGIQaD8AAACAAWIEu0ymqj5Mpqo+kIiIPZT2Zj/oLZC7ikrqvEymqj5Mpqo+AAAAP0oMYj+436E8bgl5PEymqj5Mpqo+VlVVPyv2Zz+3qSc8O/ZZPEymqj5Mpqo+IyKiPyv2Zz8HMeO5E7fRuUymqj5Mpqo+VVXVP57vZz+oxSc4AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand",
+      "PosX": {
+        "$id": 107,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAPMfkr4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 108,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 109,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 110,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACUGMT8AAAAAvDICO0ymqj5Mpqo+iIgIPpwzMj8gdqY7NrF5PEymqj5Mpqo+iogIP5jdMz8wkCC8ec0FvEymqj5Mpqo+3t1dP2WqMD9bKUu8GA6EvEymqj5Mpqo+Z2amP/tcLT9QVbQ7yreKO0ymqj5Mpqo+ExHRP4C3MD/UzEw8ANejOkymqj5Mpqo+V1XVPyUGMT8bCxg6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 111,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJ+rrTsAAAAA/f66Okymqj5Mpqo+iIgIPmwJ+Tu5Kfg6Th+6O0ymqj5Mpqo+iogIP18pyzx2KS49iCIRPUymqj5Mpqo+3t1dPxzrYj0C5ww8VCw3PEymqj5Mpqo+Z2amPzSiND3W7AG9ieLHvEymqj5Mpqo+ExHRPwTnDDwUxAy9pTlhu0ymqj5Mpqo+V1XVP5+rrTuctNi6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 112,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEaU9jwAAAAALU6PO0ymqj5Mpqo+iIgIPuVhIT3MpyE8t3vyPEymqj5Mpqo+iogIPwFNhD3WE5Y8ByF6PEymqj5Mpqo+3t1dP3PXkj3U6pi75srGu0ymqj5Mpqo+Z2amP2N/WT2/d8G8R9KUvEymqj5Mpqo+ExHRP28SAz2u7qS8GfIDu0ymqj5Mpqo+V1XVP0aU9jwp44C6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 113,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAFXBOD8AAACA/w8Ku0ymqj5Mpqo+iIgIPjSANz9rAbS7EwGHvEymqj5Mpqo+iogIP5hMNT9I9dY7tyGzO0ymqj5Mpqo+3t1dP9nONz8oPUA8IOl5PEymqj5Mpqo+Z2amPx+FOz/fHMG6YIyUukymqj5Mpqo+ExHRP94COT90Ny68g1+Lukymqj5Mpqo+V1XVP1XBOD+0MgK6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon",
+      "PosX": {
+        "$id": 114,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMxdy70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 115,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAATnDDwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 116,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAADqSS70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 117,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMKGp70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 118,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEp7g70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 119,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAH/ZfT8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 120,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAFK4nj0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon/Bone021",
+      "PosX": {
+        "$id": 121,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 122,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 123,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 124,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 125,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 126,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 127,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAgD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon/Bone021/Bone001",
+      "PosX": {
+        "$id": 128,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMSxrr4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 129,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 130,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 131,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 132,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 133,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 134,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAgD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon/Bone021/Bone001/Bone003",
+      "PosX": {
+        "$id": 135,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAA8L9b8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 136,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEp7Az0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 137,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAG8SgzoAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 138,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 139,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 140,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAgD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 141,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon/Bone021/Bone001/Bone003/Bone004",
+      "PosX": {
+        "$id": 142,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABiVRL8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 143,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 144,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 145,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAO0NPjsAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 146,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAC6QoDsAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 147,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALN7crsAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 148,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAgD8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001 R Hand/node_right_weapon/Bone021/Bone001/Bone003/Bone004/Bone005",
+      "PosX": {
+        "$id": 149,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAN4CSb8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 150,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 151,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 152,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJwzIjwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 153,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAA5PLzwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 154,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKTfvjwAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 155,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMnlfz8AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh",
+      "PosX": {
+        "$id": 156,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAN9PDT4AAACA7cwSuUymqj5Mpqo+wMzMPTsBDT51h6K5yxKwukymqj5Mpqo+iIgIP3GsCz6+tqS6uhBkukymqj5Mpqo+VlVVPygPCz6GqPs4F7dROUymqj5Mpqo+q6qqP4MvDD588rA67O3rOUymqj5Mpqo+//+/P5ayDD4+BiY62tEEOkymqj5Mpqo+ERHRP6g1DT5sre05UK3tOEymqj5Mpqo+VVXVP99PDT4tsl84AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosY": {
+        "$id": 157,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAArXIzsAAACA7cySuEymqj5Mpqo+wMzMPZm7FjvtzBK5twgfukymqj5Mpqo+iIgIP/rt6zqqrBO67XjMuUymqj5Mpqo+VlVVP6abxDqGqPu3F7dRuEymqj5Mpqo+q6qqP4nS3jrgLRA6Hz1AOUymqj5Mpqo+//+/P28SAzv2MOM52sC1OUymqj5Mpqo+ERHRP1JJHTtHw645M8OuOEymqj5Mpqo+VVXVPwrXIzuixSc4AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosZ": {
+        "$id": 158,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAABBYuT0AAAAAvq9mOUymqj5Mpqo+wMzMPccpuj1FavY5mnkFO0ymqj5Mpqo+iIgIP1tCvj0aO/Q6OxWpOkymqj5Mpqo+VlVVPzcawD1lvjy5UkmduUymqj5Mpqo+q6qqP1vTvD1LWQa7riEzukymqj5Mpqo+//+/P+wvuz1cCXm6yDpHukymqj5Mpqo+ERHRP+zAuT3awDW6xcA1uUymqj5Mpqo+VVXVPxBYuT0zw664AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotX": {
+        "$id": 159,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOQUvT4AAACAxhFKu0ymqj5Mpqo+sKoqPn6MuT5Clfm76S+7vEymqj5Mpqo+qqoqP4y5qz6DWtO8pnHhvEymqj5Mpqo+m5mZP1+YrD5r19A8BK+pPEymqj5Mpqo+ExHRP6MBvD4N3+g84k0PO0ymqj5Mpqo+VVXVP3bgvD4l2Zw6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 160,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAANEia78AAACAFHRaukymqj5Mpqo+sKoqPsiYa7822va6oCO5u0ymqj5Mpqo+qqoqP02Ebb9LFQy8EmwVvEymqj5Mpqo+m5mZP0T6bb/Lfb47M8aaO0ymqj5Mpqo+ExHRPz9Xa7/O6TI8/TJcOkymqj5Mpqo+VVXVP+wva7+nK/E5AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 161,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAHbgHD0AAAAAQEujO0ymqj5Mpqo+sKoqPszuST1ubEI8TNERPUymqj5Mpqo+qqoqP+aupT2+qKQ89KKvPEymqj5Mpqo+m5mZP95xij1Y3g69SynovEymqj5Mpqo+ExHRP+Y/JD0FcMa8ljr0ukymqj5Mpqo+VVXVP+SDHj0pEoO6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 162,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACgPC74AAACAyGSqukymqj5Mpqo+sKoqPpYhDr4ft1G7UEkdvEymqj5Mpqo+qqoqPzxOEb5cKcs7r7TYO0ymqj5Mpqo+m5mZP4LiB76Kuco7vrakO0ymqj5Mpqo+ExHRP4PACr4fvIm7t4SpuUymqj5Mpqo+VVXVP/H0Cr5vwDW5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf",
+      "PosX": {
+        "$id": 163,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAfw9r4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 164,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 165,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 166,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 167,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 168,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKhXCj8AAACAPNOXu0ymqj5Mpqo+sKoqPlCNBz/2hUm89RANvUymqj5Mpqo+JCIiP+kmAT/4zBK79cwSu0ymqj5Mpqo+zcyMP0YlBT/9m/E8AZzxPEymqj5Mpqo+iYjIP1r1CT/yqvQ7C7fROkymqj5Mpqo+VVXVP/5DCj9zqHs6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 169,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAP5lVz8AAAAAbmxCO0ymqj5Mpqo+sKoqPjAqWT+BxPs7vDywPEymqj5Mpqo+JCIiP8gHXT92RKs6c0SrOkymqj5Mpqo+zcyMP0ymWj/TLpO81S6TvEymqj5Mpqo+iYjIP4enVz/H+Zu7fbGFukymqj5Mpqo+VVXVPxlzVz9e6B+6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L Calf/Bip001 L Foot",
+      "PosX": {
+        "$id": 170,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAIcW2b4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 171,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 172,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 173,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAF+YzL0AAACAphciu0ymqj5Mpqo+8O5uPhni2L34M8+7RJoxvEymqj5Mpqo+JCIiP9Xn6r2IsYW7pdWQu0ymqj5Mpqo+iYiIP6+U5b3qzRU844P9O0ymqj5Mpqo+eXe3P4bJ1L0nfus73duVO0ymqj5Mpqo+VVXVPxZqzb11JNk6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 174,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALFQaz4AAAAAczPcOUymqj5Mpqo+8O5uPp88bD5Yc4A6dTPcOkymqj5Mpqo+JCIiP8Nkaj6sMLa7YF/Fu0ymqj5Mpqo+iYiIP3h6ZT711Fe7h6A2u0ymqj5Mpqo+eXe3P+cdZz5XD9E7twmFO0ymqj5Mpqo+VVXVPwwCaz4Prww7AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 175,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAMIXZr4AAAAAgKzNO0ymqj5Mpqo+8O5uPr1SVr4UN4E8AIPdPEymqj5Mpqo+JCIiP5XUSb6fFjy8J8NLvEymqj5Mpqo+iYiIP2WqYL7W8PS89kHPvEymqj5Mpqo+eXe3P2gibL5Uet87hjaOO0ymqj5Mpqo+VVXVP9SaZr5EUWI7AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 176,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEATcT8AAAAA+MySOkymqj5Mpqo+8O5uPqW9cT8OriY7V96OO0ymqj5Mpqo+JCIiP0VHcj/teMy6+4Ldukymqj5Mpqo+iYiIP+VhcT+/jae7ucaNu0ymqj5Mpqo+eXe3P0XYcD8k6Xk6rAgfOkymqj5Mpqo+VVXVP7MMcT9QcwA6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh",
+      "PosX": {
+        "$id": 177,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALaE/D0AAAAAbDPcOUymqj5Mpqo+yMxMPiQo/j0iLHE6GK8MO0ymqj5Mpqo+qqoqP1wgAT5zM9w6T0mdOkymqj5Mpqo+/v9/P1wgAT4AMWO6qqyTukymqj5Mpqo+d3e3P9v5/j2hJwu7WnOAukymqj5Mpqo+ERHRPyS5/D2IsYW6/EEyuUymqj5Mpqo+VVXVP7aE/D0Kt9G4AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 178,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAF8pyzwAAACAXb48ukymqj5Mpqo+yMxMPqTfvjz7F8+6AZxxu0ymqj5Mpqo+qqoqP+VhoTxjQl+7jXgfu0ymqj5Mpqo+/v9/Py6QoDwAMeM6qqwTO0ymqj5Mpqo+d3e3P1r1uTwaO3Q7pHHhOkymqj5Mpqo+ERHRPzm0yDy6EOQ6GwuYOUymqj5Mpqo+VVXVP18pyzzFwDU5AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 179,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAANEi270AAAAAqMWnOUymqj5Mpqo+yMxMPtCz2b1dvjw6czPcOkymqj5Mpqo+qqoqP/Rs1r1VYrE642d9Okymqj5Mpqo+/v9/P/Rs1r0oPUC6IOl5ukymqj5Mpqo+d3e3P4cW2b3/gt267XhMukymqj5Mpqo+ERHRP2Pu2r3teEy6k1AIuUymqj5Mpqo+VVXVP9Ei270RyKC4AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 180,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALN70r4AAAAAsvdPO0ymqj5Mpqo+iIgIPk3zzr5kW/M7syXkPEymqj5Mpqo+JCIiP1Hau76mkjo9LePfPEymqj5Mpqo+8u5uP4bJtL7cA6254C0Qukymqj5Mpqo+eXe3P2+BxL7ZX3a9fRnFvEymqj5Mpqo+ExHRPynL0L63jqq84mhju0ymqj5Mpqo+V1XVP7N70r4QZde6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 181,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAyTST8AAACArMUnuUymqj5Mpqo+iIgIPrWmST/2zJI5KaCJOkymqj5Mpqo+JCIiPz7oST8poAk7mCalOkymqj5Mpqo+8u5uP1UwSj/2N6E6S1kGO0ymqj5Mpqo+eXe3P4xKSj+8dJO7/e3rukymqj5Mpqo+ExHRP0OtST+ChyK7nLTYuUymqj5Mpqo+V1XVPwyTST+ixSe5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 182,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJYhrr4AAACAHeG0u0ymqj5Mpqo+iIgIPqFns76Fdzm8EOAtvUymqj5Mpqo+JCIiP6foyL5NLv+8yBuZvEymqj5Mpqo+8u5uPzqSy7414Rc8/yF9PEymqj5Mpqo+eXe3P6ytuL5cj0I95qWbPEymqj5Mpqo+ExHRP0Rpr76clII8bhsuO0ymqj5Mpqo+V1XVP5Yhrr4j0rE6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotW": {
+        "$id": 183,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAACQonr4AAAAAjvzBOkymqj5Mpqo+iIgIPmRdnL5+A4A7kgZwPEymqj5Mpqo+JCIiP2wJmb6cdxy8vMK7u0ymqj5Mpqo+8u5uP7aEnL7Smwq8sANnvEymqj5Mpqo+eXe3P8BboL5IUPw71tlJO0ymqj5Mpqo+ExHRP61pnr4vwWI7aSsXOkymqj5Mpqo+V1XVPyQonr4lTo85AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf",
+      "PosX": {
+        "$id": 184,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAfw9r4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 185,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 186,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 187,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotY": {
+        "$id": 188,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotZ": {
+        "$id": 189,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGTMDT8AAACArE2cu0ymqj5Mpqo+nJmZPoPACj/Sa2y8QI75vEymqj5Mpqo+8u5uP33QAz+/Ose5UkmduUymqj5Mpqo+eXe3PyxlCT+dgCY9szOFPEymqj5Mpqo+ExHRP1JJDT8DGE88tw8KO0ymqj5Mpqo+VVXVPy2yDT8iK5c6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 190,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEYlVT8AAAAAj2dQO0ymqj5Mpqo+nJmZPnQkVz8JXxg8F9agPEymqj5Mpqo+8u5uP3ZxWz+/Okc5UkkdOUymqj5Mpqo+eXe3P0cDWD9hw9O8HWkpvEymqj5Mpqo+ExHRP3h6VT9k+Ai8IaC2ukymqj5Mpqo+VVXVP+84VT8FGki6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R Calf/Bip001 R Foot",
+      "PosX": {
+        "$id": 191,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAIcW2b4AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosY": {
+        "$id": 192,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "PosZ": {
+        "$id": 193,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAAAAAAAAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 194,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAHS1lT0AAACAbn2Ru0ymqj5Mpqo+nJmZPkvIhz2BpAi8rDA2vEymqj5Mpqo+NjMzP4Y4Vj33/VS8nX14vEymqj5Mpqo+V1WVP86qTz0iFy88IhcvPEymqj5Mpqo+ExHRPwWjkj0Qaqw8FgvFOkymqj5Mpqo+VVXVPysYlT3hrG06AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotY": {
+        "$id": 195,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAOAtEL4AAAAAswPnO0ymqj5Mpqo+nJmZPiUGAb7+7Ws8VEmdPEymqj5Mpqo+NjMzPyL99r0dhg+8ynEnvEymqj5Mpqo+V1WVP6g1Db4/gZ28P4GdvEymqj5Mpqo+ExHRP05iEL5zM1w7/Kd7OUymqj5Mpqo+VVXVP+AtEL6N0QQ5AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotZ": {
+        "$id": 196,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAAKaCL4AAAAALfsuO0ymqj5Mpqo+nJmZPoEmAr48vvY7034kPEymqj5Mpqo+NjMzP40o7b3pHSc8OPhCPEymqj5Mpqo+V1WVP4y5670fnyO8H58jvEymqj5Mpqo+ExHRP96TB77RyHq84k2Pukymqj5Mpqo+VVXVP5VlCL63hCm6AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "RotW": {
+        "$id": 197,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAN5xej8AAAAAGCLgOkymqj5Mpqo+nJmZPiNKez/HKl47hRyUO0ymqj5Mpqo+NjMzPzEIfD8bt1E68qp0Okymqj5Mpqo+V1WVP5F+ez9/RZG7f0WRu0ymqj5Mpqo+ExHRP/p+ej/E6Ey7GS5quUymqj5Mpqo+VVXVP95xej/iTQ+5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAA]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "Bip001/node_fixed",
+      "PosX": {
+        "$id": 198,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAKJFNr0AAAAAAAAAAEymqj5Mpqo+gIgIPXzyML13oLY6Zq0OPUymqj5Mpqo+3t1dP39qPLwlTam72sGbu0ymqj5Mpqo+ERHRP3zyML1dQwO9d6C2ukymqj5Mpqo+VVXVP6JFNr0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosY": {
+        "$id": 199,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAGsrdr0AAAAAAAAAAEymqj5Mpqo+gIgIPY/kcr2FFVY620CnPEymqj5Mpqo+3t1dPwrXI730/VS74PNDu0ymqj5Mpqo+ERHRP4/kcr2B35m8hRVWukymqj5Mpqo+VVXVP2srdr0AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "PosZ": {
+        "$id": 200,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAALFQg78AAAAAAAAAAEymqj5Mpqo+gIgIPfhTg7+ctNi4PsMuu0ymqj5Mpqo+3t1dP/OOg78+wy45GsggOUymqj5Mpqo+ERHRP/hTg78ayCA7LbLfOEymqj5Mpqo+VVXVP7FQg78AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotX": {
+        "$id": 201,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAJ/NKr8AAACAfF0/u0ymqj5Mpqo+0MzMPnqlLL+h3O+7guJHvEymqj5Mpqo+iYiIPzJ3Lb/Ftwo8CdLrO0ymqj5Mpqo+ExHRP2PuKr/zHg08jdEEOkymqj5Mpqo+VVXVPyzUKr/hwq45AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotY": {
+        "$id": 202,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAARWDj4AAACA+cwSukymqj5Mpqo+0MzMPgTnDD44gLe61uoYu0ymqj5Mpqo+iYiIP7pJDD4MdNo6da+5Okymqj5Mpqo+ExHRP807Dj639886i7vDOEymqj5Mpqo+VVXVP807Dj6N0YQ4AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotZ": {
+        "$id": 203,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAEHxIz4AAACAI3amu0ymqj5Mpqo+0MzMPj0KFz4yVlS8e/KwvEymqj5Mpqo+iYiIPzxOET5rCXk8ba5TPEymqj5Mpqo+ExHRP4ofIz7PGnU8Uq9mOkymqj5Mpqo+VVXVPwrXIz4iKxc6AAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "RotW": {
+        "$id": 204,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAELPNr8AAAAAkvzBOkymqj5Mpqo+0MzMPjnWNb/lwoE7z0TYO0ymqj5Mpqo+iYiIP0JgNb8TGpu7LdaDu0ymqj5Mpqo+ExHRP5m7Nr+o1ZC7U1CIuUymqj5Mpqo+VVXVP7TINr+pQTK5AAAAgEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAAAAAAAIAAAACAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    },
+    {
+      "BoneName": "",
+      "PosX": {
+        "$id": 205,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "PosY": {
+        "$id": 206,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "PosZ": {
+        "$id": 207,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;AAAAAM6qT70AAAAAAAAAAEymqj5Mpqo+AAAAAAIAAAACAAAAAAAAAA==]
+      },
+      "RotX": {
+        "$id": 208,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "RotY": {
+        "$id": 209,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "RotZ": {
+        "$id": 210,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "RotW": {
+        "$id": 211,
+        "$type": "XEngine.Runtime.AnimationCurve, XEngine.Runtime",
+        "PreLoop": 0,
+        "PostLoop": 0,
+        "KeysBinary": [B;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]
+      },
+      "ScaleX": NULL,
+      "ScaleY": NULL,
+      "ScaleZ": NULL
+    }
+  ],
+  "BlendShapes": [
+
+  ]
+}

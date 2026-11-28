@@ -233,6 +233,37 @@ def export_clips_replacements(cfg, hero):
     return {"__CLIP_LIST__": literal}
 
 
+def export_monster_clips_replacements(cfg, monster):
+    """Resolve the small action set for a GPU-monster Animator export.
+
+    The Unity source stores these clips as individual AnimationSplit assets rather than as
+    a controller.  The exporter still emits the same curve document as the hero exporter, so
+    the native SanguoClipBuilder can apply the measured curve conversion rules unchanged.
+    """
+    if not monster:
+        sys.exit("[error] --filter is required for export_monster_clips")
+    anim_root = Path(cfg["jws2_client"]) / "Assets/Actor/AnimationSplit/Animation_GPUMonster" / monster
+    if not anim_root.is_dir():
+        sys.exit(f"[error] monster animation folder not found: {anim_root}")
+    # Keep the first playable battle set small and deterministic.  The remaining clips can be
+    # added later without changing the native import format.
+    wanted = ["idle_loop", "run_loop", "NormalAttack_1", "hurt", "die"]
+    available = {p.stem.removeprefix(monster + "_"): p for p in anim_root.glob("*.anim")}
+    chosen = [name for name in wanted if name in available]
+    missing = [name for name in wanted if name not in available]
+    if missing:
+        print(f"[clips] {monster} has no clip for {', '.join(missing)}; skipped")
+    if not chosen:
+        sys.exit(f"[error] no requested clips under {anim_root}")
+    literal = ", ".join(json.dumps(monster + "_" + n) for n in chosen)
+    print(f"[clips] {monster}: {len(chosen)} clips")
+    return {
+        "__CLIP_LIST__": literal,
+        "__ANIM_FOLDER__": f"Assets/Actor/AnimationSplit/Animation_GPUMonster/{monster}/",
+        "__PREFAB_PATH__": "Assets/Actor/GPUMonster/Monster_YellowArmy/Monster_YellowArmy_Yellow.prefab",
+    }
+
+
 def cmd_run(bridge, cfg, names, out_dir, timeout_ms, name_filter=""):
     out_dir.mkdir(parents=True, exist_ok=True)
     summary = []
@@ -240,7 +271,12 @@ def cmd_run(bridge, cfg, names, out_dir, timeout_ms, name_filter=""):
     for name in names:
         print(f"[run] {name} ...")
         started = time.time()
-        extra = export_clips_replacements(cfg, name_filter) if name == "export_clips" else None
+        if name == "export_clips":
+            extra = export_clips_replacements(cfg, name_filter)
+        elif name == "export_monster_clips":
+            extra = export_monster_clips_replacements(cfg, name_filter)
+        else:
+            extra = None
         result = bridge.execute(name, out_dir, timeout_ms, name_filter, extra)
         elapsed = time.time() - started
         entry = {"script": name, "ok": result["ok"], "stage": result["stage"],
