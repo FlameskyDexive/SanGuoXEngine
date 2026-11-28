@@ -19,6 +19,10 @@
 - `dynamicCollectionCacheHits=940`、`dynamicCollectionCacheBuilds=145`
 - `presentFps≈60`
 
+## HUD 视锥剔除复测
+
+`HudManager` 现在先用世界空间 HUD AABB 做相机视锥剔除，再进行深度排序和合并网格填充。D3D12 Play 原始结果见 `hud-frustum-cull-d3d12.json`，截图见 `hud-frustum-cull-gameview-d3d12.png`；诊断分项为 `componentCollectMs=4.47`、`meshRendererCollectMs=0.40`、`skinnedRendererCollectDetailedMs=1.51`、`otherComponentCollectMs=2.43`。UI 提交数与角色/战斗画面保持可见。
+
 ## 状态
 
 骨骼纹理 atlas 已将上传成本压到约 0.01 ms；当前瓶颈集中在动态组件回调、动态视图更新和编辑器 CPU 抖动，静态 registry 仅约 0.027 ms。E7 的 P95 ≤16.6 ms、600 帧零 Gen0 GC、10 分钟稳定性仍未通过，不能进入出包节点。
