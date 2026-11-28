@@ -32,3 +32,17 @@ Unity 的桃园场景并不使用反射探针 `Tex_hdr_the_sky_dusk.hdr` 作为�
 `gpuFrameTimeMs=3.792`、`cpuFrameTimeP95Ms=22.912`。天空源已对齐，但截图仍显示
 XEngine 的 Battle Camera 可见范围缺少 Unity 对应地形，角色悬空且下半视野被天空填充；
 因此本节点标记为“天空源已修正，E3 场景保真未通过”，后续必须先修场景几何/相机和光照遮罩。
+
+## Battle Camera 坐标轴修正（2026-11-28）
+
+`SanguoBattleDriver` 原来把 `(26, 0, 180)` 当作俯视角；XEngine 的 Euler 约定是
+`(yaw, pitch, roll)`，这个值实际是水平镜头加 180° 翻滚，地形不进视锥。现在跟随相机使用
+目标点 + 世界上方向的 `LookAt`，再补偿一次渲染坐标系的 180° roll；跟随距离调整为
+`(0, 24, -65)`，让场景与战斗波次有足够取景空间。
+
+真实 D3D12 Play 结果见 `camera-roll-fix-d3d12.json`、`camera-roll-fix-gameview.png`：
+`staticBatchGroups=159`、`staticBatchInstances=734`、`dynamicBatchGroups=8`、
+`dynamicBatchInstances=113`、`instancedDrawCalls=91`、`gpuFrameTimeMs=4.838`、
+`cpuFrameTimeP95Ms=24.486`。这证明相机修正同时恢复了环境物件可见性和批处理统计；截图中的
+墙体、城门、树木与黄昏天空已进入正确朝向，但材质/几何仍存在黑面、断片和 SpeedTree
+差异，E3 继续保持未通过。

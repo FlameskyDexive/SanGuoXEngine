@@ -950,14 +950,21 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         // collapses the camera to roughly 12 m from the actor and leaves only a tiny hero strip
         // at the bottom of the GameView.
         Float3 target = new(_leader.Position.X, 181f, _leader.Position.Y);
-        Float3 desiredPosition = target + new Float3(0f, 18f, -30f);
+        // Match the authored Unity framing: keep enough distance to show the plaza and
+        // the approaching wave instead of letting the nearest rock fill the GameView.
+        Float3 desiredPosition = target + new Float3(0f, 24f, -65f);
         Float3 position = _battleCamera.Transform.Position;
         float blend = Math.Clamp(deltaTime * 6f, 0f, 1f);
         _battleCamera.Transform.Position = position + (desiredPosition - position) * blend;
-        // Keep the authored battle pitch and screen roll stable while the position follows the
-        // leader. Rebuilding a LookRotation every fixed step feeds the previous roll back into
-        // the transform and can flip GameView vertically at 60 Hz.
-        _battleCamera.Transform.LocalEulerAngles = new Float3(26f, 0f, 180f);
+        // Resolve the view from the target and a world-up vector instead of relying on
+        // Euler-axis conventions. This keeps the camera upright while the follow target
+        // moves across the imported plaza.
+        _battleCamera.Transform.LookAt(target, Float3.UnitY);
+        // XEngine camera clip-space has the image origin inverted relative to the scene
+        // authoring convention; compensate with a pure roll after LookAt so the plaza is
+        // upright while preserving the target direction.
+        _battleCamera.Transform.LocalRotation =
+            Quaternion.FromEuler(0f, 0f, 180f) * _battleCamera.Transform.LocalRotation;
     }
 
     private void OnHeroHit(SanguoFieldActor hero, int damage)
