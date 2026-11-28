@@ -1,0 +1,22 @@
+[
+  {
+    "tag": "enter",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"entered\",\"resultType\":\"System.String\"}"
+  },
+  {
+    "tag": "screenshot",
+    "ok": true,
+    "text": "{\"path\":\"D:\\\\Engine\\\\XEngine\\\\SanGuoXEngine\\\\.xengine\\\\screenshots\\\\gameview-20261128-102659949.png\",\"width\":1091,\"height\":549}"
+  },
+  {
+    "tag": "stats",
+    "ok": true,
+    "text": "{\"frameTimeMs\":17.4822,\"colorPassMs\":0.088,\"shadowPassMs\":0,\"postFxMs\":0.00049999997,\"gpuWaitMs\":3.4475,\"drawCalls\":48,\"instancedDrawCalls\":3,\"batches\":46,\"triangles\":141926,\"vertices\":425778,\"renderablesCollected\":790,\"renderablesCulled\":745,\"renderablesDrawn\":45,\"cameras\":1,\"lights\":1,\"directionalLights\":1,\"pointLights\":0,\"spotLights\":0,\"shadowDrawCalls\":0,\"shadowTriangles\":0,\"shadowPasses\":0,\"shadowCasters\":1,\"imageEffects\":0,\"imageEffectPasses\":0,\"commandBufferSubmissions\":13,\"colorPassSubmissions\":2,\"shadowPassSubmissions\":0,\"postFxSubmissions\":0,\"finalPassSubmissions\":1,\"uiSubmissions\":0,\"clearOperations\":1,\"blitOperations\":0,\"blitPixels\":0,\"transientRenderTargetBytes\":0,\"prepassSubmissions\":0,\"prepassSkipped\":1,\"recentFrameTimesMs\":[16.2933,16.7631,15.6327,17.5514,16.3438,16.8818,16.481,16.8383,17.779,17.3788,68.8268,33.5758,18.1279,15.995201,17.8559,14.9231,14.556,14.4035,13.7068,14.9746,12.4785,15.858101,13.251,13.2283,17.3803,16.3502,16.1848,16.9007,47.3618,14.1643,11.3831,13.1809,12.2575,12.6405,11.9335,12.8865,14.0696,17.3523,16.2548,17.1859,16.4702,16.8937,16.0365,16.3861,17.2709,16.3675,17.0281,16.7508,16.2198,16.8431,16.8195,17.2751,15.936199,17.0722,15.940299,17.1571,16.9419,16.0915,17.7943,16.1985,16.4459,16.5488,16.2751,16.9407,17.2302,23.4116,40.0559,17.1657,15.1673,16.4744,16.3527,18.6947,14.5676,12.9263,13.2955,13.4598,12.868,13.7046,12.5627,13.8178,13.3711,15.929701,16.0367,16.7734,16.5402,16.7538,16.5103,17.9671,15.5968,16.616,16.9472,16.4097,16.7082,16.9993,16.4813,16.4446,16.9318,17.2965,15.845399,22.9116,12.6045,14.8136,16.6787,18.0881,15.5062,16.7115,16.3748,17.2198,16.7138,17.0301,58.1351,14.1644,12.8508,12.8222,12.0903,13.5108,13.3096,13.7945,15.5878,17.4822],\"backendName\":\"Direct3D 12\",\"gpuTimestampQueriesSupported\":true,\"hardwareTimestampQueriesSupported\":true,\"shadowPassesCached\":0,\"gpuFrameTimeMs\":3.7920313,\"gpuFrameId\":680,\"surfaceWidth\":1920,\"surfaceHeight\":1080,\"dirtyReason\":\"None\",\"schedulerState\":\"Idle\",\"uiDrawCalls\":168,\"uiRenderTargetBytes\":0,\"presentCount\":681,\"presentWaitMs\":3.4475,\"presentFps\":59,\"sustainedFps\":57.754795626621735,\"cpuFrameMs\":16.3184,\"managedMemoryBytes\":506760904,\"privateMemoryBytes\":2085060608,\"managedAllocatedBytes\":3169821600,\"cpuFrameTimeP50Ms\":16.38610076904297,\"cpuFrameTimeP95Ms\":22.91160011291504,\"lodRenderersHidden\":319,\"staticBatchGroups\":2,\"staticBatchInstances\":6,\"dynamicBatchGroups\":0,\"dynamicBatchInstances\":0,\"staticCollectionCacheHits\":0,\"staticCollectionCacheBuilds\":0,\"dynamicCollectionCacheHits\":2,\"dynamicCollectionCacheBuilds\":114,\"renderCollectMs\":3.49429988861084,\"staticRegistryMs\":0.024800000712275505,\"componentCollectMs\":2.9637999534606934,\"meshRendererCollectMs\":0,\"skinnedRendererCollectDetailedMs\":0,\"particleCollectDetailedMs\":0,\"otherComponentCollectMs\":0,\"lodUpdateMs\":0.4309000074863434,\"skinnedCollectMs\":2.370499849319458,\"particleCollectMs\":0.017500000074505806,\"skinningUpdateMs\":2.2355003356933594,\"boneTextureUploadMs\":0.05770000070333481,\"skinnedPaletteRows\":46,\"skinnedPaletteUploads\":1}"
+  },
+  {
+    "tag": "exit",
+    "ok": true,
+    "text": "{\"succeeded\":true,\"result\":\"exited\",\"resultType\":\"System.String\"}"
+  }
+]
