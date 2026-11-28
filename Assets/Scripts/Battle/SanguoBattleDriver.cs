@@ -421,6 +421,18 @@ public sealed class SanguoBattleDriver : MonoBehaviour
                 : _monsterModelsById.TryGetValue(actor.ModelID, out SanguoMonsterModel? model)
                     ? model.ModelScale
                     : 1.1f;
+            // The currently available xiaobingyuanjing import is a billboard quad authored in
+            // centimetre-like units (about 51 world units tall). Unity's prefab import applies
+            // the unit conversion; the raw XEngine FBX sub-asset does not. Normalize only this
+            // obviously oversized presentation mesh so the real enemy prefab enters the same
+            // human-scale frame as the four hero prefabs. Properly sized future models keep
+            // their authored ModelScale unchanged.
+            if (actor.ID != 900001)
+            {
+                float importedExtent = MaxPresentationMeshExtent(enemyInstance);
+                if (importedExtent > 8f)
+                    modelScale *= MathF.Min(1f, 2.2f / importedExtent);
+            }
             enemyInstance.Transform.LocalScale = new Float3(modelScale, modelScale, modelScale);
             BindPresenter(actor, enemyInstance);
             _enemyViewCount++;
@@ -441,6 +453,20 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         go.Transform.Position = new Float3(position.X, 181.1f, position.Y);
         go.Transform.LocalScale = new Float3(1.2f, 2.2f, 1.2f);   // humanoid-ish pillar stand-in
         BindPresenter(actor, go);
+    }
+
+    private static float MaxPresentationMeshExtent(GameObject instance)
+    {
+        float extent = 0f;
+        foreach (MeshRenderer renderer in instance.GetComponentsInChildren<MeshRenderer>(includeInactive: true))
+        {
+            Mesh? mesh = renderer.Mesh.Res;
+            if (mesh == null) continue;
+            AABB bounds = mesh.bounds;
+            extent = MathF.Max(extent, MathF.Max(bounds.Max.X - bounds.Min.X,
+                MathF.Max(bounds.Max.Y - bounds.Min.Y, bounds.Max.Z - bounds.Min.Z)));
+        }
+        return extent;
     }
 
     /// <summary>
@@ -796,7 +822,10 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         => _stage?.AttackOf(enemy.ID) ?? 20;
 
     private SanguoFieldActor? FindNearestHero(SanguoFieldActor from)
-        => _spatialHash.FindNearest(from, SanguoBattleStage.PlayerCamp, 40f);
+        // The authored first wave starts roughly 54 m from the hero marker. Keep the
+        // acquisition radius wide enough for that opening formation to enter the camera and
+        // combat instead of leaving every real enemy prefab permanently Idle off-screen.
+        => _spatialHash.FindNearest(from, SanguoBattleStage.PlayerCamp, 80f);
 
     private SanguoFieldActor? FindNearestEnemy(SanguoFieldActor from)
         => _spatialHash.FindNearest(from, SanguoBattleStage.EnemyCamp, 80f);

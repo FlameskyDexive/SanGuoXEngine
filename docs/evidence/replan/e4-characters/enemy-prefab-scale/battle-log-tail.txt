@@ -1,0 +1,21 @@
+12:47:18.974 [info] [AssetDatabase] Importing 'Scripts/Battle/SanguoBattleDriver.cs' via ScriptImporter
+12:47:18.974 [info] [AssetDatabase] Importing 'Scripts/Battle/SanguoBattleStage.cs' via ScriptImporter
+12:47:18.976 [info] [AssetDatabase] Importing 'Scripts/Data/SanguoBattleData.cs' via ScriptImporter
+12:47:18.976 [info] [AssetDatabase] Importing 'Scripts/Tests/SanguoBattleKernelTests.cs' via ScriptImporter
+12:47:23.626 [info] [SanguoBattle] stage ready: heroes 4, spawn groups 42, enemies 235
+12:47:23.626 [warning] [PlayInit] slow OnEnable: SanguoBattleDriver on 'Battle Driver' took 244ms
+12:47:23.628 [info] [SanguoBattle] first Update tick, playing=True, stage=True, enemies=235, heroes=4
+12:47:25.917 [info] [SanguoBattle] t=2.0166647s enemy0=118.94599,733.01 state=Run hero0=113.709,777.805 hp=1200 chasing=76 attacking=0 hits=0 totalHits=0
+12:47:27.920 [info] [SanguoBattle] t=4.0166745s enemy0=117.90133,741.94556 state=Run hero0=113.709,777.805 hp=1200 chasing=76 attacking=0 hits=0 totalHits=0
+12:47:29.921 [info] [SanguoBattle] t=6.0333223s enemy0=116.84797,750.95557 state=Run hero0=113.709,777.805 hp=1200 chasing=76 attacking=0 hits=0 totalHits=0
+12:47:31.940 [info] [SanguoBattle] t=8.04997s enemy0=115.79461,759.9656 state=Run hero0=113.709,777.805 hp=1200 chasing=76 attacking=0 hits=0 totalHits=0
+12:47:33.941 [info] [SanguoBattle] t=10.050004s enemy0=114.74995,768.9011 state=Run hero0=113.709,777.805 hp=1200 chasing=76 attacking=0 hits=0 totalHits=0
+12:47:35.943 [info] [SanguoBattle] t=12.050043s enemy0=113.95775,775.67725 state=Attack hero0=113.709,777.805 hp=1045 chasing=75 attacking=1 hits=1 totalHits=1
+12:47:37.945 [info] [SanguoBattle] t=14.050082s enemy0=114.05767,776.0161 state=Idle hero0=113.709,777.805 hp=890 chasing=73 attacking=2 hits=3 totalHits=4
+12:47:39.947 [info] [SanguoBattle] t=16.050121s enemy0=115.90825,778.7338 state=Run hero0=113.771576,778.7918 hp=372 chasing=51 attacking=14 hits=44 totalHits=48
+12:47:40.749 [info] [SanguoBattle] died: GuanYu
+12:47:41.965 [info] [SanguoBattle] t=18.066729s enemy0=114.804115,783.1213 state=Run hero0=113.325424,780.2319 hp=0 chasing=44 attacking=16 hits=68 totalHits=116
+12:47:42.381 [info] [SanguoBattle] died: ZhaoYun
+12:47:42.481 [info] [SanguoBattle] died: LiuBei
+12:47:42.731 [info] [SanguoBattle] died: ZhangFei
+12:47:42.732 [info] [SanguoBattle] LOSE at 18.833364s

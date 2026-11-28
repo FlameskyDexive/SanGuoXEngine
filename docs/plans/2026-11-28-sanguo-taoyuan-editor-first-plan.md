@@ -110,6 +110,7 @@ D3D12 1280×720：预热后稳态 p95 ≤ 16.6 ms、p99 ≤ 25 ms；600 帧内�
 
 - E2 GPU Instancing/动态合批：探针通过，D3D12 记录 `staticBatchGroups=6`、`staticBatchInstances=112`、`dynamicBatchGroups=1`、`dynamicBatchInstances=63`；默认桃园机位仍需真实环境物件材质/光照保真复验。
 - E1 静态 Transform 失效：已通过引擎单测 10/10 与 D3D12 Play。静态物件移动后 `Scene.StructureVersion` 递增，registry 下一次收集重新建立 proxy；证据见 `docs/evidence/replan/e1-static-transform-invalidation/`，引擎提交 `2767ec0ff`。
+- E4 敌人 prefab/缩放/索敌：已通过 50/50 子模块测试与 D3D12 1280×720 Play。首波敌人从约 54 m 外进入战斗，真实 prefab 不再被巨大四边形遮挡；采样 `dynamicBatchGroups=1`、`dynamicBatchInstances=31`，证据见 `docs/evidence/replan/e4-characters/enemy-prefab-scale/`。敌人最终材质、动作、Boss 专属形态和 HUD 仍开放。
 - E2 follow-up 每实例 Lightmap ST：已通过 D3D12 编辑器 Play 验收。批次 key 不再把
   `_LightmapScaleOffset` 当整组状态，Standard shader 从 `InstanceData.CustomData` 读取
   每实例 ST；真实战斗机位记录 `instancedDrawCalls=2`、`staticBatchGroups=3`、
