@@ -300,7 +300,9 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         // HDR/post-processing quality.  The editor GameView is the first acceptance target and
         // can use the linear presentation path without spending a full-resolution Bloom chain.
         bool editorPreview = Application.IsEditor;
-        _battleCamera.HDR = !editorPreview;
+        bool editorPost = !editorPreview
+            || string.Equals(Environment.GetEnvironmentVariable("SANGUO_EDITOR_POST"), "1", StringComparison.Ordinal);
+        _battleCamera.HDR = editorPost;
         // The editor surface is commonly a 1920x1080 dock even when GameView is set to
         // 1280x720. Render at the GameView target scale in Play so GPU cost follows the
         // acceptance resolution; player builds keep native scale until B7 passes.
@@ -311,7 +313,7 @@ public sealed class SanguoBattleDriver : MonoBehaviour
         // more than the editor budget allows. Platform quality profiles can re-enable this later.
         UniversalAdditionalCameraData cameraData = cameraGo.AddComponent<UniversalAdditionalCameraData>();
         cameraData.RenderShadows = false;
-        cameraData.RenderPostProcessing = !editorPreview;
+        cameraData.RenderPostProcessing = editorPost;
 
         if (string.Equals(Environment.GetEnvironmentVariable("SANGUO_BATCH_PROBE"), "1", StringComparison.Ordinal))
             CreateBatchProbe();
