@@ -84,8 +84,9 @@ public sealed class SanguoActorPresenter : MonoBehaviour
             };
             return alias.Length > 0 && _animator.Play(alias, 0.05f);
         }
-        catch (Exception)
+        catch (Exception error)
         {
+            Debug.LogError("[SanguoBattle] animation play failed: " + error.Message);
             _animatorBroken = true;                             // no controller bound: stay silent
             return false;
         }
@@ -120,7 +121,10 @@ public sealed class SanguoActorPresenter : MonoBehaviour
         if (clip.Length == 0) return;
         try
         {
-            if (!_animator.Play(clip, fade)) _animatorBroken = true;   // no controller → stop asking
+            // A runtime prefab may finish controller resolution one frame after it is
+            // bound. A missing state is therefore retryable; only an exception marks
+            // the bridge broken permanently.
+            _ = _animator.Play(clip, fade);
         }
         catch (Exception)
         {
@@ -528,6 +532,11 @@ public sealed class SanguoBattleDriver : MonoBehaviour
 
     private void BindPresenter(SanguoFieldActor actor, GameObject instance)
     {
+        // Imported hero/enemy prefabs carry the native Animator but do not all carry the
+        // scene-side SanguoAnimator binding. Add the lightweight bridge at bind time so
+        // Boss-only clips (SkillAttack_1/2, NormalAttack_2..4) use the same controller
+        // lookup as the normal state machine instead of silently returning false.
+        _ = instance.GetComponent<SanguoAnimator>() ?? instance.AddComponent<SanguoAnimator>();
         SanguoActorPresenter presenter = instance.GetComponent<SanguoActorPresenter>()
             ?? instance.AddComponent<SanguoActorPresenter>();
         presenter.Kernel = actor;

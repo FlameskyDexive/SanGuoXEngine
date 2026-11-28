@@ -11,3 +11,14 @@
 - 原始帧统计：[runtime-stats-d3d12.json](runtime-stats-d3d12.json)
 
 采样为 `drawCalls=67`、`instancedDrawCalls=3`、`renderablesDrawn=64`、`skinnedPaletteRows=58`、`gpuFrameTimeMs=3.434`、`cpuFrameTimeP95Ms=23.926`。截图中的吕布和黄巾兵均在真实蒙皮路径中可见；本节点验证的是动作状态映射和编辑器 Play 运行，E7 的 16.6 ms CPU P95 门禁、Boss 专属技能动作和 HUD 伤害数字仍未通过。
+
+## Boss 专属动作补齐（2026-11-28）
+
+发现 `Hero_LvBu` prefab 只有原生 `Animator`，没有场景侧 `SanguoAnimator` 桥接；同时控制器
+可能在首帧仍未解析，导致 `PlaySkillClip("SkillAttack_1")` 静默返回 false。现在 presenter
+绑定时补挂 `SanguoAnimator`，`Play`/`FindMotion` 先 `EnsureLoaded()` 控制器，并把“首帧缺少
+状态”改成可重试，不再永久锁死动作桥接。D3D12 Play 探针已返回 `bossSkill=True`，截图和
+原始结果见 `editor-gameview-skillattack1-fixed.png`、`skillattack1-fixed-runtime-result.json`；
+`runtime_stats` 记录 `drawCalls=37`、`instancedDrawCalls=1`、`skinnedPaletteRows=46`、
+`gpuFrameTimeMs=3.965`、`cpuFrameTimeP95Ms=20.006`。截图仍受 E3 场景几何/相机问题影响，
+本证据只确认 Boss 控制器状态真正被触发，不宣称 E4 或 E7 总体验收通过。

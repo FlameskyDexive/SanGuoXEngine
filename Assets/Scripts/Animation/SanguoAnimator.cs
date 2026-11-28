@@ -102,6 +102,11 @@ public sealed class SanguoAnimator : MonoBehaviour
     public bool Play(string state, float fade = 0f)
     {
         Animator animator = Animator;
+        // Runtime-spawned presenters can reach the first state request before the
+        // prefab's controller AssetRef has been touched by the editor cache. Ensure
+        // the real controller is resident so Boss skill states are not reported as
+        // missing simply because resolution was lazy.
+        animator.Controller.EnsureLoaded();
         if (!animator.HasState(state)) return false;
         animator.CrossFade(state, fade, 0);
         return true;
@@ -150,6 +155,7 @@ public sealed class SanguoAnimator : MonoBehaviour
     private AnimationClip? FindMotion(string state)
     {
         Animator animator = Animator;
+        animator.Controller.EnsureLoaded();
         AnimatorController? controller = animator.Controller.Res;
         if (controller == null) return null;
         foreach (AnimatorController.State entry in controller.States)
